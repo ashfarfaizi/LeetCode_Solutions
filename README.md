@@ -15,6 +15,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0002-add-two-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0002-add-two-numbers/) | Medium |
+| [0025-reverse-nodes-in-k-group](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0025-reverse-nodes-in-k-group/) | Hard |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -23,4 +24,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0002-add-two-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0002-add-two-numbers/) | Medium |
+| [0025-reverse-nodes-in-k-group](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0025-reverse-nodes-in-k-group/) | Hard |
 <!---LeetCode Topics End-->
