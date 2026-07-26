@@ -7,10 +7,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0001-two-sum/) | Easy |
+| [0041-first-missing-positive](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0041-first-missing-positive/) | Hard |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0001-two-sum/) | Easy |
+| [0041-first-missing-positive](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0041-first-missing-positive/) | Hard |
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
