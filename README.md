@@ -51,6 +51,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
+| [0005-longest-palindromic-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -63,4 +64,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
 <!---LeetCode Topics End-->
