@@ -38,6 +38,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0002-add-two-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0002-add-two-numbers/) | Medium |
+| [0010-regular-expression-matching](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0010-regular-expression-matching/) | Hard |
 | [0025-reverse-nodes-in-k-group](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0025-reverse-nodes-in-k-group/) | Hard |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -62,6 +63,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0005-longest-palindromic-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0006-zigzag-conversion](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0006-zigzag-conversion/) | Medium |
 | [0008-string-to-integer-atoi](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0008-string-to-integer-atoi/) | Medium |
+| [0010-regular-expression-matching](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0010-regular-expression-matching/) | Hard |
 | [0012-integer-to-roman](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0012-integer-to-roman/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
@@ -85,6 +87,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
+| [0010-regular-expression-matching](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0010-regular-expression-matching/) | Hard |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
 | ------- | ------- |
