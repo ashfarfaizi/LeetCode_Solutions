@@ -8,6 +8,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0001-two-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0001-two-sum/) | Easy |
 | [0004-median-of-two-sorted-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
+| [0011-container-with-most-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0011-container-with-most-water/) | Medium |
 | [0015-3sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0015-3sum/) | Medium |
 | [0018-4sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0018-4sum/) | Medium |
 | [0037-sudoku-solver](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0037-sudoku-solver/) | Hard |
@@ -81,6 +82,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
+| [0011-container-with-most-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0011-container-with-most-water/) | Medium |
 | [0015-3sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0015-3sum/) | Medium |
 | [0018-4sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0018-4sum/) | Medium |
 ## Dynamic Programming
@@ -92,4 +94,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0011-container-with-most-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0011-container-with-most-water/) | Medium |
 <!---LeetCode Topics End-->
