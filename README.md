@@ -13,6 +13,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0015-3sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0016-3sum-closest/) | Medium |
 | [0018-4sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0018-4sum/) | Medium |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0031-next-permutation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0031-next-permutation/) | Medium |
 | [0037-sudoku-solver](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0037-sudoku-solver/) | Hard |
 | [0039-combination-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0039-combination-sum/) | Medium |
@@ -122,6 +123,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0016-3sum-closest](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0016-3sum-closest/) | Medium |
 | [0018-4sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0018-4sum/) | Medium |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0019-remove-nth-node-from-end-of-list/) | Medium |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0031-next-permutation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0031-next-permutation/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
