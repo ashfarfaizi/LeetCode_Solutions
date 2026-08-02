@@ -18,6 +18,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0031-next-permutation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0031-next-permutation/) | Medium |
 | [0037-sudoku-solver](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0037-sudoku-solver/) | Hard |
 | [0039-combination-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0039-combination-sum/) | Medium |
+| [0040-combination-sum-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0040-combination-sum-ii/) | Medium |
 | [0041-first-missing-positive](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0041-first-missing-positive/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
@@ -74,6 +75,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0022-generate-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0022-generate-parentheses/) | Medium |
 | [0037-sudoku-solver](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0037-sudoku-solver/) | Hard |
 | [0039-combination-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0039-combination-sum/) | Medium |
+| [0040-combination-sum-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0040-combination-sum-ii/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
