@@ -25,6 +25,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0045-jump-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0045-jump-game-ii/) | Medium |
 | [0046-permutations](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0046-permutations/) | Medium |
 | [0047-permutations-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0047-permutations-ii/) | Medium |
+| [0048-rotate-image](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0048-rotate-image/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -62,6 +63,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0013-roman-to-integer](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0013-roman-to-integer/) | Easy |
 | [0029-divide-two-integers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0029-divide-two-integers/) | Medium |
 | [0043-multiply-strings](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0043-multiply-strings/) | Medium |
+| [0048-rotate-image](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0048-rotate-image/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -91,6 +93,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0037-sudoku-solver](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0037-sudoku-solver/) | Hard |
+| [0048-rotate-image](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0048-rotate-image/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
