@@ -95,6 +95,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0040-combination-sum-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0040-combination-sum-ii/) | Medium |
 | [0046-permutations](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0046-permutations/) | Medium |
 | [0047-permutations-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0047-permutations-ii/) | Medium |
+| [0052-n-queens-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0052-n-queens-ii/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -236,4 +237,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0043-multiply-strings](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0043-multiply-strings/) | Medium |
+## Algorithm X
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0052-n-queens-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0052-n-queens-ii/) | Hard |
 <!---LeetCode Topics End-->
