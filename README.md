@@ -27,6 +27,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0047-permutations-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0047-permutations-ii/) | Medium |
 | [0048-rotate-image](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0048-rotate-image/) | Medium |
 | [0049-group-anagrams](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0049-group-anagrams/) | Medium |
+| [0053-maximum-subarray](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0053-maximum-subarray/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -152,6 +153,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0023-merge-k-sorted-lists](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0023-merge-k-sorted-lists/) | Hard |
+| [0053-maximum-subarray](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0053-maximum-subarray/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -176,6 +178,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0042-trapping-rain-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0042-trapping-rain-water/) | Hard |
 | [0044-wildcard-matching](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0044-wildcard-matching/) | Hard |
 | [0045-jump-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0045-jump-game-ii/) | Medium |
+| [0053-maximum-subarray](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0053-maximum-subarray/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1406-stone-game-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1406-stone-game-iii/) | Hard |
