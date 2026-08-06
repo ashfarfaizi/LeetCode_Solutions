@@ -76,6 +76,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0048-rotate-image](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0048-rotate-image/) | Medium |
 | [0050-powx-n](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0050-powx-n/) | Medium |
 | [0060-permutation-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0060-permutation-sequence/) | Hard |
+| [0062-unique-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0062-unique-paths/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -192,6 +193,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0044-wildcard-matching](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0044-wildcard-matching/) | Hard |
 | [0045-jump-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0045-jump-game-ii/) | Medium |
 | [0053-maximum-subarray](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0053-maximum-subarray/) | Medium |
+| [0062-unique-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0062-unique-paths/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1406-stone-game-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1406-stone-game-iii/) | Hard |
@@ -220,6 +222,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Combinatorics
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0062-unique-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0062-unique-paths/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 ## Stack
 | Problem Name | Difficulty |
