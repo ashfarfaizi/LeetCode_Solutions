@@ -168,6 +168,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0065-valid-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0065-valid-number/) | Hard |
 | [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
 | [0068-text-justification](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0068-text-justification/) | Hard |
+| [0071-simplify-path](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0071-simplify-path/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -262,6 +263,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0020-valid-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0020-valid-parentheses/) | Easy |
 | [0032-longest-valid-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0032-longest-valid-parentheses/) | Hard |
 | [0042-trapping-rain-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0042-trapping-rain-water/) | Hard |
+| [0071-simplify-path](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0071-simplify-path/) | Medium |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
