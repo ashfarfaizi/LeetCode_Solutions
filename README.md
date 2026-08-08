@@ -85,6 +85,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0060-permutation-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0060-permutation-sequence/) | Hard |
 | [0062-unique-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0062-unique-paths/) | Medium |
 | [0066-plus-one](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0066-plus-one/) | Easy |
+| [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -162,6 +163,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0049-group-anagrams](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0049-group-anagrams/) | Medium |
 | [0058-length-of-last-word](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0058-length-of-last-word/) | Easy |
 | [0065-valid-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0065-valid-number/) | Hard |
+| [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -262,6 +264,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0029-divide-two-integers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0029-divide-two-integers/) | Medium |
+| [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -282,6 +285,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0043-multiply-strings](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0043-multiply-strings/) | Medium |
 | [0054-spiral-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0054-spiral-matrix/) | Medium |
 | [0059-spiral-matrix-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0059-spiral-matrix-ii/) | Medium |
+| [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
 ## Algorithm X
 | Problem Name | Difficulty |
 | ------- | ------- |
