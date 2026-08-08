@@ -163,6 +163,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0058-length-of-last-word](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0058-length-of-last-word/) | Easy |
 | [0065-valid-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0065-valid-number/) | Hard |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
+| [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 | [3517-smallest-palindromic-rearrangement-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3517-smallest-palindromic-rearrangement-i/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
@@ -199,6 +200,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0031-next-permutation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0031-next-permutation/) | Medium |
 | [0042-trapping-rain-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0042-trapping-rain-water/) | Hard |
 | [0061-rotate-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0061-rotate-list/) | Medium |
+| [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -216,6 +218,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1406-stone-game-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1406-stone-game-iii/) | Hard |
+| [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -228,6 +231,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0044-wildcard-matching](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0044-wildcard-matching/) | Hard |
 | [0045-jump-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0045-jump-game-ii/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
+| [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Counting Sort
 | Problem Name | Difficulty |
