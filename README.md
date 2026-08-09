@@ -42,6 +42,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0073-set-matrix-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0074-search-a-2d-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0074-search-a-2d-matrix/) | Medium |
 | [0075-sort-colors](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0075-sort-colors/) | Medium |
+| [0078-subsets](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0078-subsets/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -127,6 +128,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0047-permutations-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0047-permutations-ii/) | Medium |
 | [0052-n-queens-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0052-n-queens-ii/) | Hard |
 | [0077-combinations](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0077-combinations/) | Medium |
+| [0078-subsets](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0078-subsets/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
@@ -291,6 +293,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0029-divide-two-integers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0029-divide-two-integers/) | Medium |
 | [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
+| [0078-subsets](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0078-subsets/) | Medium |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
