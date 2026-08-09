@@ -126,6 +126,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0046-permutations](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0046-permutations/) | Medium |
 | [0047-permutations-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0047-permutations-ii/) | Medium |
 | [0052-n-queens-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0052-n-queens-ii/) | Hard |
+| [0077-combinations](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0077-combinations/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
