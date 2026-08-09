@@ -63,6 +63,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0041-first-missing-positive](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0041-first-missing-positive/) | Hard |
 | [0049-group-anagrams](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0049-group-anagrams/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0073-set-matrix-zeroes/) | Medium |
+| [0076-minimum-window-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0076-minimum-window-substring/) | Hard |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -179,6 +180,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0068-text-justification](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0068-text-justification/) | Hard |
 | [0071-simplify-path](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0071-simplify-path/) | Medium |
 | [0072-edit-distance](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0072-edit-distance/) | Medium |
+| [0076-minimum-window-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0076-minimum-window-substring/) | Hard |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -189,6 +191,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0030-substring-with-concatenation-of-all-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0030-substring-with-concatenation-of-all-words/) | Hard |
+| [0076-minimum-window-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0076-minimum-window-substring/) | Hard |
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
