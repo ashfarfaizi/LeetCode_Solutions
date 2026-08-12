@@ -88,6 +88,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0082-remove-duplicates-from-sorted-list-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0082-remove-duplicates-from-sorted-list-ii/) | Medium |
 | [0083-remove-duplicates-from-sorted-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0083-remove-duplicates-from-sorted-list/) | Easy |
 | [0086-partition-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0086-partition-list/) | Medium |
+| [0092-reverse-linked-list-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0092-reverse-linked-list-ii/) | Medium |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
