@@ -105,6 +105,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
 | [0069-sqrtx](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0069-sqrtx/) | Easy |
 | [0070-climbing-stairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0070-climbing-stairs/) | Easy |
+| [0089-gray-code](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0089-gray-code/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -139,6 +140,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0077-combinations](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0077-combinations/) | Medium |
 | [0078-subsets](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0079-word-search/) | Medium |
+| [0089-gray-code](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0089-gray-code/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
@@ -318,6 +320,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0029-divide-two-integers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0029-divide-two-integers/) | Medium |
 | [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
 | [0078-subsets](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0078-subsets/) | Medium |
+| [0089-gray-code](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0089-gray-code/) | Medium |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
