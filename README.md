@@ -145,6 +145,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0089-gray-code](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0089-gray-code/) | Medium |
 | [0090-subsets-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0090-subsets-ii/) | Medium |
 | [0093-restore-ip-addresses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0093-restore-ip-addresses/) | Medium |
+| [0095-unique-binary-search-trees-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0095-unique-binary-search-trees-ii/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
@@ -274,6 +275,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0085-maximal-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0085-maximal-rectangle/) | Hard |
 | [0087-scramble-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0087-scramble-string/) | Hard |
 | [0091-decode-ways](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0091-decode-ways/) | Medium |
+| [0095-unique-binary-search-trees-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0095-unique-binary-search-trees-ii/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -418,8 +420,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0094-binary-tree-inorder-traversal/) | Easy |
+| [0095-unique-binary-search-trees-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0095-unique-binary-search-trees-ii/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0094-binary-tree-inorder-traversal/) | Easy |
+| [0095-unique-binary-search-trees-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0095-unique-binary-search-trees-ii/) | Medium |
+## Binary Search Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0095-unique-binary-search-trees-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0095-unique-binary-search-trees-ii/) | Medium |
 <!---LeetCode Topics End-->
