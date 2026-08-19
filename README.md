@@ -83,6 +83,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0076-minimum-window-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0076-minimum-window-substring/) | Hard |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0105-construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0106-construct-binary-tree-from-inorder-and-postorder-traversal/) | Medium |
+| [0127-word-ladder](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0127-word-ladder/) | Hard |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -228,6 +229,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0097-interleaving-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0097-interleaving-string/) | Medium |
 | [0115-distinct-subsequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0115-distinct-subsequences/) | Hard |
 | [0125-valid-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0125-valid-palindrome/) | Easy |
+| [0127-word-ladder](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0127-word-ladder/) | Hard |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -428,6 +430,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0112-path-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0112-path-sum/) | Easy |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0116-populating-next-right-pointers-in-each-node/) | Medium |
 | [0117-populating-next-right-pointers-in-each-node-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0117-populating-next-right-pointers-in-each-node-ii/) | Medium |
+| [0127-word-ladder](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0127-word-ladder/) | Hard |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
@@ -537,4 +540,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0124-binary-tree-maximum-path-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
+## Bidirectional Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0127-word-ladder](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0127-word-ladder/) | Hard |
 <!---LeetCode Topics End-->
