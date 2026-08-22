@@ -64,6 +64,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0134-gas-station](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0134-gas-station/) | Medium |
 | [0135-candy](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0135-candy/) | Hard |
 | [0137-single-number-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0137-single-number-ii/) | Medium |
+| [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -92,6 +93,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0127-word-ladder](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0127-word-ladder/) | Hard |
 | [0128-longest-consecutive-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0133-clone-graph](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0133-clone-graph/) | Medium |
+| [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -244,6 +246,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0127-word-ladder](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0127-word-ladder/) | Hard |
 | [0131-palindrome-partitioning](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0131-palindrome-partitioning/) | Medium |
 | [0132-palindrome-partitioning-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0132-palindrome-partitioning-ii/) | Hard |
+| [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -329,6 +332,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0124-binary-tree-maximum-path-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0131-palindrome-partitioning](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0131-palindrome-partitioning/) | Medium |
 | [0132-palindrome-partitioning-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0132-palindrome-partitioning-ii/) | Hard |
+| [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -361,6 +365,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0014-longest-common-prefix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0014-longest-common-prefix/) | Easy |
+| [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 ## Combinatorics
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -483,6 +488,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0070-climbing-stairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0070-climbing-stairs/) | Easy |
+| [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 ## Minimax
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -578,4 +584,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0130-surrounded-regions](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0130-surrounded-regions/) | Medium |
+## Brute-Force Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 <!---LeetCode Topics End-->
