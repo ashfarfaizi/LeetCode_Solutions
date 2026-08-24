@@ -66,6 +66,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0137-single-number-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0137-single-number-ii/) | Medium |
 | [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0140-word-break-ii/) | Hard |
+| [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -98,6 +99,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0140-word-break-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0141-linked-list-cycle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0142-linked-list-cycle-ii/) | Medium |
+| [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -142,6 +144,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0070-climbing-stairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0070-climbing-stairs/) | Easy |
 | [0089-gray-code](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0089-gray-code/) | Medium |
 | [0096-unique-binary-search-trees](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0096-unique-binary-search-trees/) | Medium |
+| [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -618,4 +621,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0141-linked-list-cycle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0142-linked-list-cycle-ii/) | Medium |
+## Geometry
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
+## Euclidean Algorithm
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
+## Greatest Common Divisor
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
 <!---LeetCode Topics End-->
