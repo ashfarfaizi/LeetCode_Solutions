@@ -433,6 +433,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0144-binary-tree-preorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0144-binary-tree-preorder-traversal/) | Easy |
 | [0145-binary-tree-postorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
 | [0150-evaluate-reverse-polish-notation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
+| [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -591,6 +592,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0129-sum-root-to-leaf-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0129-sum-root-to-leaf-numbers/) | Medium |
 | [0144-binary-tree-preorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0144-binary-tree-preorder-traversal/) | Easy |
 | [0145-binary-tree-postorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
+| [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -619,6 +621,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0129-sum-root-to-leaf-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0129-sum-root-to-leaf-numbers/) | Medium |
 | [0144-binary-tree-preorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0144-binary-tree-preorder-traversal/) | Easy |
 | [0145-binary-tree-postorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
+| [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
 ## Binary Search Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -628,6 +631,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0099-recover-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0099-recover-binary-search-tree/) | Medium |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
 | [0109-convert-sorted-list-to-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0109-convert-sorted-list-to-binary-search-tree/) | Medium |
+| [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
 ## DP on Trees
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -679,4 +683,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0169-majority-element](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0169-majority-element/) | Easy |
+## Design
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
+## Iterator
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
 <!---LeetCode Topics End-->
