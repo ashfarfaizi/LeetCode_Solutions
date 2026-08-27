@@ -75,6 +75,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0164-maximum-gap](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0164-maximum-gap/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0169-majority-element](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0169-majority-element/) | Easy |
+| [0174-dungeon-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0174-dungeon-game/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -217,6 +218,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0079-word-search](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0079-word-search/) | Medium |
 | [0085-maximal-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0085-maximal-rectangle/) | Hard |
 | [0130-surrounded-regions](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0130-surrounded-regions/) | Medium |
+| [0174-dungeon-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0174-dungeon-game/) | Hard |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -378,6 +380,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0152-maximum-product-subarray](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0152-maximum-product-subarray/) | Medium |
+| [0174-dungeon-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0174-dungeon-game/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
