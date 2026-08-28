@@ -704,4 +704,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0175-combine-two-tables](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0175-combine-two-tables/) | Easy |
 | [0178-rank-scores](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0178-rank-scores/) | Medium |
 | [0180-consecutive-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0180-consecutive-numbers/) | Medium |
+| [0181-employees-earning-more-than-their-managers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0181-employees-earning-more-than-their-managers/) | Easy |
 <!---LeetCode Topics End-->
