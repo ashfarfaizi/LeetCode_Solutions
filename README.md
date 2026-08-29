@@ -78,6 +78,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0174-dungeon-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0174-dungeon-game/) | Hard |
 | [0179-largest-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0179-largest-number/) | Medium |
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0188-best-time-to-buy-and-sell-stock-iv/) | Hard |
+| [0189-rotate-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0189-rotate-array/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -162,6 +163,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0168-excel-sheet-column-title](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0168-excel-sheet-column-title/) | Easy |
 | [0171-excel-sheet-column-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0171-excel-sheet-column-number/) | Easy |
 | [0172-factorial-trailing-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0172-factorial-trailing-zeroes/) | Medium |
+| [0189-rotate-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0189-rotate-array/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -351,6 +353,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0151-reverse-words-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0151-reverse-words-in-a-string/) | Medium |
 | [0165-compare-version-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0165-compare-version-numbers/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
+| [0189-rotate-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0189-rotate-array/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
