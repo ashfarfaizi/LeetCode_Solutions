@@ -742,4 +742,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0192-word-frequency](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0192-word-frequency/) | Medium |
+| [0193-valid-phone-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0193-valid-phone-numbers/) | Easy |
 <!---LeetCode Topics End-->
