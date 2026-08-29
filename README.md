@@ -327,6 +327,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0109-convert-sorted-list-to-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0109-convert-sorted-list-to-binary-search-tree/) | Medium |
 | [0169-majority-element](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0169-majority-element/) | Easy |
 | [0190-reverse-bits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0190-reverse-bits/) | Easy |
+| [0191-number-of-1-bits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0191-number-of-1-bits/) | Easy |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -465,6 +466,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0137-single-number-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0137-single-number-ii/) | Medium |
 | [0187-repeated-dna-sequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0187-repeated-dna-sequences/) | Medium |
 | [0190-reverse-bits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0190-reverse-bits/) | Easy |
+| [0191-number-of-1-bits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0191-number-of-1-bits/) | Easy |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
