@@ -81,6 +81,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0189-rotate-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0189-rotate-array/) | Medium |
 | [0198-house-robber](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0198-house-robber/) | Medium |
 | [0200-number-of-islands](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0200-number-of-islands/) | Medium |
+| [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -168,6 +169,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0172-factorial-trailing-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0172-factorial-trailing-zeroes/) | Medium |
 | [0189-rotate-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0189-rotate-array/) | Medium |
 | [0202-happy-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0202-happy-number/) | Easy |
+| [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -561,10 +563,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Enumeration
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 | [3345-smallest-divisible-digit-product-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3345-smallest-divisible-digit-product-i/) | Easy |
 ## Number Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Newton's Method
 | Problem Name | Difficulty |
@@ -761,4 +765,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0192-word-frequency](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0192-word-frequency/) | Medium |
 | [0193-valid-phone-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0193-valid-phone-numbers/) | Easy |
 | [0194-transpose-file](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0194-transpose-file/) | Medium |
+## Primality Test
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
+## Sieve Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
+## Prime Number Sieve
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 <!---LeetCode Topics End-->
