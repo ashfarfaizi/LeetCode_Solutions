@@ -143,6 +143,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0141-linked-list-cycle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0143-reorder-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0143-reorder-list/) | Medium |
+| [0206-reverse-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0206-reverse-linked-list/) | Easy |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -191,6 +192,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0050-powx-n](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0050-powx-n/) | Medium |
 | [0060-permutation-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0060-permutation-sequence/) | Hard |
 | [0143-reorder-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0143-reorder-list/) | Medium |
+| [0206-reverse-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0206-reverse-linked-list/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
