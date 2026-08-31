@@ -116,6 +116,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0169-majority-element](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0169-majority-element/) | Easy |
 | [0187-repeated-dna-sequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0187-repeated-dna-sequences/) | Medium |
+| [0202-happy-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0202-happy-number/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -166,6 +167,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0171-excel-sheet-column-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0171-excel-sheet-column-number/) | Easy |
 | [0172-factorial-trailing-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0172-factorial-trailing-zeroes/) | Medium |
 | [0189-rotate-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0189-rotate-array/) | Medium |
+| [0202-happy-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0202-happy-number/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -359,6 +361,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0165-compare-version-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0165-compare-version-numbers/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0189-rotate-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0189-rotate-array/) | Medium |
+| [0202-happy-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0202-happy-number/) | Easy |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -687,6 +690,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0141-linked-list-cycle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0142-linked-list-cycle-ii/) | Medium |
+| [0202-happy-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0202-happy-number/) | Easy |
 ## Geometry
 | Problem Name | Difficulty |
 | ------- | ------- |
