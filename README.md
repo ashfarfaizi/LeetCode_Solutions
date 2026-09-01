@@ -119,6 +119,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0187-repeated-dna-sequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0187-repeated-dna-sequences/) | Medium |
 | [0202-happy-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0202-happy-number/) | Easy |
 | [0205-isomorphic-strings](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0205-isomorphic-strings/) | Easy |
+| [0208-implement-trie-prefix-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -300,6 +301,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0179-largest-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0179-largest-number/) | Medium |
 | [0187-repeated-dna-sequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0187-repeated-dna-sequences/) | Medium |
 | [0205-isomorphic-strings](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0205-isomorphic-strings/) | Easy |
+| [0208-implement-trie-prefix-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -443,6 +445,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0014-longest-common-prefix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0014-longest-common-prefix/) | Easy |
 | [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0140-word-break-ii/) | Hard |
+| [0208-implement-trie-prefix-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 ## Combinatorics
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -734,6 +737,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
+| [0208-implement-trie-prefix-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 ## Iterator
 | Problem Name | Difficulty |
 | ------- | ------- |
