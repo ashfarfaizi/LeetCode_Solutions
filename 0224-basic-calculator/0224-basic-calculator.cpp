@@ -7,14 +7,13 @@ public:
     int calculate(std::string s) {
         std::stack<int> st;
         int result = 0;
-        long long number = 0; // Changed to long long to prevent signed integer overflow
-        int sign = 1;         // 1 means (+), -1 means (-)
+        long long number = 0; 
+        int sign = 1;         
 
         for (int i = 0; i < s.length(); ++i) {
             char c = s[i];
 
-            if (isdigit(c)) {
-                // Safely build the number using a 64-bit container
+            if (std::isdigit(c)) {
                 number = number * 10 + (c - '0');
             } 
             else if (c == '+') {
@@ -28,10 +27,8 @@ public:
                 sign = -1;
             } 
             else if (c == '(') {
-                // Push the current running state to context stack
                 st.push(result);
                 st.push(sign);
-                // Reset states for the internal nested scope
                 result = 0;
                 sign = 1;
             } 
@@ -39,7 +36,6 @@ public:
                 result += sign * number;
                 number = 0;
                 
-                // Resolve the brackets scope with the parent context
                 result *= st.top(); 
                 st.pop();
                 result += st.top(); 
@@ -47,7 +43,6 @@ public:
             }
         }
         
-        // Accumulate any remaining trailing operand
         result += sign * number;
         return result;
     }
