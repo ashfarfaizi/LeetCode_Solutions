@@ -91,6 +91,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0219-contains-duplicate-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0219-contains-duplicate-ii/) | Easy |
 | [0220-contains-duplicate-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0220-contains-duplicate-iii/) | Hard |
 | [0221-maximal-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0221-maximal-square/) | Medium |
+| [0228-summary-ranges](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0228-summary-ranges/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
