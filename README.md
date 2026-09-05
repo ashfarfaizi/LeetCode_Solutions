@@ -189,6 +189,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 | [0223-rectangle-area](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0223-rectangle-area/) | Medium |
 | [0224-basic-calculator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0224-basic-calculator/) | Hard |
+| [0231-power-of-two](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0231-power-of-two/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -211,6 +212,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0143-reorder-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0143-reorder-list/) | Medium |
 | [0206-reverse-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0206-reverse-linked-list/) | Easy |
 | [0224-basic-calculator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0224-basic-calculator/) | Hard |
+| [0231-power-of-two](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0231-power-of-two/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -530,6 +532,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0191-number-of-1-bits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0191-number-of-1-bits/) | Easy |
 | [0201-bitwise-and-of-numbers-range](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0201-bitwise-and-of-numbers-range/) | Medium |
 | [0222-count-complete-tree-nodes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0222-count-complete-tree-nodes/) | Medium |
+| [0231-power-of-two](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0231-power-of-two/) | Easy |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
