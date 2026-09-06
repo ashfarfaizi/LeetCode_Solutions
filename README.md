@@ -205,6 +205,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0263-ugly-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0263-ugly-number/) | Easy |
 | [0264-ugly-number-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0264-ugly-number-ii/) | Medium |
 | [0268-missing-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0268-missing-number/) | Easy |
+| [0273-integer-to-english-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -230,6 +231,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0231-power-of-two](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0231-power-of-two/) | Easy |
 | [0234-palindrome-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
+| [0273-integer-to-english-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -357,6 +359,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [0242-valid-anagram](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0242-valid-anagram/) | Easy |
 | [0257-binary-tree-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0257-binary-tree-paths/) | Easy |
+| [0273-integer-to-english-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0273-integer-to-english-words/) | Hard |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
