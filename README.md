@@ -195,6 +195,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0223-rectangle-area](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0223-rectangle-area/) | Medium |
 | [0224-basic-calculator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0224-basic-calculator/) | Hard |
 | [0231-power-of-two](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0231-power-of-two/) | Easy |
+| [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -219,6 +220,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0224-basic-calculator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0224-basic-calculator/) | Hard |
 | [0231-power-of-two](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0231-power-of-two/) | Easy |
 | [0234-palindrome-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0234-palindrome-linked-list/) | Easy |
+| [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -340,6 +342,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0212-word-search-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0214-shortest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0214-shortest-palindrome/) | Hard |
 | [0224-basic-calculator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0224-basic-calculator/) | Hard |
+| [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -460,6 +463,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0198-house-robber](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0198-house-robber/) | Medium |
 | [0213-house-robber-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0213-house-robber-ii/) | Medium |
 | [0221-maximal-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0221-maximal-square/) | Medium |
+| [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -661,6 +665,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0070-climbing-stairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0070-climbing-stairs/) | Easy |
 | [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0140-word-break-ii/) | Hard |
+| [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 ## Minimax
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -935,4 +940,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0239-sliding-window-maximum/) | Hard |
+## Bracket Sequences
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 <!---LeetCode Topics End-->
