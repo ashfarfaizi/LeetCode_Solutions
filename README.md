@@ -93,6 +93,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0221-maximal-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0221-maximal-square/) | Medium |
 | [0228-summary-ranges](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0228-summary-ranges/) | Easy |
 | [0229-majority-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0229-majority-element-ii/) | Medium |
+| [0238-product-of-array-except-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0238-product-of-array-except-self/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -661,6 +662,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0209-minimum-size-subarray-sum/) | Medium |
+| [0238-product-of-array-except-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0238-product-of-array-except-self/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 ## Zero-Sum Game
 | Problem Name | Difficulty |
