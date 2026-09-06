@@ -97,6 +97,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0239-sliding-window-maximum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0240-search-a-2d-matrix-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0240-search-a-2d-matrix-ii/) | Medium |
 | [0260-single-number-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0260-single-number-iii/) | Medium |
+| [0268-missing-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0268-missing-number/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -140,6 +141,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0229-majority-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0229-majority-element-ii/) | Medium |
 | [0242-valid-anagram](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0242-valid-anagram/) | Easy |
 | [0264-ugly-number-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0264-ugly-number-ii/) | Medium |
+| [0268-missing-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0268-missing-number/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -202,6 +204,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0258-add-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0258-add-digits/) | Easy |
 | [0263-ugly-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0263-ugly-number/) | Easy |
 | [0264-ugly-number-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0264-ugly-number-ii/) | Medium |
+| [0268-missing-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0268-missing-number/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -293,6 +296,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0220-contains-duplicate-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0220-contains-duplicate-iii/) | Hard |
 | [0229-majority-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0229-majority-element-ii/) | Medium |
 | [0242-valid-anagram](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0242-valid-anagram/) | Easy |
+| [0268-missing-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0268-missing-number/) | Easy |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
@@ -386,6 +390,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0209-minimum-size-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0222-count-complete-tree-nodes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0222-count-complete-tree-nodes/) | Medium |
 | [0240-search-a-2d-matrix-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0240-search-a-2d-matrix-ii/) | Medium |
+| [0268-missing-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0268-missing-number/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -563,6 +568,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0222-count-complete-tree-nodes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0222-count-complete-tree-nodes/) | Medium |
 | [0231-power-of-two](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0231-power-of-two/) | Easy |
 | [0260-single-number-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0260-single-number-iii/) | Medium |
+| [0268-missing-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0268-missing-number/) | Easy |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
