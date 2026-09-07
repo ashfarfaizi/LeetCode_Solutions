@@ -100,6 +100,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0268-missing-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0268-missing-number/) | Easy |
 | [0274-h-index](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0274-h-index/) | Medium |
 | [0275-h-index-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0275-h-index-ii/) | Medium |
+| [0283-move-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0283-move-zeroes/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -449,6 +450,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0189-rotate-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0189-rotate-array/) | Medium |
 | [0202-happy-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0202-happy-number/) | Easy |
 | [0234-palindrome-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0234-palindrome-linked-list/) | Easy |
+| [0283-move-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0283-move-zeroes/) | Easy |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
