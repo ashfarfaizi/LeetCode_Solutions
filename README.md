@@ -101,6 +101,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0274-h-index](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0274-h-index/) | Medium |
 | [0275-h-index-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0275-h-index-ii/) | Medium |
 | [0283-move-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0283-move-zeroes/) | Easy |
+| [0284-peeking-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0284-peeking-iterator/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -873,10 +874,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0208-implement-trie-prefix-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0211-design-add-and-search-words-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0211-design-add-and-search-words-data-structure/) | Medium |
 | [0225-implement-stack-using-queues](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0225-implement-stack-using-queues/) | Easy |
+| [0284-peeking-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0284-peeking-iterator/) | Medium |
 ## Iterator
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
+| [0284-peeking-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0284-peeking-iterator/) | Medium |
 ## Database
 | Problem Name | Difficulty |
 | ------- | ------- |
