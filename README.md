@@ -103,6 +103,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0283-move-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0283-move-zeroes/) | Easy |
 | [0284-peeking-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0284-peeking-iterator/) | Medium |
 | [0287-find-the-duplicate-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0287-find-the-duplicate-number/) | Medium |
+| [0289-game-of-life](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0289-game-of-life/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -286,6 +287,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0212-word-search-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0221-maximal-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0221-maximal-square/) | Medium |
 | [0240-search-a-2d-matrix-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0240-search-a-2d-matrix-ii/) | Medium |
+| [0289-game-of-life](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0289-game-of-life/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -617,6 +619,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
 | [0068-text-justification](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0068-text-justification/) | Hard |
 | [0258-add-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0258-add-digits/) | Easy |
+| [0289-game-of-life](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0289-game-of-life/) | Medium |
 ## Algorithm X
 | Problem Name | Difficulty |
 | ------- | ------- |
