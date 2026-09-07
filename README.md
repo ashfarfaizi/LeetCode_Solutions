@@ -398,6 +398,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0240-search-a-2d-matrix-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0240-search-a-2d-matrix-ii/) | Medium |
 | [0268-missing-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0268-missing-number/) | Easy |
 | [0275-h-index-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0275-h-index-ii/) | Medium |
+| [0278-first-bad-version](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0278-first-bad-version/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -977,4 +978,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
+## Interactive
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0278-first-bad-version](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0278-first-bad-version/) | Easy |
 <!---LeetCode Topics End-->
