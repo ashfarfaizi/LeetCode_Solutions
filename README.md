@@ -225,6 +225,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0282-expression-add-operators](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0282-expression-add-operators/) | Hard |
 | [0292-nim-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0292-nim-game/) | Easy |
 | [0313-super-ugly-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0313-super-ugly-number/) | Medium |
+| [0319-bulb-switcher](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0319-bulb-switcher/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -1061,6 +1062,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0292-nim-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0292-nim-game/) | Easy |
+| [0319-bulb-switcher](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0319-bulb-switcher/) | Medium |
 ## Nim Game
 | Problem Name | Difficulty |
 | ------- | ------- |
