@@ -391,6 +391,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0299-bulls-and-cows](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0299-bulls-and-cows/) | Medium |
 | [0301-remove-invalid-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0301-remove-invalid-parentheses/) | Hard |
 | [0306-additive-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0306-additive-number/) | Medium |
+| [0316-remove-duplicate-letters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -551,6 +552,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0134-gas-station](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0134-gas-station/) | Medium |
 | [0135-candy](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0135-candy/) | Hard |
 | [0179-largest-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0179-largest-number/) | Medium |
+| [0316-remove-duplicate-letters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -597,6 +599,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0224-basic-calculator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0224-basic-calculator/) | Hard |
 | [0225-implement-stack-using-queues](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0225-implement-stack-using-queues/) | Easy |
 | [0234-palindrome-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0234-palindrome-linked-list/) | Easy |
+| [0316-remove-duplicate-letters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0316-remove-duplicate-letters/) | Medium |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -639,6 +642,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0042-trapping-rain-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0042-trapping-rain-water/) | Hard |
 | [0084-largest-rectangle-in-histogram](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0084-largest-rectangle-in-histogram/) | Hard |
 | [0085-maximal-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0085-maximal-rectangle/) | Hard |
+| [0316-remove-duplicate-letters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0316-remove-duplicate-letters/) | Medium |
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
