@@ -115,6 +115,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0321-create-maximum-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0321-create-maximum-number/) | Hard |
 | [0322-coin-change](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0322-coin-change/) | Medium |
 | [0324-wiggle-sort-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0324-wiggle-sort-ii/) | Medium |
+| [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -440,6 +441,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0287-find-the-duplicate-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0300-longest-increasing-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0300-longest-increasing-subsequence/) | Medium |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
+| [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -458,6 +460,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0240-search-a-2d-matrix-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0240-search-a-2d-matrix-ii/) | Medium |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
 | [0324-wiggle-sort-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0324-wiggle-sort-ii/) | Medium |
+| [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -620,6 +623,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0023-merge-k-sorted-lists/) | Hard |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
+| [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1028,11 +1032,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0218-the-skyline-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0218-the-skyline-problem/) | Hard |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
+| [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 ## Segment Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0218-the-skyline-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0218-the-skyline-problem/) | Hard |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
+| [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 ## Sweep Line
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1043,6 +1049,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0218-the-skyline-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0218-the-skyline-problem/) | Hard |
 | [0220-contains-duplicate-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0220-contains-duplicate-iii/) | Hard |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
+| [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 ## Queue
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1099,4 +1106,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
+| [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 <!---LeetCode Topics End-->
