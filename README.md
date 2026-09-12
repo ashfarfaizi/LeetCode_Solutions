@@ -230,6 +230,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0292-nim-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0292-nim-game/) | Easy |
 | [0313-super-ugly-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0313-super-ugly-number/) | Medium |
 | [0319-bulb-switcher](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0319-bulb-switcher/) | Medium |
+| [0326-power-of-three](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0326-power-of-three/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -256,6 +257,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0234-palindrome-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [0273-integer-to-english-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0273-integer-to-english-words/) | Hard |
+| [0326-power-of-three](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0326-power-of-three/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
