@@ -120,6 +120,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0330-patching-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0330-patching-array/) | Hard |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0334-increasing-triplet-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0334-increasing-triplet-subsequence/) | Medium |
+| [0335-self-crossing](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0335-self-crossing/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -236,6 +237,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0313-super-ugly-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0313-super-ugly-number/) | Medium |
 | [0319-bulb-switcher](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0319-bulb-switcher/) | Medium |
 | [0326-power-of-three](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0326-power-of-three/) | Easy |
+| [0335-self-crossing](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0335-self-crossing/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -933,6 +935,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0223-rectangle-area](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0223-rectangle-area/) | Medium |
+| [0335-self-crossing](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0335-self-crossing/) | Hard |
 ## Euclidean Algorithm
 | Problem Name | Difficulty |
 | ------- | ------- |
