@@ -637,6 +637,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0316-remove-duplicate-letters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [0321-create-maximum-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0321-create-maximum-number/) | Hard |
 | [0331-verify-preorder-serialization-of-a-binary-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0331-verify-preorder-serialization-of-a-binary-tree/) | Medium |
+| [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -731,6 +732,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
+| [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -859,6 +861,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0257-binary-tree-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0331-verify-preorder-serialization-of-a-binary-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0331-verify-preorder-serialization-of-a-binary-tree/) | Medium |
+| [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -978,11 +981,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0303-range-sum-query-immutable](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0303-range-sum-query-immutable/) | Easy |
 | [0304-range-sum-query-2d-immutable](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
+| [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 ## Iterator
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0284-peeking-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0284-peeking-iterator/) | Medium |
+| [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 ## Database
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1086,6 +1091,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0225-implement-stack-using-queues](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0225-implement-stack-using-queues/) | Easy |
 | [0239-sliding-window-maximum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0239-sliding-window-maximum/) | Hard |
+| [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 ## Binary Lifting
 | Problem Name | Difficulty |
 | ------- | ------- |
