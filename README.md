@@ -122,6 +122,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0334-increasing-triplet-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0334-increasing-triplet-subsequence/) | Medium |
 | [0335-self-crossing](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0335-self-crossing/) | Hard |
 | [0336-palindrome-pairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0336-palindrome-pairs/) | Hard |
+| [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -169,6 +170,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0290-word-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0290-word-pattern/) | Easy |
 | [0299-bulls-and-cows](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0299-bulls-and-cows/) | Medium |
 | [0336-palindrome-pairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0336-palindrome-pairs/) | Hard |
+| [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -346,6 +348,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0274-h-index](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0274-h-index/) | Medium |
 | [0324-wiggle-sort-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0324-wiggle-sort-ii/) | Medium |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
+| [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
@@ -479,6 +482,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
 | [0324-wiggle-sort-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0324-wiggle-sort-ii/) | Medium |
 | [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
+| [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -579,6 +583,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0239-sliding-window-maximum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0264-ugly-number-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0264-ugly-number-ii/) | Medium |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
+| [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 ## Greedy
 | Problem Name | Difficulty |
@@ -605,6 +610,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0229-majority-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0229-majority-element-ii/) | Medium |
 | [0274-h-index](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0274-h-index/) | Medium |
 | [0299-bulls-and-cows](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0299-bulls-and-cows/) | Medium |
+| [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3517-smallest-palindromic-rearrangement-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3517-smallest-palindromic-rearrangement-i/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
@@ -965,6 +971,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0164-maximum-gap](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0164-maximum-gap/) | Medium |
 | [0220-contains-duplicate-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0220-contains-duplicate-iii/) | Hard |
+| [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Radix Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1072,6 +1079,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0324-wiggle-sort-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0324-wiggle-sort-ii/) | Medium |
+| [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Binary Indexed Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
