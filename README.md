@@ -418,6 +418,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0331-verify-preorder-serialization-of-a-binary-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0331-verify-preorder-serialization-of-a-binary-tree/) | Medium |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0336-palindrome-pairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0336-palindrome-pairs/) | Hard |
+| [0344-reverse-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0344-reverse-string/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -510,6 +511,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0283-move-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0283-move-zeroes/) | Easy |
 | [0287-find-the-duplicate-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0321-create-maximum-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0321-create-maximum-number/) | Hard |
+| [0344-reverse-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0344-reverse-string/) | Easy |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
