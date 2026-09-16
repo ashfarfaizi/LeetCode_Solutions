@@ -250,6 +250,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0335-self-crossing](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0335-self-crossing/) | Hard |
 | [0342-power-of-four](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0342-power-of-four/) | Easy |
 | [0343-integer-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0343-integer-break/) | Medium |
+| [0357-count-numbers-with-unique-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0357-count-numbers-with-unique-digits/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -306,6 +307,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0282-expression-add-operators](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0282-expression-add-operators/) | Hard |
 | [0301-remove-invalid-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0301-remove-invalid-parentheses/) | Hard |
 | [0306-additive-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0306-additive-number/) | Medium |
+| [0357-count-numbers-with-unique-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0357-count-numbers-with-unique-digits/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
@@ -582,6 +584,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0343-integer-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0343-integer-break/) | Medium |
 | [0354-russian-doll-envelopes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0354-russian-doll-envelopes/) | Hard |
+| [0357-count-numbers-with-unique-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0357-count-numbers-with-unique-digits/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
