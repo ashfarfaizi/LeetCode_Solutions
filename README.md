@@ -253,6 +253,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0343-integer-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0343-integer-break/) | Medium |
 | [0357-count-numbers-with-unique-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0357-count-numbers-with-unique-digits/) | Medium |
 | [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
+| [0367-valid-perfect-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0367-valid-perfect-square/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -480,6 +481,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0352-data-stream-as-disjoint-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0352-data-stream-as-disjoint-intervals/) | Hard |
 | [0354-russian-doll-envelopes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0363-max-sum-of-rectangle-no-larger-than-k](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0363-max-sum-of-rectangle-no-larger-than-k/) | Hard |
+| [0367-valid-perfect-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0367-valid-perfect-square/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
