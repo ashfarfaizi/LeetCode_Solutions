@@ -252,6 +252,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0342-power-of-four](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0342-power-of-four/) | Easy |
 | [0343-integer-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0343-integer-break/) | Medium |
 | [0357-count-numbers-with-unique-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0357-count-numbers-with-unique-digits/) | Medium |
+| [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -768,6 +769,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
+| [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -795,6 +797,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0301-remove-invalid-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0301-remove-invalid-parentheses/) | Hard |
 | [0322-coin-change](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0322-coin-change/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
+| [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
@@ -984,10 +987,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
+| [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 ## Greatest Common Divisor
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
+| [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 ## Bucket Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1205,4 +1210,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0352-data-stream-as-disjoint-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0352-data-stream-as-disjoint-intervals/) | Hard |
+## Bézout's Lemma
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
+## Extended Euclidean Algorithm
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 <!---LeetCode Topics End-->
