@@ -488,6 +488,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0354-russian-doll-envelopes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0363-max-sum-of-rectangle-no-larger-than-k](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0363-max-sum-of-rectangle-no-larger-than-k/) | Hard |
 | [0367-valid-perfect-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0367-valid-perfect-square/) | Easy |
+| [0374-guess-number-higher-or-lower](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0374-guess-number-higher-or-lower/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1172,6 +1173,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0278-first-bad-version](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0278-first-bad-version/) | Easy |
+| [0374-guess-number-higher-or-lower](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0374-guess-number-higher-or-lower/) | Easy |
 ## Knapsack Problem
 | Problem Name | Difficulty |
 | ------- | ------- |
