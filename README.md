@@ -257,6 +257,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0367-valid-perfect-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0367-valid-perfect-square/) | Easy |
 | [0368-largest-divisible-subset](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0368-largest-divisible-subset/) | Medium |
 | [0371-sum-of-two-integers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0371-sum-of-two-integers/) | Medium |
+| [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -506,6 +507,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0324-wiggle-sort-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0324-wiggle-sort-ii/) | Medium |
 | [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1226,4 +1228,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
+## Euler's Totient Function
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
+## Euler's Theorem
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
 <!---LeetCode Topics End-->
