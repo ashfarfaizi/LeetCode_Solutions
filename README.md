@@ -131,6 +131,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0376-wiggle-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0376-wiggle-subsequence/) | Medium |
 | [0377-combination-sum-iv](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0377-combination-sum-iv/) | Medium |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
+| [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -182,6 +183,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0349-intersection-of-two-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0349-intersection-of-two-arrays/) | Easy |
 | [0352-data-stream-as-disjoint-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0352-data-stream-as-disjoint-intervals/) | Hard |
 | [0355-design-twitter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0355-design-twitter/) | Medium |
+| [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -263,6 +265,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0371-sum-of-two-integers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0371-sum-of-two-integers/) | Medium |
 | [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
 | [0375-guess-number-higher-or-lower-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0375-guess-number-higher-or-lower-ii/) | Medium |
+| [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -1054,6 +1057,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 | [0352-data-stream-as-disjoint-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0352-data-stream-as-disjoint-intervals/) | Hard |
 | [0355-design-twitter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0355-design-twitter/) | Medium |
+| [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 ## Iterator
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1254,4 +1258,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
+## Randomized
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 <!---LeetCode Topics End-->
