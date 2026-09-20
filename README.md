@@ -130,6 +130,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0373-find-k-pairs-with-smallest-sums](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0373-find-k-pairs-with-smallest-sums/) | Medium |
 | [0376-wiggle-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0376-wiggle-subsequence/) | Medium |
 | [0377-combination-sum-iv](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0377-combination-sum-iv/) | Medium |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -344,6 +345,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0304-range-sum-query-2d-immutable](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0363-max-sum-of-rectangle-no-larger-than-k](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0363-max-sum-of-rectangle-no-larger-than-k/) | Hard |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -372,6 +374,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0349-intersection-of-two-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0349-intersection-of-two-arrays/) | Easy |
 | [0354-russian-doll-envelopes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0368-largest-divisible-subset](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0368-largest-divisible-subset/) | Medium |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
@@ -492,6 +495,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0363-max-sum-of-rectangle-no-larger-than-k](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0363-max-sum-of-rectangle-no-larger-than-k/) | Hard |
 | [0367-valid-perfect-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0367-valid-perfect-square/) | Easy |
 | [0374-guess-number-higher-or-lower](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0374-guess-number-higher-or-lower/) | Easy |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -623,6 +627,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0355-design-twitter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0355-design-twitter/) | Medium |
 | [0373-find-k-pairs-with-smallest-sums](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0373-find-k-pairs-with-smallest-sums/) | Medium |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 ## Greedy
 | Problem Name | Difficulty |
