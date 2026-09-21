@@ -133,6 +133,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
+| [0384-shuffle-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0384-shuffle-an-array/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -272,6 +273,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
+| [0384-shuffle-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0384-shuffle-an-array/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -1067,6 +1069,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0355-design-twitter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0355-design-twitter/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
+| [0384-shuffle-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0384-shuffle-an-array/) | Medium |
 ## Iterator
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1273,6 +1276,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
+| [0384-shuffle-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0384-shuffle-an-array/) | Medium |
 ## Reservoir Sampling
 | Problem Name | Difficulty |
 | ------- | ------- |
