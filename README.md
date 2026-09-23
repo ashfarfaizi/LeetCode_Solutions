@@ -189,6 +189,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0383-ransom-note](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0383-ransom-note/) | Easy |
 | [0387-first-unique-character-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0387-first-unique-character-in-a-string/) | Easy |
+| [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -387,6 +388,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0354-russian-doll-envelopes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0368-largest-divisible-subset](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0368-largest-divisible-subset/) | Medium |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
+| [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
@@ -464,6 +466,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0383-ransom-note](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0383-ransom-note/) | Easy |
 | [0385-mini-parser](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0385-mini-parser/) | Medium |
 | [0387-first-unique-character-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0387-first-unique-character-in-a-string/) | Easy |
+| [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -742,6 +745,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0318-maximum-product-of-word-lengths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0318-maximum-product-of-word-lengths/) | Medium |
 | [0342-power-of-four](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0342-power-of-four/) | Easy |
 | [0371-sum-of-two-integers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0371-sum-of-two-integers/) | Medium |
+| [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
