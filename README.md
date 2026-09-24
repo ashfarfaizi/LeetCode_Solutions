@@ -310,6 +310,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0326-power-of-three](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0326-power-of-three/) | Easy |
 | [0342-power-of-four](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0342-power-of-four/) | Easy |
 | [0390-elimination-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0390-elimination-game/) | Medium |
+| [0394-decode-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0394-decode-string/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -475,6 +476,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0388-longest-absolute-file-path](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0388-longest-absolute-file-path/) | Medium |
 | [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
 | [0392-is-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0392-is-subsequence/) | Easy |
+| [0394-decode-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0394-decode-string/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -729,6 +731,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 | [0385-mini-parser](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0385-mini-parser/) | Medium |
 | [0388-longest-absolute-file-path](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0388-longest-absolute-file-path/) | Medium |
+| [0394-decode-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0394-decode-string/) | Medium |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
