@@ -473,6 +473,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0387-first-unique-character-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0387-first-unique-character-in-a-string/) | Easy |
 | [0388-longest-absolute-file-path](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0388-longest-absolute-file-path/) | Medium |
 | [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
+| [0392-is-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0392-is-subsequence/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -577,6 +578,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0344-reverse-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0344-reverse-string/) | Easy |
 | [0345-reverse-vowels-of-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0345-reverse-vowels-of-a-string/) | Easy |
 | [0349-intersection-of-two-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0349-intersection-of-two-arrays/) | Easy |
+| [0392-is-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0392-is-subsequence/) | Easy |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -634,6 +636,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0375-guess-number-higher-or-lower-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0375-guess-number-higher-or-lower-ii/) | Medium |
 | [0376-wiggle-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0376-wiggle-subsequence/) | Medium |
 | [0377-combination-sum-iv](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0377-combination-sum-iv/) | Medium |
+| [0392-is-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0392-is-subsequence/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
