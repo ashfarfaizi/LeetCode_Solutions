@@ -194,6 +194,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0387-first-unique-character-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0387-first-unique-character-in-a-string/) | Easy |
 | [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
 | [0391-perfect-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0391-perfect-rectangle/) | Hard |
+| [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -480,6 +481,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
 | [0392-is-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0392-is-subsequence/) | Easy |
 | [0394-decode-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0394-decode-string/) | Medium |
+| [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -496,6 +498,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0219-contains-duplicate-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0219-contains-duplicate-ii/) | Easy |
 | [0220-contains-duplicate-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0220-contains-duplicate-iii/) | Hard |
 | [0239-sliding-window-maximum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0239-sliding-window-maximum/) | Hard |
+| [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -548,6 +551,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
+| [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
