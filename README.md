@@ -86,6 +86,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0212-word-search-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0213-house-robber-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0213-house-robber-ii/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
+| [0216-combination-sum-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0216-combination-sum-iii/) | Medium |
 | [0217-contains-duplicate](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0217-contains-duplicate/) | Easy |
 | [0218-the-skyline-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0218-the-skyline-problem/) | Hard |
 | [0219-contains-duplicate-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0219-contains-duplicate-ii/) | Easy |
@@ -335,6 +336,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0131-palindrome-partitioning](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0131-palindrome-partitioning/) | Medium |
 | [0140-word-break-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0212-word-search-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0212-word-search-ii/) | Hard |
+| [0216-combination-sum-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0216-combination-sum-iii/) | Medium |
 | [0257-binary-tree-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0282-expression-add-operators](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0282-expression-add-operators/) | Hard |
 | [0301-remove-invalid-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0301-remove-invalid-parentheses/) | Hard |
