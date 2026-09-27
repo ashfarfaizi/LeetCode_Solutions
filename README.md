@@ -137,6 +137,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0384-shuffle-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0384-shuffle-an-array/) | Medium |
 | [0391-perfect-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0391-perfect-rectangle/) | Hard |
 | [0393-utf-8-validation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0393-utf-8-validation/) | Medium |
+| [0396-rotate-function](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0396-rotate-function/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -283,6 +284,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0384-shuffle-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0384-shuffle-an-array/) | Medium |
 | [0390-elimination-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0390-elimination-game/) | Medium |
 | [0391-perfect-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0391-perfect-rectangle/) | Hard |
+| [0396-rotate-function](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0396-rotate-function/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -647,6 +649,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0376-wiggle-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0376-wiggle-subsequence/) | Medium |
 | [0377-combination-sum-iv](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0377-combination-sum-iv/) | Medium |
 | [0392-is-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0392-is-subsequence/) | Easy |
+| [0396-rotate-function](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0396-rotate-function/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
