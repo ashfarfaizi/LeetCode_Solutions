@@ -286,6 +286,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0390-elimination-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0390-elimination-game/) | Medium |
 | [0391-perfect-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0391-perfect-rectangle/) | Hard |
 | [0396-rotate-function](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0396-rotate-function/) | Medium |
+| [0400-nth-digit](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0400-nth-digit/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -534,6 +535,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0367-valid-perfect-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0367-valid-perfect-square/) | Easy |
 | [0374-guess-number-higher-or-lower](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0374-guess-number-higher-or-lower/) | Easy |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
+| [0400-nth-digit](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0400-nth-digit/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
