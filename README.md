@@ -347,6 +347,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0301-remove-invalid-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0301-remove-invalid-parentheses/) | Hard |
 | [0306-additive-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0306-additive-number/) | Medium |
 | [0357-count-numbers-with-unique-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0357-count-numbers-with-unique-digits/) | Medium |
+| [0401-binary-watch](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0401-binary-watch/) | Easy |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
@@ -778,6 +779,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
 | [0393-utf-8-validation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0393-utf-8-validation/) | Medium |
 | [0397-integer-replacement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0397-integer-replacement/) | Medium |
+| [0401-binary-watch](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0401-binary-watch/) | Easy |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
