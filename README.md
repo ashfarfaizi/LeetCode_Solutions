@@ -199,6 +199,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0389-find-the-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0389-find-the-difference/) | Easy |
 | [0391-perfect-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0391-perfect-rectangle/) | Hard |
 | [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
+| [0409-longest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0409-longest-palindrome/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -494,6 +495,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 | [0405-convert-a-number-to-hexadecimal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0405-convert-a-number-to-hexadecimal/) | Easy |
+| [0409-longest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0409-longest-palindrome/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -699,6 +701,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0334-increasing-triplet-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0334-increasing-triplet-subsequence/) | Medium |
 | [0376-wiggle-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0376-wiggle-subsequence/) | Medium |
 | [0397-integer-replacement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0397-integer-replacement/) | Medium |
+| [0409-longest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0409-longest-palindrome/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
