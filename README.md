@@ -287,6 +287,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0391-perfect-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0391-perfect-rectangle/) | Hard |
 | [0396-rotate-function](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0396-rotate-function/) | Medium |
 | [0400-nth-digit](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0400-nth-digit/) | Medium |
+| [0405-convert-a-number-to-hexadecimal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0405-convert-a-number-to-hexadecimal/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -488,6 +489,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0394-decode-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0394-decode-string/) | Medium |
 | [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
+| [0405-convert-a-number-to-hexadecimal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0405-convert-a-number-to-hexadecimal/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -780,6 +782,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0393-utf-8-validation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0393-utf-8-validation/) | Medium |
 | [0397-integer-replacement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0397-integer-replacement/) | Medium |
 | [0401-binary-watch](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0401-binary-watch/) | Easy |
+| [0405-convert-a-number-to-hexadecimal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0405-convert-a-number-to-hexadecimal/) | Easy |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
