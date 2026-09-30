@@ -140,6 +140,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0396-rotate-function](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0396-rotate-function/) | Medium |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 | [0406-queue-reconstruction-by-height](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0406-queue-reconstruction-by-height/) | Medium |
+| [0407-trapping-rain-water-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0407-trapping-rain-water-ii/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -376,6 +377,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0363-max-sum-of-rectangle-no-larger-than-k](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0363-max-sum-of-rectangle-no-larger-than-k/) | Hard |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
+| [0407-trapping-rain-water-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0407-trapping-rain-water-ii/) | Hard |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -678,6 +680,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0355-design-twitter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0355-design-twitter/) | Medium |
 | [0373-find-k-pairs-with-smallest-sums](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0373-find-k-pairs-with-smallest-sums/) | Medium |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
+| [0407-trapping-rain-water-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0407-trapping-rain-water-ii/) | Hard |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 ## Greedy
 | Problem Name | Difficulty |
@@ -891,6 +894,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 | [0404-sum-of-left-leaves](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0404-sum-of-left-leaves/) | Easy |
+| [0407-trapping-rain-water-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0407-trapping-rain-water-ii/) | Hard |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
