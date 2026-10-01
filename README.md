@@ -291,6 +291,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0396-rotate-function](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0396-rotate-function/) | Medium |
 | [0400-nth-digit](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0400-nth-digit/) | Medium |
 | [0405-convert-a-number-to-hexadecimal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0405-convert-a-number-to-hexadecimal/) | Easy |
+| [0412-fizz-buzz](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0412-fizz-buzz/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -496,6 +497,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 | [0405-convert-a-number-to-hexadecimal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0405-convert-a-number-to-hexadecimal/) | Easy |
 | [0409-longest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0409-longest-palindrome/) | Easy |
+| [0412-fizz-buzz](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0412-fizz-buzz/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -823,6 +825,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0068-text-justification](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0068-text-justification/) | Hard |
 | [0258-add-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0258-add-digits/) | Easy |
 | [0289-game-of-life](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0289-game-of-life/) | Medium |
+| [0412-fizz-buzz](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0412-fizz-buzz/) | Easy |
 ## Algorithm X
 | Problem Name | Difficulty |
 | ------- | ------- |
