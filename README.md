@@ -141,6 +141,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 | [0406-queue-reconstruction-by-height](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0406-queue-reconstruction-by-height/) | Medium |
 | [0407-trapping-rain-water-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0407-trapping-rain-water-ii/) | Hard |
+| [0413-arithmetic-slices](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0413-arithmetic-slices/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -515,6 +516,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0220-contains-duplicate-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0220-contains-duplicate-iii/) | Hard |
 | [0239-sliding-window-maximum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
+| [0413-arithmetic-slices](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0413-arithmetic-slices/) | Medium |
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -666,6 +668,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0392-is-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0392-is-subsequence/) | Easy |
 | [0396-rotate-function](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0396-rotate-function/) | Medium |
 | [0397-integer-replacement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0397-integer-replacement/) | Medium |
+| [0413-arithmetic-slices](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0413-arithmetic-slices/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
