@@ -144,6 +144,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0413-arithmetic-slices](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0413-arithmetic-slices/) | Medium |
 | [0414-third-maximum-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0414-third-maximum-number/) | Easy |
 | [0416-partition-equal-subset-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0416-partition-equal-subset-sum/) | Medium |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -203,6 +204,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0391-perfect-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0391-perfect-rectangle/) | Hard |
 | [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
 | [0409-longest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0409-longest-palindrome/) | Easy |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -742,6 +744,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0211-design-add-and-search-words-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0211-design-add-and-search-words-data-structure/) | Medium |
 | [0212-word-search-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0336-palindrome-pairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0336-palindrome-pairs/) | Hard |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 ## Combinatorics
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -805,6 +808,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0397-integer-replacement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0397-integer-replacement/) | Medium |
 | [0401-binary-watch](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0401-binary-watch/) | Easy |
 | [0405-convert-a-number-to-hexadecimal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0405-convert-a-number-to-hexadecimal/) | Easy |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
