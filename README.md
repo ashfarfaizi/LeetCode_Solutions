@@ -927,6 +927,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 | [0404-sum-of-left-leaves](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0404-sum-of-left-leaves/) | Easy |
 | [0407-trapping-rain-water-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0407-trapping-rain-water-ii/) | Hard |
+| [0429-n-ary-tree-level-order-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0429-n-ary-tree-level-order-traversal/) | Medium |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
@@ -1035,6 +1036,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 | [0404-sum-of-left-leaves](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0404-sum-of-left-leaves/) | Easy |
 | [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
+| [0429-n-ary-tree-level-order-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0429-n-ary-tree-level-order-traversal/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
