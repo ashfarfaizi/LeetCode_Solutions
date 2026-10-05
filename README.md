@@ -208,6 +208,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0423-reconstruct-original-digits-from-english](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0423-reconstruct-original-digits-from-english/) | Medium |
 | [0424-longest-repeating-character-replacement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0424-longest-repeating-character-replacement/) | Medium |
+| [0432-all-oone-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0432-all-oone-data-structure/) | Hard |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
@@ -238,6 +239,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0355-design-twitter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0355-design-twitter/) | Medium |
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
 | [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0430-flatten-a-multilevel-doubly-linked-list/) | Medium |
+| [0432-all-oone-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0432-all-oone-data-structure/) | Hard |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1171,6 +1173,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0384-shuffle-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0384-shuffle-an-array/) | Medium |
+| [0432-all-oone-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0432-all-oone-data-structure/) | Hard |
 ## Iterator
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1407,4 +1410,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0430-flatten-a-multilevel-doubly-linked-list/) | Medium |
+| [0432-all-oone-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0432-all-oone-data-structure/) | Hard |
 <!---LeetCode Topics End-->
