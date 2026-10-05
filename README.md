@@ -237,6 +237,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0237-delete-node-in-a-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0237-delete-node-in-a-linked-list/) | Medium |
 | [0355-design-twitter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0355-design-twitter/) | Medium |
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
+| [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0430-flatten-a-multilevel-doubly-linked-list/) | Medium |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -896,6 +897,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0388-longest-absolute-file-path](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0388-longest-absolute-file-path/) | Medium |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 | [0404-sum-of-left-leaves](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0404-sum-of-left-leaves/) | Easy |
+| [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0430-flatten-a-multilevel-doubly-linked-list/) | Medium |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -1401,4 +1403,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0416-partition-equal-subset-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0416-partition-equal-subset-sum/) | Medium |
+## Doubly-Linked List
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0430-flatten-a-multilevel-doubly-linked-list/) | Medium |
 <!---LeetCode Topics End-->
