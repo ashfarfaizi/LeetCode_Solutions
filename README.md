@@ -145,6 +145,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0414-third-maximum-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0414-third-maximum-number/) | Easy |
 | [0416-partition-equal-subset-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
+| [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -389,6 +390,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0363-max-sum-of-rectangle-no-larger-than-k](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0363-max-sum-of-rectangle-no-larger-than-k/) | Hard |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0407-trapping-rain-water-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0407-trapping-rain-water-ii/) | Hard |
+| [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -585,6 +587,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
 | [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
+| [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1031,6 +1034,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0331-verify-preorder-serialization-of-a-binary-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0331-verify-preorder-serialization-of-a-binary-tree/) | Medium |
 | [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 | [0404-sum-of-left-leaves](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0404-sum-of-left-leaves/) | Easy |
+| [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
