@@ -244,6 +244,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
 | [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0430-flatten-a-multilevel-doubly-linked-list/) | Medium |
 | [0432-all-oone-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0432-all-oone-data-structure/) | Hard |
+| [0445-add-two-numbers-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0445-add-two-numbers-ii/) | Medium |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -310,6 +311,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0415-add-strings](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0415-add-strings/) | Easy |
 | [0423-reconstruct-original-digits-from-english](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0423-reconstruct-original-digits-from-english/) | Medium |
 | [0441-arranging-coins](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0441-arranging-coins/) | Easy |
+| [0445-add-two-numbers-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0445-add-two-numbers-ii/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -806,6 +808,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0385-mini-parser](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0385-mini-parser/) | Medium |
 | [0388-longest-absolute-file-path](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0388-longest-absolute-file-path/) | Medium |
 | [0394-decode-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0394-decode-string/) | Medium |
+| [0445-add-two-numbers-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0445-add-two-numbers-ii/) | Medium |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
