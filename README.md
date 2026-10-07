@@ -148,6 +148,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
 | [0435-non-overlapping-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0435-non-overlapping-intervals/) | Medium |
 | [0436-find-right-interval](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0436-find-right-interval/) | Medium |
+| [0442-find-all-duplicates-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0442-find-all-duplicates-in-an-array/) | Medium |
 | [0446-arithmetic-slices-ii-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0446-arithmetic-slices-ii-subsequence/) | Hard |
 | [0447-number-of-boomerangs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0447-number-of-boomerangs/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
@@ -215,6 +216,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0432-all-oone-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0432-all-oone-data-structure/) | Hard |
 | [0433-minimum-genetic-mutation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0438-find-all-anagrams-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0438-find-all-anagrams-in-a-string/) | Medium |
+| [0442-find-all-duplicates-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0442-find-all-duplicates-in-an-array/) | Medium |
 | [0447-number-of-boomerangs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0447-number-of-boomerangs/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
@@ -439,6 +441,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0414-third-maximum-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0414-third-maximum-number/) | Easy |
 | [0435-non-overlapping-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0435-non-overlapping-intervals/) | Medium |
 | [0436-find-right-interval](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0436-find-right-interval/) | Medium |
+| [0442-find-all-duplicates-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0442-find-all-duplicates-in-an-array/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
