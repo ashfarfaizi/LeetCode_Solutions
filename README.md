@@ -527,6 +527,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0433-minimum-genetic-mutation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0434-number-of-segments-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0434-number-of-segments-in-a-string/) | Easy |
 | [0438-find-all-anagrams-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0438-find-all-anagrams-in-a-string/) | Medium |
+| [0443-string-compression](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0443-string-compression/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -641,6 +642,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0345-reverse-vowels-of-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0345-reverse-vowels-of-a-string/) | Easy |
 | [0349-intersection-of-two-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0349-intersection-of-two-arrays/) | Easy |
 | [0392-is-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0392-is-subsequence/) | Easy |
+| [0443-string-compression](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0443-string-compression/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
