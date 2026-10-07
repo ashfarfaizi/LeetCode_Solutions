@@ -770,6 +770,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0212-word-search-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0336-palindrome-pairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0336-palindrome-pairs/) | Hard |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
+| [0440-k-th-smallest-in-lexicographical-order](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0440-k-th-smallest-in-lexicographical-order/) | Hard |
 ## Combinatorics
 | Problem Name | Difficulty |
 | ------- | ------- |
