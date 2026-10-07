@@ -1084,6 +1084,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0429-n-ary-tree-level-order-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0429-n-ary-tree-level-order-traversal/) | Medium |
 | [0437-path-sum-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0437-path-sum-iii/) | Medium |
 | [0449-serialize-and-deserialize-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
+| [0450-delete-node-in-a-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0450-delete-node-in-a-bst/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1124,6 +1125,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0404-sum-of-left-leaves](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0404-sum-of-left-leaves/) | Easy |
 | [0437-path-sum-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0437-path-sum-iii/) | Medium |
 | [0449-serialize-and-deserialize-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
+| [0450-delete-node-in-a-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0450-delete-node-in-a-bst/) | Medium |
 ## Binary Search Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1137,6 +1139,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0230-kth-smallest-element-in-a-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
 | [0449-serialize-and-deserialize-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
+| [0450-delete-node-in-a-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0450-delete-node-in-a-bst/) | Medium |
 ## DP on Trees
 | Problem Name | Difficulty |
 | ------- | ------- |
