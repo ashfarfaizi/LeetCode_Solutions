@@ -154,6 +154,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0447-number-of-boomerangs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0447-number-of-boomerangs/) | Medium |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0448-find-all-numbers-disappeared-in-an-array/) | Easy |
 | [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0452-minimum-number-of-arrows-to-burst-balloons/) | Medium |
+| [0453-minimum-moves-to-equal-array-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -323,6 +324,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0441-arranging-coins](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0441-arranging-coins/) | Easy |
 | [0445-add-two-numbers-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0445-add-two-numbers-ii/) | Medium |
 | [0447-number-of-boomerangs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0447-number-of-boomerangs/) | Medium |
+| [0453-minimum-moves-to-equal-array-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
