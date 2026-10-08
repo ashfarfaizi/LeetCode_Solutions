@@ -330,6 +330,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0445-add-two-numbers-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0445-add-two-numbers-ii/) | Medium |
 | [0447-number-of-boomerangs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0447-number-of-boomerangs/) | Medium |
 | [0453-minimum-moves-to-equal-array-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0453-minimum-moves-to-equal-array-elements/) | Medium |
+| [0458-poor-pigs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0458-poor-pigs/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -736,6 +737,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0416-partition-equal-subset-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0435-non-overlapping-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0435-non-overlapping-intervals/) | Medium |
 | [0446-arithmetic-slices-ii-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0446-arithmetic-slices-ii-subsequence/) | Hard |
+| [0458-poor-pigs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0458-poor-pigs/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -813,6 +815,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0062-unique-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0062-unique-paths/) | Medium |
+| [0458-poor-pigs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0458-poor-pigs/) | Hard |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 ## Stack
 | Problem Name | Difficulty |
