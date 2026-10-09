@@ -885,6 +885,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0401-binary-watch](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0401-binary-watch/) | Easy |
 | [0405-convert-a-number-to-hexadecimal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0405-convert-a-number-to-hexadecimal/) | Easy |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
+| [0461-hamming-distance](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0461-hamming-distance/) | Easy |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
