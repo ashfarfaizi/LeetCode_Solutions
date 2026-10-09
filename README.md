@@ -160,6 +160,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0456-132-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0456-132-pattern/) | Medium |
 | [0457-circular-array-loop](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0457-circular-array-loop/) | Medium |
 | [0462-minimum-moves-to-equal-array-elements-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0462-minimum-moves-to-equal-array-elements-ii/) | Medium |
+| [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -425,6 +426,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0407-trapping-rain-water-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0407-trapping-rain-water-ii/) | Hard |
 | [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
+| [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -972,6 +974,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0430-flatten-a-multilevel-doubly-linked-list/) | Medium |
 | [0437-path-sum-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0437-path-sum-iii/) | Medium |
 | [0449-serialize-and-deserialize-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
+| [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -1006,6 +1009,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0429-n-ary-tree-level-order-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0429-n-ary-tree-level-order-traversal/) | Medium |
 | [0433-minimum-genetic-mutation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0449-serialize-and-deserialize-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
+| [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
