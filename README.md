@@ -162,6 +162,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0462-minimum-moves-to-equal-array-elements-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0462-minimum-moves-to-equal-array-elements-ii/) | Medium |
 | [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
 | [0472-concatenated-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0472-concatenated-words/) | Hard |
+| [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -401,6 +402,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0306-additive-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0306-additive-number/) | Medium |
 | [0357-count-numbers-with-unique-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0357-count-numbers-with-unique-digits/) | Medium |
 | [0401-binary-watch](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0401-binary-watch/) | Easy |
+| [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
@@ -762,6 +764,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0466-count-the-repetitions](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0466-count-the-repetitions/) | Hard |
 | [0467-unique-substrings-in-wraparound-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0467-unique-substrings-in-wraparound-string/) | Medium |
 | [0472-concatenated-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0472-concatenated-words/) | Hard |
+| [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -906,6 +909,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0461-hamming-distance](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0461-hamming-distance/) | Easy |
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
+| [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1531,6 +1535,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
+| [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 ## Rejection Sampling
 | Problem Name | Difficulty |
 | ------- | ------- |
