@@ -338,6 +338,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0458-poor-pigs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0458-poor-pigs/) | Hard |
 | [0462-minimum-moves-to-equal-array-elements-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0462-minimum-moves-to-equal-array-elements-ii/) | Medium |
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
+| [0470-implement-rand10-using-rand7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0470-implement-rand10-using-rand7/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -1493,6 +1494,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
 | [0384-shuffle-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0384-shuffle-an-array/) | Medium |
+| [0470-implement-rand10-using-rand7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0470-implement-rand10-using-rand7/) | Medium |
 ## Reservoir Sampling
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1523,4 +1525,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
+## Rejection Sampling
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0470-implement-rand10-using-rand7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0470-implement-rand10-using-rand7/) | Medium |
+## Probability and Statistics
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0470-implement-rand10-using-rand7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0470-implement-rand10-using-rand7/) | Medium |
 <!---LeetCode Topics End-->
