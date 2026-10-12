@@ -164,6 +164,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0472-concatenated-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0472-concatenated-words/) | Hard |
 | [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0474-ones-and-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0474-ones-and-zeroes/) | Medium |
+| [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -473,6 +474,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0455-assign-cookies](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0455-assign-cookies/) | Easy |
 | [0462-minimum-moves-to-equal-array-elements-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0462-minimum-moves-to-equal-array-elements-ii/) | Medium |
 | [0472-concatenated-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0472-concatenated-words/) | Hard |
+| [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
@@ -632,6 +634,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0436-find-right-interval](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0436-find-right-interval/) | Medium |
 | [0441-arranging-coins](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0441-arranging-coins/) | Easy |
 | [0456-132-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0456-132-pattern/) | Medium |
+| [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -696,6 +699,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0455-assign-cookies](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0455-assign-cookies/) | Easy |
 | [0457-circular-array-loop](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0457-circular-array-loop/) | Medium |
 | [0466-count-the-repetitions](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0466-count-the-repetitions/) | Hard |
+| [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
