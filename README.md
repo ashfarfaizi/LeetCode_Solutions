@@ -917,6 +917,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0461-hamming-distance](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0461-hamming-distance/) | Easy |
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
 | [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
+| [0476-number-complement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0476-number-complement/) | Easy |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
