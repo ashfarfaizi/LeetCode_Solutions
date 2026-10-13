@@ -584,6 +584,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0468-validate-ip-address](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0468-validate-ip-address/) | Medium |
 | [0472-concatenated-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0472-concatenated-words/) | Hard |
 | [0474-ones-and-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0474-ones-and-zeroes/) | Medium |
+| [0481-magical-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0481-magical-string/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -707,6 +708,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0457-circular-array-loop](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0457-circular-array-loop/) | Medium |
 | [0466-count-the-repetitions](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0466-count-the-repetitions/) | Hard |
 | [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
+| [0481-magical-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0481-magical-string/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
