@@ -346,6 +346,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0470-implement-rand10-using-rand7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0470-implement-rand10-using-rand7/) | Medium |
 | [0477-total-hamming-distance](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0477-total-hamming-distance/) | Medium |
 | [0478-generate-random-point-in-a-circle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0478-generate-random-point-in-a-circle/) | Medium |
+| [0479-largest-palindrome-product](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0479-largest-palindrome-product/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -1064,6 +1065,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
+| [0479-largest-palindrome-product](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0479-largest-palindrome-product/) | Hard |
 | [3345-smallest-divisible-digit-product-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3345-smallest-divisible-digit-product-i/) | Easy |
 ## Number Theory
 | Problem Name | Difficulty |
