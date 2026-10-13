@@ -349,6 +349,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0477-total-hamming-distance](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0477-total-hamming-distance/) | Medium |
 | [0478-generate-random-point-in-a-circle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0478-generate-random-point-in-a-circle/) | Medium |
 | [0479-largest-palindrome-product](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0479-largest-palindrome-product/) | Hard |
+| [0483-smallest-good-base](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0483-smallest-good-base/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -644,6 +645,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0441-arranging-coins](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0441-arranging-coins/) | Easy |
 | [0456-132-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0456-132-pattern/) | Medium |
 | [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
+| [0483-smallest-good-base](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0483-smallest-good-base/) | Hard |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
