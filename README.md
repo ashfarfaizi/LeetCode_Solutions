@@ -587,6 +587,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0474-ones-and-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0481-magical-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0481-magical-string/) | Medium |
 | [0482-license-key-formatting](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0482-license-key-formatting/) | Easy |
+| [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
@@ -785,6 +786,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0474-ones-and-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
+| [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 | [1406-stone-game-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1406-stone-game-iii/) | Hard |
@@ -894,6 +896,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0394-decode-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0394-decode-string/) | Medium |
 | [0445-add-two-numbers-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0445-add-two-numbers-ii/) | Medium |
 | [0456-132-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0456-132-pattern/) | Medium |
+| [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1053,6 +1056,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0433-minimum-genetic-mutation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0449-serialize-and-deserialize-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
+| [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
@@ -1096,6 +1100,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0397-integer-replacement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0397-integer-replacement/) | Medium |
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
+| [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 ## Minimax
 | Problem Name | Difficulty |
 | ------- | ------- |
