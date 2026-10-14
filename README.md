@@ -169,6 +169,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0480-sliding-window-median](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0480-sliding-window-median/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0491-non-decreasing-subsequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0491-non-decreasing-subsequences/) | Medium |
+| [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -416,6 +417,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0401-binary-watch](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0401-binary-watch/) | Easy |
 | [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0491-non-decreasing-subsequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0491-non-decreasing-subsequences/) | Medium |
+| [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
@@ -791,6 +793,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0474-ones-and-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
+| [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 | [1406-stone-game-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1406-stone-game-iii/) | Hard |
@@ -1471,6 +1474,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0322-coin-change](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0322-coin-change/) | Medium |
 | [0416-partition-equal-subset-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0474-ones-and-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0474-ones-and-zeroes/) | Medium |
+| [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
 ## Complete Knapsack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1563,6 +1567,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0416-partition-equal-subset-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0474-ones-and-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0474-ones-and-zeroes/) | Medium |
+| [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
 ## Doubly-Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
