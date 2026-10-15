@@ -173,6 +173,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0495-teemo-attacking](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0495-teemo-attacking/) | Easy |
 | [0496-next-greater-element-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0496-next-greater-element-i/) | Easy |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
+| [0498-diagonal-traverse](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0498-diagonal-traverse/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -452,6 +453,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0407-trapping-rain-water-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0407-trapping-rain-water-ii/) | Hard |
 | [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
 | [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
+| [0498-diagonal-traverse](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0498-diagonal-traverse/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -989,6 +991,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0412-fizz-buzz](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0412-fizz-buzz/) | Easy |
 | [0415-add-strings](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0415-add-strings/) | Easy |
 | [0495-teemo-attacking](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0495-teemo-attacking/) | Easy |
+| [0498-diagonal-traverse](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0498-diagonal-traverse/) | Medium |
 ## Algorithm X
 | Problem Name | Difficulty |
 | ------- | ------- |
