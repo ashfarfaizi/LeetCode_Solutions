@@ -172,6 +172,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
 | [0495-teemo-attacking](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0495-teemo-attacking/) | Easy |
 | [0496-next-greater-element-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0496-next-greater-element-i/) | Easy |
+| [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -358,6 +359,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0483-smallest-good-base](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0483-smallest-good-base/) | Hard |
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0492-construct-the-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0492-construct-the-rectangle/) | Easy |
+| [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -656,6 +658,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0456-132-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0456-132-pattern/) | Medium |
 | [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
 | [0483-smallest-good-base](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0483-smallest-good-base/) | Hard |
+| [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1130,6 +1133,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0304-range-sum-query-2d-immutable](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
 | [0363-max-sum-of-rectangle-no-larger-than-k](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0363-max-sum-of-rectangle-no-larger-than-k/) | Hard |
 | [0410-split-array-largest-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0410-split-array-largest-sum/) | Hard |
+| [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 ## Zero-Sum Game
 | Problem Name | Difficulty |
@@ -1445,6 +1449,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0352-data-stream-as-disjoint-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0352-data-stream-as-disjoint-intervals/) | Hard |
 | [0363-max-sum-of-rectangle-no-larger-than-k](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0363-max-sum-of-rectangle-no-larger-than-k/) | Hard |
 | [0456-132-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0456-132-pattern/) | Medium |
+| [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 ## Queue
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1552,10 +1557,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0384-shuffle-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0384-shuffle-an-array/) | Medium |
 | [0470-implement-rand10-using-rand7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0470-implement-rand10-using-rand7/) | Medium |
 | [0478-generate-random-point-in-a-circle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0478-generate-random-point-in-a-circle/) | Medium |
+| [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 ## Reservoir Sampling
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
+| [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 ## Shortest Path
 | Problem Name | Difficulty |
 | ------- | ------- |
