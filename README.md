@@ -365,6 +365,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0492-construct-the-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0492-construct-the-rectangle/) | Easy |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
+| [0504-base-7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0504-base-7/) | Easy |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -607,6 +608,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0482-license-key-formatting](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0482-license-key-formatting/) | Easy |
 | [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 | [0500-keyboard-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0500-keyboard-row/) | Easy |
+| [0504-base-7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0504-base-7/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
