@@ -177,6 +177,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0500-keyboard-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0500-keyboard-row/) | Easy |
 | [0502-ipo](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0502-ipo/) | Hard |
 | [0503-next-greater-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0503-next-greater-element-ii/) | Medium |
+| [0506-relative-ranks](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0506-relative-ranks/) | Easy |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -501,6 +502,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0472-concatenated-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0472-concatenated-words/) | Hard |
 | [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
 | [0502-ipo](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0502-ipo/) | Hard |
+| [0506-relative-ranks](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0506-relative-ranks/) | Easy |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
@@ -832,6 +834,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0451-sort-characters-by-frequency](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0451-sort-characters-by-frequency/) | Medium |
 | [0480-sliding-window-median](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0480-sliding-window-median/) | Hard |
 | [0502-ipo](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0502-ipo/) | Hard |
+| [0506-relative-ranks](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0506-relative-ranks/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 ## Greedy
 | Problem Name | Difficulty |
