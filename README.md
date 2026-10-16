@@ -176,6 +176,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0498-diagonal-traverse](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0498-diagonal-traverse/) | Medium |
 | [0500-keyboard-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0500-keyboard-row/) | Easy |
 | [0502-ipo](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0502-ipo/) | Hard |
+| [0503-next-greater-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -920,6 +921,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0456-132-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0456-132-pattern/) | Medium |
 | [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 | [0496-next-greater-element-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0496-next-greater-element-i/) | Easy |
+| [0503-next-greater-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -985,6 +987,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0321-create-maximum-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0321-create-maximum-number/) | Hard |
 | [0456-132-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0456-132-pattern/) | Medium |
 | [0496-next-greater-element-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0496-next-greater-element-i/) | Easy |
+| [0503-next-greater-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
