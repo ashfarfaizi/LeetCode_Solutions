@@ -5,7 +5,7 @@
     "name": "Dynamic Programming",
     "tagId": "13"
   },
-  "updatedAt": "2026-10-20T16:34:24.470Z",
+  "updatedAt": "2026-10-20T16:36:20.609Z",
   "problems": [
     {
       "frontendId": "509",
@@ -24,6 +24,26 @@
           "path": "leet/0509-fibonacci-number/0509-fibonacci-number.cpp",
           "sha": "a7a3ca16d7bc81c78e847aae70b4ddeb29299ca9",
           "lastSyncedAt": "2026-10-20T16:34:24.470Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "514",
+      "title": "Freedom Trail",
+      "slug": "freedom-trail",
+      "problemName": "0514-freedom-trail",
+      "difficulty": "Hard",
+      "leetcodeUrl": "https://leetcode.com/problems/freedom-trail/",
+      "folderPath": "leet/0514-freedom-trail/",
+      "readmePath": "leet/0514-freedom-trail/README.md",
+      "solutions": [
+        {
+          "language": "C++",
+          "extension": ".cpp",
+          "filename": "0514-freedom-trail.cpp",
+          "path": "leet/0514-freedom-trail/0514-freedom-trail.cpp",
+          "sha": "b8f0d8bba790dcd85b56cfca48e8bdd38bdf4a14",
+          "lastSyncedAt": "2026-10-20T16:36:20.609Z"
         }
       ]
     }
