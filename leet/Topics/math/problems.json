@@ -5,8 +5,28 @@
     "name": "Math",
     "tagId": "8"
   },
-  "updatedAt": "2026-10-20T16:34:25.157Z",
+  "updatedAt": "2026-10-20T16:34:49.497Z",
   "problems": [
+    {
+      "frontendId": "507",
+      "title": "Perfect Number",
+      "slug": "perfect-number",
+      "problemName": "0507-perfect-number",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/perfect-number/",
+      "folderPath": "leet/0507-perfect-number/",
+      "readmePath": "leet/0507-perfect-number/README.md",
+      "solutions": [
+        {
+          "language": "C++",
+          "extension": ".cpp",
+          "filename": "0507-perfect-number.cpp",
+          "path": "leet/0507-perfect-number/0507-perfect-number.cpp",
+          "sha": "e7a5b0220af8fbf766b8baa0690eb8d893648b7c",
+          "lastSyncedAt": "2026-10-20T16:34:49.497Z"
+        }
+      ]
+    },
     {
       "frontendId": "509",
       "title": "Fibonacci Number",
