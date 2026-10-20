@@ -1391,6 +1391,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0185-department-top-three-salaries](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0185-department-top-three-salaries/) | Hard |
 | [0197-rising-temperature](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0197-rising-temperature/) | Easy |
 | [0262-trips-and-users](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0262-trips-and-users/) | Hard |
+| [0511-game-play-analysis-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0511-game-play-analysis-i/) | Easy |
 ## Rolling Hash
 | Problem Name | Difficulty |
 | ------- | ------- |
