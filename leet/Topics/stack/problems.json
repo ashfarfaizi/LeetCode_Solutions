@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "topic": {
+    "slug": "stack",
+    "name": "Stack",
+    "tagId": "15"
+  },
+  "updatedAt": "2026-10-20T16:35:41.886Z",
+  "problems": [
+    {
+      "frontendId": "503",
+      "title": "Next Greater Element II",
+      "slug": "next-greater-element-ii",
+      "problemName": "0503-next-greater-element-ii",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/next-greater-element-ii/",
+      "folderPath": "leet/0503-next-greater-element-ii/",
+      "readmePath": "leet/0503-next-greater-element-ii/README.md",
+      "solutions": [
+        {
+          "language": "C++",
+          "extension": ".cpp",
+          "filename": "0503-next-greater-element-ii.cpp",
+          "path": "leet/0503-next-greater-element-ii/0503-next-greater-element-ii.cpp",
+          "sha": "b3953f4bb9020565a2aa548e8d64bddd6a7d22e4",
+          "lastSyncedAt": "2026-10-20T16:35:41.886Z"
+        }
+      ]
+    }
+  ]
+}
