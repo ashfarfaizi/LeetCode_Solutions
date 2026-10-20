@@ -5,7 +5,7 @@
     "name": "Dynamic Programming",
     "tagId": "13"
   },
-  "updatedAt": "2026-10-20T16:36:20.609Z",
+  "updatedAt": "2026-10-20T16:36:39.037Z",
   "problems": [
     {
       "frontendId": "509",
@@ -43,7 +43,7 @@
           "filename": "0514-freedom-trail.cpp",
           "path": "leet/0514-freedom-trail/0514-freedom-trail.cpp",
           "sha": "b8f0d8bba790dcd85b56cfca48e8bdd38bdf4a14",
-          "lastSyncedAt": "2026-10-20T16:36:20.609Z"
+          "lastSyncedAt": "2026-10-20T16:36:39.037Z"
         }
       ]
     }
