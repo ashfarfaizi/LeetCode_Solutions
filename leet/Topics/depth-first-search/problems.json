@@ -5,7 +5,7 @@
     "name": "Depth-First Search",
     "tagId": "21"
   },
-  "updatedAt": "2026-10-20T16:34:19.366Z",
+  "updatedAt": "2026-10-20T16:36:39.037Z",
   "problems": [
     {
       "frontendId": "508",
@@ -24,6 +24,26 @@
           "path": "leet/0508-most-frequent-subtree-sum/0508-most-frequent-subtree-sum.cpp",
           "sha": "ca622cbd96e723aa530722b65ea8aec3448ca572",
           "lastSyncedAt": "2026-10-20T16:34:19.366Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "514",
+      "title": "Freedom Trail",
+      "slug": "freedom-trail",
+      "problemName": "0514-freedom-trail",
+      "difficulty": "Hard",
+      "leetcodeUrl": "https://leetcode.com/problems/freedom-trail/",
+      "folderPath": "leet/0514-freedom-trail/",
+      "readmePath": "leet/0514-freedom-trail/README.md",
+      "solutions": [
+        {
+          "language": "C++",
+          "extension": ".cpp",
+          "filename": "0514-freedom-trail.cpp",
+          "path": "leet/0514-freedom-trail/0514-freedom-trail.cpp",
+          "sha": "b8f0d8bba790dcd85b56cfca48e8bdd38bdf4a14",
+          "lastSyncedAt": "2026-10-20T16:36:39.037Z"
         }
       ]
     }
