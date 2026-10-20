@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "topic": {
+    "slug": "binary-tree",
+    "name": "Binary Tree",
+    "tagId": "61057"
+  },
+  "updatedAt": "2026-10-20T16:34:19.366Z",
+  "problems": [
+    {
+      "frontendId": "508",
+      "title": "Most Frequent Subtree Sum",
+      "slug": "most-frequent-subtree-sum",
+      "problemName": "0508-most-frequent-subtree-sum",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/most-frequent-subtree-sum/",
+      "folderPath": "leet/0508-most-frequent-subtree-sum/",
+      "readmePath": "leet/0508-most-frequent-subtree-sum/README.md",
+      "solutions": [
+        {
+          "language": "C++",
+          "extension": ".cpp",
+          "filename": "0508-most-frequent-subtree-sum.cpp",
+          "path": "leet/0508-most-frequent-subtree-sum/0508-most-frequent-subtree-sum.cpp",
+          "sha": "ca622cbd96e723aa530722b65ea8aec3448ca572",
+          "lastSyncedAt": "2026-10-20T16:34:19.366Z"
+        }
+      ]
+    }
+  ]
+}
