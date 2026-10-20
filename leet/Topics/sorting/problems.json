@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "topic": {
+    "slug": "sorting",
+    "name": "Sorting",
+    "tagId": "61049"
+  },
+  "updatedAt": "2026-10-20T16:35:17.122Z",
+  "problems": [
+    {
+      "frontendId": "506",
+      "title": "Relative Ranks",
+      "slug": "relative-ranks",
+      "problemName": "0506-relative-ranks",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/relative-ranks/",
+      "folderPath": "leet/0506-relative-ranks/",
+      "readmePath": "leet/0506-relative-ranks/README.md",
+      "solutions": [
+        {
+          "language": "C++",
+          "extension": ".cpp",
+          "filename": "0506-relative-ranks.cpp",
+          "path": "leet/0506-relative-ranks/0506-relative-ranks.cpp",
+          "sha": "d55558ebd328b06575704d9c00975cb9fe5b801c",
+          "lastSyncedAt": "2026-10-20T16:35:17.122Z"
+        }
+      ]
+    }
+  ]
+}
