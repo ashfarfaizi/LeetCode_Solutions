@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "topic": {
+    "slug": "greedy",
+    "name": "Greedy",
+    "tagId": "17"
+  },
+  "updatedAt": "2026-10-20T16:35:54.889Z",
+  "problems": [
+    {
+      "frontendId": "502",
+      "title": "IPO",
+      "slug": "ipo",
+      "problemName": "0502-ipo",
+      "difficulty": "Hard",
+      "leetcodeUrl": "https://leetcode.com/problems/ipo/",
+      "folderPath": "leet/0502-ipo/",
+      "readmePath": "leet/0502-ipo/README.md",
+      "solutions": [
+        {
+          "language": "C++",
+          "extension": ".cpp",
+          "filename": "0502-ipo.cpp",
+          "path": "leet/0502-ipo/0502-ipo.cpp",
+          "sha": "ac8bee65fe87b1a1c1ba0fa44de562a6590581e0",
+          "lastSyncedAt": "2026-10-20T16:35:54.889Z"
+        }
+      ]
+    }
+  ]
+}
