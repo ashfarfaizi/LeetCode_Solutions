@@ -1067,6 +1067,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0472-concatenated-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0472-concatenated-words/) | Hard |
 | [0501-find-mode-in-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0501-find-mode-in-binary-search-tree/) | Easy |
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
+| [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -1103,6 +1104,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0449-serialize-and-deserialize-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
 | [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
+| [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
@@ -1224,6 +1226,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0450-delete-node-in-a-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0450-delete-node-in-a-bst/) | Medium |
 | [0501-find-mode-in-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0501-find-mode-in-binary-search-tree/) | Easy |
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
+| [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -1267,6 +1270,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0450-delete-node-in-a-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0450-delete-node-in-a-bst/) | Medium |
 | [0501-find-mode-in-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0501-find-mode-in-binary-search-tree/) | Easy |
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
+| [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 ## Binary Search Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
