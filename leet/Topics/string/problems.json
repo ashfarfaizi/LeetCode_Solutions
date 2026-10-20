@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "topic": {
+    "slug": "string",
+    "name": "String",
+    "tagId": "10"
+  },
+  "updatedAt": "2026-10-20T16:34:55.885Z",
+  "problems": [
+    {
+      "frontendId": "567",
+      "title": "Permutation in String",
+      "slug": "permutation-in-string",
+      "problemName": "0567-permutation-in-string",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/permutation-in-string/",
+      "folderPath": "leet/0567-permutation-in-string/",
+      "readmePath": "leet/0567-permutation-in-string/README.md",
+      "solutions": [
+        {
+          "language": "C++",
+          "extension": ".cpp",
+          "filename": "0567-permutation-in-string.cpp",
+          "path": "leet/0567-permutation-in-string/0567-permutation-in-string.cpp",
+          "sha": "d347d93191e3200005f4d4c1dffa10a330000127",
+          "lastSyncedAt": "2026-10-20T16:34:55.885Z"
+        }
+      ]
+    }
+  ]
+}
