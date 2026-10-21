@@ -4,8 +4,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 <!---LeetCode Topics Start-->
 # LeetCode Topics
 ## Array
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0001-two-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0001-two-sum/) | Easy |
 | [0004-median-of-two-sorted-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0011-container-with-most-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0011-container-with-most-water/) | Medium |
@@ -185,8 +185,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
 ## Hash Table
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0001-two-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0001-two-sum/) | Easy |
 | [0003-longest-substring-without-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0012-integer-to-roman](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0012-integer-to-roman/) | Medium |
@@ -259,8 +259,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
 ## Linked List
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0002-add-two-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0002-add-two-numbers/) | Medium |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0019-remove-nth-node-from-end-of-list/) | Medium |
 | [0021-merge-two-sorted-lists](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0021-merge-two-sorted-lists/) | Easy |
@@ -289,8 +289,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0445-add-two-numbers-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0445-add-two-numbers-ii/) | Medium |
 | [0460-lfu-cache](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0460-lfu-cache/) | Hard |
 ## Math
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0002-add-two-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0002-add-two-numbers/) | Medium |
 | [0007-reverse-integer](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0007-reverse-integer/) | Medium |
 | [0009-palindrome-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0009-palindrome-number/) | Easy |
@@ -379,8 +379,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 ## Recursion
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0002-add-two-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0002-add-two-numbers/) | Medium |
 | [0010-regular-expression-matching](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0010-regular-expression-matching/) | Hard |
 | [0021-merge-two-sorted-lists](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0021-merge-two-sorted-lists/) | Easy |
@@ -403,8 +403,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0486-predict-the-winner](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0486-predict-the-winner/) | Medium |
 | [0509-fibonacci-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0509-fibonacci-number/) | Easy |
 ## Backtracking
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
 | [0022-generate-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0022-generate-parentheses/) | Medium |
 | [0037-sudoku-solver](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0037-sudoku-solver/) | Hard |
@@ -437,8 +437,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0036-valid-sudoku](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0036-valid-sudoku/) | Medium |
 | [0037-sudoku-solver](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0037-sudoku-solver/) | Hard |
 | [0048-rotate-image](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0048-rotate-image/) | Medium |
@@ -466,8 +466,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
 | [0498-diagonal-traverse](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0498-diagonal-traverse/) | Medium |
 ## Sorting
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0015-3sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0016-3sum-closest/) | Medium |
 | [0018-4sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0018-4sum/) | Medium |
@@ -514,8 +514,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3517-smallest-palindromic-rearrangement-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3517-smallest-palindromic-rearrangement-i/) | Medium |
 | [3731-find-missing-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3731-find-missing-elements/) | Easy |
 ## String
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0005-longest-palindromic-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0006-zigzag-conversion](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0006-zigzag-conversion/) | Medium |
@@ -624,8 +624,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3517-smallest-palindromic-rearrangement-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3517-smallest-palindromic-rearrangement-i/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 ## Sliding Window
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0030-substring-with-concatenation-of-all-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0030-substring-with-concatenation-of-all-words/) | Hard |
 | [0076-minimum-window-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0076-minimum-window-substring/) | Hard |
@@ -641,8 +641,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0480-sliding-window-median](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0480-sliding-window-median/) | Hard |
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 ## Binary Search
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0033-search-in-rotated-sorted-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0034-find-first-and-last-position-of-element-in-sorted-array/) | Medium |
@@ -680,8 +680,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0483-smallest-good-base](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0483-smallest-good-base/) | Hard |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 ## Divide and Conquer
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0023-merge-k-sorted-lists](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0023-merge-k-sorted-lists/) | Hard |
 | [0053-maximum-subarray](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0053-maximum-subarray/) | Medium |
@@ -703,8 +703,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0395-longest-substring-with-at-least-k-repeating-characters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0395-longest-substring-with-at-least-k-repeating-characters/) | Medium |
 | [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
 ## Two Pointers
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0005-longest-palindromic-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0011-container-with-most-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0011-container-with-most-water/) | Medium |
 | [0015-3sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0015-3sum/) | Medium |
@@ -748,8 +748,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0005-longest-palindromic-substring](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0010-regular-expression-matching](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0010-regular-expression-matching/) | Hard |
 | [0022-generate-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0022-generate-parentheses/) | Medium |
@@ -828,8 +828,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1406-stone-game-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1406-stone-game-iii/) | Hard |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Heap (Priority Queue)
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0023-merge-k-sorted-lists](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0023-merge-k-sorted-lists/) | Hard |
 | [0215-kth-largest-element-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0218-the-skyline-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0218-the-skyline-problem/) | Hard |
@@ -848,8 +848,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0506-relative-ranks](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0506-relative-ranks/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 ## Greedy
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0011-container-with-most-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0011-container-with-most-water/) | Medium |
 | [0044-wildcard-matching](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0044-wildcard-matching/) | Hard |
 | [0045-jump-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0045-jump-game-ii/) | Medium |
@@ -875,8 +875,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Counting Sort
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0169-majority-element](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0169-majority-element/) | Easy |
 | [0229-majority-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0229-majority-element-ii/) | Medium |
 | [0274-h-index](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0274-h-index/) | Medium |
@@ -889,8 +889,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3517-smallest-palindromic-rearrangement-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3517-smallest-palindromic-rearrangement-i/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 ## Trie
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0014-longest-common-prefix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0014-longest-common-prefix/) | Easy |
 | [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0140-word-break-ii/) | Hard |
@@ -902,14 +902,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0440-k-th-smallest-in-lexicographical-order](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0440-k-th-smallest-in-lexicographical-order/) | Hard |
 | [0472-concatenated-words](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0472-concatenated-words/) | Hard |
 ## Combinatorics
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0062-unique-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0062-unique-paths/) | Medium |
 | [0458-poor-pigs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0458-poor-pigs/) | Hard |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
 ## Stack
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0020-valid-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0020-valid-parentheses/) | Easy |
 | [0032-longest-valid-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0032-longest-valid-parentheses/) | Hard |
 | [0042-trapping-rain-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0042-trapping-rain-water/) | Hard |
@@ -939,14 +939,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0496-next-greater-element-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0496-next-greater-element-i/) | Easy |
 | [0503-next-greater-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 ## Merge Sort
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0023-merge-k-sorted-lists](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0023-merge-k-sorted-lists/) | Hard |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
 | [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 ## Bit Manipulation
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0029-divide-two-integers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0029-divide-two-integers/) | Medium |
 | [0067-add-binary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0067-add-binary/) | Easy |
 | [0078-subsets](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0078-subsets/) | Medium |
@@ -978,8 +978,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0477-total-hamming-distance](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0477-total-hamming-distance/) | Medium |
 | [0491-non-decreasing-subsequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0491-non-decreasing-subsequences/) | Medium |
 ## Game Theory
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0292-nim-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0292-nim-game/) | Easy |
 | [0375-guess-number-higher-or-lower-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0375-guess-number-higher-or-lower-ii/) | Medium |
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
@@ -988,14 +988,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 | [1406-stone-game-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1406-stone-game-iii/) | Hard |
 ## String Matching
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0028-find-the-index-of-the-first-occurrence-in-a-string/) | Easy |
 | [0214-shortest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0214-shortest-palindrome/) | Hard |
 | [0459-repeated-substring-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0459-repeated-substring-pattern/) | Easy |
 ## Monotonic Stack
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0042-trapping-rain-water](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0042-trapping-rain-water/) | Hard |
 | [0084-largest-rectangle-in-histogram](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0084-largest-rectangle-in-histogram/) | Hard |
 | [0085-maximal-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0085-maximal-rectangle/) | Hard |
@@ -1005,8 +1005,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0496-next-greater-element-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0496-next-greater-element-i/) | Easy |
 | [0503-next-greater-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 ## Simulation
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0043-multiply-strings](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0043-multiply-strings/) | Medium |
 | [0054-spiral-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0054-spiral-matrix/) | Medium |
 | [0059-spiral-matrix-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0059-spiral-matrix-ii/) | Medium |
@@ -1019,12 +1019,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0495-teemo-attacking](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0495-teemo-attacking/) | Easy |
 | [0498-diagonal-traverse](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0498-diagonal-traverse/) | Medium |
 ## Algorithm X
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0052-n-queens-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0052-n-queens-ii/) | Hard |
 ## Depth-First Search
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0079-word-search](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0079-word-search/) | Medium |
 | [0094-binary-tree-inorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0094-binary-tree-inorder-traversal/) | Easy |
 | [0098-validate-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0098-validate-binary-search-tree/) | Medium |
@@ -1071,10 +1071,11 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
 | [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 | [0514-freedom-trail](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0514-freedom-trail/) | Hard |
+| [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Breadth-First Search
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0100-same-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0100-same-tree/) | Easy |
 | [0102-binary-tree-level-order-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
@@ -1109,10 +1110,11 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 | [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 | [0514-freedom-trail](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0514-freedom-trail/) | Hard |
+| [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0133-clone-graph](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0133-clone-graph/) | Medium |
 | [0207-course-schedule](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0207-course-schedule/) | Medium |
 | [0210-course-schedule-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0210-course-schedule-ii/) | Medium |
@@ -1121,30 +1123,30 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Quicksort
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0056-merge-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0056-merge-intervals/) | Medium |
 | [0075-sort-colors](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0075-sort-colors/) | Medium |
 | [0455-assign-cookies](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0455-assign-cookies/) | Easy |
 ## Enumeration
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 | [0479-largest-palindrome-product](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0479-largest-palindrome-product/) | Hard |
 | [3345-smallest-divisible-digit-product-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3345-smallest-divisible-digit-product-i/) | Easy |
 ## Number Theory
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 | [0258-add-digits](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0258-add-digits/) | Easy |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Newton's Method
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0069-sqrtx](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0069-sqrtx/) | Easy |
 ## Memoization
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0070-climbing-stairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0070-climbing-stairs/) | Easy |
 | [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0140-word-break-ii/) | Hard |
@@ -1155,14 +1157,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 | [0509-fibonacci-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0509-fibonacci-number/) | Easy |
 ## Minimax
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0292-nim-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0292-nim-game/) | Easy |
 | [0375-guess-number-higher-or-lower-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0375-guess-number-higher-or-lower-ii/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 ## Prefix Sum
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0238-product-of-array-except-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0238-product-of-array-except-self/) | Medium |
 | [0303-range-sum-query-immutable](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0303-range-sum-query-immutable/) | Easy |
@@ -1172,21 +1174,21 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 ## Zero-Sum Game
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 ## Bubble Sort
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0075-sort-colors](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0075-sort-colors/) | Medium |
 ## Range Minimum/Maximum Query
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0084-largest-rectangle-in-histogram](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0084-largest-rectangle-in-histogram/) | Hard |
 | [0239-sliding-window-maximum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 ## Tree
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0094-binary-tree-inorder-traversal/) | Easy |
 | [0095-unique-binary-search-trees-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0095-unique-binary-search-trees-ii/) | Medium |
 | [0096-unique-binary-search-trees](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0096-unique-binary-search-trees/) | Medium |
@@ -1231,9 +1233,10 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0501-find-mode-in-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0501-find-mode-in-binary-search-tree/) | Easy |
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
 | [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
+| [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
 ## Binary Tree
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0094-binary-tree-inorder-traversal/) | Easy |
 | [0095-unique-binary-search-trees-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0095-unique-binary-search-trees-ii/) | Medium |
 | [0096-unique-binary-search-trees](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0096-unique-binary-search-trees/) | Medium |
@@ -1275,9 +1278,10 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0501-find-mode-in-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0501-find-mode-in-binary-search-tree/) | Easy |
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
 | [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
+| [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
 ## Binary Search Tree
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0095-unique-binary-search-trees-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0095-unique-binary-search-trees-ii/) | Medium |
 | [0096-unique-binary-search-trees](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0096-unique-binary-search-trees/) | Medium |
 | [0098-validate-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0098-validate-binary-search-tree/) | Medium |
@@ -1291,78 +1295,78 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0450-delete-node-in-a-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0450-delete-node-in-a-bst/) | Medium |
 | [0501-find-mode-in-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0501-find-mode-in-binary-search-tree/) | Easy |
 ## DP on Trees
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0124-binary-tree-maximum-path-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
 ## Bidirectional Search
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0126-word-ladder-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0126-word-ladder-ii/) | Hard |
 | [0127-word-ladder](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0127-word-ladder/) | Hard |
 | [0433-minimum-genetic-mutation](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0433-minimum-genetic-mutation/) | Medium |
 ## Union-Find
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0128-longest-consecutive-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0130-surrounded-regions](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0200-number-of-islands/) | Medium |
 | [0352-data-stream-as-disjoint-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0352-data-stream-as-disjoint-intervals/) | Hard |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 ## Brute-Force Search
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0139-word-break](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0139-word-break/) | Medium |
 ## Floyd's Cycle Finding Algorithm
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0141-linked-list-cycle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0202-happy-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0202-happy-number/) | Easy |
 | [0287-find-the-duplicate-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0457-circular-array-loop](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0457-circular-array-loop/) | Medium |
 ## Geometry
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0223-rectangle-area](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0223-rectangle-area/) | Medium |
 | [0335-self-crossing](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0335-self-crossing/) | Hard |
 | [0391-perfect-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0391-perfect-rectangle/) | Hard |
 | [0478-generate-random-point-in-a-circle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0478-generate-random-point-in-a-circle/) | Medium |
 ## Euclidean Algorithm
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 ## Greatest Common Divisor
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0149-max-points-on-a-line](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0149-max-points-on-a-line/) | Hard |
 | [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 ## Bucket Sort
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0164-maximum-gap](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0164-maximum-gap/) | Medium |
 | [0220-contains-duplicate-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0220-contains-duplicate-iii/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0451-sort-characters-by-frequency](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0451-sort-characters-by-frequency/) | Medium |
 ## Radix Sort
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0164-maximum-gap](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0164-maximum-gap/) | Medium |
 ## Pigeonhole Principle
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0164-maximum-gap](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0164-maximum-gap/) | Medium |
 | [0287-find-the-duplicate-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0287-find-the-duplicate-number/) | Medium |
 ## Boyer–Moore Majority Vote Algorithm
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0169-majority-element](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0169-majority-element/) | Easy |
 | [0229-majority-element-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0229-majority-element-ii/) | Medium |
 ## Design
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0208-implement-trie-prefix-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0211-design-add-and-search-words-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0211-design-add-and-search-words-data-structure/) | Medium |
@@ -1381,14 +1385,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0449-serialize-and-deserialize-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0460-lfu-cache](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0460-lfu-cache/) | Hard |
 ## Iterator
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0173-binary-search-tree-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0284-peeking-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0284-peeking-iterator/) | Medium |
 | [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 ## Database
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0175-combine-two-tables](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0175-combine-two-tables/) | Easy |
 | [0178-rank-scores](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0178-rank-scores/) | Medium |
 | [0180-consecutive-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0180-consecutive-numbers/) | Medium |
@@ -1401,92 +1405,92 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0262-trips-and-users](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0262-trips-and-users/) | Hard |
 | [0511-game-play-analysis-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0511-game-play-analysis-i/) | Easy |
 ## Rolling Hash
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0187-repeated-dna-sequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0187-repeated-dna-sequences/) | Medium |
 | [0214-shortest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0214-shortest-palindrome/) | Hard |
 ## Hash Function
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0187-repeated-dna-sequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0187-repeated-dna-sequences/) | Medium |
 | [0214-shortest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0214-shortest-palindrome/) | Hard |
 | [0336-palindrome-pairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0336-palindrome-pairs/) | Hard |
 ## Z Algorithm
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0187-repeated-dna-sequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0187-repeated-dna-sequences/) | Medium |
 | [0214-shortest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0214-shortest-palindrome/) | Hard |
 | [0459-repeated-substring-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0459-repeated-substring-pattern/) | Easy |
 ## Boyer–Moore String-Search Algorithm
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0187-repeated-dna-sequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0187-repeated-dna-sequences/) | Medium |
 ## Shell
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0192-word-frequency](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0192-word-frequency/) | Medium |
 | [0193-valid-phone-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0193-valid-phone-numbers/) | Easy |
 | [0194-transpose-file](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0194-transpose-file/) | Medium |
 ## Primality Test
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 ## Sieve Theory
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 ## Prime Number Sieve
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0204-count-primes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0204-count-primes/) | Medium |
 ## Topological Sort
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0207-course-schedule](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0207-course-schedule/) | Medium |
 | [0210-course-schedule-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0210-course-schedule-ii/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 ## Directed Acyclic Graph
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0207-course-schedule](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0207-course-schedule/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 ## Manacher
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0214-shortest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0214-shortest-palindrome/) | Hard |
 ## Knuth–Morris–Pratt Algorithm
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0214-shortest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0214-shortest-palindrome/) | Hard |
 | [0459-repeated-substring-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0459-repeated-substring-pattern/) | Easy |
 ## Quickselect
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0324-wiggle-sort-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0324-wiggle-sort-ii/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Binary Indexed Tree
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0218-the-skyline-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0218-the-skyline-problem/) | Hard |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
 | [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 | [0406-queue-reconstruction-by-height](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0406-queue-reconstruction-by-height/) | Medium |
 ## Segment Tree
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0218-the-skyline-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0218-the-skyline-problem/) | Hard |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
 | [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 | [0406-queue-reconstruction-by-height](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0406-queue-reconstruction-by-height/) | Medium |
 ## Sweep Line
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0218-the-skyline-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0218-the-skyline-problem/) | Hard |
 | [0391-perfect-rectangle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0391-perfect-rectangle/) | Hard |
 ## Ordered Set
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0218-the-skyline-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0218-the-skyline-problem/) | Hard |
 | [0220-contains-duplicate-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0220-contains-duplicate-iii/) | Hard |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
@@ -1496,106 +1500,106 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0456-132-pattern](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0456-132-pattern/) | Medium |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 ## Queue
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0225-implement-stack-using-queues](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0225-implement-stack-using-queues/) | Easy |
 | [0239-sliding-window-maximum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0341-flatten-nested-list-iterator](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0341-flatten-nested-list-iterator/) | Medium |
 | [0387-first-unique-character-in-a-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0387-first-unique-character-in-a-string/) | Easy |
 ## Binary Lifting
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
 ## Lowest Common Ancestor
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
 ## Monotonic Queue
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0239-sliding-window-maximum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 ## Bracket Sequences
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0241-different-ways-to-add-parentheses](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 ## Interactive
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0278-first-bad-version](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0278-first-bad-version/) | Easy |
 | [0374-guess-number-higher-or-lower](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0374-guess-number-higher-or-lower/) | Easy |
 ## Knapsack Problem
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0279-perfect-squares](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0279-perfect-squares/) | Medium |
 | [0322-coin-change](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0322-coin-change/) | Medium |
 | [0416-partition-equal-subset-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0474-ones-and-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
 ## Complete Knapsack
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0279-perfect-squares](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0279-perfect-squares/) | Medium |
 | [0322-coin-change](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0322-coin-change/) | Medium |
 ## Brainteaser
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0292-nim-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0292-nim-game/) | Easy |
 | [0319-bulb-switcher](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0319-bulb-switcher/) | Medium |
 ## Nim Game
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0292-nim-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0292-nim-game/) | Easy |
 ## Impartial Game
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0292-nim-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0292-nim-game/) | Easy |
 ## Longest Increasing Subsequence
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0300-longest-increasing-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0300-longest-increasing-subsequence/) | Medium |
 | [0334-increasing-triplet-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0334-increasing-triplet-subsequence/) | Medium |
 | [0354-russian-doll-envelopes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0354-russian-doll-envelopes/) | Hard |
 ## Treap
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
 | [0327-count-of-range-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0327-count-of-range-sum/) | Hard |
 | [0480-sliding-window-median](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0480-sliding-window-median/) | Hard |
 ## Eulerian Circuit
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
 ## Eulerian Path
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
 ## Semi-Eulerian Graph
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
 ## Data Stream
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0352-data-stream-as-disjoint-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0352-data-stream-as-disjoint-intervals/) | Hard |
 ## Bézout's Lemma
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 ## Extended Euclidean Algorithm
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0365-water-and-jug-problem](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0365-water-and-jug-problem/) | Medium |
 ## Euler's Totient Function
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
 ## Euler's Theorem
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0372-super-pow](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0372-super-pow/) | Medium |
 ## Randomized
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0380-insert-delete-getrandom-o1](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
@@ -1604,46 +1608,46 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0478-generate-random-point-in-a-circle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0478-generate-random-point-in-a-circle/) | Medium |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 ## Reservoir Sampling
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 ## Shortest Path
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 ## Bellman–Ford Algorithm
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 ## Floyd–Warshall Algorithm
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
 ## 0-1 Knapsack
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0416-partition-equal-subset-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0474-ones-and-zeroes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
 ## Doubly-Linked List
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0430-flatten-a-multilevel-doubly-linked-list](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0430-flatten-a-multilevel-doubly-linked-list/) | Medium |
 | [0432-all-oone-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0432-all-oone-data-structure/) | Hard |
 | [0460-lfu-cache](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0460-lfu-cache/) | Hard |
 ## Bitmask
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
 | [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 ## Rejection Sampling
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0470-implement-rand10-using-rand7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0470-implement-rand10-using-rand7/) | Medium |
 | [0478-generate-random-point-in-a-circle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0478-generate-random-point-in-a-circle/) | Medium |
 ## Probability and Statistics
-| Problem Name | Difficulty |
-| ------- | ------- |
+|  |
+| ------- |
 | [0470-implement-rand10-using-rand7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0470-implement-rand10-using-rand7/) | Medium |
 <!---LeetCode Topics End-->
