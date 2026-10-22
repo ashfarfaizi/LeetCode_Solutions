@@ -623,6 +623,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0514-freedom-trail](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0514-freedom-trail/) | Hard |
 | [0516-longest-palindromic-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0516-longest-palindromic-subsequence) |
 | [0520-detect-capital](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0520-detect-capital) |
+| [0521-longest-uncommon-subsequence-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0521-longest-uncommon-subsequence-i) |
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
