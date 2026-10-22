@@ -181,6 +181,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0517-super-washing-machines](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0517-super-washing-machines) |
 | [0518-coin-change-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0518-coin-change-ii) |
 | [0522-longest-uncommon-subsequence-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0522-longest-uncommon-subsequence-ii) |
+| [0523-continuous-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0523-continuous-subarray-sum) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -259,6 +260,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
 | [0519-random-flip-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0519-random-flip-matrix) |
 | [0522-longest-uncommon-subsequence-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0522-longest-uncommon-subsequence-ii) |
+| [0523-continuous-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0523-continuous-subarray-sum) |
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
@@ -377,6 +379,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0507-perfect-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0507-perfect-number/) | Easy |
 | [0509-fibonacci-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0509-fibonacci-number/) | Easy |
 | [0519-random-flip-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0519-random-flip-matrix) |
+| [0523-continuous-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0523-continuous-subarray-sum) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -1187,6 +1190,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0363-max-sum-of-rectangle-no-larger-than-k](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0363-max-sum-of-rectangle-no-larger-than-k/) | Hard |
 | [0410-split-array-largest-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
+| [0523-continuous-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0523-continuous-subarray-sum) |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 ## Zero-Sum Game
 |  |
@@ -1374,6 +1378,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0164-maximum-gap](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0164-maximum-gap/) | Medium |
 | [0287-find-the-duplicate-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0287-find-the-duplicate-number/) | Medium |
+| [0523-continuous-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0523-continuous-subarray-sum) |
 ## Boyer–Moore Majority Vote Algorithm
 |  |
 | ------- |
