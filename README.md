@@ -180,6 +180,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0506-relative-ranks](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0506-relative-ranks/) | Easy |
 | [0517-super-washing-machines](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0517-super-washing-machines) |
 | [0518-coin-change-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0518-coin-change-ii) |
+| [0522-longest-uncommon-subsequence-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0522-longest-uncommon-subsequence-ii) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -257,6 +258,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0500-keyboard-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0500-keyboard-row/) | Easy |
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
 | [0519-random-flip-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0519-random-flip-matrix) |
+| [0522-longest-uncommon-subsequence-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0522-longest-uncommon-subsequence-ii) |
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
@@ -512,6 +514,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
 | [0502-ipo](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0502-ipo/) | Hard |
 | [0506-relative-ranks](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0506-relative-ranks/) | Easy |
+| [0522-longest-uncommon-subsequence-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0522-longest-uncommon-subsequence-ii) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
@@ -624,6 +627,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0516-longest-palindromic-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0516-longest-palindromic-subsequence) |
 | [0520-detect-capital](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0520-detect-capital) |
 | [0521-longest-uncommon-subsequence-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0521-longest-uncommon-subsequence-i) |
+| [0522-longest-uncommon-subsequence-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0522-longest-uncommon-subsequence-ii) |
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
@@ -752,6 +756,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0466-count-the-repetitions](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0466-count-the-repetitions/) | Hard |
 | [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
 | [0481-magical-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0481-magical-string/) | Medium |
+| [0522-longest-uncommon-subsequence-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0522-longest-uncommon-subsequence-ii) |
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3302-find-the-lexicographically-smallest-valid-sequence/) | Medium |
 ## Dynamic Programming
