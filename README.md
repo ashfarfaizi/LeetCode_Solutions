@@ -256,6 +256,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0496-next-greater-element-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0496-next-greater-element-i/) | Easy |
 | [0500-keyboard-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0500-keyboard-row/) | Easy |
 | [0508-most-frequent-subtree-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0508-most-frequent-subtree-sum/) | Medium |
+| [0519-random-flip-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0519-random-flip-matrix) |
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
@@ -373,6 +374,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0504-base-7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0504-base-7/) | Easy |
 | [0507-perfect-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0507-perfect-number/) | Easy |
 | [0509-fibonacci-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0509-fibonacci-number/) | Easy |
+| [0519-random-flip-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0519-random-flip-matrix) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -1615,11 +1617,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0470-implement-rand10-using-rand7](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0470-implement-rand10-using-rand7/) | Medium |
 | [0478-generate-random-point-in-a-circle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0478-generate-random-point-in-a-circle/) | Medium |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
+| [0519-random-flip-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0519-random-flip-matrix) |
 ## Reservoir Sampling
 |  |
 | ------- |
 | [0382-linked-list-random-node](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0382-linked-list-random-node/) | Medium |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
+| [0519-random-flip-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0519-random-flip-matrix) |
 ## Shortest Path
 |  |
 | ------- |
