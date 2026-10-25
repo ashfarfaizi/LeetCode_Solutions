@@ -184,6 +184,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0523-continuous-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0523-continuous-subarray-sum) |
 | [0524-longest-word-in-dictionary-through-deleting](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0524-longest-word-in-dictionary-through-deleting) |
 | [0525-contiguous-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0525-contiguous-array) |
+| [0526-beautiful-arrangement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0526-beautiful-arrangement) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -447,6 +448,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0491-non-decreasing-subsequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0491-non-decreasing-subsequences/) | Medium |
 | [0494-target-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0494-target-sum/) | Medium |
+| [0526-beautiful-arrangement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0526-beautiful-arrangement) |
 | [3348-smallest-divisible-digit-product-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3348-smallest-divisible-digit-product-ii/) | Hard |
 ## Matrix
 |  |
@@ -848,6 +850,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0514-freedom-trail](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0514-freedom-trail/) | Hard |
 | [0516-longest-palindromic-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0518-coin-change-ii) |
+| [0526-beautiful-arrangement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0526-beautiful-arrangement) |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 | [1406-stone-game-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1406-stone-game-iii/) | Hard |
@@ -1003,6 +1006,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0476-number-complement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0476-number-complement/) | Easy |
 | [0477-total-hamming-distance](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0477-total-hamming-distance/) | Medium |
 | [0491-non-decreasing-subsequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0491-non-decreasing-subsequences/) | Medium |
+| [0526-beautiful-arrangement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0526-beautiful-arrangement) |
 ## Game Theory
 |  |
 | ------- |
@@ -1674,6 +1678,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
 | [0473-matchsticks-to-square](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0473-matchsticks-to-square/) | Medium |
+| [0526-beautiful-arrangement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0526-beautiful-arrangement) |
 ## Rejection Sampling
 |  |
 | ------- |
