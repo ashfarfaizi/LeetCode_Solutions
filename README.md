@@ -269,6 +269,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0523-continuous-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0523-continuous-subarray-sum) |
 | [0525-contiguous-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0525-contiguous-array) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0532-k-diff-pairs-in-an-array) |
+| [0535-encode-and-decode-tinyurl](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0535-encode-and-decode-tinyurl) |
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3518-smallest-palindromic-rearrangement-ii/) | Hard |
@@ -645,6 +646,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0521-longest-uncommon-subsequence-i](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0521-longest-uncommon-subsequence-i) |
 | [0522-longest-uncommon-subsequence-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0522-longest-uncommon-subsequence-ii) |
 | [0524-longest-word-in-dictionary-through-deleting](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0524-longest-word-in-dictionary-through-deleting) |
+| [0535-encode-and-decode-tinyurl](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0535-encode-and-decode-tinyurl) |
 | [0557-reverse-words-in-a-string-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0557-reverse-words-in-a-string-iii) |
 | [0567-permutation-in-string](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
@@ -1435,6 +1437,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0432-all-oone-data-structure](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0432-all-oone-data-structure/) | Hard |
 | [0449-serialize-and-deserialize-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0460-lfu-cache](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0460-lfu-cache/) | Hard |
+| [0535-encode-and-decode-tinyurl](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0535-encode-and-decode-tinyurl) |
 ## Iterator
 |  |
 | ------- |
@@ -1466,6 +1469,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0187-repeated-dna-sequences](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0187-repeated-dna-sequences/) | Medium |
 | [0214-shortest-palindrome](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0214-shortest-palindrome/) | Hard |
 | [0336-palindrome-pairs](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0336-palindrome-pairs/) | Hard |
+| [0535-encode-and-decode-tinyurl](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0535-encode-and-decode-tinyurl) |
 ## Z Algorithm
 |  |
 | ------- |
