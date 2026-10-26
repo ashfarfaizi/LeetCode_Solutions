@@ -186,6 +186,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0525-contiguous-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0525-contiguous-array) |
 | [0526-beautiful-arrangement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0526-beautiful-arrangement) |
 | [0528-random-pick-with-weight](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0528-random-pick-with-weight) |
+| [0529-minesweeper](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0529-minesweeper) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -481,6 +482,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0427-construct-quad-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0427-construct-quad-tree/) | Medium |
 | [0463-island-perimeter](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0463-island-perimeter/) | Easy |
 | [0498-diagonal-traverse](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0498-diagonal-traverse/) | Medium |
+| [0529-minesweeper](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0529-minesweeper) |
 ## Sorting
 |  |
 | ------- |
@@ -1105,6 +1107,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 | [0514-freedom-trail](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0514-freedom-trail/) | Hard |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [0529-minesweeper](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0529-minesweeper) |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Breadth-First Search
 |  |
@@ -1144,6 +1147,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 | [0514-freedom-trail](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0514-freedom-trail/) | Hard |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [0529-minesweeper](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0529-minesweeper) |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
 |  |
