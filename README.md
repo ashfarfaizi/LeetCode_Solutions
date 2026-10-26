@@ -185,6 +185,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0524-longest-word-in-dictionary-through-deleting](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0524-longest-word-in-dictionary-through-deleting) |
 | [0525-contiguous-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0525-contiguous-array) |
 | [0526-beautiful-arrangement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0526-beautiful-arrangement) |
+| [0528-random-pick-with-weight](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0528-random-pick-with-weight) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -384,6 +385,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0509-fibonacci-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0509-fibonacci-number/) | Easy |
 | [0519-random-flip-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0519-random-flip-matrix) |
 | [0523-continuous-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0523-continuous-subarray-sum) |
+| [0528-random-pick-with-weight](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0528-random-pick-with-weight) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -701,6 +703,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0475-heaters](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0475-heaters/) | Medium |
 | [0483-smallest-good-base](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0483-smallest-good-base/) | Hard |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
+| [0528-random-pick-with-weight](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0528-random-pick-with-weight) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -1204,6 +1207,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 | [0523-continuous-subarray-sum](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0523-continuous-subarray-sum) |
 | [0525-contiguous-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0525-contiguous-array) |
+| [0528-random-pick-with-weight](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0528-random-pick-with-weight) |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 ## Zero-Sum Game
 |  |
@@ -1643,6 +1647,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0478-generate-random-point-in-a-circle](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0478-generate-random-point-in-a-circle/) | Medium |
 | [0497-random-point-in-non-overlapping-rectangles](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0497-random-point-in-non-overlapping-rectangles/) | Medium |
 | [0519-random-flip-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0519-random-flip-matrix) |
+| [0528-random-pick-with-weight](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0528-random-pick-with-weight) |
 ## Reservoir Sampling
 |  |
 | ------- |
