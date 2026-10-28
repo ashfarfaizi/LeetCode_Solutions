@@ -863,6 +863,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0516-longest-palindromic-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0518-coin-change-ii) |
 | [0526-beautiful-arrangement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0526-beautiful-arrangement) |
+| [0576-out-of-boundary-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0576-out-of-boundary-paths) |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
 | [1406-stone-game-iii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1406-stone-game-iii/) | Hard |
