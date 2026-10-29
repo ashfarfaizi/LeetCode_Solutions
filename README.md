@@ -1122,6 +1122,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0529-minesweeper](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0529-minesweeper) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0530-minimum-absolute-difference-in-bst) |
+| [0538-convert-bst-to-greater-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0538-convert-bst-to-greater-tree) |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Breadth-First Search
 |  |
@@ -1290,6 +1291,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0530-minimum-absolute-difference-in-bst) |
+| [0538-convert-bst-to-greater-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0538-convert-bst-to-greater-tree) |
 ## Binary Tree
 |  |
 | ------- |
@@ -1336,6 +1338,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0513-find-bottom-left-tree-value](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0513-find-bottom-left-tree-value/) | Medium |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0530-minimum-absolute-difference-in-bst) |
+| [0538-convert-bst-to-greater-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0538-convert-bst-to-greater-tree) |
 ## Binary Search Tree
 |  |
 | ------- |
@@ -1352,6 +1355,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0450-delete-node-in-a-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0450-delete-node-in-a-bst/) | Medium |
 | [0501-find-mode-in-binary-search-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0501-find-mode-in-binary-search-tree/) | Easy |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0530-minimum-absolute-difference-in-bst) |
+| [0538-convert-bst-to-greater-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0538-convert-bst-to-greater-tree) |
 ## DP on Trees
 |  |
 | ------- |
