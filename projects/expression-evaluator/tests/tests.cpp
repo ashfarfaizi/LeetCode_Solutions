@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 
+#include "evaluator.hpp"
 #include "lexer.hpp"
 #include "parser.hpp"
 
@@ -76,9 +77,39 @@ static void testParser() {
     CHECK(throwsParseError([] { toRPN(tokenize("1 + 2)")); }));
 }
 
+static bool near(double a, double b) { return std::fabs(a - b) < 1e-9; }
+
+template <typename F>
+static bool throwsEvalError(F f) {
+    try {
+        f();
+    } catch (const EvalError&) {
+        return true;
+    }
+    return false;
+}
+
+static void testEvaluator() {
+    CHECK(near(evaluate("3 + 4 * 2"), 11));
+    CHECK(near(evaluate("(3 + 4) * 2"), 14));
+    CHECK(near(evaluate("10 - 4 - 3"), 3));
+    CHECK(near(evaluate("2 ^ 3 ^ 2"), 512));
+    CHECK(near(evaluate("7 / 2"), 3.5));
+    CHECK(near(evaluate("1.5 * (2 + 0.5)"), 3.75));
+    CHECK(near(evaluate("42"), 42));
+    CHECK(near(evaluate("(3 + 4) * 2 ^ 2"), 28));  // README example
+
+    CHECK(throwsEvalError([] { evaluate("1 / 0"); }));
+    CHECK(throwsEvalError([] { evaluate("1 / (2 - 2)"); }));
+    CHECK(throwsEvalError([] { evaluate(""); }));
+    CHECK(throwsEvalError([] { evaluate("1 +"); }));
+    CHECK(throwsEvalError([] { evaluate("1 2"); }));
+}
+
 int main() {
     testLexer();
     testParser();
+    testEvaluator();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
