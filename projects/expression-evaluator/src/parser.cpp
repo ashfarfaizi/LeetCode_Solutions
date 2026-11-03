@@ -7,7 +7,8 @@ int precedence(char op) {
     switch (op) {
         case '+': case '-': return 1;
         case '*': case '/': return 2;
-        case '^': return 3;
+        case 'u': return 3;  // unary minus: binds tighter than * / but looser than ^
+        case '^': return 4;
         default: return 0;
     }
 }
@@ -18,13 +19,23 @@ bool rightAssociative(char op) { return op == '^'; }
 std::vector<Token> toRPN(const std::vector<Token>& tokens) {
     std::vector<Token> output;
     std::vector<Token> ops;
+    // An operator is unary when nothing that can end an operand precedes it.
+    bool expectOperand = true;
     for (std::size_t i = 0; i < tokens.size(); ++i) {
         const Token& t = tokens[i];
         switch (t.type) {
             case TokenType::Number:
                 output.push_back(t);
+                expectOperand = false;
                 break;
             case TokenType::Operator:
+                if (expectOperand) {
+                    if (t.op == '+') break;  // unary plus is a no-op
+                    if (t.op != '-') throw ParseError(std::string("unexpected operator '") + t.op + "'", i);
+                    // Prefix operators never pop: they apply to what follows.
+                    ops.push_back({TokenType::Operator, 0.0, 'u'});
+                    break;
+                }
                 while (!ops.empty() && ops.back().type == TokenType::Operator) {
                     int top = precedence(ops.back().op), cur = precedence(t.op);
                     if (top > cur || (top == cur && !rightAssociative(t.op))) {
@@ -35,9 +46,11 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
                     }
                 }
                 ops.push_back(t);
+                expectOperand = true;
                 break;
             case TokenType::LParen:
                 ops.push_back(t);
+                expectOperand = true;
                 break;
             case TokenType::RParen:
                 while (!ops.empty() && ops.back().type != TokenType::LParen) {
@@ -46,6 +59,7 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
                 }
                 if (ops.empty()) throw ParseError("unmatched ')'", i);
                 ops.pop_back();  // discard '('
+                expectOperand = false;
                 break;
         }
     }

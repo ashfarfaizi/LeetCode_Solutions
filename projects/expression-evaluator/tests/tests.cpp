@@ -73,7 +73,14 @@ static void testParser() {
     CHECK(rpnString("((1))") == "1");
     CHECK(rpnString("") == "");
 
+    CHECK(rpnString("-3 + 4") == "3 u 4 +");
+    CHECK(rpnString("-2 ^ 2") == "2 2 ^ u");
+    CHECK(rpnString("2 ^ -1") == "2 1 u ^");
+    CHECK(rpnString("+5") == "5");
+
     CHECK(throwsParseError([] { toRPN(tokenize("(1 + 2")); }));
+    CHECK(throwsParseError([] { toRPN(tokenize("* 3")); }));
+    CHECK(throwsParseError([] { toRPN(tokenize("2 * / 3")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("1 + 2)")); }));
 }
 
@@ -98,6 +105,13 @@ static void testEvaluator() {
     CHECK(near(evaluate("1.5 * (2 + 0.5)"), 3.75));
     CHECK(near(evaluate("42"), 42));
     CHECK(near(evaluate("(3 + 4) * 2 ^ 2"), 28));  // README example
+
+    CHECK(near(evaluate("-3 + 4"), 1));
+    CHECK(near(evaluate("-2 ^ 2"), -4));
+    CHECK(near(evaluate("2 ^ -1"), 0.5));
+    CHECK(near(evaluate("--5"), 5));
+    CHECK(near(evaluate("3 * -(2 + 1)"), -9));
+    CHECK(near(evaluate("-3 * 2"), -6));
 
     CHECK(throwsEvalError([] { evaluate("1 / 0"); }));
     CHECK(throwsEvalError([] { evaluate("1 / (2 - 2)"); }));

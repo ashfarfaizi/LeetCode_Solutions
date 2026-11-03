@@ -28,6 +28,10 @@ double evaluateRPN(const std::vector<Token>& rpn) {
             stack.push_back(t.value);
             continue;
         }
+        if (t.type == TokenType::Operator && t.op == 'u' && !stack.empty()) {
+            stack.back() = -stack.back();
+            continue;
+        }
         if (t.type != TokenType::Operator || stack.size() < 2)
             throw EvalError("malformed expression");
         double b = stack.back(); stack.pop_back();
