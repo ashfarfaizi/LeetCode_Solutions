@@ -19,9 +19,25 @@ No external dependencies; only the standard library.
 ## Build & test
 
 ```sh
+make           # builds build/calc and runs the tests
 make test      # builds build/tests and runs it
 make clean
 ```
+
+## Usage
+
+```sh
+$ ./build/calc "2 * (3 + 4)"
+14
+$ ./build/calc
+> -2 ^ 2
+-4
+> 1 / 0
+eval error: division by zero
+> exit
+```
+
+Errors go to stderr; in one-shot mode the exit status is 1 on error.
 
 Or without make:
 
@@ -35,5 +51,6 @@ g++ -std=c++17 -Wall -Wextra -Isrc tests/tests.cpp src/lexer.cpp src/parser.cpp 
 src/lexer.hpp, src/lexer.cpp   tokenizer
 src/parser.hpp, src/parser.cpp shunting-yard infix -> RPN
 src/evaluator.hpp/.cpp         RPN evaluation + evaluate() helper
+src/main.cpp                   CLI: one-shot or interactive REPL
 tests/tests.cpp                minimal self-contained test runner
 ```
