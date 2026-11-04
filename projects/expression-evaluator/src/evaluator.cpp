@@ -68,14 +68,18 @@ double call(const std::string& name, const std::vector<double>& args) {
     return std::round(x);
 }
 
-double lookup(const std::string& name) {
+bool isConstant(const std::string& name) { return name == "pi" || name == "e"; }
+
+double lookup(const std::string& name, const Environment& env) {
+    auto it = env.find(name);
+    if (it != env.end()) return it->second;
     if (name == "pi") return 3.14159265358979323846;
     if (name == "e") return 2.71828182845904523536;
     throw EvalError("unknown identifier '" + name + "'");
 }
 }  // namespace
 
-double evaluateRPN(const std::vector<Token>& rpn) {
+double evaluateRPN(const std::vector<Token>& rpn, const Environment& env) {
     std::vector<double> stack;
     for (const Token& t : rpn) {
         if (t.type == TokenType::Number) {
@@ -83,7 +87,7 @@ double evaluateRPN(const std::vector<Token>& rpn) {
             continue;
         }
         if (t.type == TokenType::Identifier) {
-            stack.push_back(lookup(t.name));
+            stack.push_back(lookup(t.name, env));
             continue;
         }
         if (t.type == TokenType::Function) {
@@ -109,7 +113,22 @@ double evaluateRPN(const std::vector<Token>& rpn) {
 }
 
 double evaluate(const std::string& expression) {
-    return evaluateRPN(toRPN(tokenize(expression)));
+    Environment scratch;
+    return evaluate(expression, scratch);
+}
+
+double evaluate(const std::string& expression, Environment& env) {
+    std::vector<Token> tokens = tokenize(expression);
+    if (tokens.size() >= 2 && tokens[0].type == TokenType::Identifier &&
+        tokens[1].type == TokenType::Assign) {
+        const std::string name = tokens[0].name;
+        if (isConstant(name)) throw EvalError("cannot assign to constant '" + name + "'");
+        tokens.erase(tokens.begin(), tokens.begin() + 2);
+        double value = evaluateRPN(toRPN(tokens), env);
+        env[name] = value;  // only stored once evaluation succeeded
+        return value;
+    }
+    return evaluateRPN(toRPN(tokens), env);
 }
 
 }  // namespace expr

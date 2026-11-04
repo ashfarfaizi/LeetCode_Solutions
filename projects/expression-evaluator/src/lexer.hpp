@@ -8,7 +8,7 @@ namespace expr {
 
 // Function tokens are never produced by the lexer: the parser turns an
 // Identifier followed by '(' into a Function whose value holds its arity.
-enum class TokenType { Number, Operator, LParen, RParen, Comma, Identifier, Function };
+enum class TokenType { Number, Operator, LParen, RParen, Comma, Assign, Identifier, Function };
 
 struct Token {
     TokenType type;

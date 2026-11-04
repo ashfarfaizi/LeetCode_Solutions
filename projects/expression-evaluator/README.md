@@ -23,6 +23,18 @@ functions `sqrt abs exp ln log10 sin cos tan floor ceil round`
 number of arguments is an eval error. Domain errors such as `sqrt(-1)` or `ln(0)` are
 reported as eval errors rather than returning NaN.
 
+Variables live in an `expr::Environment` (a `std::map<std::string, double>`)
+and are set with `name = expression`:
+
+```cpp
+expr::Environment env;
+expr::evaluate("r = 2", env);
+double area = expr::evaluate("pi * r ^ 2", env);  // 12.566...
+```
+
+A failed assignment (e.g. `x = 1 / 0`) leaves the previous value in place,
+and `pi` / `e` cannot be reassigned.
+
 No external dependencies; only the standard library.
 
 ## Build & test

@@ -50,6 +50,8 @@ static void testLexer() {
     CHECK(id[2] == (Token{TokenType::Identifier, 0.0, '\0', "pi_2"}));
     CHECK(id[4].name == "x1");
 
+    CHECK(tokenize("x = 1")[1].type == TokenType::Assign);
+
     CHECK(throwsParseError([] { tokenize("1 $ 2"); }));
     CHECK(throwsParseError([] { tokenize("1.2.3"); }));
     CHECK(throwsParseError([] { tokenize("."); }));
@@ -95,6 +97,7 @@ static void testParser() {
     CHECK(toRPN(tokenize("max(1, 2, 3)")).back().value == 3);
     CHECK(throwsParseError([] { toRPN(tokenize("sqrt(4")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("1, 2")); }));
+    CHECK(throwsParseError([] { toRPN(tokenize("1 + x = 2")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("(1, 2)")); }));
 
     CHECK(throwsParseError([] { toRPN(tokenize("(1 + 2")); }));
@@ -173,10 +176,30 @@ static void testEvaluator() {
     CHECK(throwsEvalError([] { evaluate("1 2"); }));
 }
 
+static void testVariables() {
+    Environment env;
+    CHECK(near(evaluate("x = 3", env), 3));
+    CHECK(near(env.at("x"), 3));
+    CHECK(near(evaluate("y = x * 2 + 1", env), 7));
+    CHECK(near(evaluate("x + y", env), 10));
+    CHECK(near(evaluate("x = x + 1", env), 4));  // reads old value
+    CHECK(near(evaluate("max(x, y) - min(x, y)", env), 3));
+    CHECK(near(evaluateRPN(toRPN(tokenize("r * r * pi")), {{"r", 2}}), 4 * 3.14159265358979323846));
+
+    CHECK(throwsEvalError([&] { evaluate("z + 1", env); }));
+    CHECK(throwsEvalError([&] { evaluate("pi = 3", env); }));
+    // A failed assignment leaves the old binding untouched.
+    CHECK(throwsEvalError([&] { evaluate("x = 1 / 0", env); }));
+    CHECK(near(env.at("x"), 4));
+    CHECK(throwsParseError([&] { evaluate("x = = 1", env); }));
+    CHECK(throwsParseError([&] { evaluate("2 = 1", env); }));
+}
+
 int main() {
     testLexer();
     testParser();
     testEvaluator();
+    testVariables();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

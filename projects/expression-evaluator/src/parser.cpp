@@ -36,6 +36,10 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
                 break;
             case TokenType::Function:
                 throw ParseError("unexpected function token", i);
+            case TokenType::Assign:
+                // Assignment is only valid as "name = expr" and is split off
+                // by evaluate() before parsing.
+                throw ParseError("unexpected '='", i);
             case TokenType::Number:
                 output.push_back(t);
                 expectOperand = false;
