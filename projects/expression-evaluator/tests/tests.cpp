@@ -90,7 +90,12 @@ static void testParser() {
     CHECK(rpnString("sqrt(x + 1)") == "x 1 + sqrt");
     CHECK(rpnString("-abs(2) ^ 2") == "2 abs 2 ^ u");
     CHECK(rpnString("sin(cos(0))") == "0 cos sin");
+    CHECK(rpnString("max(1, 2 + 3)") == "1 2 3 + max");
+    CHECK(rpnString("min(a, max(b, c), d)") == "a b c max d min");
+    CHECK(toRPN(tokenize("max(1, 2, 3)")).back().value == 3);
     CHECK(throwsParseError([] { toRPN(tokenize("sqrt(4")); }));
+    CHECK(throwsParseError([] { toRPN(tokenize("1, 2")); }));
+    CHECK(throwsParseError([] { toRPN(tokenize("(1, 2)")); }));
 
     CHECK(throwsParseError([] { toRPN(tokenize("(1 + 2")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("* 3")); }));
@@ -150,6 +155,17 @@ static void testEvaluator() {
     CHECK(throwsEvalError([] { evaluate("sqrt(-1)"); }));
     CHECK(throwsEvalError([] { evaluate("ln(0)"); }));
     CHECK(throwsEvalError([] { evaluate("sqrt()"); }));
+
+    CHECK(near(evaluate("max(3, 9, 4)"), 9));
+    CHECK(near(evaluate("min(3, -9, 4) * 2"), -18));
+    CHECK(near(evaluate("max(7)"), 7));
+    CHECK(near(evaluate("hypot(3, 4)"), 5));
+    CHECK(near(evaluate("pow(2, 10)"), 1024));
+    CHECK(near(evaluate("atan2(1, 1) * 4"), 3.14159265358979323846));
+    CHECK(near(evaluate("max(1, min(5, 2 + 1))"), 3));
+    CHECK(throwsEvalError([] { evaluate("sqrt(1, 2)"); }));
+    CHECK(throwsEvalError([] { evaluate("pow(2)"); }));
+    CHECK(throwsEvalError([] { evaluate("max(1,)"); }));
     CHECK(throwsEvalError([] { evaluate("5 % 0"); }));
     CHECK(throwsEvalError([] { evaluate("1 / (2 - 2)"); }));
     CHECK(throwsEvalError([] { evaluate(""); }));

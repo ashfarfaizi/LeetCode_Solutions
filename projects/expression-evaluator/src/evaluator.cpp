@@ -1,6 +1,8 @@
 #include "evaluator.hpp"
 
+#include <algorithm>
 #include <cmath>
+#include <iterator>
 
 #include "parser.hpp"
 
@@ -23,7 +25,31 @@ double apply(char op, double a, double b) {
     throw EvalError(std::string("unknown operator '") + op + "'");
 }
 
-double call(const std::string& name, double x) {
+void expectArgs(const std::string& name, std::size_t got, std::size_t want) {
+    if (got != want)
+        throw EvalError(name + "() takes " + std::to_string(want) + " argument" +
+                        (want == 1 ? "" : "s") + ", got " + std::to_string(got));
+}
+
+double call(const std::string& name, const std::vector<double>& args) {
+    if (name == "min" || name == "max") {
+        if (args.empty()) throw EvalError(name + "() needs at least one argument");
+        return name == "min" ? *std::min_element(args.begin(), args.end())
+                             : *std::max_element(args.begin(), args.end());
+    }
+    if (name == "pow" || name == "hypot" || name == "atan2") {
+        expectArgs(name, args.size(), 2);
+        if (name == "pow") return std::pow(args[0], args[1]);
+        if (name == "hypot") return std::hypot(args[0], args[1]);
+        return std::atan2(args[0], args[1]);
+    }
+
+    static const char* const unary[] = {"sqrt", "ln",  "log10", "abs",  "exp",  "sin",
+                                        "cos",  "tan", "floor", "ceil", "round"};
+    if (std::find(std::begin(unary), std::end(unary), name) == std::end(unary))
+        throw EvalError("unknown function '" + name + "'");
+    expectArgs(name, args.size(), 1);
+    double x = args[0];
     if (name == "sqrt") {
         if (x < 0) throw EvalError("sqrt of negative number");
         return std::sqrt(x);
@@ -39,8 +65,7 @@ double call(const std::string& name, double x) {
     if (name == "tan") return std::tan(x);
     if (name == "floor") return std::floor(x);
     if (name == "ceil") return std::ceil(x);
-    if (name == "round") return std::round(x);
-    throw EvalError("unknown function '" + name + "'");
+    return std::round(x);
 }
 
 double lookup(const std::string& name) {
@@ -62,8 +87,11 @@ double evaluateRPN(const std::vector<Token>& rpn) {
             continue;
         }
         if (t.type == TokenType::Function) {
-            if (stack.empty()) throw EvalError("malformed expression");
-            stack.back() = call(t.name, stack.back());
+            auto argc = static_cast<std::size_t>(t.value);
+            if (stack.size() < argc) throw EvalError("malformed expression");
+            std::vector<double> args(stack.end() - static_cast<std::ptrdiff_t>(argc), stack.end());
+            stack.resize(stack.size() - argc);
+            stack.push_back(call(t.name, args));
             continue;
         }
         if (t.type == TokenType::Operator && t.op == 'u' && !stack.empty()) {

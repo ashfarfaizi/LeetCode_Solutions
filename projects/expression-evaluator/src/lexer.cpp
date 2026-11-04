@@ -44,6 +44,9 @@ std::vector<Token> tokenize(const std::string& input) {
         } else if (c == '(') {
             tokens.push_back({TokenType::LParen, 0.0, '\0'});
             ++i;
+        } else if (c == ',') {
+            tokens.push_back({TokenType::Comma, 0.0, '\0'});
+            ++i;
         } else if (c == ')') {
             tokens.push_back({TokenType::RParen, 0.0, '\0'});
             ++i;

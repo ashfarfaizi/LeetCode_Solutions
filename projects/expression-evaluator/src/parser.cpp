@@ -64,6 +64,19 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
                 ops.push_back(t);
                 expectOperand = true;
                 break;
+            case TokenType::Comma: {
+                // Flush the current argument, then count one more for the
+                // function owning the innermost '('.
+                while (!ops.empty() && ops.back().type != TokenType::LParen) {
+                    output.push_back(ops.back());
+                    ops.pop_back();
+                }
+                if (ops.size() < 2 || ops[ops.size() - 2].type != TokenType::Function)
+                    throw ParseError("',' outside a function call", i);
+                ops[ops.size() - 2].value += 1.0;
+                expectOperand = true;
+                break;
+            }
             case TokenType::RParen:
                 while (!ops.empty() && ops.back().type != TokenType::LParen) {
                     output.push_back(ops.back());
