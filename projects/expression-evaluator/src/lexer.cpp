@@ -32,6 +32,12 @@ std::vector<Token> tokenize(const std::string& input) {
             std::string text = input.substr(start, i - start);
             if (text == ".") throw ParseError("malformed number", start);
             tokens.push_back({TokenType::Number, std::strtod(text.c_str(), nullptr), '\0'});
+        } else if (std::isalpha(static_cast<unsigned char>(c)) || c == '_') {
+            std::size_t start = i;
+            while (i < input.size() &&
+                   (std::isalnum(static_cast<unsigned char>(input[i])) || input[i] == '_'))
+                ++i;
+            tokens.push_back({TokenType::Identifier, 0.0, '\0', input.substr(start, i - start)});
         } else if (isOperatorChar(c)) {
             tokens.push_back({TokenType::Operator, 0.0, c});
             ++i;

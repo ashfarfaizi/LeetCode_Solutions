@@ -6,15 +6,16 @@
 
 namespace expr {
 
-enum class TokenType { Number, Operator, LParen, RParen };
+enum class TokenType { Number, Operator, LParen, RParen, Identifier };
 
 struct Token {
     TokenType type;
     double value = 0.0;  // valid when type == Number
     char op = '\0';      // valid when type == Operator
+    std::string name{};  // valid when type == Identifier
 
     bool operator==(const Token& o) const {
-        return type == o.type && value == o.value && op == o.op;
+        return type == o.type && value == o.value && op == o.op && name == o.name;
     }
 };
 
@@ -29,6 +30,7 @@ private:
 };
 
 // Split an expression into tokens. Whitespace is ignored.
+// Identifiers match [A-Za-z_][A-Za-z0-9_]*.
 // Throws ParseError on an unexpected character or malformed number.
 std::vector<Token> tokenize(const std::string& input);
 

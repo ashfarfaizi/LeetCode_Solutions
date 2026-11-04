@@ -22,6 +22,12 @@ double apply(char op, double a, double b) {
     }
     throw EvalError(std::string("unknown operator '") + op + "'");
 }
+
+double lookup(const std::string& name) {
+    if (name == "pi") return 3.14159265358979323846;
+    if (name == "e") return 2.71828182845904523536;
+    throw EvalError("unknown identifier '" + name + "'");
+}
 }  // namespace
 
 double evaluateRPN(const std::vector<Token>& rpn) {
@@ -29,6 +35,10 @@ double evaluateRPN(const std::vector<Token>& rpn) {
     for (const Token& t : rpn) {
         if (t.type == TokenType::Number) {
             stack.push_back(t.value);
+            continue;
+        }
+        if (t.type == TokenType::Identifier) {
+            stack.push_back(lookup(t.name));
             continue;
         }
         if (t.type == TokenType::Operator && t.op == 'u' && !stack.empty()) {

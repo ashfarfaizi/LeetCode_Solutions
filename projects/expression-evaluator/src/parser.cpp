@@ -25,6 +25,7 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
         const Token& t = tokens[i];
         switch (t.type) {
             case TokenType::Number:
+            case TokenType::Identifier:
                 output.push_back(t);
                 expectOperand = false;
                 break;

@@ -45,6 +45,11 @@ static void testLexer() {
     CHECK(tokenize("2^3")[1].op == '^');
     CHECK(tokenize("7%3")[1].op == '%');
 
+    auto id = tokenize("2*pi_2 + x1");
+    CHECK(id.size() == 5);
+    CHECK(id[2] == (Token{TokenType::Identifier, 0.0, '\0', "pi_2"}));
+    CHECK(id[4].name == "x1");
+
     CHECK(throwsParseError([] { tokenize("1 $ 2"); }));
     CHECK(throwsParseError([] { tokenize("1.2.3"); }));
     CHECK(throwsParseError([] { tokenize("."); }));
@@ -55,7 +60,9 @@ static std::string rpnString(const std::string& src) {
     std::string out;
     for (const Token& t : toRPN(tokenize(src))) {
         if (!out.empty()) out += ' ';
-        if (t.type == TokenType::Number) {
+        if (t.type == TokenType::Identifier) {
+            out += t.name;
+        } else if (t.type == TokenType::Number) {
             double v = t.value;
             out += (v == std::floor(v)) ? std::to_string(static_cast<long long>(v)) : std::to_string(v);
         } else {
@@ -79,6 +86,7 @@ static void testParser() {
     CHECK(rpnString("-2 ^ 2") == "2 2 ^ u");
     CHECK(rpnString("2 ^ -1") == "2 1 u ^");
     CHECK(rpnString("+5") == "5");
+    CHECK(rpnString("2 * pi") == "2 pi *");
 
     CHECK(throwsParseError([] { toRPN(tokenize("(1 + 2")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("* 3")); }));
@@ -120,7 +128,12 @@ static void testEvaluator() {
     CHECK(near(evaluate("5.5 % 2"), 1.5));
     CHECK(near(evaluate("2 * 7 % 4"), 2));  // left-assoc with *
 
+    CHECK(near(evaluate("pi"), 3.14159265358979323846));
+    CHECK(near(evaluate("2 * pi"), 6.28318530717958647692));
+    CHECK(near(evaluate("e ^ 2"), 7.38905609893064951));
+
     CHECK(throwsEvalError([] { evaluate("1 / 0"); }));
+    CHECK(throwsEvalError([] { evaluate("foo + 1"); }));
     CHECK(throwsEvalError([] { evaluate("5 % 0"); }));
     CHECK(throwsEvalError([] { evaluate("1 / (2 - 2)"); }));
     CHECK(throwsEvalError([] { evaluate(""); }));
