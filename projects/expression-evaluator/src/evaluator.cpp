@@ -15,6 +15,9 @@ double apply(char op, double a, double b) {
         case '/':
             if (b == 0.0) throw EvalError("division by zero");
             return a / b;
+        case '%':
+            if (b == 0.0) throw EvalError("modulo by zero");
+            return std::fmod(a, b);  // result takes the sign of a, like C++ %
         case '^': return std::pow(a, b);
     }
     throw EvalError(std::string("unknown operator '") + op + "'");

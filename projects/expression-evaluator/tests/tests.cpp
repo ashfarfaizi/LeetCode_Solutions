@@ -43,6 +43,7 @@ static void testLexer() {
     CHECK(tokenize("   \t ").empty());
     CHECK(tokenize(".25")[0].value == 0.25);
     CHECK(tokenize("2^3")[1].op == '^');
+    CHECK(tokenize("7%3")[1].op == '%');
 
     CHECK(throwsParseError([] { tokenize("1 $ 2"); }));
     CHECK(throwsParseError([] { tokenize("1.2.3"); }));
@@ -70,6 +71,7 @@ static void testParser() {
     CHECK(rpnString("10 - 4 - 3") == "10 4 - 3 -");      // left-assoc
     CHECK(rpnString("2 ^ 3 ^ 2") == "2 3 2 ^ ^");        // right-assoc
     CHECK(rpnString("8 / 2 * 3") == "8 2 / 3 *");
+    CHECK(rpnString("1 + 7 % 4") == "1 7 4 % +");
     CHECK(rpnString("((1))") == "1");
     CHECK(rpnString("") == "");
 
@@ -113,7 +115,13 @@ static void testEvaluator() {
     CHECK(near(evaluate("3 * -(2 + 1)"), -9));
     CHECK(near(evaluate("-3 * 2"), -6));
 
+    CHECK(near(evaluate("7 % 3"), 1));
+    CHECK(near(evaluate("-7 % 3"), -1));
+    CHECK(near(evaluate("5.5 % 2"), 1.5));
+    CHECK(near(evaluate("2 * 7 % 4"), 2));  // left-assoc with *
+
     CHECK(throwsEvalError([] { evaluate("1 / 0"); }));
+    CHECK(throwsEvalError([] { evaluate("5 % 0"); }));
     CHECK(throwsEvalError([] { evaluate("1 / (2 - 2)"); }));
     CHECK(throwsEvalError([] { evaluate(""); }));
     CHECK(throwsEvalError([] { evaluate("1 +"); }));

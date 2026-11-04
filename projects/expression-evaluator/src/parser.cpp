@@ -6,7 +6,7 @@ namespace {
 int precedence(char op) {
     switch (op) {
         case '+': case '-': return 1;
-        case '*': case '/': return 2;
+        case '*': case '/': case '%': return 2;
         case 'u': return 3;  // unary minus: binds tighter than * / but looser than ^
         case '^': return 4;
         default: return 0;

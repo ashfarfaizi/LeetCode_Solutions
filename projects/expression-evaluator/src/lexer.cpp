@@ -7,7 +7,7 @@ namespace expr {
 
 namespace {
 bool isOperatorChar(char c) {
-    return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
+    return c == '+' || c == '-' || c == '*' || c == '/' || c == '%' || c == '^';
 }
 }  // namespace
 

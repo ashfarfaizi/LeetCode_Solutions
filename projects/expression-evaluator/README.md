@@ -4,10 +4,11 @@ A small arithmetic expression evaluator written in C++17, built in stages:
 
 1. **Lexer** – turns a string such as `3 + 4.5 * (2 - 1)` into tokens.
 2. **Parser** – converts tokens to Reverse Polish Notation with the
-   shunting-yard algorithm (`+ -` < `* /` < unary `-` < `^`, with `^`
+   shunting-yard algorithm (`+ -` < `* / %` < unary `-` < `^`, with `^`
    right-associative, so `-2^2 = -4` and `2^-1 = 0.5`).
 3. **Evaluator** – computes the RPN result with a value stack and reports
-   errors such as division by zero.
+   errors such as division or modulo by zero. `%` is the
+   floating-point remainder (`fmod`), so `-7 % 3 = -1` and `5.5 % 2 = 1.5`.
 
 ```cpp
 #include "evaluator.hpp"
