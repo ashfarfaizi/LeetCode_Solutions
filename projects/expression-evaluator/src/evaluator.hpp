@@ -14,8 +14,10 @@ public:
 };
 
 // Evaluate an RPN token sequence with a value stack.
-// Identifiers resolve to the built-in constants pi and e.
-// Throws EvalError on division or modulo by zero, an unknown identifier,
+// Identifiers resolve to the built-in constants pi and e. Built-in
+// functions: sqrt abs exp ln log10 sin cos tan floor ceil round.
+// Throws EvalError on division or modulo by zero, an unknown identifier or function,
+// a domain error such as sqrt(-1),
 // or a malformed sequence.
 double evaluateRPN(const std::vector<Token>& rpn);
 

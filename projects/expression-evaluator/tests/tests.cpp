@@ -60,7 +60,7 @@ static std::string rpnString(const std::string& src) {
     std::string out;
     for (const Token& t : toRPN(tokenize(src))) {
         if (!out.empty()) out += ' ';
-        if (t.type == TokenType::Identifier) {
+        if (t.type == TokenType::Identifier || t.type == TokenType::Function) {
             out += t.name;
         } else if (t.type == TokenType::Number) {
             double v = t.value;
@@ -87,6 +87,10 @@ static void testParser() {
     CHECK(rpnString("2 ^ -1") == "2 1 u ^");
     CHECK(rpnString("+5") == "5");
     CHECK(rpnString("2 * pi") == "2 pi *");
+    CHECK(rpnString("sqrt(x + 1)") == "x 1 + sqrt");
+    CHECK(rpnString("-abs(2) ^ 2") == "2 abs 2 ^ u");
+    CHECK(rpnString("sin(cos(0))") == "0 cos sin");
+    CHECK(throwsParseError([] { toRPN(tokenize("sqrt(4")); }));
 
     CHECK(throwsParseError([] { toRPN(tokenize("(1 + 2")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("* 3")); }));
@@ -133,7 +137,19 @@ static void testEvaluator() {
     CHECK(near(evaluate("e ^ 2"), 7.38905609893064951));
 
     CHECK(throwsEvalError([] { evaluate("1 / 0"); }));
+    CHECK(near(evaluate("sqrt(16) + 1"), 5));
+    CHECK(near(evaluate("abs(-3.5)"), 3.5));
+    CHECK(near(evaluate("ln(e ^ 3)"), 3));
+    CHECK(near(evaluate("log10(1000)"), 3));
+    CHECK(near(evaluate("sin(pi / 2) + cos(0)"), 2));
+    CHECK(near(evaluate("floor(2.7) + ceil(2.1) + round(2.5)"), 8));
+    CHECK(near(evaluate("2 * sqrt(sqrt(16))"), 4));
+
     CHECK(throwsEvalError([] { evaluate("foo + 1"); }));
+    CHECK(throwsEvalError([] { evaluate("foo(1)"); }));
+    CHECK(throwsEvalError([] { evaluate("sqrt(-1)"); }));
+    CHECK(throwsEvalError([] { evaluate("ln(0)"); }));
+    CHECK(throwsEvalError([] { evaluate("sqrt()"); }));
     CHECK(throwsEvalError([] { evaluate("5 % 0"); }));
     CHECK(throwsEvalError([] { evaluate("1 / (2 - 2)"); }));
     CHECK(throwsEvalError([] { evaluate(""); }));

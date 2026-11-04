@@ -16,8 +16,10 @@ A small arithmetic expression evaluator written in C++17, built in stages:
 double x = expr::evaluate("(3 + 4) * 2 ^ 2");  // 28
 ```
 
-The constants `pi` and `e` are built in; any other identifier is reported
-as `unknown identifier`.
+The constants `pi` and `e` are built in, along with the one-argument
+functions `sqrt abs exp ln log10 sin cos tan floor ceil round`
+(angles in radians). Domain errors such as `sqrt(-1)` or `ln(0)` are
+reported as eval errors rather than returning NaN.
 
 No external dependencies; only the standard library.
 

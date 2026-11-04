@@ -6,13 +6,15 @@
 
 namespace expr {
 
-enum class TokenType { Number, Operator, LParen, RParen, Identifier };
+// Function tokens are never produced by the lexer: the parser turns an
+// Identifier followed by '(' into a Function whose value holds its arity.
+enum class TokenType { Number, Operator, LParen, RParen, Identifier, Function };
 
 struct Token {
     TokenType type;
-    double value = 0.0;  // valid when type == Number
+    double value = 0.0;  // Number: the value; Function: argument count
     char op = '\0';      // valid when type == Operator
-    std::string name{};  // valid when type == Identifier
+    std::string name{};  // valid when type == Identifier or Function
 
     bool operator==(const Token& o) const {
         return type == o.type && value == o.value && op == o.op && name == o.name;

@@ -23,6 +23,26 @@ double apply(char op, double a, double b) {
     throw EvalError(std::string("unknown operator '") + op + "'");
 }
 
+double call(const std::string& name, double x) {
+    if (name == "sqrt") {
+        if (x < 0) throw EvalError("sqrt of negative number");
+        return std::sqrt(x);
+    }
+    if (name == "ln" || name == "log10") {
+        if (x <= 0) throw EvalError(name + " of non-positive number");
+        return name == "ln" ? std::log(x) : std::log10(x);
+    }
+    if (name == "abs") return std::fabs(x);
+    if (name == "exp") return std::exp(x);
+    if (name == "sin") return std::sin(x);
+    if (name == "cos") return std::cos(x);
+    if (name == "tan") return std::tan(x);
+    if (name == "floor") return std::floor(x);
+    if (name == "ceil") return std::ceil(x);
+    if (name == "round") return std::round(x);
+    throw EvalError("unknown function '" + name + "'");
+}
+
 double lookup(const std::string& name) {
     if (name == "pi") return 3.14159265358979323846;
     if (name == "e") return 2.71828182845904523536;
@@ -39,6 +59,11 @@ double evaluateRPN(const std::vector<Token>& rpn) {
         }
         if (t.type == TokenType::Identifier) {
             stack.push_back(lookup(t.name));
+            continue;
+        }
+        if (t.type == TokenType::Function) {
+            if (stack.empty()) throw EvalError("malformed expression");
+            stack.back() = call(t.name, stack.back());
             continue;
         }
         if (t.type == TokenType::Operator && t.op == 'u' && !stack.empty()) {

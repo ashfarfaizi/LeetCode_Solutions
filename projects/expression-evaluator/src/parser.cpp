@@ -24,8 +24,19 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
     for (std::size_t i = 0; i < tokens.size(); ++i) {
         const Token& t = tokens[i];
         switch (t.type) {
-            case TokenType::Number:
             case TokenType::Identifier:
+                if (i + 1 < tokens.size() && tokens[i + 1].type == TokenType::LParen) {
+                    // Function call: the '(' is pushed on the next iteration and
+                    // the function itself is emitted when its ')' closes.
+                    ops.push_back({TokenType::Function, 1.0, '\0', t.name});
+                    break;
+                }
+                output.push_back(t);
+                expectOperand = false;
+                break;
+            case TokenType::Function:
+                throw ParseError("unexpected function token", i);
+            case TokenType::Number:
                 output.push_back(t);
                 expectOperand = false;
                 break;
@@ -60,6 +71,10 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
                 }
                 if (ops.empty()) throw ParseError("unmatched ')'", i);
                 ops.pop_back();  // discard '('
+                if (!ops.empty() && ops.back().type == TokenType::Function) {
+                    output.push_back(ops.back());
+                    ops.pop_back();
+                }
                 expectOperand = false;
                 break;
         }
