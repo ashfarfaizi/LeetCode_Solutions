@@ -1,5 +1,6 @@
 // Command-line front end.
 //   calc "1 + 2 * 3"     evaluate the arguments as one expression and exit
+//   calc --rpn "1 + 2"   print the expression in RPN instead of evaluating it
 //   calc                 read expressions line by line from stdin (REPL)
 //
 // In the REPL, variables persist between lines ("x = 4", then "x * 2"),
@@ -8,6 +9,7 @@
 #include <string>
 
 #include "evaluator.hpp"
+#include "parser.hpp"
 
 namespace {
 bool evalAndPrint(const std::string& line, expr::Environment& env) {
@@ -24,6 +26,16 @@ bool evalAndPrint(const std::string& line, expr::Environment& env) {
     return false;
 }
 
+bool printRPN(const std::string& line) {
+    try {
+        std::cout << expr::rpnToString(expr::toRPN(expr::tokenize(line))) << '\n';
+        return true;
+    } catch (const expr::ParseError& e) {
+        std::cerr << "parse error: " << e.what() << '\n';
+    }
+    return false;
+}
+
 std::string trim(const std::string& s) {
     auto b = s.find_first_not_of(" \t\r");
     if (b == std::string::npos) return "";
@@ -35,12 +47,16 @@ std::string trim(const std::string& s) {
 int main(int argc, char** argv) {
     expr::Environment env;
     if (argc > 1) {
+        int first = 1;
+        bool rpnOnly = std::string(argv[1]) == "--rpn";
+        if (rpnOnly) ++first;
         std::string expression;
-        for (int i = 1; i < argc; ++i) {
-            if (i > 1) expression += ' ';
+        for (int i = first; i < argc; ++i) {
+            if (i > first) expression += ' ';
             expression += argv[i];
         }
-        return evalAndPrint(expression, env) ? 0 : 1;
+        bool ok = rpnOnly ? printRPN(expression) : evalAndPrint(expression, env);
+        return ok ? 0 : 1;
     }
 
     std::string line;

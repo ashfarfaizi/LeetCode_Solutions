@@ -95,6 +95,10 @@ static void testParser() {
     CHECK(rpnString("max(1, 2 + 3)") == "1 2 3 + max");
     CHECK(rpnString("min(a, max(b, c), d)") == "a b c max d min");
     CHECK(toRPN(tokenize("max(1, 2, 3)")).back().value == 3);
+    auto show = [](const std::string& src) { return rpnToString(toRPN(tokenize(src))); };
+    CHECK(show("-max(1, 2.5) * x") == "1 2.5 max/2 neg x *");
+    CHECK(show("sqrt(0.125) % 3") == "0.125 sqrt 3 %");
+    CHECK(show("") == "");
     CHECK(throwsParseError([] { toRPN(tokenize("sqrt(4")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("1, 2")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("1 + x = 2")); }));

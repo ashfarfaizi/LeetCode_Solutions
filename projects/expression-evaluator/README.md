@@ -67,6 +67,13 @@ eval error: division by zero
 > exit
 ```
 
+To see how an expression is parsed, print its RPN form instead:
+
+```sh
+$ ./build/calc --rpn "-max(1, 2.5) * x"
+1 2.5 max/2 neg x *
+```
+
 In the REPL, variables persist between lines, `ans` holds the last
 successful result, and `vars` lists all bindings.
 
@@ -82,7 +89,7 @@ g++ -std=c++17 -Wall -Wextra -Isrc tests/tests.cpp src/lexer.cpp src/parser.cpp 
 
 ```
 src/lexer.hpp, src/lexer.cpp   tokenizer
-src/parser.hpp, src/parser.cpp shunting-yard infix -> RPN
+src/parser.hpp, src/parser.cpp shunting-yard infix -> RPN, rpnToString()
 src/evaluator.hpp/.cpp         RPN evaluation + evaluate() helper
 src/main.cpp                   CLI: one-shot or REPL with variables and ans
 tests/tests.cpp                minimal self-contained test runner

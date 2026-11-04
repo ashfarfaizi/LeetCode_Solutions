@@ -1,5 +1,7 @@
 #include "parser.hpp"
 
+#include <sstream>
+
 namespace expr {
 
 namespace {
@@ -103,6 +105,28 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
         ops.pop_back();
     }
     return output;
+}
+
+std::string rpnToString(const std::vector<Token>& rpn) {
+    std::ostringstream out;
+    for (std::size_t i = 0; i < rpn.size(); ++i) {
+        if (i) out << ' ';
+        const Token& t = rpn[i];
+        switch (t.type) {
+            case TokenType::Number: out << t.value; break;
+            case TokenType::Identifier: out << t.name; break;
+            case TokenType::Function:
+                out << t.name;
+                if (t.value != 1.0) out << '/' << static_cast<int>(t.value);
+                break;
+            case TokenType::Operator:
+                if (t.op == 'u') out << "neg";
+                else out << t.op;
+                break;
+            default: out << '?'; break;  // parens etc. never appear in RPN
+        }
+    }
+    return out.str();
 }
 
 }  // namespace expr
