@@ -53,10 +53,22 @@ $ ./build/calc "2 * (3 + 4)"
 $ ./build/calc
 > -2 ^ 2
 -4
+> r = 2
+2
+> pi * r ^ 2
+12.5664
+> ans / pi
+4
+> vars
+ans = 4
+r = 2
 > 1 / 0
 eval error: division by zero
 > exit
 ```
+
+In the REPL, variables persist between lines, `ans` holds the last
+successful result, and `vars` lists all bindings.
 
 Errors go to stderr; in one-shot mode the exit status is 1 on error.
 
@@ -72,6 +84,6 @@ g++ -std=c++17 -Wall -Wextra -Isrc tests/tests.cpp src/lexer.cpp src/parser.cpp 
 src/lexer.hpp, src/lexer.cpp   tokenizer
 src/parser.hpp, src/parser.cpp shunting-yard infix -> RPN
 src/evaluator.hpp/.cpp         RPN evaluation + evaluate() helper
-src/main.cpp                   CLI: one-shot or interactive REPL
+src/main.cpp                   CLI: one-shot or REPL with variables and ans
 tests/tests.cpp                minimal self-contained test runner
 ```
