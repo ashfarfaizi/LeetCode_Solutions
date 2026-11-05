@@ -18,6 +18,16 @@ cache.put(3, "three");   // evicts 2
 cache.get(2);            // std::nullopt
 ```
 
+Other operations:
+
+| call            | effect                                              |
+|-----------------|-----------------------------------------------------|
+| `peek(k)`       | like `get` but does not change recency              |
+| `contains(k)`   | membership test, does not change recency            |
+| `erase(k)`      | removes `k`, returns whether it was present         |
+| `clear()`       | removes everything                                  |
+| `size()`, `empty()`, `capacity()` | the obvious                       |
+
 No dependencies beyond the standard library.
 
 ## Build & test

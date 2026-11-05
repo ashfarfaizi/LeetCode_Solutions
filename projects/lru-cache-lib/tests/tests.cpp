@@ -62,11 +62,42 @@ static void testZeroCapacityThrows() {
     CHECK(threw);
 }
 
+static void testPeekDoesNotRefresh() {
+    lru::LRUCache<int, int> c(2);
+    c.put(1, 1);
+    c.put(2, 2);
+    CHECK(c.peek(1) == 1);  // 1 stays least recently used
+    CHECK(c.contains(1));
+    c.put(3, 3);
+    CHECK(!c.contains(1));
+    CHECK(!c.peek(1));
+    CHECK(c.contains(2));
+}
+
+static void testEraseAndClear() {
+    lru::LRUCache<int, int> c(3);
+    c.put(1, 1);
+    c.put(2, 2);
+    CHECK(c.erase(1));
+    CHECK(!c.erase(1));
+    CHECK(c.size() == 1);
+    c.put(3, 3);
+    c.put(4, 4);
+    c.put(5, 5);           // full again only now, evicts 2
+    CHECK(!c.contains(2));
+    c.clear();
+    CHECK(c.empty());
+    c.put(6, 6);
+    CHECK(c.get(6) == 6);
+}
+
 int main() {
     testBasicGetPut();
     testEvictsLeastRecentlyUsed();
     testOverwriteRefreshes();
     testZeroCapacityThrows();
+    testPeekDoesNotRefresh();
+    testEraseAndClear();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

@@ -46,6 +46,31 @@ public:
         index_[key] = items_.begin();
     }
 
+    // True if key is cached; does not change recency.
+    bool contains(const Key& key) const { return index_.count(key) != 0; }
+
+    // Returns the value for key without marking it as recently used.
+    std::optional<Value> peek(const Key& key) const {
+        auto it = index_.find(key);
+        if (it == index_.end()) return std::nullopt;
+        return it->second->second;
+    }
+
+    // Removes key if present; returns whether anything was removed.
+    bool erase(const Key& key) {
+        auto it = index_.find(key);
+        if (it == index_.end()) return false;
+        items_.erase(it->second);
+        index_.erase(it);
+        return true;
+    }
+
+    void clear() {
+        items_.clear();
+        index_.clear();
+    }
+
+    bool empty() const { return items_.empty(); }
     std::size_t size() const { return items_.size(); }
     std::size_t capacity() const { return capacity_; }
 
