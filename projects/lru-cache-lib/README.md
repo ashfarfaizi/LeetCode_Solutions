@@ -31,6 +31,18 @@ Other operations:
 `stats()` returns hit, miss and eviction counters plus `hitRate()`;
 only `get` counts towards hits and misses. `resetStats()` zeroes them.
 
+To react to capacity evictions (for example to write dirty entries back),
+pass a callback to the constructor or `setEvictionCallback`:
+
+```cpp
+lru::LRUCache<std::string, Page> pages(64, [](const std::string& key, const Page& p) {
+    if (p.dirty) flush(key, p);
+});
+```
+
+The callback runs after the entry has been removed and is not called for
+`erase()` or `clear()`.
+
 No dependencies beyond the standard library.
 
 ## Build & test

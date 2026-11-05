@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 static int failures = 0;
 static int checks = 0;
@@ -109,6 +110,29 @@ static void testStats() {
     CHECK(c.stats().hits == 0 && c.stats().evictions == 0);
 }
 
+static void testEvictionCallback() {
+    std::vector<std::pair<int, std::string>> evicted;
+    lru::LRUCache<int, std::string> c(2, [&](const int& k, const std::string& v) {
+        evicted.emplace_back(k, v);
+    });
+    c.put(1, "a");
+    c.put(2, "b");
+    c.get(1);
+    c.put(3, "c");         // evicts 2
+    c.erase(1);            // explicit erase: no callback
+    c.put(4, "d");
+    c.put(5, "e");         // evicts 3
+    CHECK(evicted.size() == 2);
+    CHECK(evicted[0] == std::make_pair(2, std::string("b")));
+    CHECK(evicted[1] == std::make_pair(3, std::string("c")));
+
+    int count = 0;
+    c.setEvictionCallback([&](const int&, const std::string&) { ++count; });
+    c.put(6, "f");
+    CHECK(count == 1);
+    CHECK(evicted.size() == 2);
+}
+
 int main() {
     testBasicGetPut();
     testEvictsLeastRecentlyUsed();
@@ -117,6 +141,7 @@ int main() {
     testPeekDoesNotRefresh();
     testEraseAndClear();
     testStats();
+    testEvictionCallback();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

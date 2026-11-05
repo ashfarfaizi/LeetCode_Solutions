@@ -30,9 +30,19 @@ struct Stats {
 template <typename Key, typename Value, typename Hash = std::hash<Key>>
 class LRUCache {
 public:
+    // Called with the key and value of each entry evicted for capacity
+    // (not for erase() or clear()).
+    using EvictionCallback = std::function<void(const Key&, const Value&)>;
+
     explicit LRUCache(std::size_t capacity) : capacity_(capacity) {
         if (capacity_ == 0) throw std::invalid_argument("LRUCache capacity must be > 0");
     }
+
+    LRUCache(std::size_t capacity, EvictionCallback onEvict) : LRUCache(capacity) {
+        onEvict_ = std::move(onEvict);
+    }
+
+    void setEvictionCallback(EvictionCallback onEvict) { onEvict_ = std::move(onEvict); }
 
     // Returns the value for key and marks it most recently used.
     std::optional<Value> get(const Key& key) {
@@ -55,9 +65,11 @@ public:
             return;
         }
         if (items_.size() == capacity_) {
-            index_.erase(items_.back().first);
+            Entry victim = std::move(items_.back());
+            index_.erase(victim.first);
             items_.pop_back();
             ++stats_.evictions;
+            if (onEvict_) onEvict_(victim.first, victim.second);
         }
         items_.emplace_front(key, std::move(value));
         index_[key] = items_.begin();
@@ -99,6 +111,7 @@ private:
     using Entry = std::pair<Key, Value>;
     std::size_t capacity_;
     Stats stats_;
+    EvictionCallback onEvict_;
     std::list<Entry> items_;
     std::unordered_map<Key, typename std::list<Entry>::iterator, Hash> index_;
 };
