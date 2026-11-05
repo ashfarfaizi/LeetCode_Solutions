@@ -60,8 +60,21 @@ No dependencies beyond the standard library.
 ## Build & test
 
 ```sh
+make          # builds build/cache_sim and runs the tests
 make test     # builds build/tests and runs it
 make clean
+```
+
+## Example: cache simulator
+
+`examples/cache_sim.cpp` replays a whitespace-separated trace of keys and
+reports how each capacity would perform:
+
+```sh
+$ echo "a b c a d a b e a b" | ./build/cache_sim 2 3
+requests: 10
+capacity 2: 1 hits, 9 misses, 7 evictions, hit rate 10.0%
+capacity 3: 4 hits, 6 misses, 3 evictions, hit rate 40.0%
 ```
 
 Or without make:
@@ -75,5 +88,6 @@ g++ -std=c++17 -Wall -Wextra -Iinclude tests/tests.cpp -o tests_bin -pthread && 
 ```
 include/lru_cache.hpp              the cache (header-only)
 include/concurrent_lru_cache.hpp   mutex-guarded wrapper
+examples/cache_sim.cpp             trace-driven hit-rate simulator
 tests/tests.cpp                    minimal self-contained test runner
 ```

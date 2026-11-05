@@ -4,7 +4,11 @@ LDFLAGS  ?= -pthread
 
 .PHONY: all test clean
 
-all: test
+all: build/cache_sim test
+
+build/cache_sim: examples/cache_sim.cpp $(wildcard include/*.hpp)
+	@mkdir -p build
+	$(CXX) $(CXXFLAGS) -Iinclude examples/cache_sim.cpp -o $@
 
 build/tests: tests/tests.cpp $(wildcard include/*.hpp)
 	@mkdir -p build
