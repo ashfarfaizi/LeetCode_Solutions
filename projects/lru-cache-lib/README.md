@@ -43,6 +43,18 @@ lru::LRUCache<std::string, Page> pages(64, [](const std::string& key, const Page
 The callback runs after the entry has been removed and is not called for
 `erase()` or `clear()`.
 
+For use from several threads, `lru::ConcurrentLRUCache` (in
+`concurrent_lru_cache.hpp`) guards a cache with a single mutex and adds
+`getOrCompute(key, factory)`:
+
+```cpp
+lru::ConcurrentLRUCache<int, Result> results(1024);
+Result r = results.getOrCompute(id, [&] { return expensiveLookup(id); });
+```
+
+The factory runs outside the lock, so it may run more than once for the same
+key under contention.
+
 No dependencies beyond the standard library.
 
 ## Build & test
@@ -55,12 +67,13 @@ make clean
 Or without make:
 
 ```sh
-g++ -std=c++17 -Wall -Wextra -Iinclude tests/tests.cpp -o tests_bin && ./tests_bin
+g++ -std=c++17 -Wall -Wextra -Iinclude tests/tests.cpp -o tests_bin -pthread && ./tests_bin
 ```
 
 ## Layout
 
 ```
-include/lru_cache.hpp   the cache (header-only)
-tests/tests.cpp         minimal self-contained test runner
+include/lru_cache.hpp              the cache (header-only)
+include/concurrent_lru_cache.hpp   mutex-guarded wrapper
+tests/tests.cpp                    minimal self-contained test runner
 ```

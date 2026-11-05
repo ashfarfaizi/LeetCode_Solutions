@@ -1,8 +1,11 @@
 // Minimal self-contained test runner for lru-cache-lib.
+#include "concurrent_lru_cache.hpp"
 #include "lru_cache.hpp"
 
 #include <iostream>
+#include <atomic>
 #include <string>
+#include <thread>
 #include <vector>
 
 static int failures = 0;
@@ -133,6 +136,33 @@ static void testEvictionCallback() {
     CHECK(evicted.size() == 2);
 }
 
+static void testConcurrentCache() {
+    lru::ConcurrentLRUCache<int, int> c(64);
+    std::atomic<int> computed{0};
+    std::atomic<int> wrong{0};
+    std::vector<std::thread> threads;
+    for (int t = 0; t < 4; ++t) {
+        threads.emplace_back([&, t] {
+            for (int i = 0; i < 1000; ++i) {
+                int key = (i * 7 + t) % 128;
+                int v = c.getOrCompute(key, [&] {
+                    ++computed;
+                    return key * key;
+                });
+                if (v != key * key) ++wrong;
+            }
+        });
+    }
+    for (auto& th : threads) th.join();
+    CHECK(wrong.load() == 0);
+    CHECK(c.size() == 64);
+    CHECK(computed.load() > 0);
+    lru::Stats s = c.stats();
+    CHECK(s.hits + s.misses == 4000);
+    c.put(5, 25);
+    CHECK(c.get(5) == 25);
+}
+
 int main() {
     testBasicGetPut();
     testEvictsLeastRecentlyUsed();
@@ -142,6 +172,7 @@ int main() {
     testEraseAndClear();
     testStats();
     testEvictionCallback();
+    testConcurrentCache();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
