@@ -91,6 +91,24 @@ static void testEraseAndClear() {
     CHECK(c.get(6) == 6);
 }
 
+static void testStats() {
+    lru::LRUCache<int, int> c(2);
+    CHECK(c.stats().hitRate() == 0.0);
+    c.put(1, 1);
+    c.put(2, 2);
+    c.get(1);              // hit
+    c.get(3);              // miss
+    c.peek(2);             // not counted
+    c.put(3, 3);           // evicts 2
+    c.put(4, 4);           // evicts 1
+    CHECK(c.stats().hits == 1);
+    CHECK(c.stats().misses == 1);
+    CHECK(c.stats().evictions == 2);
+    CHECK(c.stats().hitRate() == 0.5);
+    c.resetStats();
+    CHECK(c.stats().hits == 0 && c.stats().evictions == 0);
+}
+
 int main() {
     testBasicGetPut();
     testEvictsLeastRecentlyUsed();
@@ -98,6 +116,7 @@ int main() {
     testZeroCapacityThrows();
     testPeekDoesNotRefresh();
     testEraseAndClear();
+    testStats();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

@@ -28,6 +28,9 @@ Other operations:
 | `clear()`       | removes everything                                  |
 | `size()`, `empty()`, `capacity()` | the obvious                       |
 
+`stats()` returns hit, miss and eviction counters plus `hitRate()`;
+only `get` counts towards hits and misses. `resetStats()` zeroes them.
+
 No dependencies beyond the standard library.
 
 ## Build & test

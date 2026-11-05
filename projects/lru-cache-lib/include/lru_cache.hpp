@@ -15,6 +15,18 @@
 
 namespace lru {
 
+// Counters describing how well the cache is doing.
+struct Stats {
+    std::size_t hits = 0;
+    std::size_t misses = 0;
+    std::size_t evictions = 0;
+
+    double hitRate() const {
+        std::size_t total = hits + misses;
+        return total == 0 ? 0.0 : static_cast<double>(hits) / static_cast<double>(total);
+    }
+};
+
 template <typename Key, typename Value, typename Hash = std::hash<Key>>
 class LRUCache {
 public:
@@ -25,7 +37,11 @@ public:
     // Returns the value for key and marks it most recently used.
     std::optional<Value> get(const Key& key) {
         auto it = index_.find(key);
-        if (it == index_.end()) return std::nullopt;
+        if (it == index_.end()) {
+            ++stats_.misses;
+            return std::nullopt;
+        }
+        ++stats_.hits;
         items_.splice(items_.begin(), items_, it->second);
         return it->second->second;
     }
@@ -41,6 +57,7 @@ public:
         if (items_.size() == capacity_) {
             index_.erase(items_.back().first);
             items_.pop_back();
+            ++stats_.evictions;
         }
         items_.emplace_front(key, std::move(value));
         index_[key] = items_.begin();
@@ -70,6 +87,10 @@ public:
         index_.clear();
     }
 
+    // Hit/miss counts come from get() only; peek() and contains() are not counted.
+    const Stats& stats() const { return stats_; }
+    void resetStats() { stats_ = Stats{}; }
+
     bool empty() const { return items_.empty(); }
     std::size_t size() const { return items_.size(); }
     std::size_t capacity() const { return capacity_; }
@@ -77,6 +98,7 @@ public:
 private:
     using Entry = std::pair<Key, Value>;
     std::size_t capacity_;
+    Stats stats_;
     std::list<Entry> items_;
     std::unordered_map<Key, typename std::list<Entry>::iterator, Hash> index_;
 };
