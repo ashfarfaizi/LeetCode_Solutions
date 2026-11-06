@@ -69,6 +69,9 @@ $ ./build/calc
 > vars
 ans = 4
 r = 2
+> del r
+> vars
+ans = 4
 > 1 / 0
 eval error: division by zero
 > exit
@@ -82,7 +85,9 @@ $ ./build/calc --rpn "-max(1, 2.5) * x"
 ```
 
 In the REPL, variables persist between lines, `ans` holds the last
-successful result, and `vars` lists all bindings.
+successful result, and `vars` lists all bindings. `del x y` removes the
+named variables (reporting any that do not exist) and `clear` removes
+them all.
 
 Errors go to stderr; in one-shot mode the exit status is 1 on error.
 

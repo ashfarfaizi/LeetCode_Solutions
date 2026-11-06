@@ -4,8 +4,10 @@
 //   calc                 read expressions line by line from stdin (REPL)
 //
 // In the REPL, variables persist between lines ("x = 4", then "x * 2"),
-// "ans" holds the last successful result, and "vars" lists the bindings.
+// "ans" holds the last successful result, "vars" lists the bindings,
+// "del NAME..." removes bindings and "clear" removes them all.
 #include <iostream>
+#include <sstream>
 #include <string>
 
 #include "evaluator.hpp"
@@ -67,6 +69,17 @@ int main(int argc, char** argv) {
         if (line == "vars") {
             if (env.empty()) std::cout << "(no variables)\n";
             for (const auto& [name, value] : env) std::cout << name << " = " << value << '\n';
+            continue;
+        }
+        if (line == "clear") {
+            env.clear();
+            continue;
+        }
+        if (line.rfind("del ", 0) == 0) {
+            std::istringstream names(line.substr(4));
+            std::string name;
+            while (names >> name)
+                if (env.erase(name) == 0) std::cerr << "no variable '" << name << "'\n";
             continue;
         }
         evalAndPrint(line, env);
