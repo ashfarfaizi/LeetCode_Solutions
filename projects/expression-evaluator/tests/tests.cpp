@@ -71,7 +71,8 @@ static void testLexer() {
     CHECK(cmp[9].op == '<');
     CHECK(cmp[11].op == '>');
     CHECK(tokenize("x = 1")[1].type == TokenType::Assign);
-    CHECK(throwsParseError([] { tokenize("!1"); }));
+    CHECK(tokenize("3!")[1].op == '!');
+    CHECK(tokenize("3!=3")[1].op == 'N');
 
     CHECK(throwsParseError([] { tokenize("1 $ 2"); }));
     CHECK(throwsParseError([] { tokenize("1.2.3"); }));
@@ -122,6 +123,11 @@ static void testParser() {
     CHECK(show("") == "");
     CHECK(show("1 + 2 <= 3 * 4") == "1 2 + 3 4 * <=");
     CHECK(show("a == b != c") == "a b == c !=");
+    CHECK(show("2 ^ 3!") == "2 3 ! ^");
+    CHECK(show("-n! + 1") == "n ! neg 1 +");
+    CHECK(show("(1 + 2)!!") == "1 2 + ! !");
+    CHECK(throwsParseError([] { toRPN(tokenize("!3")); }));
+    CHECK(throwsParseError([] { toRPN(tokenize("2 * !")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("sqrt(4")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("1, 2")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("1 + x = 2")); }));
@@ -199,6 +205,16 @@ static void testEvaluator() {
     CHECK(near(evaluate("2 ^ 3 != 8"), 0));
     CHECK(near(evaluate("(3 > 2) * 10"), 10));
     CHECK(near(evaluate("-1 < 0"), 1));
+    CHECK(near(evaluate("5!"), 120));
+    CHECK(near(evaluate("0!"), 1));
+    CHECK(near(evaluate("2 ^ 3!"), 64));
+    CHECK(near(evaluate("-3!"), -6));
+    CHECK(near(evaluate("3!!"), 720));
+    CHECK(near(evaluate("4! / 2!"), 12));
+    CHECK(near(evaluate("3! != 6"), 0));
+    CHECK(throwsEvalError([] { evaluate("(-1)!"); }));
+    CHECK(throwsEvalError([] { evaluate("2.5!"); }));
+    CHECK(throwsEvalError([] { evaluate("171!"); }));
     CHECK(near(evaluate("pow(2, 10)"), 1024));
     CHECK(near(evaluate("atan2(1, 1) * 4"), 3.14159265358979323846));
     CHECK(near(evaluate("max(1, min(5, 2 + 1))"), 3));

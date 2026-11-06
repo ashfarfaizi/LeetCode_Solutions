@@ -32,6 +32,15 @@ double apply(char op, double a, double b) {
     throw EvalError("unknown operator '" + operatorText(op) + "'");
 }
 
+double factorial(double x) {
+    // 170! is the largest factorial that fits in a double.
+    if (x < 0 || x != std::floor(x)) throw EvalError("factorial of non-integer or negative number");
+    if (x > 170) throw EvalError("factorial overflow");
+    double result = 1.0;
+    for (int i = 2; i <= static_cast<int>(x); ++i) result *= i;
+    return result;
+}
+
 void expectArgs(const std::string& name, std::size_t got, std::size_t want) {
     if (got != want)
         throw EvalError(name + "() takes " + std::to_string(want) + " argument" +
@@ -103,6 +112,10 @@ double evaluateRPN(const std::vector<Token>& rpn, const Environment& env) {
             std::vector<double> args(stack.end() - static_cast<std::ptrdiff_t>(argc), stack.end());
             stack.resize(stack.size() - argc);
             stack.push_back(call(t.name, args));
+            continue;
+        }
+        if (t.type == TokenType::Operator && t.op == '!' && !stack.empty()) {
+            stack.back() = factorial(stack.back());
             continue;
         }
         if (t.type == TokenType::Operator && t.op == 'u' && !stack.empty()) {

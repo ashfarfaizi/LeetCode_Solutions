@@ -10,6 +10,9 @@ A small arithmetic expression evaluator written in C++17, built in stages:
    right-associative, so `-2^2 = -4` and `2^-1 = 0.5`). The comparisons
    `< <= > >= == !=` bind loosest of all and yield `1` (true) or `0`
    (false), so `1 + 1 == 2` is `1` and `(x > 0) * x` clamps at zero.
+   Postfix `!` is the factorial and binds tightest, so `2^3! = 64` and
+   `-3! = -6`; it accepts non-negative integers up to `170`. Note that
+   `3!=6` lexes as `3 != 6`; write `(3!) == 6` to compare a factorial.
 3. **Evaluator** – computes the RPN result with a value stack and reports
    errors such as division or modulo by zero. `%` is the
    floating-point remainder (`fmod`), so `-7 % 3 = -1` and `5.5 % 2 = 1.5`.

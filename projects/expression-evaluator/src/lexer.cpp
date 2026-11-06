@@ -73,7 +73,7 @@ std::vector<Token> tokenize(const std::string& input) {
         } else if (char two = i + 1 < input.size() ? twoCharOperator(c, input[i + 1]) : '\0') {
             tokens.push_back({TokenType::Operator, 0.0, two});
             i += 2;
-        } else if (c == '<' || c == '>') {
+        } else if (c == '<' || c == '>' || c == '!') {
             tokens.push_back({TokenType::Operator, 0.0, c});
             ++i;
         } else if (isOperatorChar(c)) {

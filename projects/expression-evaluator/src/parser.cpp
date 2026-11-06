@@ -48,6 +48,13 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
                 expectOperand = false;
                 break;
             case TokenType::Operator:
+                if (t.op == '!') {
+                    // Postfix factorial binds tightest and its operand is
+                    // already complete, so it goes straight to the output.
+                    if (expectOperand) throw ParseError("unexpected operator '!'", i);
+                    output.push_back(t);
+                    break;
+                }
                 if (expectOperand) {
                     if (t.op == '+') break;  // unary plus is a no-op
                     if (t.op != '-') throw ParseError(std::string("unexpected operator '") + t.op + "'", i);
