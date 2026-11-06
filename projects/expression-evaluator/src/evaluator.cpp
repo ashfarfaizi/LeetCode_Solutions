@@ -21,8 +21,15 @@ double apply(char op, double a, double b) {
             if (b == 0.0) throw EvalError("modulo by zero");
             return std::fmod(a, b);  // result takes the sign of a, like C++ %
         case '^': return std::pow(a, b);
+        // Comparisons yield 1 for true and 0 for false; equality is exact.
+        case '<': return a < b ? 1.0 : 0.0;
+        case '>': return a > b ? 1.0 : 0.0;
+        case 'l': return a <= b ? 1.0 : 0.0;
+        case 'g': return a >= b ? 1.0 : 0.0;
+        case 'E': return a == b ? 1.0 : 0.0;
+        case 'N': return a != b ? 1.0 : 0.0;
     }
-    throw EvalError(std::string("unknown operator '") + op + "'");
+    throw EvalError("unknown operator '" + operatorText(op) + "'");
 }
 
 void expectArgs(const std::string& name, std::size_t got, std::size_t want) {

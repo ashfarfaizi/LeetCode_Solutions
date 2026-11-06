@@ -13,7 +13,9 @@ enum class TokenType { Number, Operator, LParen, RParen, Comma, Assign, Identifi
 struct Token {
     TokenType type;
     double value = 0.0;  // Number: the value; Function: argument count
-    char op = '\0';      // valid when type == Operator
+    // Operator: the symbol; two-character comparisons are encoded as
+    // 'l' (<=), 'g' (>=), 'E' (==) and 'N' (!=). See operatorText().
+    char op = '\0';
     std::string name{};  // valid when type == Identifier or Function
 
     bool operator==(const Token& o) const {
@@ -30,6 +32,9 @@ public:
 private:
     std::size_t pos_;
 };
+
+// Display form of an operator code, e.g. 'l' -> "<=", 'u' -> "neg".
+std::string operatorText(char op);
 
 // Split an expression into tokens. Whitespace is ignored.
 // Numbers may use scientific notation (1e3, 2.5E-4, .5e+2).

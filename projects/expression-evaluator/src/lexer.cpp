@@ -9,7 +9,29 @@ namespace {
 bool isOperatorChar(char c) {
     return c == '+' || c == '-' || c == '*' || c == '/' || c == '%' || c == '^';
 }
+// Map "<=", ">=", "==", "!=" to their single-char codes; 0 if not one.
+char twoCharOperator(char a, char b) {
+    if (b != '=') return '\0';
+    switch (a) {
+        case '<': return 'l';
+        case '>': return 'g';
+        case '=': return 'E';
+        case '!': return 'N';
+        default: return '\0';
+    }
+}
 }  // namespace
+
+std::string operatorText(char op) {
+    switch (op) {
+        case 'l': return "<=";
+        case 'g': return ">=";
+        case 'E': return "==";
+        case 'N': return "!=";
+        case 'u': return "neg";
+        default: return std::string(1, op);
+    }
+}
 
 std::vector<Token> tokenize(const std::string& input) {
     std::vector<Token> tokens;
@@ -48,6 +70,12 @@ std::vector<Token> tokenize(const std::string& input) {
                    (std::isalnum(static_cast<unsigned char>(input[i])) || input[i] == '_'))
                 ++i;
             tokens.push_back({TokenType::Identifier, 0.0, '\0', input.substr(start, i - start)});
+        } else if (char two = i + 1 < input.size() ? twoCharOperator(c, input[i + 1]) : '\0') {
+            tokens.push_back({TokenType::Operator, 0.0, two});
+            i += 2;
+        } else if (c == '<' || c == '>') {
+            tokens.push_back({TokenType::Operator, 0.0, c});
+            ++i;
         } else if (isOperatorChar(c)) {
             tokens.push_back({TokenType::Operator, 0.0, c});
             ++i;

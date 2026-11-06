@@ -62,6 +62,17 @@ static void testLexer() {
     CHECK(noExp[1].name == "e");
     CHECK(tokenize("3e-x").size() == 4);
 
+    auto cmp = tokenize("a<=b>=c==d!=e<f>g");
+    CHECK(cmp.size() == 13);
+    CHECK(cmp[1].op == 'l');
+    CHECK(cmp[3].op == 'g');
+    CHECK(cmp[5].op == 'E');
+    CHECK(cmp[7].op == 'N');
+    CHECK(cmp[9].op == '<');
+    CHECK(cmp[11].op == '>');
+    CHECK(tokenize("x = 1")[1].type == TokenType::Assign);
+    CHECK(throwsParseError([] { tokenize("!1"); }));
+
     CHECK(throwsParseError([] { tokenize("1 $ 2"); }));
     CHECK(throwsParseError([] { tokenize("1.2.3"); }));
     CHECK(throwsParseError([] { tokenize("."); }));
@@ -109,6 +120,8 @@ static void testParser() {
     CHECK(show("-max(1, 2.5) * x") == "1 2.5 max/2 neg x *");
     CHECK(show("sqrt(0.125) % 3") == "0.125 sqrt 3 %");
     CHECK(show("") == "");
+    CHECK(show("1 + 2 <= 3 * 4") == "1 2 + 3 4 * <=");
+    CHECK(show("a == b != c") == "a b == c !=");
     CHECK(throwsParseError([] { toRPN(tokenize("sqrt(4")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("1, 2")); }));
     CHECK(throwsParseError([] { toRPN(tokenize("1 + x = 2")); }));
@@ -179,6 +192,13 @@ static void testEvaluator() {
     CHECK(near(evaluate("hypot(3, 4)"), 5));
     CHECK(near(evaluate("1.5e3 / 3"), 500));
     CHECK(near(evaluate("2e-1 * 10"), 2));
+    CHECK(near(evaluate("1 < 2"), 1));
+    CHECK(near(evaluate("2 < 1"), 0));
+    CHECK(near(evaluate("2 <= 2") + evaluate("3 >= 4"), 1));
+    CHECK(near(evaluate("1 + 1 == 2"), 1));
+    CHECK(near(evaluate("2 ^ 3 != 8"), 0));
+    CHECK(near(evaluate("(3 > 2) * 10"), 10));
+    CHECK(near(evaluate("-1 < 0"), 1));
     CHECK(near(evaluate("pow(2, 10)"), 1024));
     CHECK(near(evaluate("atan2(1, 1) * 4"), 3.14159265358979323846));
     CHECK(near(evaluate("max(1, min(5, 2 + 1))"), 3));
@@ -209,6 +229,8 @@ static void testVariables() {
     CHECK(near(env.at("x"), 4));
     CHECK(throwsParseError([&] { evaluate("x = = 1", env); }));
     CHECK(throwsParseError([&] { evaluate("2 = 1", env); }));
+    CHECK(near(evaluate("big = x >= 4", env), 1));
+    CHECK(near(evaluate("x == 4", env), 1));
 }
 
 int main() {

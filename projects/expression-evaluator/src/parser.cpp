@@ -7,10 +7,11 @@ namespace expr {
 namespace {
 int precedence(char op) {
     switch (op) {
-        case '+': case '-': return 1;
-        case '*': case '/': case '%': return 2;
-        case 'u': return 3;  // unary minus: binds tighter than * / but looser than ^
-        case '^': return 4;
+        case '<': case '>': case 'l': case 'g': case 'E': case 'N': return 1;
+        case '+': case '-': return 2;
+        case '*': case '/': case '%': return 3;
+        case 'u': return 4;  // unary minus: binds tighter than * / but looser than ^
+        case '^': return 5;
         default: return 0;
     }
 }
@@ -120,8 +121,7 @@ std::string rpnToString(const std::vector<Token>& rpn) {
                 if (t.value != 1.0) out << '/' << static_cast<int>(t.value);
                 break;
             case TokenType::Operator:
-                if (t.op == 'u') out << "neg";
-                else out << t.op;
+                out << operatorText(t.op);
                 break;
             default: out << '?'; break;  // parens etc. never appear in RPN
         }
