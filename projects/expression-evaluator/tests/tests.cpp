@@ -52,6 +52,16 @@ static void testLexer() {
 
     CHECK(tokenize("x = 1")[1].type == TokenType::Assign);
 
+    CHECK(tokenize("1e3")[0].value == 1000.0);
+    CHECK(tokenize("2.5E-2")[0].value == 0.025);
+    CHECK(tokenize(".5e+1")[0].value == 5.0);
+    CHECK(tokenize("1e3").size() == 1);
+    // A dangling exponent is not part of the number: "2e" is 2 then e.
+    auto noExp = tokenize("2e");
+    CHECK(noExp.size() == 2);
+    CHECK(noExp[1].name == "e");
+    CHECK(tokenize("3e-x").size() == 4);
+
     CHECK(throwsParseError([] { tokenize("1 $ 2"); }));
     CHECK(throwsParseError([] { tokenize("1.2.3"); }));
     CHECK(throwsParseError([] { tokenize("."); }));
@@ -167,6 +177,8 @@ static void testEvaluator() {
     CHECK(near(evaluate("min(3, -9, 4) * 2"), -18));
     CHECK(near(evaluate("max(7)"), 7));
     CHECK(near(evaluate("hypot(3, 4)"), 5));
+    CHECK(near(evaluate("1.5e3 / 3"), 500));
+    CHECK(near(evaluate("2e-1 * 10"), 2));
     CHECK(near(evaluate("pow(2, 10)"), 1024));
     CHECK(near(evaluate("atan2(1, 1) * 4"), 3.14159265358979323846));
     CHECK(near(evaluate("max(1, min(5, 2 + 1))"), 3));

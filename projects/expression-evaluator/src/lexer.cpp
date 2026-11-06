@@ -29,8 +29,18 @@ std::vector<Token> tokenize(const std::string& input) {
                 }
                 ++i;
             }
+            if (i - start == 1 && input[start] == '.') throw ParseError("malformed number", start);
+            // Optional exponent: e/E, an optional sign, then at least one digit.
+            // "2e" or "2ex" is left alone so the 'e' lexes as an identifier.
+            if (i < input.size() && (input[i] == 'e' || input[i] == 'E')) {
+                std::size_t j = i + 1;
+                if (j < input.size() && (input[j] == '+' || input[j] == '-')) ++j;
+                if (j < input.size() && std::isdigit(static_cast<unsigned char>(input[j]))) {
+                    while (j < input.size() && std::isdigit(static_cast<unsigned char>(input[j]))) ++j;
+                    i = j;
+                }
+            }
             std::string text = input.substr(start, i - start);
-            if (text == ".") throw ParseError("malformed number", start);
             tokens.push_back({TokenType::Number, std::strtod(text.c_str(), nullptr), '\0'});
         } else if (std::isalpha(static_cast<unsigned char>(c)) || c == '_') {
             std::size_t start = i;

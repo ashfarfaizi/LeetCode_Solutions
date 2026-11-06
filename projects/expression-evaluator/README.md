@@ -3,7 +3,8 @@
 A small arithmetic expression evaluator written in C++17, built in stages:
 
 1. **Lexer** – turns a string such as `3 + 4.5 * (2 - pi)` into number,
-   operator, parenthesis and identifier tokens.
+   operator, parenthesis and identifier tokens. Numbers may be written in
+   scientific notation (`1e3`, `2.5E-4`).
 2. **Parser** – converts tokens to Reverse Polish Notation with the
    shunting-yard algorithm (`+ -` < `* / %` < unary `-` < `^`, with `^`
    right-associative, so `-2^2 = -4` and `2^-1 = 0.5`).

@@ -32,6 +32,7 @@ private:
 };
 
 // Split an expression into tokens. Whitespace is ignored.
+// Numbers may use scientific notation (1e3, 2.5E-4, .5e+2).
 // Identifiers match [A-Za-z_][A-Za-z0-9_]*.
 // Throws ParseError on an unexpected character or malformed number.
 std::vector<Token> tokenize(const std::string& input);
