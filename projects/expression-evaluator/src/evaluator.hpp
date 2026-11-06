@@ -20,8 +20,8 @@ using Environment = std::map<std::string, double>;
 // Evaluate an RPN token sequence with a value stack.
 // Identifiers resolve to variables in env, then to the built-in constants
 // pi and e. Built-in
-// functions: sqrt abs exp ln log10 sin cos tan floor ceil round (one
-// argument), pow hypot atan2 (two), min max (one or more).
+// functions: sqrt cbrt abs sign exp ln log10 sin cos tan floor ceil round
+// trunc (one argument), pow hypot atan2 gcd lcm (two), min max (one or more).
 // Throws EvalError on division or modulo by zero, an unknown identifier or function,
 // a wrong argument count, a domain error such as sqrt(-1),
 // or a malformed sequence.

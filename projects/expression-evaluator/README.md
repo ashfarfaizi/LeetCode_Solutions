@@ -23,8 +23,9 @@ double x = expr::evaluate("(3 + 4) * 2 ^ 2");  // 28
 ```
 
 The constants `pi` and `e` are built in, along with the one-argument
-functions `sqrt abs exp ln log10 sin cos tan floor ceil round`
-(angles in radians), the two-argument `pow hypot atan2`, and the variadic
+functions `sqrt cbrt abs sign exp ln log10 sin cos tan floor ceil round
+trunc` (angles in radians), the two-argument `pow hypot atan2` and
+`gcd lcm` (integers only, sign ignored), and the variadic
 `min` / `max`, e.g. `max(1, hypot(3, 4), 2)` is `5`. Passing the wrong
 number of arguments is an eval error. Domain errors such as `sqrt(-1)` or `ln(0)` are
 reported as eval errors rather than returning NaN.

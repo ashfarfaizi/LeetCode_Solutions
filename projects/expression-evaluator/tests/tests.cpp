@@ -215,6 +215,17 @@ static void testEvaluator() {
     CHECK(throwsEvalError([] { evaluate("(-1)!"); }));
     CHECK(throwsEvalError([] { evaluate("2.5!"); }));
     CHECK(throwsEvalError([] { evaluate("171!"); }));
+    CHECK(near(evaluate("cbrt(-27)"), -3));
+    CHECK(near(evaluate("sign(-4) + sign(0) + sign(9)"), 0));
+    CHECK(near(evaluate("trunc(-2.7)"), -2));
+    CHECK(near(evaluate("gcd(48, 18)"), 6));
+    CHECK(near(evaluate("gcd(-12, 0)"), 12));
+    CHECK(near(evaluate("lcm(4, 6)"), 12));
+    CHECK(near(evaluate("lcm(0, 5)"), 0));
+    CHECK(near(evaluate("lcm(-3, 5)"), 15));
+    CHECK(throwsEvalError([] { evaluate("gcd(1.5, 3)"); }));
+    CHECK(throwsEvalError([] { evaluate("gcd(4)"); }));
+    CHECK(throwsEvalError([] { evaluate("lcm(1e300, 2)"); }));
     CHECK(near(evaluate("pow(2, 10)"), 1024));
     CHECK(near(evaluate("atan2(1, 1) * 4"), 3.14159265358979323846));
     CHECK(near(evaluate("max(1, min(5, 2 + 1))"), 3));
