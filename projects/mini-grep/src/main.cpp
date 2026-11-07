@@ -1,6 +1,6 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-i] PATTERN [FILE...]
+//   mgrep [-icn] PATTERN [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
 // is given each output line is prefixed with its file name.
@@ -15,7 +15,7 @@
 
 namespace {
 
-void usage() { std::cerr << "usage: mgrep [-i] PATTERN [FILE...]\n"; }
+void usage() { std::cerr << "usage: mgrep [-icn] PATTERN [FILE...]\n"; }
 
 }  // namespace
 
@@ -32,6 +32,8 @@ int main(int argc, char** argv) {
         for (std::size_t j = 1; j < arg.size(); ++j) {
             switch (arg[j]) {
                 case 'i': opts.ignoreCase = true; break;
+                case 'n': opts.lineNumbers = true; break;
+                case 'c': opts.countOnly = true; break;
                 default:
                     std::cerr << "mgrep: unknown option -" << arg[j] << '\n';
                     usage();

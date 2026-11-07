@@ -10,6 +10,8 @@ namespace mgrep {
 struct Options {
     std::string pattern;
     bool ignoreCase = false;
+    bool lineNumbers = false;  // prefix matches with their 1-based line number
+    bool countOnly = false;    // print only the number of matching lines
 };
 
 class Matcher {
@@ -27,7 +29,9 @@ private:
 };
 
 // Reads in line by line and writes every matching line to out, prefixed with
-// "label:" when label is non-empty. Returns the number of matching lines.
+// "label:" when label is non-empty and "N:" when lineNumbers is set. With
+// countOnly, writes just "label:count" (or "count") instead. Returns the
+// number of matching lines.
 std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
                  const std::string& label = "");
 

@@ -54,11 +54,39 @@ static void testScanWithLabel() {
     CHECK(out.str() == "f.txt:two\nf.txt:three\n");
 }
 
+static void testLineNumbers() {
+    mgrep::Options o;
+    o.pattern = "a";
+    o.lineNumbers = true;
+    std::istringstream in("a1\nb2\na3\n");
+    std::ostringstream out;
+    CHECK(mgrep::scan(in, out, mgrep::Matcher(o), "x") == 2);
+    CHECK(out.str() == "x:1:a1\nx:3:a3\n");
+}
+
+static void testCountOnly() {
+    mgrep::Options o;
+    o.pattern = "a";
+    o.countOnly = true;
+    o.lineNumbers = true;  // ignored when counting
+    std::istringstream in("a\nb\na\na\n");
+    std::ostringstream out;
+    CHECK(mgrep::scan(in, out, mgrep::Matcher(o)) == 3);
+    CHECK(out.str() == "3\n");
+
+    std::istringstream none("b\n");
+    std::ostringstream out2;
+    CHECK(mgrep::scan(none, out2, mgrep::Matcher(o), "f") == 0);
+    CHECK(out2.str() == "f:0\n");
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
     testScan();
     testScanWithLabel();
+    testLineNumbers();
+    testCountOnly();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

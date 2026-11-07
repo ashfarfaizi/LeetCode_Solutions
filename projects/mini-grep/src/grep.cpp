@@ -27,13 +27,21 @@ bool Matcher::matches(const std::string& line) const {
 
 std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
                  const std::string& label) {
-    std::size_t matched = 0;
+    const Options& o = m.options();
+    std::size_t matched = 0, lineNo = 0;
     std::string line;
     while (std::getline(in, line)) {
+        ++lineNo;
         if (!m.matches(line)) continue;
         ++matched;
+        if (o.countOnly) continue;
         if (!label.empty()) out << label << ':';
+        if (o.lineNumbers) out << lineNo << ':';
         out << line << '\n';
+    }
+    if (o.countOnly) {
+        if (!label.empty()) out << label << ':';
+        out << matched << '\n';
     }
     return matched;
 }
