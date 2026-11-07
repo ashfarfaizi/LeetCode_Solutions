@@ -80,6 +80,38 @@ static void testCountOnly() {
     CHECK(out2.str() == "f:0\n");
 }
 
+static void testInvert() {
+    mgrep::Options o;
+    o.pattern = "#";
+    o.invert = true;
+    mgrep::Matcher m(o);
+    CHECK(m.matches("key = value"));
+    CHECK(!m.matches("# comment"));
+    std::istringstream in("# a\nx\n# b\ny\n");
+    std::ostringstream out;
+    CHECK(mgrep::scan(in, out, m) == 2);
+    CHECK(out.str() == "x\ny\n");
+}
+
+static void testWholeWord() {
+    mgrep::Options o;
+    o.pattern = "cat";
+    o.wholeWord = true;
+    mgrep::Matcher m(o);
+    CHECK(m.matches("cat"));
+    CHECK(m.matches("the cat sat"));
+    CHECK(m.matches("(cat)"));
+    CHECK(!m.matches("concatenate"));
+    CHECK(!m.matches("cats"));
+    CHECK(!m.matches("cat_food"));
+    CHECK(m.matches("cats and a cat"));  // a later occurrence qualifies
+
+    o.ignoreCase = true;
+    CHECK(mgrep::Matcher(o).matches("Cat!"));
+    o.invert = true;
+    CHECK(mgrep::Matcher(o).matches("bobcat"));
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -87,6 +119,8 @@ int main() {
     testScanWithLabel();
     testLineNumbers();
     testCountOnly();
+    testInvert();
+    testWholeWord();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

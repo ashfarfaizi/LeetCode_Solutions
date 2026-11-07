@@ -14,15 +14,31 @@ std::string toLower(std::string s) {
     return s;
 }
 
+bool isWordChar(char c) {
+    return std::isalnum(static_cast<unsigned char>(c)) || c == '_';
+}
+
 }  // namespace
 
 Matcher::Matcher(Options opts) : opts_(std::move(opts)) {
     needle_ = opts_.ignoreCase ? toLower(opts_.pattern) : opts_.pattern;
 }
 
+bool Matcher::contains(const std::string& hay) const {
+    if (!opts_.wholeWord || needle_.empty()) return hay.find(needle_) != std::string::npos;
+    for (std::size_t pos = hay.find(needle_); pos != std::string::npos;
+         pos = hay.find(needle_, pos + 1)) {
+        std::size_t end = pos + needle_.size();
+        bool leftOk = pos == 0 || !isWordChar(hay[pos - 1]);
+        bool rightOk = end == hay.size() || !isWordChar(hay[end]);
+        if (leftOk && rightOk) return true;
+    }
+    return false;
+}
+
 bool Matcher::matches(const std::string& line) const {
-    if (opts_.ignoreCase) return toLower(line).find(needle_) != std::string::npos;
-    return line.find(needle_) != std::string::npos;
+    bool found = opts_.ignoreCase ? contains(toLower(line)) : contains(line);
+    return found != opts_.invert;
 }
 
 std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,

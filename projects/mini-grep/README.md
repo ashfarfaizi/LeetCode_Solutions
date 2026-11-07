@@ -4,7 +4,7 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icn] PATTERN [FILE...]
+mgrep [-icnvw] PATTERN [FILE...]
 ```
 
 It prints every line that contains `PATTERN` as a plain substring. With no
@@ -16,6 +16,8 @@ prefixed with `name:`.
 | `-i`   | ignore case (ASCII)        |
 | `-n`   | prefix lines with `N:`     |
 | `-c`   | print only a match count   |
+| `-v`   | select non-matching lines  |
+| `-w`   | match whole words only     |
 
 Exit status is `0` if any line matched, `1` if none did and `2` on a usage
 error or a file that cannot be opened. Short options can be combined and
@@ -47,6 +49,10 @@ $ ./build/mgrep -n namespace src/grep.hpp
 $ printf 'a\nb\na\n' | ./build/mgrep -c a
 2
 ```
+
+A word character is a letter, digit or `_`, so `-w cat` matches `the cat`
+and `(cat)` but not `cats` or `cat_food`. `-v` combines with the others,
+e.g. `mgrep -vc '#' config` counts lines that are not comments.
 
 With `-c` each file prints one count line (including `0`).
 

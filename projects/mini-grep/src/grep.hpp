@@ -10,6 +10,8 @@ namespace mgrep {
 struct Options {
     std::string pattern;
     bool ignoreCase = false;
+    bool invert = false;       // select lines that do NOT match
+    bool wholeWord = false;    // match only where bounded by non-word chars
     bool lineNumbers = false;  // prefix matches with their 1-based line number
     bool countOnly = false;    // print only the number of matching lines
 };
@@ -18,12 +20,15 @@ class Matcher {
 public:
     explicit Matcher(Options opts);
 
-    // True if line contains the pattern under the configured options.
+    // True if line is selected: it contains the pattern (as a whole word when
+    // wholeWord is set), negated when invert is set.
     bool matches(const std::string& line) const;
 
     const Options& options() const { return opts_; }
 
 private:
+    bool contains(const std::string& haystack) const;
+
     Options opts_;
     std::string needle_;  // pattern, lowercased when ignoreCase is set
 };
