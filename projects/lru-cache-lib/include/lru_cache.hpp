@@ -64,13 +64,7 @@ public:
             items_.splice(items_.begin(), items_, it->second);
             return;
         }
-        if (items_.size() == capacity_) {
-            Entry victim = std::move(items_.back());
-            index_.erase(victim.first);
-            items_.pop_back();
-            ++stats_.evictions;
-            if (onEvict_) onEvict_(victim.first, victim.second);
-        }
+        if (items_.size() == capacity_) evictLeastRecent();
         items_.emplace_front(key, std::move(value));
         index_[key] = items_.begin();
     }
@@ -94,6 +88,14 @@ public:
         return true;
     }
 
+    // Changes the capacity. Shrinking below size() evicts least recently used
+    // entries (counted in stats and passed to the eviction callback).
+    void resize(std::size_t newCapacity) {
+        if (newCapacity == 0) throw std::invalid_argument("LRUCache capacity must be > 0");
+        capacity_ = newCapacity;
+        while (items_.size() > capacity_) evictLeastRecent();
+    }
+
     void clear() {
         items_.clear();
         index_.clear();
@@ -109,6 +111,15 @@ public:
 
 private:
     using Entry = std::pair<Key, Value>;
+
+    void evictLeastRecent() {
+        Entry victim = std::move(items_.back());
+        index_.erase(victim.first);
+        items_.pop_back();
+        ++stats_.evictions;
+        if (onEvict_) onEvict_(victim.first, victim.second);
+    }
+
     std::size_t capacity_;
     Stats stats_;
     EvictionCallback onEvict_;

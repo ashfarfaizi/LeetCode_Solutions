@@ -26,6 +26,7 @@ Other operations:
 | `contains(k)`   | membership test, does not change recency            |
 | `erase(k)`      | removes `k`, returns whether it was present         |
 | `clear()`       | removes everything                                  |
+| `resize(n)`     | changes capacity; shrinking evicts LRU entries      |
 | `size()`, `empty()`, `capacity()` | the obvious                       |
 
 `stats()` returns hit, miss and eviction counters plus `hitRate()`;

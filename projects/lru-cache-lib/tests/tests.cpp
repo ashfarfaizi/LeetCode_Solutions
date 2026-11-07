@@ -136,6 +136,31 @@ static void testEvictionCallback() {
     CHECK(evicted.size() == 2);
 }
 
+static void testResize() {
+    std::vector<int> evicted;
+    lru::LRUCache<int, int> c(4, [&](const int& k, const int&) { evicted.push_back(k); });
+    for (int i = 1; i <= 4; ++i) c.put(i, i * 10);
+    c.get(1);              // recency: 1 4 3 2
+    c.resize(2);           // evicts 2 then 3
+    CHECK(c.capacity() == 2);
+    CHECK(c.size() == 2);
+    CHECK((evicted == std::vector<int>{2, 3}));
+    CHECK(c.stats().evictions == 2);
+    CHECK(c.contains(1) && c.contains(4));
+    c.resize(3);           // growing keeps everything
+    c.put(5, 50);
+    CHECK(c.size() == 3);
+    CHECK(evicted.size() == 2);
+    bool threw = false;
+    try {
+        c.resize(0);
+    } catch (const std::invalid_argument&) {
+        threw = true;
+    }
+    CHECK(threw);
+    CHECK(c.capacity() == 3);
+}
+
 static void testConcurrentCache() {
     lru::ConcurrentLRUCache<int, int> c(64);
     std::atomic<int> computed{0};
@@ -172,6 +197,7 @@ int main() {
     testEraseAndClear();
     testStats();
     testEvictionCallback();
+    testResize();
     testConcurrentCache();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
