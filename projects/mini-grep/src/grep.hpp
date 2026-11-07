@@ -12,6 +12,7 @@ struct Options {
     bool ignoreCase = false;
     bool invert = false;       // select lines that do NOT match
     bool wholeWord = false;    // match only where bounded by non-word chars
+    bool wholeLine = false;    // the entire line must equal the pattern
     bool lineNumbers = false;  // prefix matches with their 1-based line number
     bool countOnly = false;    // print only the number of matching lines
 };

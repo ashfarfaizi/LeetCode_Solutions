@@ -112,6 +112,22 @@ static void testWholeWord() {
     CHECK(mgrep::Matcher(o).matches("bobcat"));
 }
 
+static void testWholeLine() {
+    mgrep::Options o;
+    o.pattern = "done";
+    o.wholeLine = true;
+    CHECK(mgrep::Matcher(o).matches("done"));
+    CHECK(!mgrep::Matcher(o).matches("done "));
+    CHECK(!mgrep::Matcher(o).matches("undone"));
+    o.ignoreCase = true;
+    CHECK(mgrep::Matcher(o).matches("DONE"));
+    o.wholeWord = true;  // -x takes precedence over -w
+    CHECK(!mgrep::Matcher(o).matches("all done"));
+    o.pattern = "";
+    CHECK(mgrep::Matcher(o).matches(""));
+    CHECK(!mgrep::Matcher(o).matches("x"));
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -121,6 +137,7 @@ int main() {
     testCountOnly();
     testInvert();
     testWholeWord();
+    testWholeLine();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

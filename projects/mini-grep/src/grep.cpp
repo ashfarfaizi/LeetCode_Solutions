@@ -25,6 +25,7 @@ Matcher::Matcher(Options opts) : opts_(std::move(opts)) {
 }
 
 bool Matcher::contains(const std::string& hay) const {
+    if (opts_.wholeLine) return hay == needle_;
     if (!opts_.wholeWord || needle_.empty()) return hay.find(needle_) != std::string::npos;
     for (std::size_t pos = hay.find(needle_); pos != std::string::npos;
          pos = hay.find(needle_, pos + 1)) {
