@@ -161,6 +161,26 @@ static void testResize() {
     CHECK(c.capacity() == 3);
 }
 
+static void testKeysAndForEach() {
+    lru::LRUCache<std::string, int> c(3);
+    CHECK(c.keys().empty());
+    c.put("a", 1);
+    c.put("b", 2);
+    c.put("c", 3);
+    c.get("a");
+    CHECK((c.keys() == std::vector<std::string>{"a", "c", "b"}));
+    int sum = 0;
+    std::string order;
+    c.forEach([&](const std::string& k, const int& v) {
+        order += k;
+        sum += v;
+    });
+    CHECK(order == "acb");
+    CHECK(sum == 6);
+    CHECK((c.keys() == std::vector<std::string>{"a", "c", "b"}));  // unchanged
+    CHECK(c.stats().hits == 1);
+}
+
 static void testConcurrentCache() {
     lru::ConcurrentLRUCache<int, int> c(64);
     std::atomic<int> computed{0};
@@ -198,6 +218,7 @@ int main() {
     testStats();
     testEvictionCallback();
     testResize();
+    testKeysAndForEach();
     testConcurrentCache();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;

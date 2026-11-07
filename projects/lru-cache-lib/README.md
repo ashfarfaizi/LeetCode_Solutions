@@ -27,6 +27,8 @@ Other operations:
 | `erase(k)`      | removes `k`, returns whether it was present         |
 | `clear()`       | removes everything                                  |
 | `resize(n)`     | changes capacity; shrinking evicts LRU entries      |
+| `keys()`        | keys from most to least recently used               |
+| `forEach(fn)`   | visits `(key, value)` pairs in that order           |
 | `size()`, `empty()`, `capacity()` | the obvious                       |
 
 `stats()` returns hit, miss and eviction counters plus `hitRate()`;

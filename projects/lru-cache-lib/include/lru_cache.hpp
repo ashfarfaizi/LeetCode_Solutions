@@ -12,6 +12,7 @@
 #include <stdexcept>
 #include <unordered_map>
 #include <utility>
+#include <vector>
 
 namespace lru {
 
@@ -99,6 +100,22 @@ public:
     void clear() {
         items_.clear();
         index_.clear();
+    }
+
+    // Visits entries from most to least recently used without changing
+    // recency. fn receives (const Key&, const Value&) and must not modify the
+    // cache.
+    template <typename Fn>
+    void forEach(Fn fn) const {
+        for (const Entry& e : items_) fn(e.first, e.second);
+    }
+
+    // Keys ordered from most to least recently used.
+    std::vector<Key> keys() const {
+        std::vector<Key> out;
+        out.reserve(items_.size());
+        for (const Entry& e : items_) out.push_back(e.first);
+        return out;
     }
 
     // Hit/miss counts come from get() only; peek() and contains() are not counted.
