@@ -1,6 +1,6 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-icnvwxlL] [-m NUM] PATTERN [FILE...]
+//   mgrep [-icnovwxlL] [-m NUM] PATTERN [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
 // is given each output line is prefixed with its file name. -l / -L print
@@ -19,7 +19,7 @@ namespace {
 
 enum class ListMode { None, WithMatch, WithoutMatch };
 
-void usage() { std::cerr << "usage: mgrep [-icnvwxlL] [-m NUM] PATTERN [FILE...]\n"; }
+void usage() { std::cerr << "usage: mgrep [-icnovwxlL] [-m NUM] PATTERN [FILE...]\n"; }
 
 // Parses a non-negative decimal count; returns false on anything else.
 bool parseCount(const std::string& s, std::size_t& out) {
@@ -49,6 +49,7 @@ int main(int argc, char** argv) {
                 case 'v': opts.invert = true; break;
                 case 'w': opts.wholeWord = true; break;
                 case 'x': opts.wholeLine = true; break;
+                case 'o': opts.onlyMatching = true; break;
                 case 'l': list = ListMode::WithMatch; break;
                 case 'L': list = ListMode::WithoutMatch; break;
                 case 'm': {

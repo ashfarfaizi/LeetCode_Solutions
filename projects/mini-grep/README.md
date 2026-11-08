@@ -4,7 +4,7 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icnvwxlL] [-m NUM] PATTERN [FILE...]
+mgrep [-icnovwxlL] [-m NUM] PATTERN [FILE...]
 ```
 
 It prints every line that contains `PATTERN` as a plain substring. With no
@@ -16,6 +16,7 @@ prefixed with `name:`.
 | `-i`   | ignore case (ASCII)        |
 | `-n`   | prefix lines with `N:`     |
 | `-c`   | print only a match count   |
+| `-o`   | print only matched text    |
 | `-v`   | select non-matching lines  |
 | `-w`   | match whole words only     |
 | `-x`   | match whole lines only     |
@@ -63,6 +64,11 @@ With `-c` each file prints one count line (including `0`). `-m N` applies
 per file and stops reading as soon as `N` lines have matched, so
 `mgrep -m1 TODO big.log` returns quickly; with `-c` it caps the count. The
 value may be attached (`-m3`) or separate (`-m 3`).
+
+`-o` prints every non-overlapping match on its own line (keeping the
+`name:` and `N:` prefixes), which is handy for pulling tokens out of logs:
+`mgrep -oiw error app.log | wc -l` counts occurrences rather than lines.
+With `-v` it prints nothing, and `-c` still counts lines.
 
 `-l` prints each file name once, as soon as a selected line is found, and
 `-L` prints the files where none was. For example `mgrep -L '#pragma once'

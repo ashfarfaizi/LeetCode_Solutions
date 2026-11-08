@@ -172,6 +172,42 @@ static void testAnyMatch() {
     CHECK(!mgrep::anyMatch(allX, mgrep::Matcher(o)));
 }
 
+static void testSpans() {
+    using Spans = std::vector<std::pair<std::size_t, std::size_t>>;
+    CHECK(make("ab").spans("abxab") == (Spans{{0, 2}, {3, 2}}));
+    CHECK(make("aa").spans("aaaa") == (Spans{{0, 2}, {2, 2}}));  // non-overlapping
+    CHECK(make("ab").spans("xyz").empty());
+    CHECK(make("").spans("anything").empty());
+    CHECK(make("AB", true).spans("ab Ab") == (Spans{{0, 2}, {3, 2}}));
+
+    mgrep::Options o;
+    o.pattern = "cat";
+    o.wholeWord = true;
+    CHECK(mgrep::Matcher(o).spans("cats cat bobcat cat") == (Spans{{5, 3}, {16, 3}}));
+    o.wholeWord = false;
+    o.wholeLine = true;
+    CHECK(mgrep::Matcher(o).spans("cat") == (Spans{{0, 3}}));
+    CHECK(mgrep::Matcher(o).spans("cat ").empty());
+}
+
+static void testOnlyMatching() {
+    mgrep::Options o;
+    o.pattern = "id";
+    o.onlyMatching = true;
+    o.ignoreCase = true;
+    o.lineNumbers = true;
+    std::istringstream in("ID=1 id=2\nnone\nuid\n");
+    std::ostringstream out;
+    CHECK(mgrep::scan(in, out, mgrep::Matcher(o), "f") == 2);  // counts lines
+    CHECK(out.str() == "f:1:ID\nf:1:id\nf:3:id\n");
+
+    o.invert = true;  // nothing to print for non-matching lines
+    std::istringstream in2("a\nid\n");
+    std::ostringstream out2;
+    CHECK(mgrep::scan(in2, out2, mgrep::Matcher(o)) == 1);
+    CHECK(out2.str().empty());
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -184,6 +220,8 @@ int main() {
     testWholeLine();
     testMaxCount();
     testAnyMatch();
+    testSpans();
+    testOnlyMatching();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

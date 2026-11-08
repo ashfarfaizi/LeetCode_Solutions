@@ -5,6 +5,8 @@
 #include <cstddef>
 #include <ostream>
 #include <string>
+#include <utility>
+#include <vector>
 
 namespace mgrep {
 
@@ -16,6 +18,7 @@ struct Options {
     bool wholeLine = false;    // the entire line must equal the pattern
     bool lineNumbers = false;  // prefix matches with their 1-based line number
     bool countOnly = false;    // print only the number of matching lines
+    bool onlyMatching = false; // print each matched part, not the whole line
     std::size_t maxCount = 0;  // stop after this many matching lines (0 = no limit)
 };
 
@@ -27,10 +30,16 @@ public:
     // wholeWord is set), negated when invert is set.
     bool matches(const std::string& line) const;
 
+    // Start/length of every non-overlapping occurrence of the pattern in line,
+    // left to right, honouring ignoreCase, wholeWord and wholeLine (but not
+    // invert). An empty pattern yields no spans.
+    std::vector<std::pair<std::size_t, std::size_t>> spans(const std::string& line) const;
+
     const Options& options() const { return opts_; }
 
 private:
     bool contains(const std::string& haystack) const;
+    bool wordBounded(const std::string& hay, std::size_t pos) const;
 
     Options opts_;
     std::string needle_;  // pattern, lowercased when ignoreCase is set
@@ -38,6 +47,8 @@ private:
 
 // Reads in line by line and writes every matching line to out, prefixed with
 // "label:" when label is non-empty and "N:" when lineNumbers is set. With
+// onlyMatching (and not invert) each matched span is written on its own line
+// with the same prefixes instead of the whole line. With
 // countOnly, writes just "label:count" (or "count") instead. Reading stops
 // once maxCount lines have matched (when maxCount > 0). Returns the number of
 // matching lines.
