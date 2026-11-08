@@ -4,7 +4,7 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icnovwxlL] [-m NUM] PATTERN [FILE...]
+mgrep [-icnovwxlLq] [-m NUM] PATTERN [FILE...]
 ```
 
 It prints every line that contains `PATTERN` as a plain substring. With no
@@ -23,9 +23,15 @@ prefixed with `name:`.
 | `-m N` | stop after `N` matches     |
 | `-l`   | list files that match      |
 | `-L`   | list files that don't      |
+| `-q`   | quiet: exit status only    |
 
 Exit status is `0` if any line matched, `1` if none did and `2` on a usage
-error or a file that cannot be opened. Short options can be combined and
+error or a file that cannot be opened. With `-q` nothing is printed, reading
+stops at the first selected line, and a match gives `0` even if an earlier
+file could not be opened, so it slots straight into shell conditions:
+`if mgrep -q TODO notes.md; then ...`.
+
+Short options can be combined and
 `--` ends option parsing.
 
 ## Build & test
