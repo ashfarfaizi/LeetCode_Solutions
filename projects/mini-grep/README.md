@@ -4,12 +4,13 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icnovwxlLq] [-m NUM] PATTERN [FILE...]
+mgrep [-icnovwxlLqHh] [-m NUM] PATTERN [FILE...]
 ```
 
 It prints every line that contains `PATTERN` as a plain substring. With no
 `FILE` (or `-`) it reads standard input; with several files each line is
-prefixed with `name:`.
+prefixed with `name:`. `-H` adds that prefix even for a single file and `-h`
+leaves it off even for several; whichever comes last wins.
 
 | option | effect                     |
 |--------|----------------------------|
@@ -31,8 +32,7 @@ stops at the first selected line, and a match gives `0` even if an earlier
 file could not be opened, so it slots straight into shell conditions:
 `if mgrep -q TODO notes.md; then ...`.
 
-Short options can be combined and
-`--` ends option parsing.
+Short options can be combined and `--` ends option parsing.
 
 ## Build & test
 
