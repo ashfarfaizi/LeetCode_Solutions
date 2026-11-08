@@ -153,6 +153,25 @@ static void testMaxCount() {
     CHECK(mgrep::scan(in3, out3, mgrep::Matcher(o)) == 3);
 }
 
+static void testAnyMatch() {
+    std::istringstream in("x\nneedle\nmore\n");
+    CHECK(mgrep::anyMatch(in, make("needle")));
+    std::string rest;
+    std::getline(in, rest);
+    CHECK(rest == "more");  // stops at the first selected line
+
+    std::istringstream none("x\ny\n");
+    CHECK(!mgrep::anyMatch(none, make("needle")));
+    std::istringstream empty("");
+    CHECK(!mgrep::anyMatch(empty, make("")));
+
+    mgrep::Options o;
+    o.pattern = "x";
+    o.invert = true;
+    std::istringstream allX("x\nxx\n");
+    CHECK(!mgrep::anyMatch(allX, mgrep::Matcher(o)));
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -164,6 +183,7 @@ int main() {
     testWholeWord();
     testWholeLine();
     testMaxCount();
+    testAnyMatch();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

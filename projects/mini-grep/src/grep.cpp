@@ -63,4 +63,12 @@ std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
     return matched;
 }
 
+bool anyMatch(std::istream& in, const Matcher& m) {
+    std::string line;
+    while (std::getline(in, line)) {
+        if (m.matches(line)) return true;
+    }
+    return false;
+}
+
 }  // namespace mgrep

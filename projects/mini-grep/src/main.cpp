@@ -1,9 +1,10 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-icnvwx] [-m NUM] PATTERN [FILE...]
+//   mgrep [-icnvwxlL] [-m NUM] PATTERN [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
-// is given each output line is prefixed with its file name.
+// is given each output line is prefixed with its file name. -l / -L print
+// only the names of files that do / do not contain a selected line.
 // Exit status: 0 if any line matched, 1 if none did, 2 on usage or I/O error.
 
 #include "grep.hpp"
@@ -16,7 +17,9 @@
 
 namespace {
 
-void usage() { std::cerr << "usage: mgrep [-icnvwx] [-m NUM] PATTERN [FILE...]\n"; }
+enum class ListMode { None, WithMatch, WithoutMatch };
+
+void usage() { std::cerr << "usage: mgrep [-icnvwxlL] [-m NUM] PATTERN [FILE...]\n"; }
 
 // Parses a non-negative decimal count; returns false on anything else.
 bool parseCount(const std::string& s, std::size_t& out) {
@@ -29,6 +32,7 @@ bool parseCount(const std::string& s, std::size_t& out) {
 
 int main(int argc, char** argv) {
     mgrep::Options opts;
+    ListMode list = ListMode::None;
     int i = 1;
     for (; i < argc; ++i) {
         std::string arg = argv[i];
@@ -45,6 +49,8 @@ int main(int argc, char** argv) {
                 case 'v': opts.invert = true; break;
                 case 'w': opts.wholeWord = true; break;
                 case 'x': opts.wholeLine = true; break;
+                case 'l': list = ListMode::WithMatch; break;
+                case 'L': list = ListMode::WithoutMatch; break;
                 case 'm': {
                     // The count is the rest of this argument (-m3) or the next one (-m 3).
                     std::string value = arg.substr(j + 1);
@@ -77,17 +83,26 @@ int main(int argc, char** argv) {
     bool anyMatch = false, hadError = false;
     for (const std::string& name : files) {
         std::string label = showNames ? (name == "-" ? "(standard input)" : name) : "";
-        if (name == "-") {
-            anyMatch |= mgrep::scan(std::cin, std::cout, matcher, label) > 0;
+        std::ifstream file;
+        if (name != "-") {
+            file.open(name);
+            if (!file) {
+                std::cerr << "mgrep: " << name << ": cannot open file\n";
+                hadError = true;
+                continue;
+            }
+        }
+        std::istream& in = name == "-" ? std::cin : file;
+        if (list != ListMode::None) {
+            // -l succeeds when some file matched, -L when some file did not.
+            bool found = mgrep::anyMatch(in, matcher);
+            if (found == (list == ListMode::WithMatch)) {
+                std::cout << (name == "-" ? "(standard input)" : name) << '\n';
+                anyMatch = true;
+            }
             continue;
         }
-        std::ifstream file(name);
-        if (!file) {
-            std::cerr << "mgrep: " << name << ": cannot open file\n";
-            hadError = true;
-            continue;
-        }
-        anyMatch |= mgrep::scan(file, std::cout, matcher, label) > 0;
+        anyMatch |= mgrep::scan(in, std::cout, matcher, label) > 0;
     }
     if (hadError) return 2;
     return anyMatch ? 0 : 1;

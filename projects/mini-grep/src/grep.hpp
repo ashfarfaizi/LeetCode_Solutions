@@ -44,4 +44,8 @@ private:
 std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
                  const std::string& label = "");
 
+// True if any line read from in is selected by m. Stops reading at the first
+// selected line, which is what -l and -L need.
+bool anyMatch(std::istream& in, const Matcher& m);
+
 }  // namespace mgrep

@@ -4,7 +4,7 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icnvwx] [-m NUM] PATTERN [FILE...]
+mgrep [-icnvwxlL] [-m NUM] PATTERN [FILE...]
 ```
 
 It prints every line that contains `PATTERN` as a plain substring. With no
@@ -20,6 +20,8 @@ prefixed with `name:`.
 | `-w`   | match whole words only     |
 | `-x`   | match whole lines only     |
 | `-m N` | stop after `N` matches     |
+| `-l`   | list files that match      |
+| `-L`   | list files that don't      |
 
 Exit status is `0` if any line matched, `1` if none did and `2` on a usage
 error or a file that cannot be opened. Short options can be combined and
@@ -61,6 +63,11 @@ With `-c` each file prints one count line (including `0`). `-m N` applies
 per file and stops reading as soon as `N` lines have matched, so
 `mgrep -m1 TODO big.log` returns quickly; with `-c` it caps the count. The
 value may be attached (`-m3`) or separate (`-m 3`).
+
+`-l` prints each file name once, as soon as a selected line is found, and
+`-L` prints the files where none was. For example `mgrep -L '#pragma once'
+src/*.hpp` finds headers missing a guard. With `-l` or `-L` the exit status
+is `0` when at least one name was printed.
 
 ## Layout
 
