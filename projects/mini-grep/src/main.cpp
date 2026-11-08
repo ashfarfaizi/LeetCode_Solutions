@@ -1,6 +1,6 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-icnvwx] PATTERN [FILE...]
+//   mgrep [-icnvwx] [-m NUM] PATTERN [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
 // is given each output line is prefixed with its file name.
@@ -8,6 +8,7 @@
 
 #include "grep.hpp"
 
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -15,7 +16,14 @@
 
 namespace {
 
-void usage() { std::cerr << "usage: mgrep [-icnvwx] PATTERN [FILE...]\n"; }
+void usage() { std::cerr << "usage: mgrep [-icnvwx] [-m NUM] PATTERN [FILE...]\n"; }
+
+// Parses a non-negative decimal count; returns false on anything else.
+bool parseCount(const std::string& s, std::size_t& out) {
+    if (s.empty() || s.find_first_not_of("0123456789") != std::string::npos) return false;
+    out = std::strtoull(s.c_str(), nullptr, 10);
+    return true;
+}
 
 }  // namespace
 
@@ -37,6 +45,18 @@ int main(int argc, char** argv) {
                 case 'v': opts.invert = true; break;
                 case 'w': opts.wholeWord = true; break;
                 case 'x': opts.wholeLine = true; break;
+                case 'm': {
+                    // The count is the rest of this argument (-m3) or the next one (-m 3).
+                    std::string value = arg.substr(j + 1);
+                    if (value.empty() && i + 1 < argc) value = argv[++i];
+                    if (!parseCount(value, opts.maxCount) || opts.maxCount == 0) {
+                        std::cerr << "mgrep: -m needs a positive number\n";
+                        usage();
+                        return 2;
+                    }
+                    j = arg.size();  // the value consumed the rest of the argument
+                    break;
+                }
                 default:
                     std::cerr << "mgrep: unknown option -" << arg[j] << '\n';
                     usage();

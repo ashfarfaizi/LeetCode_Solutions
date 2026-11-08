@@ -4,7 +4,7 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icnvwx] PATTERN [FILE...]
+mgrep [-icnvwx] [-m NUM] PATTERN [FILE...]
 ```
 
 It prints every line that contains `PATTERN` as a plain substring. With no
@@ -19,6 +19,7 @@ prefixed with `name:`.
 | `-v`   | select non-matching lines  |
 | `-w`   | match whole words only     |
 | `-x`   | match whole lines only     |
+| `-m N` | stop after `N` matches     |
 
 Exit status is `0` if any line matched, `1` if none did and `2` on a usage
 error or a file that cannot be opened. Short options can be combined and
@@ -56,7 +57,10 @@ and `(cat)` but not `cats` or `cat_food`. `-v` combines with the others,
 e.g. `mgrep -vc '#' config` counts lines that are not comments. `-x`
 overrides `-w`, and `mgrep -vx '' file` drops blank lines.
 
-With `-c` each file prints one count line (including `0`).
+With `-c` each file prints one count line (including `0`). `-m N` applies
+per file and stops reading as soon as `N` lines have matched, so
+`mgrep -m1 TODO big.log` returns quickly; with `-c` it caps the count. The
+value may be attached (`-m3`) or separate (`-m 3`).
 
 ## Layout
 

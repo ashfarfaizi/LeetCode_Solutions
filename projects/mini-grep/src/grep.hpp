@@ -2,6 +2,7 @@
 // Core of mini-grep: decide whether a line matches and scan whole streams.
 
 #include <istream>
+#include <cstddef>
 #include <ostream>
 #include <string>
 
@@ -15,6 +16,7 @@ struct Options {
     bool wholeLine = false;    // the entire line must equal the pattern
     bool lineNumbers = false;  // prefix matches with their 1-based line number
     bool countOnly = false;    // print only the number of matching lines
+    std::size_t maxCount = 0;  // stop after this many matching lines (0 = no limit)
 };
 
 class Matcher {
@@ -36,8 +38,9 @@ private:
 
 // Reads in line by line and writes every matching line to out, prefixed with
 // "label:" when label is non-empty and "N:" when lineNumbers is set. With
-// countOnly, writes just "label:count" (or "count") instead. Returns the
-// number of matching lines.
+// countOnly, writes just "label:count" (or "count") instead. Reading stops
+// once maxCount lines have matched (when maxCount > 0). Returns the number of
+// matching lines.
 std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
                  const std::string& label = "");
 

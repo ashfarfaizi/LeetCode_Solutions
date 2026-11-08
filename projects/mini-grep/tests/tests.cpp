@@ -128,6 +128,31 @@ static void testWholeLine() {
     CHECK(!mgrep::Matcher(o).matches("x"));
 }
 
+static void testMaxCount() {
+    mgrep::Options o;
+    o.pattern = "a";
+    o.maxCount = 2;
+    std::istringstream in("a1\nb\na2\na3\na4\n");
+    std::ostringstream out;
+    CHECK(mgrep::scan(in, out, mgrep::Matcher(o)) == 2);
+    CHECK(out.str() == "a1\na2\n");
+    std::string rest;
+    std::getline(in, rest);
+    CHECK(rest == "a3");  // stopped right after the second match
+
+    o.countOnly = true;
+    std::istringstream in2("a\na\na\n");
+    std::ostringstream out2;
+    CHECK(mgrep::scan(in2, out2, mgrep::Matcher(o)) == 2);
+    CHECK(out2.str() == "2\n");
+
+    o.countOnly = false;
+    o.maxCount = 0;  // no limit
+    std::istringstream in3("a\na\na\n");
+    std::ostringstream out3;
+    CHECK(mgrep::scan(in3, out3, mgrep::Matcher(o)) == 3);
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -138,6 +163,7 @@ int main() {
     testInvert();
     testWholeWord();
     testWholeLine();
+    testMaxCount();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

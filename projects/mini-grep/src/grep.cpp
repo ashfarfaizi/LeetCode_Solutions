@@ -47,7 +47,7 @@ std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
     const Options& o = m.options();
     std::size_t matched = 0, lineNo = 0;
     std::string line;
-    while (std::getline(in, line)) {
+    while ((o.maxCount == 0 || matched < o.maxCount) && std::getline(in, line)) {
         ++lineNo;
         if (!m.matches(line)) continue;
         ++matched;
