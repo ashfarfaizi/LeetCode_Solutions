@@ -14,8 +14,9 @@ build/tests: tests/tests.cpp $(SRC) $(wildcard src/*.hpp)
 	@mkdir -p build
 	$(CXX) $(CXXFLAGS) -Isrc tests/tests.cpp $(SRC) -o $@
 
-test: build/tests
+test: build/tests build/mgrep
 	./build/tests
+	sh tests/cli.sh build/mgrep
 
 clean:
 	rm -rf build

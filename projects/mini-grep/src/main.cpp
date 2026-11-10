@@ -1,6 +1,6 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
+//   mgrep [-icnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
 //         {PATTERN | -e PATTERN...} [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
@@ -8,6 +8,7 @@
 // prefix, -h suppresses it). -l / -L print
 // only the names of files that do / do not contain a selected line, and -q
 // prints nothing at all, exiting 0 at the first selected line.
+// -s hides "cannot open" messages (the exit status still reports them).
 // Exit status: 0 if any line matched, 1 if none did, 2 on usage or I/O error.
 
 #include "grep.hpp"
@@ -23,7 +24,7 @@ namespace {
 enum class ListMode { None, WithMatch, WithoutMatch };
 
 void usage() {
-    std::cerr << "usage: mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
+    std::cerr << "usage: mgrep [-icnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
                  "             {PATTERN | -e PATTERN...} [FILE...]\n";
 }
 
@@ -40,6 +41,7 @@ int main(int argc, char** argv) {
     mgrep::Options opts;
     ListMode list = ListMode::None;
     bool quiet = false;
+    bool noMessages = false;  // -s
     enum class Names { Auto, Always, Never } names = Names::Auto;
     std::vector<std::string> patterns;  // from -e
     int i = 1;
@@ -62,6 +64,7 @@ int main(int argc, char** argv) {
                 case 'l': list = ListMode::WithMatch; break;
                 case 'L': list = ListMode::WithoutMatch; break;
                 case 'q': quiet = true; break;
+                case 's': noMessages = true; break;
                 case 'H': names = Names::Always; break;
                 case 'h': names = Names::Never; break;
                 case 'e': {
@@ -132,7 +135,7 @@ int main(int argc, char** argv) {
         if (name != "-") {
             file.open(name);
             if (!file) {
-                std::cerr << "mgrep: " << name << ": cannot open file\n";
+                if (!noMessages) std::cerr << "mgrep: " << name << ": cannot open file\n";
                 hadError = true;
                 continue;
             }

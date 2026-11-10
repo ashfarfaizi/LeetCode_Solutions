@@ -4,7 +4,7 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
+mgrep [-icnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
       {PATTERN | -e PATTERN...} [FILE...]
 ```
 
@@ -30,6 +30,7 @@ leaves it off even for several; whichever comes last wins.
 | `-l`   | list files that match      |
 | `-L`   | list files that don't      |
 | `-q`   | quiet: exit status only    |
+| `-s`   | no "cannot open" messages  |
 
 Exit status is `0` if any line matched, `1` if none did and `2` on a usage
 error or a file that cannot be opened. With `-q` nothing is printed, reading
@@ -37,13 +38,17 @@ stops at the first selected line, and a match gives `0` even if an earlier
 file could not be opened, so it slots straight into shell conditions:
 `if mgrep -q TODO notes.md; then ...`.
 
+`-s` suppresses the message for a file that cannot be opened; the other
+files are still searched and the exit status is still `2`, so
+`mgrep -s TODO *.cpp missing.cpp` prints only matches.
+
 Short options can be combined and `--` ends option parsing.
 
 ## Build & test
 
 ```sh
 make           # builds build/mgrep and runs the tests
-make test      # builds build/tests and runs it
+make test      # runs the unit tests and the tests/cli.sh smoke tests
 make clean
 ```
 
@@ -108,4 +113,5 @@ is `0` when at least one name was printed.
 src/grep.hpp, src/grep.cpp   Matcher and scan(): the testable core
 src/main.cpp                 command-line parsing and file handling
 tests/tests.cpp              minimal self-contained test runner
+tests/cli.sh                 exit-code and message checks for the binary
 ```
