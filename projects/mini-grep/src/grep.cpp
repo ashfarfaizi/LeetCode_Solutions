@@ -22,48 +22,70 @@ bool isWordChar(char c) {
 }  // namespace
 
 Matcher::Matcher(Options opts) : opts_(std::move(opts)) {
-    needle_ = opts_.ignoreCase ? toLower(opts_.pattern) : opts_.pattern;
-}
-
-bool Matcher::contains(const std::string& hay) const {
-    if (opts_.wholeLine) return hay == needle_;
-    if (!opts_.wholeWord || needle_.empty()) return hay.find(needle_) != std::string::npos;
-    for (std::size_t pos = hay.find(needle_); pos != std::string::npos;
-         pos = hay.find(needle_, pos + 1)) {
-        if (wordBounded(hay, pos)) return true;
+    needles_.push_back(opts_.pattern);
+    needles_.insert(needles_.end(), opts_.morePatterns.begin(), opts_.morePatterns.end());
+    if (opts_.ignoreCase) {
+        for (std::string& n : needles_) n = toLower(n);
     }
-    return false;
 }
 
-bool Matcher::wordBounded(const std::string& hay, std::size_t pos) const {
-    std::size_t end = pos + needle_.size();
+bool Matcher::wordBounded(const std::string& hay, std::size_t pos, std::size_t len) {
+    std::size_t end = pos + len;
     bool leftOk = pos == 0 || !isWordChar(hay[pos - 1]);
     bool rightOk = end == hay.size() || !isWordChar(hay[end]);
     return leftOk && rightOk;
 }
 
+std::size_t Matcher::findFrom(const std::string& hay, const std::string& needle,
+                              std::size_t from) const {
+    for (std::size_t pos = hay.find(needle, from); pos != std::string::npos;
+         pos = hay.find(needle, pos + 1)) {
+        if (!opts_.wholeWord || wordBounded(hay, pos, needle.size())) return pos;
+    }
+    return std::string::npos;
+}
+
+bool Matcher::contains(const std::string& hay, const std::string& needle) const {
+    if (opts_.wholeLine) return hay == needle;
+    if (needle.empty()) return true;
+    return findFrom(hay, needle, 0) != std::string::npos;
+}
+
 std::vector<std::pair<std::size_t, std::size_t>> Matcher::spans(const std::string& line) const {
     std::vector<std::pair<std::size_t, std::size_t>> out;
-    if (needle_.empty()) return out;
     const std::string hay = opts_.ignoreCase ? toLower(line) : line;
     if (opts_.wholeLine) {
-        if (hay == needle_) out.emplace_back(0, hay.size());
+        for (const std::string& n : needles_) {
+            if (!n.empty() && hay == n) {
+                out.emplace_back(0, hay.size());
+                break;
+            }
+        }
         return out;
     }
-    std::size_t pos = hay.find(needle_);
-    while (pos != std::string::npos) {
-        if (!opts_.wholeWord || wordBounded(hay, pos)) {
-            out.emplace_back(pos, needle_.size());
-            pos = hay.find(needle_, pos + needle_.size());
-        } else {
-            pos = hay.find(needle_, pos + 1);
+    std::size_t from = 0;
+    while (from < hay.size()) {
+        std::size_t bestPos = std::string::npos, bestLen = 0;
+        for (const std::string& n : needles_) {
+            if (n.empty()) continue;
+            std::size_t pos = findFrom(hay, n, from);
+            if (pos == std::string::npos) continue;
+            if (pos < bestPos || (pos == bestPos && n.size() > bestLen)) {
+                bestPos = pos;
+                bestLen = n.size();
+            }
         }
+        if (bestPos == std::string::npos) break;
+        out.emplace_back(bestPos, bestLen);
+        from = bestPos + bestLen;
     }
     return out;
 }
 
 bool Matcher::matches(const std::string& line) const {
-    bool found = opts_.ignoreCase ? contains(toLower(line)) : contains(line);
+    const std::string hay = opts_.ignoreCase ? toLower(line) : line;
+    bool found = std::any_of(needles_.begin(), needles_.end(),
+                             [&](const std::string& n) { return contains(hay, n); });
     return found != opts_.invert;
 }
 

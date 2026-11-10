@@ -268,6 +268,40 @@ static void testBothContexts() {
     CHECK(runScan(o, "x\na\nb\nx\n") == "x\na\nb\nx\n");
 }
 
+static void testMultiplePatterns() {
+    using Spans = std::vector<std::pair<std::size_t, std::size_t>>;
+    mgrep::Options o;
+    o.pattern = "warn";
+    o.morePatterns = {"error"};
+    mgrep::Matcher m(o);
+    CHECK(m.matches("warn: low disk"));
+    CHECK(m.matches("error: full"));
+    CHECK(!m.matches("info: ok"));
+    CHECK(runScan(o, "warn\ninfo\nerror\n") == "warn\nerror\n");
+
+    o.invert = true;  // -v drops lines matching any pattern
+    CHECK(runScan(o, "warn\ninfo\nerror\n") == "info\n");
+
+    // -o takes the leftmost match, preferring the longest at a position.
+    mgrep::Options s;
+    s.pattern = "ab";
+    s.morePatterns = {"abc", "c", "d"};
+    CHECK(mgrep::Matcher(s).spans("xabcd ab") == (Spans{{1, 3}, {4, 1}, {6, 2}}));
+
+    // -w applies to each pattern separately.
+    s.pattern = "cat";
+    s.morePatterns = {"dog"};
+    s.wholeWord = true;
+    CHECK(mgrep::Matcher(s).spans("cats dog cat") == (Spans{{5, 3}, {9, 3}}));
+    CHECK(!mgrep::Matcher(s).matches("cats dogs"));
+
+    // -x needs some pattern to equal the whole line.
+    s.wholeWord = false;
+    s.wholeLine = true;
+    CHECK(mgrep::Matcher(s).matches("dog"));
+    CHECK(!mgrep::Matcher(s).matches("dog cat"));
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -285,6 +319,7 @@ int main() {
     testAfterContext();
     testBeforeContext();
     testBothContexts();
+    testMultiplePatterns();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

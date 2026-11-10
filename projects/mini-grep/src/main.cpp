@@ -1,6 +1,7 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM] PATTERN [FILE...]
+//   mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
+//         {PATTERN | -e PATTERN...} [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
 // is given each output line is prefixed with its file name (-H forces the
@@ -21,7 +22,10 @@ namespace {
 
 enum class ListMode { None, WithMatch, WithoutMatch };
 
-void usage() { std::cerr << "usage: mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM] PATTERN [FILE...]\n"; }
+void usage() {
+    std::cerr << "usage: mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
+                 "             {PATTERN | -e PATTERN...} [FILE...]\n";
+}
 
 // Parses a non-negative decimal count; returns false on anything else.
 bool parseCount(const std::string& s, std::size_t& out) {
@@ -37,6 +41,7 @@ int main(int argc, char** argv) {
     ListMode list = ListMode::None;
     bool quiet = false;
     enum class Names { Auto, Always, Never } names = Names::Auto;
+    std::vector<std::string> patterns;  // from -e
     int i = 1;
     for (; i < argc; ++i) {
         std::string arg = argv[i];
@@ -59,6 +64,20 @@ int main(int argc, char** argv) {
                 case 'q': quiet = true; break;
                 case 'H': names = Names::Always; break;
                 case 'h': names = Names::Never; break;
+                case 'e': {
+                    // Like -m, the pattern is the rest of the argument or the next one.
+                    if (j + 1 < arg.size()) {
+                        patterns.push_back(arg.substr(j + 1));
+                    } else if (i + 1 < argc) {
+                        patterns.push_back(argv[++i]);
+                    } else {
+                        std::cerr << "mgrep: -e needs a pattern\n";
+                        usage();
+                        return 2;
+                    }
+                    j = arg.size();
+                    break;
+                }
                 case 'm':
                 case 'A':
                 case 'B':
@@ -92,11 +111,15 @@ int main(int argc, char** argv) {
             }
         }
     }
-    if (i >= argc) {
-        usage();
-        return 2;
+    if (patterns.empty()) {
+        if (i >= argc) {
+            usage();
+            return 2;
+        }
+        patterns.push_back(argv[i++]);
     }
-    opts.pattern = argv[i++];
+    opts.pattern = patterns.front();
+    opts.morePatterns.assign(patterns.begin() + 1, patterns.end());
     std::vector<std::string> files(argv + i, argv + argc);
     if (files.empty()) files.push_back("-");
 

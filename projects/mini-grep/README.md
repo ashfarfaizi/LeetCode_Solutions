@@ -4,7 +4,8 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM] PATTERN [FILE...]
+mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
+      {PATTERN | -e PATTERN...} [FILE...]
 ```
 
 It prints every line that contains `PATTERN` as a plain substring. With no
@@ -14,6 +15,7 @@ leaves it off even for several; whichever comes last wins.
 
 | option | effect                     |
 |--------|----------------------------|
+| `-e P` | extra pattern (repeatable) |
 | `-i`   | ignore case (ASCII)        |
 | `-n`   | prefix lines with `N:`     |
 | `-c`   | print only a match count   |
@@ -78,6 +80,13 @@ value may be attached (`-m3`) or separate (`-m 3`).
 `name:` and `N:` prefixes), which is handy for pulling tokens out of logs:
 `mgrep -oiw error app.log | wc -l` counts occurrences rather than lines.
 With `-v` it prints nothing, and `-c` still counts lines.
+
+`-e PATTERN` can be given several times and a line is selected when it
+contains any of them: `mgrep -e WARN -e ERROR app.log`. Once `-e` is used
+there is no positional pattern, so every remaining argument is a file. It is
+also the way to search for text that starts with `-` (`mgrep -e -v`). With
+`-o`, where patterns overlap the leftmost match is printed, and the longest
+one when several start at the same place.
 
 `-A N` prints up to `N` lines after each match and `-B N` up to `N` lines
 before it; `-C N` sets both. A line is never printed twice when contexts

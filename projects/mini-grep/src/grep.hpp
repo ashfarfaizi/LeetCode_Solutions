@@ -12,6 +12,7 @@ namespace mgrep {
 
 struct Options {
     std::string pattern;
+    std::vector<std::string> morePatterns;  // extra patterns (-e); any may match
     bool ignoreCase = false;
     bool invert = false;       // select lines that do NOT match
     bool wholeWord = false;    // match only where bounded by non-word chars
@@ -28,23 +29,28 @@ class Matcher {
 public:
     explicit Matcher(Options opts);
 
-    // True if line is selected: it contains the pattern (as a whole word when
-    // wholeWord is set), negated when invert is set.
+    // True if line is selected: it contains the pattern or any of
+    // morePatterns (as a whole word when wholeWord is set), negated when
+    // invert is set.
     bool matches(const std::string& line) const;
 
-    // Start/length of every non-overlapping occurrence of the pattern in line,
+    // Start/length of every non-overlapping occurrence of any pattern in line,
     // left to right, honouring ignoreCase, wholeWord and wholeLine (but not
-    // invert). An empty pattern yields no spans.
+    // invert). Where several patterns match at the same place the longest
+    // wins. Empty patterns yield no spans.
     std::vector<std::pair<std::size_t, std::size_t>> spans(const std::string& line) const;
 
     const Options& options() const { return opts_; }
 
 private:
-    bool contains(const std::string& haystack) const;
-    bool wordBounded(const std::string& hay, std::size_t pos) const;
+    bool contains(const std::string& hay, const std::string& needle) const;
+    static bool wordBounded(const std::string& hay, std::size_t pos, std::size_t len);
+    // Earliest valid occurrence of needle in hay at or after from (npos if none).
+    std::size_t findFrom(const std::string& hay, const std::string& needle,
+                         std::size_t from) const;
 
     Options opts_;
-    std::string needle_;  // pattern, lowercased when ignoreCase is set
+    std::vector<std::string> needles_;  // all patterns, lowercased when ignoreCase
 };
 
 // Reads in line by line and writes every matching line to out, prefixed with
