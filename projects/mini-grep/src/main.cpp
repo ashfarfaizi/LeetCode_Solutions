@@ -1,6 +1,6 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] PATTERN [FILE...]
+//   mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM] PATTERN [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
 // is given each output line is prefixed with its file name (-H forces the
@@ -21,7 +21,7 @@ namespace {
 
 enum class ListMode { None, WithMatch, WithoutMatch };
 
-void usage() { std::cerr << "usage: mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] PATTERN [FILE...]\n"; }
+void usage() { std::cerr << "usage: mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM] PATTERN [FILE...]\n"; }
 
 // Parses a non-negative decimal count; returns false on anything else.
 bool parseCount(const std::string& s, std::size_t& out) {
@@ -60,7 +60,9 @@ int main(int argc, char** argv) {
                 case 'H': names = Names::Always; break;
                 case 'h': names = Names::Never; break;
                 case 'm':
-                case 'A': {
+                case 'A':
+                case 'B':
+                case 'C': {
                     // The count is the rest of this argument (-m3) or the next one (-m 3).
                     const char opt = arg[j];
                     std::string value = arg.substr(j + 1);
@@ -71,7 +73,8 @@ int main(int argc, char** argv) {
                         ok = ok && n > 0;
                         opts.maxCount = n;
                     } else {
-                        opts.afterContext = n;
+                        if (opt != 'B') opts.afterContext = n;
+                        if (opt != 'A') opts.beforeContext = n;
                     }
                     if (!ok) {
                         std::cerr << "mgrep: -" << opt << " needs a "

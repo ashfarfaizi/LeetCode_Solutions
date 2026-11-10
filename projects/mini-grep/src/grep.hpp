@@ -20,7 +20,8 @@ struct Options {
     bool countOnly = false;    // print only the number of matching lines
     bool onlyMatching = false; // print each matched part, not the whole line
     std::size_t maxCount = 0;  // stop after this many matching lines (0 = no limit)
-    std::size_t afterContext = 0;  // non-matching lines to print after each match
+    std::size_t afterContext = 0;   // non-matching lines to print after each match
+    std::size_t beforeContext = 0;  // non-matching lines to print before each match
 };
 
 class Matcher {
@@ -52,8 +53,8 @@ private:
 // with the same prefixes instead of the whole line. With
 // countOnly, writes just "label:count" (or "count") instead. Reading stops
 // once maxCount lines have matched (when maxCount > 0), after printing any
-// trailing context. With afterContext each match is followed by up to that
-// many further lines, prefixed with "label-" and "N-" instead of ':'; groups
+// trailing context. With afterContext / beforeContext each match is followed /
+// preceded by up to that many further lines (never repeating a line), prefixed with "label-" and "N-" instead of ':'; groups
 // that are not adjacent are separated by a "--" line. Context is ignored with
 // countOnly and onlyMatching. Returns the number of matching lines.
 std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,

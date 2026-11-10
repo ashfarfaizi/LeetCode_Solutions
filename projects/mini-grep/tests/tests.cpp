@@ -244,6 +244,30 @@ static void testAfterContext() {
     CHECK(runScan(o, "ax\nb\n") == "x\n");
 }
 
+static void testBeforeContext() {
+    mgrep::Options o;
+    o.pattern = "x";
+    o.beforeContext = 2;
+    o.lineNumbers = true;
+    CHECK(runScan(o, "a\nb\nc\nx\nd\n") == "2-b\n3-c\n4:x\n");
+    // Leading context never repeats lines already printed, and gaps get "--".
+    CHECK(runScan(o, "a\nx\nb\nx\nc\nd\ne\nf\nx\n") ==
+          "1-a\n2:x\n3-b\n4:x\n--\n7-e\n8-f\n9:x\n");
+    // Fewer lines than requested at the start of the input.
+    CHECK(runScan(o, "x\n") == "1:x\n");
+}
+
+static void testBothContexts() {
+    mgrep::Options o;
+    o.pattern = "x";
+    o.beforeContext = 1;
+    o.afterContext = 1;
+    CHECK(runScan(o, "a\nb\nx\nc\nd\ne\nx\nf\n", "f") ==
+          "f-b\nf:x\nf-c\n--\nf-e\nf:x\nf-f\n");
+    // Groups that touch are merged without a separator.
+    CHECK(runScan(o, "x\na\nb\nx\n") == "x\na\nb\nx\n");
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -259,6 +283,8 @@ int main() {
     testSpans();
     testOnlyMatching();
     testAfterContext();
+    testBeforeContext();
+    testBothContexts();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
