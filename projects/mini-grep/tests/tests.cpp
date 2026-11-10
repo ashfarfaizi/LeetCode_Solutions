@@ -208,6 +208,42 @@ static void testOnlyMatching() {
     CHECK(out2.str().empty());
 }
 
+static std::string runScan(const mgrep::Options& o, const std::string& text,
+                           const std::string& label = "") {
+    std::istringstream in(text);
+    std::ostringstream out;
+    mgrep::scan(in, out, mgrep::Matcher(o), label);
+    return out.str();
+}
+
+static void testAfterContext() {
+    mgrep::Options o;
+    o.pattern = "x";
+    o.afterContext = 1;
+    // Adjacent groups merge; a gap produces a "--" separator.
+    CHECK(runScan(o, "x1\na\nx2\nb\nc\nx3\n") == "x1\na\nx2\nb\n--\nx3\n");
+
+    o.lineNumbers = true;
+    CHECK(runScan(o, "x\na\nb\n", "f") == "f:1:x\nf-2-a\n");
+
+    // A match inside the trailing context is printed as a match and extends it.
+    o.lineNumbers = false;
+    o.afterContext = 2;
+    CHECK(runScan(o, "x\nx\na\nb\nc\n") == "x\nx\na\nb\n");
+
+    // -m stops after the trailing context of the last allowed match.
+    o.maxCount = 1;
+    CHECK(runScan(o, "x\nx\na\nx\n") == "x\nx\na\n");
+
+    // Context is ignored with -c and -o.
+    o.maxCount = 0;
+    o.countOnly = true;
+    CHECK(runScan(o, "x\na\n") == "1\n");
+    o.countOnly = false;
+    o.onlyMatching = true;
+    CHECK(runScan(o, "ax\nb\n") == "x\n");
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -222,6 +258,7 @@ int main() {
     testAnyMatch();
     testSpans();
     testOnlyMatching();
+    testAfterContext();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

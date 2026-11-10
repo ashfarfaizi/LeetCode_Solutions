@@ -69,25 +69,51 @@ bool Matcher::matches(const std::string& line) const {
 std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
                  const std::string& label) {
     const Options& o = m.options();
+    const bool context = !o.countOnly && !o.onlyMatching && o.afterContext > 0;
     std::size_t matched = 0, lineNo = 0;
+    std::size_t afterLeft = 0;    // trailing context lines still to print
+    std::size_t lastPrinted = 0;  // line number of the last printed line, 0 = none
+    bool limitReached = false;
     std::string line;
-    while ((o.maxCount == 0 || matched < o.maxCount) && std::getline(in, line)) {
+
+    // Writes one output line; sep is ':' for selected lines, '-' for context.
+    auto emit = [&](std::size_t n, const std::string& text, char sep) {
+        if (context && lastPrinted != 0 && n > lastPrinted + 1) out << "--\n";
+        if (!label.empty()) out << label << sep;
+        if (o.lineNumbers) out << n << sep;
+        out << text << '\n';
+        lastPrinted = n;
+    };
+
+    while (std::getline(in, line)) {
         ++lineNo;
-        if (!m.matches(line)) continue;
-        ++matched;
-        if (o.countOnly) continue;
-        if (o.onlyMatching) {
-            if (o.invert) continue;  // an unmatched line has no parts to print
-            for (const auto& [start, len] : m.spans(line)) {
-                if (!label.empty()) out << label << ':';
-                if (o.lineNumbers) out << lineNo << ':';
-                out << line.substr(start, len) << '\n';
+        if (limitReached || !m.matches(line)) {
+            if (afterLeft > 0) {
+                emit(lineNo, line, '-');
+                --afterLeft;
             }
+            if (limitReached && afterLeft == 0) break;
             continue;
         }
-        if (!label.empty()) out << label << ':';
-        if (o.lineNumbers) out << lineNo << ':';
-        out << line << '\n';
+        ++matched;
+        if (o.countOnly) {
+            // nothing to print per line
+        } else if (o.onlyMatching) {
+            if (!o.invert) {  // an unmatched line has no parts to print
+                for (const auto& [start, len] : m.spans(line)) {
+                    if (!label.empty()) out << label << ':';
+                    if (o.lineNumbers) out << lineNo << ':';
+                    out << line.substr(start, len) << '\n';
+                }
+            }
+        } else {
+            emit(lineNo, line, ':');
+            afterLeft = context ? o.afterContext : 0;
+        }
+        if (o.maxCount != 0 && matched >= o.maxCount) {
+            limitReached = true;
+            if (afterLeft == 0) break;
+        }
     }
     if (o.countOnly) {
         if (!label.empty()) out << label << ':';

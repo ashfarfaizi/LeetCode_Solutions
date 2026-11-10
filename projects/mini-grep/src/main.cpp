@@ -1,6 +1,6 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-icnovwxlLqHh] [-m NUM] PATTERN [FILE...]
+//   mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] PATTERN [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
 // is given each output line is prefixed with its file name (-H forces the
@@ -21,7 +21,7 @@ namespace {
 
 enum class ListMode { None, WithMatch, WithoutMatch };
 
-void usage() { std::cerr << "usage: mgrep [-icnovwxlLqHh] [-m NUM] PATTERN [FILE...]\n"; }
+void usage() { std::cerr << "usage: mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] PATTERN [FILE...]\n"; }
 
 // Parses a non-negative decimal count; returns false on anything else.
 bool parseCount(const std::string& s, std::size_t& out) {
@@ -59,12 +59,23 @@ int main(int argc, char** argv) {
                 case 'q': quiet = true; break;
                 case 'H': names = Names::Always; break;
                 case 'h': names = Names::Never; break;
-                case 'm': {
+                case 'm':
+                case 'A': {
                     // The count is the rest of this argument (-m3) or the next one (-m 3).
+                    const char opt = arg[j];
                     std::string value = arg.substr(j + 1);
                     if (value.empty() && i + 1 < argc) value = argv[++i];
-                    if (!parseCount(value, opts.maxCount) || opts.maxCount == 0) {
-                        std::cerr << "mgrep: -m needs a positive number\n";
+                    std::size_t n = 0;
+                    bool ok = parseCount(value, n);
+                    if (opt == 'm') {
+                        ok = ok && n > 0;
+                        opts.maxCount = n;
+                    } else {
+                        opts.afterContext = n;
+                    }
+                    if (!ok) {
+                        std::cerr << "mgrep: -" << opt << " needs a "
+                                  << (opt == 'm' ? "positive" : "non-negative") << " number\n";
                         usage();
                         return 2;
                     }

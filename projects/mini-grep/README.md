@@ -4,7 +4,7 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icnovwxlLqHh] [-m NUM] PATTERN [FILE...]
+mgrep [-icnovwxlLqHh] [-m NUM] [-A NUM] PATTERN [FILE...]
 ```
 
 It prints every line that contains `PATTERN` as a plain substring. With no
@@ -22,6 +22,7 @@ leaves it off even for several; whichever comes last wins.
 | `-w`   | match whole words only     |
 | `-x`   | match whole lines only     |
 | `-m N` | stop after `N` matches     |
+| `-A N` | `N` lines of context after |
 | `-l`   | list files that match      |
 | `-L`   | list files that don't      |
 | `-q`   | quiet: exit status only    |
@@ -75,6 +76,13 @@ value may be attached (`-m3`) or separate (`-m 3`).
 `name:` and `N:` prefixes), which is handy for pulling tokens out of logs:
 `mgrep -oiw error app.log | wc -l` counts occurrences rather than lines.
 With `-v` it prints nothing, and `-c` still counts lines.
+
+`-A N` prints up to `N` lines after each match. Context lines use `-`
+instead of `:` after the file name and line number (`app.log-12-...`), and
+groups that are not next to each other are separated by a `--` line, so
+`mgrep -n -A2 panic app.log` shows each panic with the two lines that
+followed it. With `-m` the trailing context of the last match is still
+printed. Context is ignored with `-c` and `-o`.
 
 `-l` prints each file name once, as soon as a selected line is found, and
 `-L` prints the files where none was. For example `mgrep -L '#pragma once'
