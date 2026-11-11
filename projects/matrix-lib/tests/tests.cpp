@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <iostream>
+#include <sstream>
 #include <stdexcept>
 
 static int failures = 0;
@@ -138,6 +139,26 @@ static void testInverse() {
     CHECK_THROWS(Matrix(2, 3).inverse(), std::invalid_argument);
 }
 
+static void testSolveAndPrint() {
+    // 2x + y - z = 8, -3x - y + 2z = -11, -2x + y + 2z = -3  ->  (2, 3, -1)
+    Matrix a{{2, 1, -1}, {-3, -1, 2}, {-2, 1, 2}};
+    Matrix b{{8}, {-11}, {-3}};
+    CHECK(a.solve(b).approxEqual(Matrix{{2}, {3}, {-1}}));
+
+    // Several right-hand sides at once: solving against I gives the inverse.
+    CHECK(a.solve(Matrix::identity(3)).approxEqual(a.inverse()));
+
+    Matrix swapNeeded{{0, 1}, {1, 1}};
+    CHECK(swapNeeded.solve(Matrix{{2}, {5}}).approxEqual(Matrix{{3}, {2}}));
+
+    CHECK_THROWS((Matrix{{1, 2}, {2, 4}}).solve(Matrix{{1}, {2}}), std::domain_error);
+    CHECK_THROWS(a.solve(Matrix(2, 1)), std::invalid_argument);
+
+    std::ostringstream os;
+    os << Matrix{{1, 2.5}, {-3, 0}};
+    CHECK(os.str() == "[1, 2.5]\n[-3, 0]\n");
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -146,6 +167,7 @@ int main() {
     testIdentityPowTrace();
     testDeterminant();
     testInverse();
+    testSolveAndPrint();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

@@ -4,6 +4,7 @@
 #include <cmath>
 #include <cstddef>
 #include <initializer_list>
+#include <ostream>
 #include <stdexcept>
 #include <string>
 #include <utility>
@@ -171,6 +172,40 @@ public:
         return inv;
     }
 
+    // Solves A X = B for X, where B may hold several right-hand-side columns.
+    // Gaussian elimination with partial pivoting and back substitution,
+    // O(n^3 + n^2 k); cheaper and more accurate than inverse() * B.
+    Matrix solve(const Matrix& b, double eps = 1e-12) const {
+        if (!isSquare()) throw std::invalid_argument("solve requires a square matrix");
+        if (b.rows_ != rows_) throw std::invalid_argument("shape mismatch in solve");
+        const std::size_t n = rows_, k = b.cols_;
+        Matrix a = *this;
+        Matrix x = b;
+        for (std::size_t col = 0; col < n; ++col) {
+            std::size_t pivot = col;
+            for (std::size_t r = col + 1; r < n; ++r) {
+                if (std::fabs(a(r, col)) > std::fabs(a(pivot, col))) pivot = r;
+            }
+            if (std::fabs(a(pivot, col)) < eps) throw std::domain_error("matrix is singular");
+            a.swapRows(pivot, col);
+            x.swapRows(pivot, col);
+            for (std::size_t r = col + 1; r < n; ++r) {
+                double f = a(r, col) / a(col, col);
+                if (f == 0.0) continue;
+                for (std::size_t c = col; c < n; ++c) a(r, c) -= f * a(col, c);
+                for (std::size_t c = 0; c < k; ++c) x(r, c) -= f * x(col, c);
+            }
+        }
+        for (std::size_t i = n; i-- > 0;) {
+            for (std::size_t c = 0; c < k; ++c) {
+                double sum = x(i, c);
+                for (std::size_t j = i + 1; j < n; ++j) sum -= a(i, j) * x(j, c);
+                x(i, c) = sum / a(i, i);
+            }
+        }
+        return x;
+    }
+
     void swapRows(std::size_t a, std::size_t b) {
         check(a, 0);
         check(b, 0);
@@ -198,6 +233,19 @@ public:
             if (std::fabs(data_[i] - o.data_[i]) > eps) return false;
         }
         return true;
+    }
+
+    // Prints one bracketed row per line, e.g. "[1, 2]\n[3, 4]\n".
+    friend std::ostream& operator<<(std::ostream& os, const Matrix& m) {
+        for (std::size_t r = 0; r < m.rows_; ++r) {
+            os << '[';
+            for (std::size_t c = 0; c < m.cols_; ++c) {
+                if (c) os << ", ";
+                os << m(r, c);
+            }
+            os << "]\n";
+        }
+        return os;
     }
 
 private:

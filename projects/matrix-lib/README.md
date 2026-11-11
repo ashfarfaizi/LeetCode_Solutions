@@ -28,6 +28,11 @@ fib.pow(10)(0, 1);               // 55: fast exponentiation by squaring
 a.trace();                       // sum of the diagonal (square only)
 a.determinant();                 // -2, Gaussian elimination with partial pivoting
 a.inverse();                     // Gauss-Jordan; throws std::domain_error if singular
+
+// Solve A x = b (b may have several columns). Prefer this over inverse() * b.
+mat::Matrix A{{2, 1, -1}, {-3, -1, 2}, {-2, 1, 2}};
+mat::Matrix rhs{{8}, {-11}, {-3}};
+std::cout << A.solve(rhs);       // [2]\n[3]\n[-1]\n
 ```
 
 Shape mismatches throw `std::invalid_argument`.
