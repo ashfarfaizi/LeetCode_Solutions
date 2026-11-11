@@ -66,6 +66,30 @@ public:
     friend Matrix operator*(double k, Matrix a) { return a *= k; }
     friend Matrix operator-(Matrix a) { return a *= -1.0; }
 
+    // Matrix product. Uses i-k-j loop order so the inner loop walks both
+    // operands row-wise, which is cache-friendly for row-major storage.
+    friend Matrix operator*(const Matrix& a, const Matrix& b) {
+        if (a.cols_ != b.rows_) throw std::invalid_argument("shape mismatch in matrix product");
+        Matrix out(a.rows_, b.cols_);
+        for (std::size_t i = 0; i < a.rows_; ++i) {
+            for (std::size_t k = 0; k < a.cols_; ++k) {
+                double aik = a(i, k);
+                if (aik == 0.0) continue;
+                for (std::size_t j = 0; j < b.cols_; ++j) out(i, j) += aik * b(k, j);
+            }
+        }
+        return out;
+    }
+    Matrix& operator*=(const Matrix& o) { return *this = *this * o; }
+
+    Matrix transpose() const {
+        Matrix t(cols_, rows_);
+        for (std::size_t r = 0; r < rows_; ++r) {
+            for (std::size_t c = 0; c < cols_; ++c) t(c, r) = (*this)(r, c);
+        }
+        return t;
+    }
+
     friend bool operator==(const Matrix& a, const Matrix& b) {
         return a.rows_ == b.rows_ && a.cols_ == b.cols_ && a.data_ == b.data_;
     }

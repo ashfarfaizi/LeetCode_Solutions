@@ -15,6 +15,14 @@ double y = c.at(1, 0);           // bounds-checked, throws std::out_of_range
 c.approxEqual(a, 1e-9);          // tolerance comparison for float results
 ```
 
+Matrix product and transpose:
+
+```cpp
+mat::Matrix p = a * b;           // requires a.cols() == b.rows()
+p *= a;                          // in-place product
+mat::Matrix t = p.transpose();
+```
+
 Shape mismatches throw `std::invalid_argument`.
 
 ## Build and test

@@ -58,10 +58,28 @@ static void testApproxEqual() {
     CHECK(!a.approxEqual(Matrix(1, 2)));
 }
 
+static void testProductAndTranspose() {
+    Matrix a{{1, 2, 3}, {4, 5, 6}};
+    Matrix b{{7, 8}, {9, 10}, {11, 12}};
+    CHECK((a * b == Matrix{{58, 64}, {139, 154}}));
+    CHECK((b * a == Matrix{{39, 54, 69}, {49, 68, 87}, {59, 82, 105}}));
+    CHECK_THROWS(a * a, std::invalid_argument);
+
+    CHECK((a.transpose() == Matrix{{1, 4}, {2, 5}, {3, 6}}));
+    CHECK(a.transpose().transpose() == a);
+    // (AB)^T == B^T A^T
+    CHECK((a * b).transpose() == b.transpose() * a.transpose());
+
+    Matrix c{{1, 1}, {0, 1}};
+    c *= Matrix{{1, 0}, {1, 1}};
+    CHECK((c == Matrix{{2, 1}, {1, 1}}));
+}
+
 int main() {
     testConstruction();
     testArithmetic();
     testApproxEqual();
+    testProductAndTranspose();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
