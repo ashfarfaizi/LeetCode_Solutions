@@ -75,11 +75,31 @@ static void testProductAndTranspose() {
     CHECK((c == Matrix{{2, 1}, {1, 1}}));
 }
 
+static void testIdentityPowTrace() {
+    Matrix i3 = Matrix::identity(3);
+    CHECK(i3.trace() == 3.0);
+    Matrix a{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    CHECK(a * i3 == a && i3 * a == a);
+    CHECK(a.trace() == 15.0);
+
+    // Fibonacci via [[1,1],[1,0]]^n = [[F(n+1),F(n)],[F(n),F(n-1)]]
+    Matrix fib{{1, 1}, {1, 0}};
+    CHECK(fib.pow(0) == Matrix::identity(2));
+    CHECK(fib.pow(1) == fib);
+    CHECK(fib.pow(10)(0, 1) == 55.0);
+    CHECK(fib.pow(30)(0, 1) == 832040.0);
+    CHECK(a.pow(3) == a * a * a);
+
+    CHECK_THROWS(Matrix(2, 3).pow(2), std::invalid_argument);
+    CHECK_THROWS(Matrix(2, 3).trace(), std::invalid_argument);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
     testApproxEqual();
     testProductAndTranspose();
+    testIdentityPowTrace();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

@@ -21,6 +21,11 @@ Matrix product and transpose:
 mat::Matrix p = a * b;           // requires a.cols() == b.rows()
 p *= a;                          // in-place product
 mat::Matrix t = p.transpose();
+
+auto id = mat::Matrix::identity(3);
+mat::Matrix fib{{1, 1}, {1, 0}};
+fib.pow(10)(0, 1);               // 55: fast exponentiation by squaring
+a.trace();                       // sum of the diagonal (square only)
 ```
 
 Shape mismatches throw `std::invalid_argument`.

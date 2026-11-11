@@ -28,6 +28,12 @@ public:
         }
     }
 
+    static Matrix identity(std::size_t n) {
+        Matrix m(n, n);
+        for (std::size_t i = 0; i < n; ++i) m(i, i) = 1.0;
+        return m;
+    }
+
     std::size_t rows() const { return rows_; }
     std::size_t cols() const { return cols_; }
     bool isSquare() const { return rows_ == cols_; }
@@ -81,6 +87,26 @@ public:
         return out;
     }
     Matrix& operator*=(const Matrix& o) { return *this = *this * o; }
+
+    // Integer power by repeated squaring: O(n^3 log e). pow(0) is the identity.
+    Matrix pow(unsigned long long e) const {
+        if (!isSquare()) throw std::invalid_argument("pow requires a square matrix");
+        Matrix result = identity(rows_);
+        Matrix base = *this;
+        while (e > 0) {
+            if (e & 1ULL) result = result * base;
+            e >>= 1;
+            if (e > 0) base = base * base;
+        }
+        return result;
+    }
+
+    double trace() const {
+        if (!isSquare()) throw std::invalid_argument("trace requires a square matrix");
+        double t = 0.0;
+        for (std::size_t i = 0; i < rows_; ++i) t += (*this)(i, i);
+        return t;
+    }
 
     Matrix transpose() const {
         Matrix t(cols_, rows_);
