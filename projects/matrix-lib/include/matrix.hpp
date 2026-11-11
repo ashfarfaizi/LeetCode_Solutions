@@ -1,0 +1,98 @@
+// matrix-lib: a small header-only dense matrix of doubles.
+#pragma once
+
+#include <cmath>
+#include <cstddef>
+#include <initializer_list>
+#include <stdexcept>
+#include <string>
+#include <vector>
+
+namespace mat {
+
+class Matrix {
+public:
+    Matrix() = default;
+
+    Matrix(std::size_t rows, std::size_t cols, double fill = 0.0)
+        : rows_(rows), cols_(cols), data_(rows * cols, fill) {}
+
+    // Row-major literal: Matrix{{1, 2}, {3, 4}}. All rows must be the same length.
+    Matrix(std::initializer_list<std::initializer_list<double>> init) {
+        rows_ = init.size();
+        cols_ = rows_ ? init.begin()->size() : 0;
+        data_.reserve(rows_ * cols_);
+        for (const auto& row : init) {
+            if (row.size() != cols_) throw std::invalid_argument("ragged matrix literal");
+            data_.insert(data_.end(), row.begin(), row.end());
+        }
+    }
+
+    std::size_t rows() const { return rows_; }
+    std::size_t cols() const { return cols_; }
+    bool isSquare() const { return rows_ == cols_; }
+
+    double& operator()(std::size_t r, std::size_t c) { return data_[r * cols_ + c]; }
+    double operator()(std::size_t r, std::size_t c) const { return data_[r * cols_ + c]; }
+
+    // Bounds-checked access.
+    double& at(std::size_t r, std::size_t c) {
+        check(r, c);
+        return (*this)(r, c);
+    }
+    double at(std::size_t r, std::size_t c) const {
+        check(r, c);
+        return (*this)(r, c);
+    }
+
+    Matrix& operator+=(const Matrix& o) {
+        requireSameShape(o, "+");
+        for (std::size_t i = 0; i < data_.size(); ++i) data_[i] += o.data_[i];
+        return *this;
+    }
+    Matrix& operator-=(const Matrix& o) {
+        requireSameShape(o, "-");
+        for (std::size_t i = 0; i < data_.size(); ++i) data_[i] -= o.data_[i];
+        return *this;
+    }
+    Matrix& operator*=(double k) {
+        for (double& x : data_) x *= k;
+        return *this;
+    }
+
+    friend Matrix operator+(Matrix a, const Matrix& b) { return a += b; }
+    friend Matrix operator-(Matrix a, const Matrix& b) { return a -= b; }
+    friend Matrix operator*(Matrix a, double k) { return a *= k; }
+    friend Matrix operator*(double k, Matrix a) { return a *= k; }
+    friend Matrix operator-(Matrix a) { return a *= -1.0; }
+
+    friend bool operator==(const Matrix& a, const Matrix& b) {
+        return a.rows_ == b.rows_ && a.cols_ == b.cols_ && a.data_ == b.data_;
+    }
+    friend bool operator!=(const Matrix& a, const Matrix& b) { return !(a == b); }
+
+    // Element-wise comparison with an absolute tolerance, for floating-point results.
+    bool approxEqual(const Matrix& o, double eps = 1e-9) const {
+        if (rows_ != o.rows_ || cols_ != o.cols_) return false;
+        for (std::size_t i = 0; i < data_.size(); ++i) {
+            if (std::fabs(data_[i] - o.data_[i]) > eps) return false;
+        }
+        return true;
+    }
+
+private:
+    std::size_t rows_ = 0;
+    std::size_t cols_ = 0;
+    std::vector<double> data_;
+
+    void check(std::size_t r, std::size_t c) const {
+        if (r >= rows_ || c >= cols_) throw std::out_of_range("matrix index out of range");
+    }
+    void requireSameShape(const Matrix& o, const char* op) const {
+        if (rows_ != o.rows_ || cols_ != o.cols_) {
+            throw std::invalid_argument(std::string("shape mismatch in operator") + op);
+        }
+    }
+};
+
+}  // namespace mat
