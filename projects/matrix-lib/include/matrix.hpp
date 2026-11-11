@@ -136,6 +136,41 @@ public:
         return det;
     }
 
+    // Inverse by Gauss-Jordan elimination on [A | I] with partial pivoting.
+    // Throws std::domain_error when a pivot is below `eps` (singular or
+    // numerically close to singular).
+    Matrix inverse(double eps = 1e-12) const {
+        if (!isSquare()) throw std::invalid_argument("inverse requires a square matrix");
+        const std::size_t n = rows_;
+        Matrix a = *this;
+        Matrix inv = identity(n);
+        for (std::size_t col = 0; col < n; ++col) {
+            std::size_t pivot = col;
+            for (std::size_t r = col + 1; r < n; ++r) {
+                if (std::fabs(a(r, col)) > std::fabs(a(pivot, col))) pivot = r;
+            }
+            if (std::fabs(a(pivot, col)) < eps) throw std::domain_error("matrix is singular");
+            a.swapRows(pivot, col);
+            inv.swapRows(pivot, col);
+
+            double p = a(col, col);
+            for (std::size_t c = 0; c < n; ++c) {
+                a(col, c) /= p;
+                inv(col, c) /= p;
+            }
+            for (std::size_t r = 0; r < n; ++r) {
+                if (r == col) continue;
+                double f = a(r, col);
+                if (f == 0.0) continue;
+                for (std::size_t c = 0; c < n; ++c) {
+                    a(r, c) -= f * a(col, c);
+                    inv(r, c) -= f * inv(col, c);
+                }
+            }
+        }
+        return inv;
+    }
+
     void swapRows(std::size_t a, std::size_t b) {
         check(a, 0);
         check(b, 0);

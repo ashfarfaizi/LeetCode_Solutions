@@ -119,6 +119,25 @@ static void testDeterminant() {
     CHECK_THROWS(s.swapRows(0, 3), std::out_of_range);
 }
 
+static void testInverse() {
+    Matrix a{{4, 7}, {2, 6}};
+    CHECK(a.inverse().approxEqual(Matrix{{0.6, -0.7}, {-0.2, 0.4}}));
+    CHECK((a * a.inverse()).approxEqual(Matrix::identity(2)));
+
+    // Zero leading pivot forces a row swap.
+    Matrix b{{0, 2, 1}, {1, 0, 0}, {0, 0, 3}};
+    CHECK((b * b.inverse()).approxEqual(Matrix::identity(3)));
+    CHECK((b.inverse() * b).approxEqual(Matrix::identity(3)));
+
+    Matrix c{{2, -1, 0}, {-1, 2, -1}, {0, -1, 2}};
+    CHECK(c.inverse().approxEqual(Matrix{{0.75, 0.5, 0.25}, {0.5, 1, 0.5}, {0.25, 0.5, 0.75}}));
+    CHECK(c.inverse().inverse().approxEqual(c));
+    CHECK(near(c.inverse().determinant(), 1.0 / c.determinant()));
+
+    CHECK_THROWS((Matrix{{1, 2}, {2, 4}}).inverse(), std::domain_error);
+    CHECK_THROWS(Matrix(2, 3).inverse(), std::invalid_argument);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -126,6 +145,7 @@ int main() {
     testProductAndTranspose();
     testIdentityPowTrace();
     testDeterminant();
+    testInverse();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
