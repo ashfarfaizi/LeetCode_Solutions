@@ -1,6 +1,7 @@
 // Minimal self-contained test runner for matrix-lib.
 #include "matrix.hpp"
 
+#include <cmath>
 #include <iostream>
 #include <stdexcept>
 
@@ -94,12 +95,37 @@ static void testIdentityPowTrace() {
     CHECK_THROWS(Matrix(2, 3).trace(), std::invalid_argument);
 }
 
+static bool near(double a, double b, double eps = 1e-9) { return std::fabs(a - b) <= eps; }
+
+static void testDeterminant() {
+    CHECK(near(Matrix{{4}}.determinant(), 4));
+    CHECK(near((Matrix{{1, 2}, {3, 4}}).determinant(), -2));
+    CHECK(near((Matrix{{6, 1, 1}, {4, -2, 5}, {2, 8, 7}}).determinant(), -306));
+    // Needs a row swap: the first pivot is zero.
+    CHECK(near((Matrix{{0, 1}, {1, 0}}).determinant(), -1));
+    CHECK(near((Matrix{{0, 2, 1}, {1, 0, 0}, {0, 0, 3}}).determinant(), -6));
+    // Singular: linearly dependent rows.
+    CHECK(near((Matrix{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}).determinant(), 0, 1e-9));
+    CHECK(Matrix::identity(5).determinant() == 1.0);
+    // det(AB) == det(A) det(B)
+    Matrix a{{2, -1, 0}, {1, 3, 4}, {0, 5, -2}};
+    Matrix b{{1, 0, 2}, {-1, 1, 0}, {3, 2, 1}};
+    CHECK(near((a * b).determinant(), a.determinant() * b.determinant(), 1e-7));
+    CHECK_THROWS(Matrix(2, 3).determinant(), std::invalid_argument);
+
+    Matrix s{{1, 2}, {3, 4}, {5, 6}};
+    s.swapRows(0, 2);
+    CHECK((s == Matrix{{5, 6}, {3, 4}, {1, 2}}));
+    CHECK_THROWS(s.swapRows(0, 3), std::out_of_range);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
     testApproxEqual();
     testProductAndTranspose();
     testIdentityPowTrace();
+    testDeterminant();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

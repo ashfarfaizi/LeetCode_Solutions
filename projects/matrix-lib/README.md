@@ -26,6 +26,7 @@ auto id = mat::Matrix::identity(3);
 mat::Matrix fib{{1, 1}, {1, 0}};
 fib.pow(10)(0, 1);               // 55: fast exponentiation by squaring
 a.trace();                       // sum of the diagonal (square only)
+a.determinant();                 // -2, Gaussian elimination with partial pivoting
 ```
 
 Shape mismatches throw `std::invalid_argument`.

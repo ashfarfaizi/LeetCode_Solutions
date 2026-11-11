@@ -6,6 +6,7 @@
 #include <initializer_list>
 #include <stdexcept>
 #include <string>
+#include <utility>
 #include <vector>
 
 namespace mat {
@@ -106,6 +107,40 @@ public:
         double t = 0.0;
         for (std::size_t i = 0; i < rows_; ++i) t += (*this)(i, i);
         return t;
+    }
+
+    // Determinant by Gaussian elimination with partial pivoting: O(n^3).
+    // Each row swap flips the sign; the result is the product of the pivots.
+    double determinant() const {
+        if (!isSquare()) throw std::invalid_argument("determinant requires a square matrix");
+        Matrix m = *this;
+        const std::size_t n = rows_;
+        double det = 1.0;
+        for (std::size_t col = 0; col < n; ++col) {
+            std::size_t pivot = col;
+            for (std::size_t r = col + 1; r < n; ++r) {
+                if (std::fabs(m(r, col)) > std::fabs(m(pivot, col))) pivot = r;
+            }
+            if (m(pivot, col) == 0.0) return 0.0;
+            if (pivot != col) {
+                m.swapRows(pivot, col);
+                det = -det;
+            }
+            det *= m(col, col);
+            for (std::size_t r = col + 1; r < n; ++r) {
+                double f = m(r, col) / m(col, col);
+                if (f == 0.0) continue;
+                for (std::size_t c = col; c < n; ++c) m(r, c) -= f * m(col, c);
+            }
+        }
+        return det;
+    }
+
+    void swapRows(std::size_t a, std::size_t b) {
+        check(a, 0);
+        check(b, 0);
+        if (a == b) return;
+        for (std::size_t c = 0; c < cols_; ++c) std::swap((*this)(a, c), (*this)(b, c));
     }
 
     Matrix transpose() const {
