@@ -36,6 +36,30 @@ public:
         return m;
     }
 
+    // Places b to the right of a: [a | b]. Row counts must match.
+    static Matrix hstack(const Matrix& a, const Matrix& b) {
+        if (a.rows_ != b.rows_) throw std::invalid_argument("shape mismatch in hstack");
+        Matrix out(a.rows_, a.cols_ + b.cols_);
+        for (std::size_t r = 0; r < a.rows_; ++r) {
+            for (std::size_t c = 0; c < a.cols_; ++c) out(r, c) = a(r, c);
+            for (std::size_t c = 0; c < b.cols_; ++c) out(r, a.cols_ + c) = b(r, c);
+        }
+        return out;
+    }
+
+    // Places b below a. Column counts must match. Row-major storage makes
+    // this a plain concatenation of the two data buffers.
+    static Matrix vstack(const Matrix& a, const Matrix& b) {
+        if (a.cols_ != b.cols_) throw std::invalid_argument("shape mismatch in vstack");
+        Matrix out;
+        out.rows_ = a.rows_ + b.rows_;
+        out.cols_ = a.cols_;
+        out.data_.reserve(a.data_.size() + b.data_.size());
+        out.data_.insert(out.data_.end(), a.data_.begin(), a.data_.end());
+        out.data_.insert(out.data_.end(), b.data_.begin(), b.data_.end());
+        return out;
+    }
+
     std::size_t rows() const { return rows_; }
     std::size_t cols() const { return cols_; }
     bool isSquare() const { return rows_ == cols_; }

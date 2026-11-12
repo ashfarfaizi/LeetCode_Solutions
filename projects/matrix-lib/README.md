@@ -44,6 +44,13 @@ m.col(2);                        // 3x1 column [3; 6; 9]
 m.submatrix(1, 1, 2, 2);         // [[5, 6], [8, 9]]; throws std::out_of_range if it doesn't fit
 ```
 
+Joining matrices:
+
+```cpp
+mat::Matrix::hstack(a, b);       // [a | b], needs equal row counts
+mat::Matrix::vstack(a, b);       // a on top of b, needs equal column counts
+```
+
 Shape mismatches throw `std::invalid_argument`.
 
 ## Build and test

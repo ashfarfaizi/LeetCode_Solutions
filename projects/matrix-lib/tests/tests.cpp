@@ -175,6 +175,20 @@ static void testSlicing() {
     CHECK_THROWS(m.submatrix(0, 1, 1, 3), std::out_of_range);
 }
 
+static void testStacking() {
+    Matrix a{{1, 2}, {3, 4}};
+    Matrix b{{5}, {6}};
+    CHECK(Matrix::hstack(a, b) == (Matrix{{1, 2, 5}, {3, 4, 6}}));
+    CHECK(Matrix::vstack(a, Matrix{{7, 8}}) == (Matrix{{1, 2}, {3, 4}, {7, 8}}));
+
+    // Round trip with submatrix().
+    Matrix aug = Matrix::hstack(a, Matrix::identity(2));
+    CHECK(aug.submatrix(0, 2, 2, 2) == Matrix::identity(2));
+
+    CHECK_THROWS(Matrix::hstack(a, Matrix(3, 1)), std::invalid_argument);
+    CHECK_THROWS(Matrix::vstack(a, b), std::invalid_argument);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -185,6 +199,7 @@ int main() {
     testInverse();
     testSolveAndPrint();
     testSlicing();
+    testStacking();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
