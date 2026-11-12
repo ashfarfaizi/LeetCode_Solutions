@@ -12,6 +12,8 @@
 
 namespace mat {
 
+struct LU;
+
 class Matrix {
 public:
     Matrix() = default;
@@ -247,6 +249,10 @@ public:
         return inv;
     }
 
+    // LU factorisation with partial pivoting: P A = L U, where L is unit
+    // lower-triangular and U upper-triangular. Defined after the class.
+    LU lu(double eps = 1e-12) const;
+
     // Solves A X = B for X, where B may hold several right-hand-side columns.
     // Gaussian elimination with partial pivoting and back substitution,
     // O(n^3 + n^2 k); cheaper and more accurate than inverse() * B.
@@ -356,5 +362,77 @@ private:
         }
     }
 };
+
+// Result of Matrix::lu(). perm[i] is the row of A that ended up in row i,
+// so P A = L U with P built from perm. Factor once, then solve() cheaply for
+// each new right-hand side in O(n^2) instead of O(n^3).
+struct LU {
+    Matrix L, U;
+    std::vector<std::size_t> perm;
+    int sign = 1;  // +1 or -1: parity of the row permutation
+
+    double determinant() const {
+        double d = sign;
+        for (std::size_t i = 0; i < U.rows(); ++i) d *= U(i, i);
+        return d;
+    }
+
+    Matrix permutation() const {
+        Matrix p(perm.size(), perm.size());
+        for (std::size_t i = 0; i < perm.size(); ++i) p(i, perm[i]) = 1.0;
+        return p;
+    }
+
+    // Solves A X = B using forward then back substitution.
+    Matrix solve(const Matrix& b) const {
+        const std::size_t n = L.rows(), k = b.cols();
+        if (b.rows() != n) throw std::invalid_argument("shape mismatch in LU::solve");
+        Matrix x(n, k);
+        for (std::size_t c = 0; c < k; ++c) {
+            for (std::size_t i = 0; i < n; ++i) {
+                double s = b(perm[i], c);
+                for (std::size_t j = 0; j < i; ++j) s -= L(i, j) * x(j, c);
+                x(i, c) = s;
+            }
+            for (std::size_t i = n; i-- > 0;) {
+                double s = x(i, c);
+                for (std::size_t j = i + 1; j < n; ++j) s -= U(i, j) * x(j, c);
+                x(i, c) = s / U(i, i);
+            }
+        }
+        return x;
+    }
+};
+
+inline LU Matrix::lu(double eps) const {
+    if (!isSquare()) throw std::invalid_argument("lu requires a square matrix");
+    const std::size_t n = rows_;
+    LU out;
+    out.U = *this;
+    out.L = Matrix(n, n);
+    out.perm.resize(n);
+    for (std::size_t i = 0; i < n; ++i) out.perm[i] = i;
+    for (std::size_t col = 0; col < n; ++col) {
+        std::size_t pivot = col;
+        for (std::size_t r = col + 1; r < n; ++r) {
+            if (std::fabs(out.U(r, col)) > std::fabs(out.U(pivot, col))) pivot = r;
+        }
+        if (std::fabs(out.U(pivot, col)) < eps) throw std::domain_error("matrix is singular");
+        if (pivot != col) {
+            out.U.swapRows(pivot, col);
+            out.L.swapRows(pivot, col);  // only the already-filled multipliers move
+            std::swap(out.perm[pivot], out.perm[col]);
+            out.sign = -out.sign;
+        }
+        for (std::size_t r = col + 1; r < n; ++r) {
+            double f = out.U(r, col) / out.U(col, col);
+            out.L(r, col) = f;
+            for (std::size_t c = col; c < n; ++c) out.U(r, c) -= f * out.U(col, c);
+            out.U(r, col) = 0.0;
+        }
+    }
+    for (std::size_t i = 0; i < n; ++i) out.L(i, i) = 1.0;
+    return out;
+}
 
 }  // namespace mat

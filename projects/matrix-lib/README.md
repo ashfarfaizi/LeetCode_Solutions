@@ -53,6 +53,15 @@ mat::Matrix::hstack(a, b);       // [a | b], needs equal row counts
 mat::Matrix::vstack(a, b);       // a on top of b, needs equal column counts
 ```
 
+LU factorisation, for solving many systems with the same coefficient matrix:
+
+```cpp
+mat::LU f = A.lu();              // P A = L U with partial pivoting; throws if singular
+f.solve(rhs);                    // O(n^2) per right-hand side once factored
+f.determinant();                 // product of U's diagonal times the permutation sign
+f.permutation() * A;             // equals f.L * f.U
+```
+
 Shape mismatches throw `std::invalid_argument`.
 
 ## Build and test

@@ -214,6 +214,30 @@ static void testNorms() {
     CHECK(w.norm1() == w.transpose().normInf());
 }
 
+static void testLU() {
+    Matrix a{{2, 1, -1}, {-3, -1, 2}, {-2, 1, 2}};
+    mat::LU f = a.lu();
+    CHECK((f.permutation() * a).approxEqual(f.L * f.U));
+    for (std::size_t i = 0; i < 3; ++i) {
+        CHECK(f.L(i, i) == 1.0);
+        for (std::size_t j = i + 1; j < 3; ++j) CHECK(f.L(i, j) == 0.0 && f.U(j, i) == 0.0);
+    }
+    CHECK(std::fabs(f.determinant() - a.determinant()) < 1e-9);
+    CHECK(f.solve(Matrix{{8}, {-11}, {-3}}).approxEqual(Matrix{{2}, {3}, {-1}}));
+    CHECK(f.solve(Matrix::identity(3)).approxEqual(a.inverse()));
+
+    // Needs a pivot swap on the first column.
+    Matrix s{{0, 1}, {1, 1}};
+    mat::LU g = s.lu();
+    CHECK(g.sign == -1);
+    CHECK((g.permutation() * s).approxEqual(g.L * g.U));
+    CHECK(g.solve(Matrix{{2}, {5}}).approxEqual(Matrix{{3}, {2}}));
+
+    CHECK_THROWS((Matrix{{1, 2}, {2, 4}}).lu(), std::domain_error);
+    CHECK_THROWS(Matrix(2, 3).lu(), std::invalid_argument);
+    CHECK_THROWS(f.solve(Matrix(2, 1)), std::invalid_argument);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -227,6 +251,7 @@ int main() {
     testStacking();
     testRank();
     testNorms();
+    testLU();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
