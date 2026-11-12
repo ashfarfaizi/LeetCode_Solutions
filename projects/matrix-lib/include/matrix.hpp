@@ -134,6 +134,35 @@ public:
         return t;
     }
 
+    // Frobenius norm: sqrt of the sum of squared entries.
+    double frobeniusNorm() const {
+        double s = 0.0;
+        for (double x : data_) s += x * x;
+        return std::sqrt(s);
+    }
+
+    // Induced 1-norm: largest absolute column sum.
+    double norm1() const {
+        double best = 0.0;
+        for (std::size_t c = 0; c < cols_; ++c) {
+            double s = 0.0;
+            for (std::size_t r = 0; r < rows_; ++r) s += std::fabs((*this)(r, c));
+            if (s > best) best = s;
+        }
+        return best;
+    }
+
+    // Induced infinity-norm: largest absolute row sum.
+    double normInf() const {
+        double best = 0.0;
+        for (std::size_t r = 0; r < rows_; ++r) {
+            double s = 0.0;
+            for (std::size_t c = 0; c < cols_; ++c) s += std::fabs((*this)(r, c));
+            if (s > best) best = s;
+        }
+        return best;
+    }
+
     // Determinant by Gaussian elimination with partial pivoting: O(n^3).
     // Each row swap flips the sign; the result is the product of the pivots.
     double determinant() const {

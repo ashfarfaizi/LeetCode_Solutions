@@ -202,6 +202,18 @@ static void testRank() {
     CHECK(Matrix().rank() == 0);
 }
 
+static void testNorms() {
+    Matrix m{{1, -2}, {-3, 4}};
+    CHECK(std::fabs(m.frobeniusNorm() - std::sqrt(30.0)) < 1e-12);
+    CHECK(m.norm1() == 6);    // column sums: 4, 6
+    CHECK(m.normInf() == 7);  // row sums: 3, 7
+    CHECK(Matrix::identity(3).frobeniusNorm() == std::sqrt(3.0));
+    CHECK(Matrix().frobeniusNorm() == 0 && Matrix().norm1() == 0 && Matrix().normInf() == 0);
+    // ||A||_1 == ||A^T||_inf
+    Matrix w{{1, 2, 3}, {-4, 5, -6}};
+    CHECK(w.norm1() == w.transpose().normInf());
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -214,6 +226,7 @@ int main() {
     testSlicing();
     testStacking();
     testRank();
+    testNorms();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

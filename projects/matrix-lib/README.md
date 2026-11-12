@@ -28,6 +28,7 @@ fib.pow(10)(0, 1);               // 55: fast exponentiation by squaring
 a.trace();                       // sum of the diagonal (square only)
 a.determinant();                 // -2, Gaussian elimination with partial pivoting
 a.rank();                        // 2; works for any shape, tolerance-based
+a.frobeniusNorm();               // sqrt(30); also norm1() (max col sum) and normInf() (max row sum)
 a.inverse();                     // Gauss-Jordan; throws std::domain_error if singular
 
 // Solve A x = b (b may have several columns). Prefer this over inverse() * b.
