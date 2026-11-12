@@ -161,6 +161,28 @@ public:
         return det;
     }
 
+    // Rank via row-echelon reduction with partial pivoting. Works for any
+    // shape; entries with magnitude below `eps` are treated as zero.
+    std::size_t rank(double eps = 1e-10) const {
+        Matrix m = *this;
+        std::size_t r = 0;
+        for (std::size_t col = 0; col < cols_ && r < rows_; ++col) {
+            std::size_t pivot = r;
+            for (std::size_t i = r + 1; i < rows_; ++i) {
+                if (std::fabs(m(i, col)) > std::fabs(m(pivot, col))) pivot = i;
+            }
+            if (std::fabs(m(pivot, col)) < eps) continue;
+            m.swapRows(pivot, r);
+            for (std::size_t i = r + 1; i < rows_; ++i) {
+                double f = m(i, col) / m(r, col);
+                if (f == 0.0) continue;
+                for (std::size_t c = col; c < cols_; ++c) m(i, c) -= f * m(r, c);
+            }
+            ++r;
+        }
+        return r;
+    }
+
     // Inverse by Gauss-Jordan elimination on [A | I] with partial pivoting.
     // Throws std::domain_error when a pivot is below `eps` (singular or
     // numerically close to singular).

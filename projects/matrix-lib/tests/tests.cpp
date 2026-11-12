@@ -189,6 +189,19 @@ static void testStacking() {
     CHECK_THROWS(Matrix::vstack(a, b), std::invalid_argument);
 }
 
+static void testRank() {
+    CHECK(Matrix::identity(4).rank() == 4);
+    CHECK(Matrix(3, 5).rank() == 0);
+    CHECK((Matrix{{1, 2}, {2, 4}}).rank() == 1);
+    CHECK((Matrix{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}).rank() == 2);
+    // Non-square: wide and tall.
+    CHECK((Matrix{{1, 0, 2, 1}, {0, 1, 1, 3}}).rank() == 2);
+    CHECK((Matrix{{1, 2}, {2, 4}, {3, 6}}).rank() == 1);
+    // Leading zero column must be skipped, not treated as a pivot.
+    CHECK((Matrix{{0, 1}, {0, 2}}).rank() == 1);
+    CHECK(Matrix().rank() == 0);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -200,6 +213,7 @@ int main() {
     testSolveAndPrint();
     testSlicing();
     testStacking();
+    testRank();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
