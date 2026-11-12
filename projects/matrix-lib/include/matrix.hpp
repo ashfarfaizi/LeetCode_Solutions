@@ -206,6 +206,25 @@ public:
         return x;
     }
 
+    // Copies row r as a 1 x cols() matrix. Throws std::out_of_range.
+    Matrix row(std::size_t r) const { return submatrix(r, 0, 1, cols_); }
+
+    // Copies column c as a rows() x 1 matrix. Throws std::out_of_range.
+    Matrix col(std::size_t c) const { return submatrix(0, c, rows_, 1); }
+
+    // Copies the nr x nc block whose top-left corner is (r0, c0).
+    // Throws std::out_of_range if the block does not fit inside the matrix.
+    Matrix submatrix(std::size_t r0, std::size_t c0, std::size_t nr, std::size_t nc) const {
+        if (r0 > rows_ || c0 > cols_ || nr > rows_ - r0 || nc > cols_ - c0) {
+            throw std::out_of_range("submatrix block out of range");
+        }
+        Matrix out(nr, nc);
+        for (std::size_t r = 0; r < nr; ++r) {
+            for (std::size_t c = 0; c < nc; ++c) out(r, c) = (*this)(r0 + r, c0 + c);
+        }
+        return out;
+    }
+
     void swapRows(std::size_t a, std::size_t b) {
         check(a, 0);
         check(b, 0);

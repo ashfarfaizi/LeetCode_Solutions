@@ -35,6 +35,15 @@ mat::Matrix rhs{{8}, {-11}, {-3}};
 std::cout << A.solve(rhs);       // [2]\n[3]\n[-1]\n
 ```
 
+Slicing (all return copies):
+
+```cpp
+mat::Matrix m{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+m.row(1);                        // [4, 5, 6]
+m.col(2);                        // 3x1 column [3; 6; 9]
+m.submatrix(1, 1, 2, 2);         // [[5, 6], [8, 9]]; throws std::out_of_range if it doesn't fit
+```
+
 Shape mismatches throw `std::invalid_argument`.
 
 ## Build and test

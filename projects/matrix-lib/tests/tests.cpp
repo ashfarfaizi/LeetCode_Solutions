@@ -159,6 +159,22 @@ static void testSolveAndPrint() {
     CHECK(os.str() == "[1, 2.5]\n[-3, 0]\n");
 }
 
+static void testSlicing() {
+    Matrix m{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    CHECK(m.row(1) == (Matrix{{4, 5, 6}}));
+    CHECK(m.col(2) == (Matrix{{3}, {6}, {9}}));
+    CHECK(m.submatrix(1, 1, 2, 2) == (Matrix{{5, 6}, {8, 9}}));
+    CHECK(m.submatrix(0, 0, 3, 3) == m);
+
+    Matrix empty = m.submatrix(3, 3, 0, 0);
+    CHECK(empty.rows() == 0 && empty.cols() == 0);
+
+    CHECK_THROWS(m.row(3), std::out_of_range);
+    CHECK_THROWS(m.col(3), std::out_of_range);
+    CHECK_THROWS(m.submatrix(2, 0, 2, 1), std::out_of_range);
+    CHECK_THROWS(m.submatrix(0, 1, 1, 3), std::out_of_range);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -168,6 +184,7 @@ int main() {
     testDeterminant();
     testInverse();
     testSolveAndPrint();
+    testSlicing();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
