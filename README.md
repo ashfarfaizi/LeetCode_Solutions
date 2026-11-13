@@ -1131,6 +1131,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0529-minesweeper](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0529-minesweeper) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0530-minimum-absolute-difference-in-bst) |
 | [0538-convert-bst-to-greater-tree](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0538-convert-bst-to-greater-tree) |
+| [0547-number-of-provinces](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0547-number-of-provinces) |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Breadth-First Search
 |  |
@@ -1172,6 +1173,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0515-find-largest-value-in-each-tree-row](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0529-minesweeper](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0529-minesweeper) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0530-minimum-absolute-difference-in-bst) |
+| [0547-number-of-provinces](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0547-number-of-provinces) |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Graph Theory
 |  |
@@ -1182,6 +1184,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0332-reconstruct-itinerary](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
+| [0547-number-of-provinces](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0547-number-of-provinces) |
 | [3310-remove-methods-from-project](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/3310-remove-methods-from-project/) | Medium |
 ## Quicksort
 |  |
@@ -1384,6 +1387,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0200-number-of-islands](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0200-number-of-islands/) | Medium |
 | [0352-data-stream-as-disjoint-intervals](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0352-data-stream-as-disjoint-intervals/) | Hard |
 | [0399-evaluate-division](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0399-evaluate-division/) | Medium |
+| [0547-number-of-provinces](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0547-number-of-provinces) |
 ## Brute-Force Search
 |  |
 | ------- |
