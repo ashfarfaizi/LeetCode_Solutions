@@ -190,6 +190,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0532-k-diff-pairs-in-an-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0532-k-diff-pairs-in-an-array) |
 | [0539-minimum-time-difference](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0539-minimum-time-difference) |
 | [0540-single-element-in-a-sorted-array](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0540-single-element-in-a-sorted-array) |
+| [0546-remove-boxes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0546-remove-boxes) |
 | [0575-distribute-candies](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0575-distribute-candies) |
 | [0628-maximum-product-of-three-numbers](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
@@ -873,6 +874,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0516-longest-palindromic-subsequence](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0518-coin-change-ii) |
 | [0526-beautiful-arrangement](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0526-beautiful-arrangement) |
+| [0546-remove-boxes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0546-remove-boxes) |
 | [0576-out-of-boundary-paths](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0576-out-of-boundary-paths) |
 | [0877-stone-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0877-stone-game/) | Medium |
 | [1140-stone-game-ii](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/1140-stone-game-ii/) | Medium |
@@ -1215,6 +1217,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0464-can-i-win](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0464-can-i-win/) | Medium |
 | [0488-zuma-game](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0488-zuma-game/) | Hard |
 | [0509-fibonacci-number](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/main/0509-fibonacci-number/) | Easy |
+| [0546-remove-boxes](https://github.com/ashfarfaizi/LeetCode_Solutions/tree/master/0546-remove-boxes) |
 ## Minimax
 |  |
 | ------- |
