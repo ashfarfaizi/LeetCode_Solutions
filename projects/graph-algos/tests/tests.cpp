@@ -1,4 +1,5 @@
 #include "graph.hpp"
+#include "shortest_paths.hpp"
 
 #include <cstdio>
 #include <functional>
@@ -65,9 +66,29 @@ static void test_traversals() {
     CHECK(label[4] != label[0]);
 }
 
+static void test_dijkstra() {
+    ga::Graph g(5, true);
+    g.add_edge(0, 1, 4);
+    g.add_edge(0, 2, 1);
+    g.add_edge(2, 1, 2);
+    g.add_edge(1, 3, 1);
+    g.add_edge(2, 3, 5);
+    auto sp = ga::dijkstra(g, 0);
+    CHECK((sp.dist[1] == 3 && sp.dist[3] == 4));
+    CHECK((sp.path_to(3) == std::vector<int>{0, 2, 1, 3}));
+    CHECK(!sp.reachable(4));
+    CHECK(sp.path_to(4).empty());
+    CHECK((sp.path_to(0) == std::vector<int>{0}));
+
+    ga::Graph neg(2, true);
+    neg.add_edge(0, 1, -1);
+    CHECK(throws([&] { ga::dijkstra(neg, 0); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
+    test_dijkstra();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

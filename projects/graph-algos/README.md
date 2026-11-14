@@ -8,6 +8,8 @@ easy to read and easy to drop into a contest or side project.
 - `ga::Graph` — weighted adjacency-list graph (directed or undirected)
 - `bfs_order`, `bfs_distances`, `dfs_order` traversals
 - `connected_components` labelling
+- `dijkstra` single-source shortest paths with `path_to` reconstruction
+  (`shortest_paths.hpp`)
 
 ## Build and test
 
