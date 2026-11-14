@@ -1,5 +1,6 @@
 #include "graph.hpp"
 #include "shortest_paths.hpp"
+#include "mst.hpp"
 #include "topo.hpp"
 
 #include <cstdio>
@@ -134,12 +135,49 @@ static void test_topological_sort() {
     CHECK(throws([&] { ga::topological_sort(undirected); }));
 }
 
+static void test_disjoint_set() {
+    ga::DisjointSet d(5);
+    CHECK(d.set_count() == 5);
+    CHECK(d.unite(0, 1));
+    CHECK(d.unite(1, 2));
+    CHECK(!d.unite(0, 2));
+    CHECK(d.same(0, 2));
+    CHECK(!d.same(0, 3));
+    CHECK(d.set_size(2) == 3);
+    CHECK(d.set_count() == 3);
+}
+
+static void test_kruskal() {
+    ga::Graph g(4);
+    g.add_edge(0, 1, 1);
+    g.add_edge(1, 2, 2);
+    g.add_edge(0, 2, 3);
+    g.add_edge(2, 3, 4);
+    g.add_edge(1, 3, 5);
+    auto f = ga::kruskal(g);
+    CHECK(f.total_weight == 7);
+    CHECK(f.edges.size() == 3);
+    CHECK(f.components == 1);
+
+    ga::Graph forest(5);
+    forest.add_edge(0, 1, 2);
+    forest.add_edge(3, 4, 1);
+    auto f2 = ga::kruskal(forest);
+    CHECK(f2.total_weight == 3);
+    CHECK(f2.components == 3);  // {0,1}, {2}, {3,4}
+
+    ga::Graph directed(2, true);
+    CHECK(throws([&] { ga::kruskal(directed); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
     test_dijkstra();
     test_bellman_ford();
     test_topological_sort();
+    test_disjoint_set();
+    test_kruskal();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

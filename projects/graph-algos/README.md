@@ -13,6 +13,8 @@ easy to read and easy to drop into a contest or side project.
 - `bellman_ford` for negative weights, with negative-cycle detection
 - `topological_sort` (Kahn, smallest-id-first) and `has_cycle` for DAGs
   (`topo.hpp`)
+- `DisjointSet` (union-find) and `kruskal` minimum spanning forest
+  (`mst.hpp`)
 
 ## Build and test
 
