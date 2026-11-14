@@ -1,5 +1,6 @@
 #include "graph.hpp"
 #include "shortest_paths.hpp"
+#include "topo.hpp"
 
 #include <cstdio>
 #include <functional>
@@ -109,11 +110,36 @@ static void test_bellman_ford() {
     CHECK(!sp2.reachable(1));
 }
 
+static void test_topological_sort() {
+    // Course prerequisites: 0 -> 2, 1 -> 2, 2 -> 3, 1 -> 4
+    ga::Graph g(5, true);
+    g.add_edge(0, 2);
+    g.add_edge(1, 2);
+    g.add_edge(2, 3);
+    g.add_edge(1, 4);
+    auto order = ga::topological_sort(g);
+    CHECK(order.has_value());
+    CHECK((*order == std::vector<int>{0, 1, 2, 3, 4}));
+    CHECK(!ga::has_cycle(g));
+
+    g.add_edge(3, 1);  // 1 -> 2 -> 3 -> 1
+    CHECK(!ga::topological_sort(g).has_value());
+    CHECK(ga::has_cycle(g));
+
+    ga::Graph self_loop(1, true);
+    self_loop.add_edge(0, 0);
+    CHECK(ga::has_cycle(self_loop));
+
+    ga::Graph undirected(2);
+    CHECK(throws([&] { ga::topological_sort(undirected); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
     test_dijkstra();
     test_bellman_ford();
+    test_topological_sort();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }
