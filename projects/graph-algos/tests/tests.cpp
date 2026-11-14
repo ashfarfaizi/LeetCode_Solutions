@@ -85,10 +85,35 @@ static void test_dijkstra() {
     CHECK(throws([&] { ga::dijkstra(neg, 0); }));
 }
 
+static void test_bellman_ford() {
+    ga::Graph g(4, true);
+    g.add_edge(0, 1, 5);
+    g.add_edge(0, 2, 2);
+    g.add_edge(1, 3, 1);
+    g.add_edge(2, 1, -4);
+    bool neg = true;
+    auto sp = ga::bellman_ford(g, 0, neg);
+    CHECK(!neg);
+    CHECK((sp.dist[1] == -2 && sp.dist[3] == -1));
+    CHECK((sp.path_to(3) == std::vector<int>{0, 2, 1, 3}));
+
+    g.add_edge(3, 2, 1);  // 2 -> 1 -> 3 -> 2 has weight -2
+    ga::bellman_ford(g, 0, neg);
+    CHECK(neg);
+
+    ga::Graph unreachable_cycle(3, true);
+    unreachable_cycle.add_edge(1, 2, -1);
+    unreachable_cycle.add_edge(2, 1, -1);
+    auto sp2 = ga::bellman_ford(unreachable_cycle, 0, neg);
+    CHECK(!neg);
+    CHECK(!sp2.reachable(1));
+}
+
 int main() {
     test_construction();
     test_traversals();
     test_dijkstra();
+    test_bellman_ford();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

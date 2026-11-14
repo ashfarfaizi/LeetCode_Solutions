@@ -55,4 +55,31 @@ inline ShortestPaths dijkstra(const Graph& g, int src) {
     return sp;
 }
 
+// Bellman-Ford: handles negative weights. Sets has_negative_cycle when a
+// negative cycle is reachable from src (distances are then not meaningful).
+// Intended for directed graphs; an undirected negative edge is itself a cycle.
+inline ShortestPaths bellman_ford(const Graph& g, int src, bool& has_negative_cycle) {
+    int n = g.size();
+    ShortestPaths sp{std::vector<long long>(n, INF), std::vector<int>(n, -1)};
+    g.neighbors(src);
+    sp.dist[src] = 0;
+    has_negative_cycle = false;
+    for (int round = 0; round < n; ++round) {
+        bool changed = false;
+        for (int u = 0; u < n; ++u) {
+            if (sp.dist[u] == INF) continue;
+            for (const auto& e : g.neighbors(u)) {
+                if (sp.dist[u] + e.weight < sp.dist[e.to]) {
+                    sp.dist[e.to] = sp.dist[u] + e.weight;
+                    sp.parent[e.to] = u;
+                    changed = true;
+                }
+            }
+        }
+        if (!changed) return sp;
+        if (round == n - 1) has_negative_cycle = true;  // n-th round still relaxed
+    }
+    return sp;
+}
+
 }  // namespace ga

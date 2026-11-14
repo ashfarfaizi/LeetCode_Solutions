@@ -10,6 +10,7 @@ easy to read and easy to drop into a contest or side project.
 - `connected_components` labelling
 - `dijkstra` single-source shortest paths with `path_to` reconstruction
   (`shortest_paths.hpp`)
+- `bellman_ford` for negative weights, with negative-cycle detection
 
 ## Build and test
 
