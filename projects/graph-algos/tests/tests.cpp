@@ -170,6 +170,33 @@ static void test_kruskal() {
     CHECK(throws([&] { ga::kruskal(directed); }));
 }
 
+static void test_prim() {
+    ga::Graph g(5);
+    g.add_edge(0, 1, 2);
+    g.add_edge(0, 3, 6);
+    g.add_edge(1, 2, 3);
+    g.add_edge(1, 3, 8);
+    g.add_edge(1, 4, 5);
+    g.add_edge(2, 4, 7);
+    g.add_edge(3, 4, 9);
+    auto f = ga::prim(g);
+    CHECK(f.total_weight == 16);
+    CHECK(f.edges.size() == 4);
+    CHECK(f.components == 1);
+    CHECK(f.total_weight == ga::kruskal(g).total_weight);
+
+    ga::Graph forest(5);
+    forest.add_edge(0, 1, 2);
+    forest.add_edge(3, 4, 1);
+    auto f2 = ga::prim(forest);
+    CHECK(f2.total_weight == 3);
+    CHECK(f2.components == 3);
+
+    CHECK(ga::prim(ga::Graph(0)).components == 0);
+    ga::Graph directed(2, true);
+    CHECK(throws([&] { ga::prim(directed); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
@@ -178,6 +205,7 @@ int main() {
     test_topological_sort();
     test_disjoint_set();
     test_kruskal();
+    test_prim();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

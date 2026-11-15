@@ -5,6 +5,8 @@
 #include <stdexcept>
 #include <tuple>
 #include <utility>
+#include <functional>
+#include <queue>
 #include <vector>
 
 #include "graph.hpp"
@@ -73,6 +75,35 @@ inline SpanningForest kruskal(const Graph& g) {
         }
     }
     f.components = dsu.set_count();
+    return f;
+}
+
+// Prim's algorithm with a lazy binary heap, O(E log E). Grows a tree from
+// every unvisited vertex in turn, so a disconnected graph yields a minimum
+// spanning forest with the same total weight Kruskal would report.
+inline SpanningForest prim(const Graph& g) {
+    if (g.directed()) throw std::invalid_argument("prim: graph must be undirected");
+    using Item = std::tuple<long long, int, int>;  // weight, vertex, parent
+    std::priority_queue<Item, std::vector<Item>, std::greater<Item>> pq;
+    std::vector<bool> in_tree(g.size(), false);
+    SpanningForest f;
+    for (int s = 0; s < g.size(); ++s) {
+        if (in_tree[s]) continue;
+        ++f.components;
+        pq.emplace(0, s, -1);
+        while (!pq.empty()) {
+            auto [w, u, p] = pq.top();
+            pq.pop();
+            if (in_tree[u]) continue;
+            in_tree[u] = true;
+            if (p != -1) {
+                f.total_weight += w;
+                f.edges.emplace_back(p, u, w);
+            }
+            for (const auto& e : g.neighbors(u))
+                if (!in_tree[e.to]) pq.emplace(e.weight, e.to, u);
+        }
+    }
     return f;
 }
 

@@ -15,6 +15,7 @@ easy to read and easy to drop into a contest or side project.
   (`topo.hpp`)
 - `DisjointSet` (union-find) and `kruskal` minimum spanning forest
   (`mst.hpp`)
+- `prim` minimum spanning forest using a lazy heap (`mst.hpp`)
 
 ## Build and test
 
