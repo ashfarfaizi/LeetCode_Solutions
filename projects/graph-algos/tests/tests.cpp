@@ -3,6 +3,7 @@
 #include "mst.hpp"
 #include "topo.hpp"
 #include "scc.hpp"
+#include "bridges.hpp"
 
 #include <cstdio>
 #include <functional>
@@ -282,6 +283,40 @@ static void test_condensation() {
     CHECK(dag.neighbors(scc.component[4]).empty());
 }
 
+static void test_cut_structure() {
+    // triangle 0-1-2, bridge 1-3, then path 3-4-5
+    ga::Graph g(6);
+    g.add_edge(0, 1);
+    g.add_edge(1, 2);
+    g.add_edge(2, 0);
+    g.add_edge(1, 3);
+    g.add_edge(3, 4);
+    g.add_edge(4, 5);
+    auto r = ga::find_cut_structure(g);
+    CHECK((r.bridges == std::vector<std::pair<int, int>>{{1, 3}, {3, 4}, {4, 5}}));
+    CHECK((r.articulation_points == std::vector<int>{1, 3, 4}));
+
+    ga::Graph cycle(4);
+    for (int i = 0; i < 4; ++i) cycle.add_edge(i, (i + 1) % 4);
+    auto rc = ga::find_cut_structure(cycle);
+    CHECK(rc.bridges.empty());
+    CHECK(rc.articulation_points.empty());
+
+    ga::Graph doubled(2);
+    doubled.add_edge(0, 1);
+    doubled.add_edge(0, 1);
+    CHECK(ga::find_cut_structure(doubled).bridges.empty());
+
+    ga::Graph star(4);  // centre 0 is a cut vertex as DFS root
+    star.add_edge(0, 1);
+    star.add_edge(0, 2);
+    star.add_edge(0, 3);
+    CHECK((ga::find_cut_structure(star).articulation_points == std::vector<int>{0}));
+
+    ga::Graph directed(2, true);
+    CHECK(throws([&] { ga::find_cut_structure(directed); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
@@ -294,6 +329,7 @@ int main() {
     test_floyd_warshall();
     test_scc();
     test_condensation();
+    test_cut_structure();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

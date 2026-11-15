@@ -22,6 +22,8 @@ easy to read and easy to drop into a contest or side project.
   grouping (`scc.hpp`)
 - `condensation` builds the DAG of SCCs for reachability or DP over
   components (`scc.hpp`)
+- `find_cut_structure` for bridges and articulation points of an undirected
+  graph, safe with parallel edges (`bridges.hpp`)
 
 ## Build and test
 
