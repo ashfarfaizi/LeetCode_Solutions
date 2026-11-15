@@ -2,7 +2,9 @@
 
 #include <algorithm>
 #include <cstddef>
+#include <set>
 #include <stdexcept>
+#include <tuple>
 #include <utility>
 #include <vector>
 
@@ -78,6 +80,24 @@ inline SCCResult strongly_connected_components(const Graph& g) {
         }
     }
     return r;
+}
+
+// Condensation DAG: one vertex per SCC, with a single edge c1 -> c2 whenever
+// some edge leads from component c1 to a different component c2. Edge weight
+// is the minimum weight among the original edges it replaces.
+inline Graph condensation(const Graph& g, const SCCResult& scc) {
+    std::set<std::pair<int, int>> seen;
+    std::vector<std::tuple<int, int, long long>> edges;
+    for (int u = 0; u < g.size(); ++u)
+        for (const auto& e : g.neighbors(u)) {
+            int a = scc.component[u], b = scc.component[e.to];
+            if (a != b) edges.emplace_back(a, b, e.weight);
+        }
+    std::sort(edges.begin(), edges.end());
+    Graph dag(scc.count, true);
+    for (const auto& [a, b, w] : edges)
+        if (seen.insert({a, b}).second) dag.add_edge(a, b, w);
+    return dag;
 }
 
 }  // namespace ga

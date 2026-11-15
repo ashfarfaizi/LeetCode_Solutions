@@ -259,6 +259,29 @@ static void test_scc() {
     CHECK(throws([&] { ga::strongly_connected_components(undirected); }));
 }
 
+static void test_condensation() {
+    ga::Graph g(6, true);
+    g.add_edge(0, 1, 1);
+    g.add_edge(1, 0, 1);
+    g.add_edge(1, 2, 7);
+    g.add_edge(0, 2, 4);  // parallel to 1 -> 2 after condensing
+    g.add_edge(2, 3, 1);
+    g.add_edge(3, 2, 1);
+    g.add_edge(3, 4, 2);
+    g.add_edge(5, 4, 1);
+    auto scc = ga::strongly_connected_components(g);
+    CHECK(scc.count == 4);
+    auto dag = ga::condensation(g, scc);
+    CHECK(dag.size() == 4);
+    CHECK(dag.edge_count() == 3);
+    CHECK(!ga::has_cycle(dag));
+    int a = scc.component[0], b = scc.component[2];
+    CHECK(dag.neighbors(a).size() == 1);
+    CHECK(dag.neighbors(a)[0].to == b);
+    CHECK(dag.neighbors(a)[0].weight == 4);
+    CHECK(dag.neighbors(scc.component[4]).empty());
+}
+
 int main() {
     test_construction();
     test_traversals();
@@ -270,6 +293,7 @@ int main() {
     test_prim();
     test_floyd_warshall();
     test_scc();
+    test_condensation();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

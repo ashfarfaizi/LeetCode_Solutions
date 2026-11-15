@@ -20,6 +20,8 @@ easy to read and easy to drop into a contest or side project.
   negative-cycle detection (`shortest_paths.hpp`)
 - `strongly_connected_components` (iterative Tarjan) with per-component
   grouping (`scc.hpp`)
+- `condensation` builds the DAG of SCCs for reachability or DP over
+  components (`scc.hpp`)
 
 ## Build and test
 
