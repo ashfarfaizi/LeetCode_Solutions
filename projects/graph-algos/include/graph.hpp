@@ -132,4 +132,32 @@ inline int connected_components(const Graph& g, std::vector<int>& label) {
     return count;
 }
 
+// Two-colour the graph (undirected sense) with BFS. Returns true and fills
+// side with 0/1 per vertex if the graph is bipartite; otherwise returns false
+// and side is left empty. Self-loops and odd cycles make it non-bipartite.
+inline bool is_bipartite(const Graph& g, std::vector<int>& side) {
+    if (g.directed()) throw std::invalid_argument("is_bipartite: graph must be undirected");
+    side.assign(g.size(), -1);
+    std::queue<int> q;
+    for (int s = 0; s < g.size(); ++s) {
+        if (side[s] != -1) continue;
+        side[s] = 0;
+        q.push(s);
+        while (!q.empty()) {
+            int u = q.front();
+            q.pop();
+            for (const auto& e : g.neighbors(u)) {
+                if (side[e.to] == -1) {
+                    side[e.to] = side[u] ^ 1;
+                    q.push(e.to);
+                } else if (side[e.to] == side[u]) {
+                    side.clear();
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
 }  // namespace ga

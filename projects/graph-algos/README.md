@@ -24,6 +24,7 @@ easy to read and easy to drop into a contest or side project.
   components (`scc.hpp`)
 - `find_cut_structure` for bridges and articulation points of an undirected
   graph, safe with parallel edges (`bridges.hpp`)
+- `is_bipartite` two-colouring with the colour of each vertex (`graph.hpp`)
 
 ## Build and test
 

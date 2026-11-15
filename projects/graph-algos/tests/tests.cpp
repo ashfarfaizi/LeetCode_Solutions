@@ -317,6 +317,30 @@ static void test_cut_structure() {
     CHECK(throws([&] { ga::find_cut_structure(directed); }));
 }
 
+static void test_bipartite() {
+    ga::Graph square(5);  // 4-cycle plus an isolated vertex
+    for (int i = 0; i < 4; ++i) square.add_edge(i, (i + 1) % 4);
+    std::vector<int> side;
+    CHECK(ga::is_bipartite(square, side));
+    CHECK(side.size() == 5);
+    for (int u = 0; u < 4; ++u)
+        for (const auto& e : square.neighbors(u)) CHECK(side[u] != side[e.to]);
+
+    ga::Graph triangle(3);
+    triangle.add_edge(0, 1);
+    triangle.add_edge(1, 2);
+    triangle.add_edge(2, 0);
+    CHECK(!ga::is_bipartite(triangle, side));
+    CHECK(side.empty());
+
+    ga::Graph loop(1);
+    loop.add_edge(0, 0);
+    CHECK(!ga::is_bipartite(loop, side));
+
+    ga::Graph directed(2, true);
+    CHECK(throws([&] { ga::is_bipartite(directed, side); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
@@ -330,6 +354,7 @@ int main() {
     test_scc();
     test_condensation();
     test_cut_structure();
+    test_bipartite();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }
