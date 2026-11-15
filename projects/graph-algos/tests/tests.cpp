@@ -197,6 +197,36 @@ static void test_prim() {
     CHECK(throws([&] { ga::prim(directed); }));
 }
 
+static void test_floyd_warshall() {
+    ga::Graph g(4, true);
+    g.add_edge(0, 1, 3);
+    g.add_edge(0, 3, 7);
+    g.add_edge(1, 0, 8);
+    g.add_edge(1, 2, 2);
+    g.add_edge(2, 0, 5);
+    g.add_edge(2, 3, 1);
+    g.add_edge(3, 0, 2);
+    auto ap = ga::floyd_warshall(g);
+    CHECK(!ap.has_negative_cycle);
+    CHECK(ap.dist[0][3] == 6);
+    CHECK(ap.dist[1][0] == 5);
+    CHECK(ap.dist[3][2] == 7);
+    CHECK((ap.path(0, 3) == std::vector<int>{0, 1, 2, 3}));
+    CHECK((ap.path(2, 2) == std::vector<int>{2}));
+    // agrees with Dijkstra from every source
+    for (int s = 0; s < 4; ++s) CHECK(ga::dijkstra(g, s).dist == ap.dist[s]);
+
+    ga::Graph split(3, true);
+    split.add_edge(0, 1, -2);
+    auto ap2 = ga::floyd_warshall(split);
+    CHECK(ap2.dist[0][1] == -2);
+    CHECK(ap2.dist[1][0] == ga::INF);
+    CHECK(ap2.path(0, 2).empty());
+
+    split.add_edge(1, 0, 1);  // cycle weight -1
+    CHECK(ga::floyd_warshall(split).has_negative_cycle);
+}
+
 int main() {
     test_construction();
     test_traversals();
@@ -206,6 +236,7 @@ int main() {
     test_disjoint_set();
     test_kruskal();
     test_prim();
+    test_floyd_warshall();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

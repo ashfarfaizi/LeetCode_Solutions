@@ -82,4 +82,56 @@ inline ShortestPaths bellman_ford(const Graph& g, int src, bool& has_negative_cy
     return sp;
 }
 
+struct AllPairs {
+    std::vector<std::vector<long long>> dist;  // INF when unreachable
+    std::vector<std::vector<int>> next;        // next hop on a shortest path, -1 if none
+    bool has_negative_cycle = false;
+
+    // Vertices on a shortest path from u to v (empty if unreachable or if a
+    // negative cycle makes the path undefined).
+    std::vector<int> path(int u, int v) const {
+        std::vector<int> p;
+        if (has_negative_cycle || dist.at(u).at(v) == INF) return p;
+        p.push_back(u);
+        while (u != v) {
+            u = next[u][v];
+            p.push_back(u);
+        }
+        return p;
+    }
+};
+
+// Floyd-Warshall all-pairs shortest paths, O(V^3) time and O(V^2) memory.
+// Negative edges are allowed; a negative cycle sets has_negative_cycle.
+inline AllPairs floyd_warshall(const Graph& g) {
+    int n = g.size();
+    AllPairs ap{std::vector<std::vector<long long>>(n, std::vector<long long>(n, INF)),
+                std::vector<std::vector<int>>(n, std::vector<int>(n, -1))};
+    for (int u = 0; u < n; ++u) {
+        ap.dist[u][u] = 0;
+        ap.next[u][u] = u;
+        for (const auto& e : g.neighbors(u)) {
+            if (e.weight < ap.dist[u][e.to]) {
+                ap.dist[u][e.to] = e.weight;
+                ap.next[u][e.to] = e.to;
+            }
+        }
+    }
+    for (int k = 0; k < n; ++k)
+        for (int i = 0; i < n; ++i) {
+            if (ap.dist[i][k] == INF) continue;
+            for (int j = 0; j < n; ++j) {
+                if (ap.dist[k][j] == INF) continue;
+                long long nd = ap.dist[i][k] + ap.dist[k][j];
+                if (nd < ap.dist[i][j]) {
+                    ap.dist[i][j] = nd;
+                    ap.next[i][j] = ap.next[i][k];
+                }
+            }
+        }
+    for (int u = 0; u < n; ++u)
+        if (ap.dist[u][u] < 0) ap.has_negative_cycle = true;
+    return ap;
+}
+
 }  // namespace ga
