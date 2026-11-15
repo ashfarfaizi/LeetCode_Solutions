@@ -2,6 +2,7 @@
 #include "shortest_paths.hpp"
 #include "mst.hpp"
 #include "topo.hpp"
+#include "scc.hpp"
 
 #include <cstdio>
 #include <functional>
@@ -227,6 +228,37 @@ static void test_floyd_warshall() {
     CHECK(ga::floyd_warshall(split).has_negative_cycle);
 }
 
+static void test_scc() {
+    // {0,1,2} cycle -> {3,4} cycle -> 5
+    ga::Graph g(6, true);
+    g.add_edge(0, 1);
+    g.add_edge(1, 2);
+    g.add_edge(2, 0);
+    g.add_edge(2, 3);
+    g.add_edge(3, 4);
+    g.add_edge(4, 3);
+    g.add_edge(4, 5);
+    auto r = ga::strongly_connected_components(g);
+    CHECK(r.count == 3);
+    CHECK(r.component[0] == r.component[2]);
+    CHECK(r.component[3] == r.component[4]);
+    CHECK(r.component[0] != r.component[3]);
+    // sinks first: {5} before {3,4} before {0,1,2}
+    CHECK(r.component[5] < r.component[3]);
+    CHECK(r.component[3] < r.component[0]);
+    auto groups = r.groups();
+    CHECK((groups[r.component[1]] == std::vector<int>{0, 1, 2}));
+
+    // a long path must not blow the stack and gives n singleton components
+    const int n = 200000;
+    ga::Graph path(n, true);
+    for (int i = 0; i + 1 < n; ++i) path.add_edge(i, i + 1);
+    CHECK(ga::strongly_connected_components(path).count == n);
+
+    ga::Graph undirected(2);
+    CHECK(throws([&] { ga::strongly_connected_components(undirected); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
@@ -237,6 +269,7 @@ int main() {
     test_kruskal();
     test_prim();
     test_floyd_warshall();
+    test_scc();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

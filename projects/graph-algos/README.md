@@ -18,6 +18,8 @@ easy to read and easy to drop into a contest or side project.
 - `prim` minimum spanning forest using a lazy heap (`mst.hpp`)
 - `floyd_warshall` all-pairs shortest paths with path reconstruction and
   negative-cycle detection (`shortest_paths.hpp`)
+- `strongly_connected_components` (iterative Tarjan) with per-component
+  grouping (`scc.hpp`)
 
 ## Build and test
 
