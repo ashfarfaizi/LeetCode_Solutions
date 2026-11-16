@@ -8,16 +8,23 @@
 
 namespace todo {
 
+enum class Priority { Low = 0, Normal = 1, High = 2 };
+
+// "low"/"normal"/"high" (also "l"/"n"/"h"), case-sensitive.
+std::optional<Priority> parsePriority(const std::string& s);
+const char* priorityName(Priority p);
+
 struct Task {
     int id = 0;
     std::string text;
     bool done = false;
+    Priority priority = Priority::Normal;
 };
 
 class TodoList {
 public:
     // Appends a task and returns its id. Ids are never reused.
-    int add(const std::string& text);
+    int add(const std::string& text, Priority p = Priority::Normal);
 
     // Marks a task done; returns false if no task has that id.
     bool complete(int id);
@@ -28,12 +35,20 @@ public:
     // Replaces a task's text; returns false if no task has that id.
     bool edit(int id, const std::string& text);
 
+    // Changes a task's priority; returns false if no task has that id.
+    bool setPriority(int id, Priority p);
+
+    // Tasks ordered for display: higher priority first, then by id.
+    std::vector<Task> sorted() const;
+
     std::optional<Task> find(int id) const;
     const std::vector<Task>& tasks() const { return tasks_; }
     int nextId() const { return nextId_; }
 
-    // Text format: a "# cli-todo v1" header, then one "id<TAB>done<TAB>text"
-    // line per task, where done is 0 or 1.
+    // Text format: a "# cli-todo v2" header, then one
+    // "id<TAB>done<TAB>priority<TAB>text" line per task, where done is 0 or 1
+    // and priority is L, N or H. Files with a v1 header (no priority column)
+    // still load, with every task at normal priority.
     void save(std::ostream& out) const;
     static TodoList load(std::istream& in);  // throws std::runtime_error
 
@@ -48,7 +63,7 @@ private:
     int nextId_ = 1;
 };
 
-// "[ ] 3  buy milk" / "[x] 4  call mum"
+// "[ ] 3  buy milk" / "[x] 4  call mum" / "[ ] 5  (high) pay rent"
 std::string format(const Task& t);
 
 }  // namespace todo

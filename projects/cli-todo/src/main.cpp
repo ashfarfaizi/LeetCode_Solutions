@@ -9,11 +9,13 @@
 namespace {
 
 int usage() {
-    std::cerr << "usage: todo [-f FILE] add TEXT...\n"
+    std::cerr << "usage: todo [-f FILE] add [-p LEVEL] TEXT...\n"
                  "       todo [-f FILE] list\n"
                  "       todo [-f FILE] done ID\n"
                  "       todo [-f FILE] rm ID\n"
-                 "       todo [-f FILE] edit ID TEXT...\n";
+                 "       todo [-f FILE] edit ID TEXT...\n"
+                 "       todo [-f FILE] pri ID LEVEL\n"
+                 "LEVEL is high, normal or low (or h, n, l)\n";
     return 2;
 }
 
@@ -59,14 +61,22 @@ int main(int argc, char** argv) {
     try {
         todo::TodoList list = todo::TodoList::loadFile(path);
         if (cmd == "add") {
+            todo::Priority prio = todo::Priority::Normal;
+            if (i < args.size() && args[i] == "-p") {
+                if (i + 1 >= args.size()) return usage();
+                auto p = todo::parsePriority(args[i + 1]);
+                if (!p) return usage();
+                prio = *p;
+                i += 2;
+            }
             std::string text = joinArgs(args, i);
             if (text.empty()) return usage();
-            int id = list.add(text);
+            int id = list.add(text, prio);
             list.saveFile(path);
             std::cout << "added " << id << '\n';
         } else if (cmd == "list") {
             if (i != args.size()) return usage();
-            for (const auto& t : list.tasks()) std::cout << todo::format(t) << '\n';
+            for (const auto& t : list.sorted()) std::cout << todo::format(t) << '\n';
         } else if (cmd == "done" || cmd == "rm") {
             int id = 0;
             if (i + 1 != args.size() || !parseId(args[i], id)) return usage();
@@ -79,6 +89,13 @@ int main(int argc, char** argv) {
             std::string text = joinArgs(args, i + 1);
             if (text.empty()) return usage();
             if (!list.edit(id, text)) return noTask(id);
+            list.saveFile(path);
+        } else if (cmd == "pri") {
+            int id = 0;
+            if (i + 2 != args.size() || !parseId(args[i], id)) return usage();
+            auto p = todo::parsePriority(args[i + 1]);
+            if (!p) return usage();
+            if (!list.setPriority(id, *p)) return noTask(id);
             list.saveFile(path);
         } else {
             return usage();

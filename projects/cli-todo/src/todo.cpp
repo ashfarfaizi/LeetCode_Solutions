@@ -10,7 +10,16 @@ namespace todo {
 
 namespace {
 
-const char* const kHeader = "# cli-todo v1";
+const char* const kHeaderV1 = "# cli-todo v1";
+const char* const kHeaderV2 = "# cli-todo v2";
+
+char priorityCode(Priority p) {
+    switch (p) {
+        case Priority::Low: return 'L';
+        case Priority::High: return 'H';
+        default: return 'N';
+    }
+}
 
 // Keep each task on a single line of the file.
 std::string sanitize(std::string s) {
@@ -21,10 +30,26 @@ std::string sanitize(std::string s) {
 
 }  // namespace
 
-int TodoList::add(const std::string& text) {
+std::optional<Priority> parsePriority(const std::string& s) {
+    if (s == "low" || s == "l") return Priority::Low;
+    if (s == "normal" || s == "n") return Priority::Normal;
+    if (s == "high" || s == "h") return Priority::High;
+    return std::nullopt;
+}
+
+const char* priorityName(Priority p) {
+    switch (p) {
+        case Priority::Low: return "low";
+        case Priority::High: return "high";
+        default: return "normal";
+    }
+}
+
+int TodoList::add(const std::string& text, Priority p) {
     Task t;
     t.id = nextId_++;
     t.text = sanitize(text);
+    t.priority = p;
     tasks_.push_back(t);
     return t.id;
 }
@@ -63,18 +88,38 @@ bool TodoList::edit(int id, const std::string& text) {
     return true;
 }
 
+bool TodoList::setPriority(int id, Priority p) {
+    Task* t = findMut(id);
+    if (!t) return false;
+    t->priority = p;
+    return true;
+}
+
+std::vector<Task> TodoList::sorted() const {
+    std::vector<Task> out = tasks_;
+    std::stable_sort(out.begin(), out.end(), [](const Task& a, const Task& b) {
+        if (a.priority != b.priority) return a.priority > b.priority;
+        return a.id < b.id;
+    });
+    return out;
+}
+
 void TodoList::save(std::ostream& out) const {
-    out << kHeader << '\n';
+    out << kHeaderV2 << '\n';
     for (const auto& t : tasks_)
-        out << t.id << '\t' << (t.done ? 1 : 0) << '\t' << t.text << '\n';
+        out << t.id << '\t' << (t.done ? 1 : 0) << '\t' << priorityCode(t.priority) << '\t'
+            << t.text << '\n';
 }
 
 TodoList TodoList::load(std::istream& in) {
     TodoList list;
     std::string line;
     int lineNo = 0;
+    int version = 1;
     while (std::getline(in, line)) {
         ++lineNo;
+        if (line == kHeaderV2) version = 2;
+        if (line == kHeaderV1) version = 1;
         if (line.empty() || line[0] == '#') continue;
         auto bad = [&] {
             return std::runtime_error("malformed task on line " + std::to_string(lineNo));
@@ -94,6 +139,17 @@ TodoList TodoList::load(std::istream& in) {
         std::string done = line.substr(a + 1, b - a - 1);
         if (done != "0" && done != "1") throw bad();
         t.done = done == "1";
+        if (version >= 2) {
+            size_t c = line.find('\t', b + 1);
+            if (c != b + 2) throw bad();
+            switch (line[b + 1]) {
+                case 'L': t.priority = Priority::Low; break;
+                case 'N': t.priority = Priority::Normal; break;
+                case 'H': t.priority = Priority::High; break;
+                default: throw bad();
+            }
+            b = c;
+        }
         t.text = line.substr(b + 1);
         if (list.findMut(t.id)) throw bad();
         list.tasks_.push_back(t);
@@ -115,7 +171,9 @@ void TodoList::saveFile(const std::string& path) const {
 }
 
 std::string format(const Task& t) {
-    return std::string(t.done ? "[x] " : "[ ] ") + std::to_string(t.id) + "  " + t.text;
+    std::string out = std::string(t.done ? "[x] " : "[ ] ") + std::to_string(t.id) + "  ";
+    if (t.priority != Priority::Normal) out += std::string("(") + priorityName(t.priority) + ") ";
+    return out + t.text;
 }
 
 }  // namespace todo

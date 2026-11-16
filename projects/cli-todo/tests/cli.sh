@@ -31,6 +31,12 @@ expect "edit and rm" "[ ] 2  call dad
 [ ] 3  water plants" "$("$BIN" -f "$F" list)"
 "$BIN" -f "$F" rm 1 2>/dev/null; expect "rm missing id exits 1" 1 $?
 "$BIN" -f "$F" edit 2 2>/dev/null; expect "edit without text is usage error" 2 $?
+"$BIN" -f "$F" add -p high pay rent >/dev/null
+"$BIN" -f "$F" pri 3 low
+expect "list sorted by priority" "[ ] 4  (high) pay rent
+[ ] 2  call dad
+[ ] 3  (low) water plants" "$("$BIN" -f "$F" list)"
+"$BIN" -f "$F" pri 3 urgent 2>/dev/null; expect "bad level is usage error" 2 $?
 
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"
 exit $fail

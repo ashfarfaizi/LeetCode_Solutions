@@ -90,11 +90,47 @@ static void testRemoveAndEdit() {
     CHECK(!l.edit(2, "gone"));
 }
 
+static void testPriorities() {
+    CHECK(todo::parsePriority("high") == todo::Priority::High);
+    CHECK(todo::parsePriority("l") == todo::Priority::Low);
+    CHECK(!todo::parsePriority("urgent").has_value());
+
+    todo::TodoList l;
+    l.add("normal a");
+    l.add("low", todo::Priority::Low);
+    l.add("high", todo::Priority::High);
+    l.add("normal b");
+    auto s = l.sorted();
+    CHECK(s[0].id == 3 && s[1].id == 1 && s[2].id == 4 && s[3].id == 2);
+    CHECK(l.tasks()[0].id == 1);  // storage order is untouched
+    CHECK(l.setPriority(4, todo::Priority::High));
+    CHECK(!l.setPriority(9, todo::Priority::High));
+    CHECK(l.sorted()[1].id == 4);
+
+    std::stringstream ss;
+    l.save(ss);
+    todo::TodoList r = todo::TodoList::load(ss);
+    CHECK(r.find(2)->priority == todo::Priority::Low);
+    CHECK(r.find(3)->priority == todo::Priority::High);
+    CHECK(r.find(1)->priority == todo::Priority::Normal);
+}
+
+static void testLoadsV1Files() {
+    std::istringstream in("# cli-todo v1\n1\t0\tH\tlooks like v2\n");
+    todo::TodoList l = todo::TodoList::load(in);
+    CHECK(l.find(1)->text == "H\tlooks like v2");
+    CHECK(l.find(1)->priority == todo::Priority::Normal);
+    CHECK(loadThrows("# cli-todo v2\n1\t0\tX\tbad level\n"));
+    CHECK(loadThrows("# cli-todo v2\n1\t0\tno level\n"));
+}
+
 static void testFormat() {
     todo::Task t{3, "write tests", false};
     CHECK(todo::format(t) == "[ ] 3  write tests");
     t.done = true;
     CHECK(todo::format(t) == "[x] 3  write tests");
+    t.priority = todo::Priority::High;
+    CHECK(todo::format(t) == "[x] 3  (high) write tests");
 }
 
 int main() {
@@ -104,6 +140,8 @@ int main() {
     testIdsNotReusedAfterLoad();
     testRejectsMalformed();
     testRemoveAndEdit();
+    testPriorities();
+    testLoadsV1Files();
     testFormat();
     std::cout << checks - failures << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
