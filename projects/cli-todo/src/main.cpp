@@ -1,0 +1,79 @@
+// todo: command-line front end for the cli-todo library.
+#include "todo.hpp"
+
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <vector>
+
+namespace {
+
+int usage() {
+    std::cerr << "usage: todo [-f FILE] add TEXT...\n"
+                 "       todo [-f FILE] list\n"
+                 "       todo [-f FILE] done ID\n";
+    return 2;
+}
+
+bool parseId(const std::string& s, int& id) {
+    if (s.empty() || s.find_first_not_of("0123456789") != std::string::npos) return false;
+    try {
+        id = std::stoi(s);
+    } catch (const std::out_of_range&) {
+        return false;
+    }
+    return id > 0;
+}
+
+std::string joinArgs(const std::vector<std::string>& args, size_t from) {
+    std::string out;
+    for (size_t i = from; i < args.size(); ++i) {
+        if (!out.empty()) out += ' ';
+        out += args[i];
+    }
+    return out;
+}
+
+}  // namespace
+
+int main(int argc, char** argv) {
+    std::vector<std::string> args(argv + 1, argv + argc);
+    std::string path = "todo.txt";
+    if (const char* env = std::getenv("TODO_FILE")) path = env;
+    size_t i = 0;
+    if (i < args.size() && args[i] == "-f") {
+        if (i + 1 >= args.size()) return usage();
+        path = args[i + 1];
+        i += 2;
+    }
+    if (i >= args.size()) return usage();
+    const std::string cmd = args[i++];
+
+    try {
+        todo::TodoList list = todo::TodoList::loadFile(path);
+        if (cmd == "add") {
+            std::string text = joinArgs(args, i);
+            if (text.empty()) return usage();
+            int id = list.add(text);
+            list.saveFile(path);
+            std::cout << "added " << id << '\n';
+        } else if (cmd == "list") {
+            if (i != args.size()) return usage();
+            for (const auto& t : list.tasks()) std::cout << todo::format(t) << '\n';
+        } else if (cmd == "done") {
+            int id = 0;
+            if (i + 1 != args.size() || !parseId(args[i], id)) return usage();
+            if (!list.complete(id)) {
+                std::cerr << "todo: no task " << id << '\n';
+                return 1;
+            }
+            list.saveFile(path);
+        } else {
+            return usage();
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "todo: " << path << ": " << e.what() << '\n';
+        return 1;
+    }
+    return 0;
+}
