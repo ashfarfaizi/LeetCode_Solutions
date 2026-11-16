@@ -22,6 +22,12 @@ public:
     // Marks a task done; returns false if no task has that id.
     bool complete(int id);
 
+    // Deletes a task; returns false if no task has that id.
+    bool remove(int id);
+
+    // Replaces a task's text; returns false if no task has that id.
+    bool edit(int id, const std::string& text);
+
     std::optional<Task> find(int id) const;
     const std::vector<Task>& tasks() const { return tasks_; }
     int nextId() const { return nextId_; }

@@ -8,6 +8,8 @@ that is easy to read, diff and keep in version control.
 todo [-f FILE] add TEXT...   # add a task, prints its id
 todo [-f FILE] list          # show all tasks
 todo [-f FILE] done ID       # mark a task as done
+todo [-f FILE] rm ID         # delete a task
+todo [-f FILE] edit ID TEXT  # replace a task's text
 ```
 
 The list is read from `-f FILE`, else `$TODO_FILE`, else `./todo.txt`. A
@@ -22,6 +24,10 @@ $ todo done 1
 $ todo list
 [x] 1  buy milk
 [ ] 2  call mum
+$ todo edit 2 call mum back
+$ todo rm 1
+$ todo list
+[ ] 2  call mum back
 ```
 
 Exit status is `0` on success, `1` for an unknown task id or an unreadable

@@ -48,6 +48,21 @@ bool TodoList::complete(int id) {
     return true;
 }
 
+bool TodoList::remove(int id) {
+    auto it = std::find_if(tasks_.begin(), tasks_.end(),
+                           [id](const Task& t) { return t.id == id; });
+    if (it == tasks_.end()) return false;
+    tasks_.erase(it);
+    return true;
+}
+
+bool TodoList::edit(int id, const std::string& text) {
+    Task* t = findMut(id);
+    if (!t) return false;
+    t->text = sanitize(text);
+    return true;
+}
+
 void TodoList::save(std::ostream& out) const {
     out << kHeader << '\n';
     for (const auto& t : tasks_)

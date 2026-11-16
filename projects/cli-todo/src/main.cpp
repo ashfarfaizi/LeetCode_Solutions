@@ -11,8 +11,15 @@ namespace {
 int usage() {
     std::cerr << "usage: todo [-f FILE] add TEXT...\n"
                  "       todo [-f FILE] list\n"
-                 "       todo [-f FILE] done ID\n";
+                 "       todo [-f FILE] done ID\n"
+                 "       todo [-f FILE] rm ID\n"
+                 "       todo [-f FILE] edit ID TEXT...\n";
     return 2;
+}
+
+int noTask(int id) {
+    std::cerr << "todo: no task " << id << '\n';
+    return 1;
 }
 
 bool parseId(const std::string& s, int& id) {
@@ -60,13 +67,18 @@ int main(int argc, char** argv) {
         } else if (cmd == "list") {
             if (i != args.size()) return usage();
             for (const auto& t : list.tasks()) std::cout << todo::format(t) << '\n';
-        } else if (cmd == "done") {
+        } else if (cmd == "done" || cmd == "rm") {
             int id = 0;
             if (i + 1 != args.size() || !parseId(args[i], id)) return usage();
-            if (!list.complete(id)) {
-                std::cerr << "todo: no task " << id << '\n';
-                return 1;
-            }
+            bool ok = cmd == "done" ? list.complete(id) : list.remove(id);
+            if (!ok) return noTask(id);
+            list.saveFile(path);
+        } else if (cmd == "edit") {
+            int id = 0;
+            if (i >= args.size() || !parseId(args[i], id)) return usage();
+            std::string text = joinArgs(args, i + 1);
+            if (text.empty()) return usage();
+            if (!list.edit(id, text)) return noTask(id);
             list.saveFile(path);
         } else {
             return usage();

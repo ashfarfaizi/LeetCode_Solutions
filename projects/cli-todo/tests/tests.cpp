@@ -75,6 +75,21 @@ static void testRejectsMalformed() {
     CHECK(!loadThrows("# comment\n\n1\t1\tok\n"));
 }
 
+static void testRemoveAndEdit() {
+    todo::TodoList l;
+    l.add("a");
+    l.add("b");
+    l.add("c");
+    CHECK(l.remove(2));
+    CHECK(!l.remove(2));
+    CHECK(l.tasks().size() == 2);
+    CHECK(l.tasks()[1].id == 3);
+    CHECK(l.add("d") == 4);  // removed id 2 is not reused
+    CHECK(l.edit(1, "alpha\nbeta"));
+    CHECK(l.find(1)->text == "alpha beta");
+    CHECK(!l.edit(2, "gone"));
+}
+
 static void testFormat() {
     todo::Task t{3, "write tests", false};
     CHECK(todo::format(t) == "[ ] 3  write tests");
@@ -88,6 +103,7 @@ int main() {
     testRoundTrip();
     testIdsNotReusedAfterLoad();
     testRejectsMalformed();
+    testRemoveAndEdit();
     testFormat();
     std::cout << checks - failures << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
