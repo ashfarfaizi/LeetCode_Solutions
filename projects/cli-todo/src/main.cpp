@@ -10,11 +10,12 @@ namespace {
 
 int usage() {
     std::cerr << "usage: todo [-f FILE] add [-p LEVEL] TEXT...\n"
-                 "       todo [-f FILE] list\n"
+                 "       todo [-f FILE] list [--pending | --done]\n"
                  "       todo [-f FILE] done ID\n"
                  "       todo [-f FILE] rm ID\n"
                  "       todo [-f FILE] edit ID TEXT...\n"
                  "       todo [-f FILE] pri ID LEVEL\n"
+                 "       todo [-f FILE] clear\n"
                  "LEVEL is high, normal or low (or h, n, l)\n";
     return 2;
 }
@@ -75,8 +76,23 @@ int main(int argc, char** argv) {
             list.saveFile(path);
             std::cout << "added " << id << '\n';
         } else if (cmd == "list") {
+            enum { All, Pending, Done } show = All;
+            if (i < args.size()) {
+                if (args[i] == "--pending") show = Pending;
+                else if (args[i] == "--done") show = Done;
+                else return usage();
+                ++i;
+            }
             if (i != args.size()) return usage();
-            for (const auto& t : list.sorted()) std::cout << todo::format(t) << '\n';
+            for (const auto& t : list.sorted()) {
+                if ((show == Pending && t.done) || (show == Done && !t.done)) continue;
+                std::cout << todo::format(t) << '\n';
+            }
+        } else if (cmd == "clear") {
+            if (i != args.size()) return usage();
+            int n = list.clearDone();
+            if (n > 0) list.saveFile(path);
+            std::cout << "cleared " << n << (n == 1 ? " task\n" : " tasks\n");
         } else if (cmd == "done" || cmd == "rm") {
             int id = 0;
             if (i + 1 != args.size() || !parseId(args[i], id)) return usage();

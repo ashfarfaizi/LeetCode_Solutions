@@ -37,6 +37,15 @@ expect "list sorted by priority" "[ ] 4  (high) pay rent
 [ ] 2  call dad
 [ ] 3  (low) water plants" "$("$BIN" -f "$F" list)"
 "$BIN" -f "$F" pri 3 urgent 2>/dev/null; expect "bad level is usage error" 2 $?
+"$BIN" -f "$F" done 2
+expect "list --pending" "[ ] 4  (high) pay rent
+[ ] 3  (low) water plants" "$("$BIN" -f "$F" list --pending)"
+expect "list --done" "[ ] 2  call dad" "$("$BIN" -f "$F" list --done | tr x ' ')"
+expect "clear" "cleared 1 task" "$("$BIN" -f "$F" clear)"
+expect "clear again" "cleared 0 tasks" "$("$BIN" -f "$F" clear)"
+expect "list after clear" "[ ] 4  (high) pay rent
+[ ] 3  (low) water plants" "$("$BIN" -f "$F" list)"
+"$BIN" -f "$F" list --all 2>/dev/null; expect "unknown list flag is usage error" 2 $?
 
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"
 exit $fail

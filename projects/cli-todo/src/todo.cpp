@@ -95,6 +95,14 @@ bool TodoList::setPriority(int id, Priority p) {
     return true;
 }
 
+int TodoList::clearDone() {
+    auto before = tasks_.size();
+    tasks_.erase(std::remove_if(tasks_.begin(), tasks_.end(),
+                                [](const Task& t) { return t.done; }),
+                 tasks_.end());
+    return static_cast<int>(before - tasks_.size());
+}
+
 std::vector<Task> TodoList::sorted() const {
     std::vector<Task> out = tasks_;
     std::stable_sort(out.begin(), out.end(), [](const Task& a, const Task& b) {

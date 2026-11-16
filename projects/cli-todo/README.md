@@ -6,12 +6,17 @@ that is easy to read, diff and keep in version control.
 
 ```
 todo [-f FILE] add [-p LEVEL] TEXT...  # add a task, prints its id
-todo [-f FILE] list          # show all tasks, highest priority first
+todo [-f FILE] list [--pending | --done]  # show tasks, highest priority first
 todo [-f FILE] done ID       # mark a task as done
 todo [-f FILE] rm ID         # delete a task
 todo [-f FILE] edit ID TEXT  # replace a task's text
 todo [-f FILE] pri ID LEVEL  # change a task's priority
+todo [-f FILE] clear         # delete all completed tasks
 ```
+
+`list --pending` shows only unfinished tasks and `list --done` only
+finished ones. `clear` prints how many tasks it removed; ids of cleared
+tasks are not reused.
 
 `LEVEL` is `high`, `normal` (the default) or `low`, or just `h`, `n`, `l`.
 `list` shows high-priority tasks first, then normal, then low; within a

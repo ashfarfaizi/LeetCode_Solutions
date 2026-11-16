@@ -38,6 +38,9 @@ public:
     // Changes a task's priority; returns false if no task has that id.
     bool setPriority(int id, Priority p);
 
+    // Deletes every completed task and returns how many were removed.
+    int clearDone();
+
     // Tasks ordered for display: higher priority first, then by id.
     std::vector<Task> sorted() const;
 

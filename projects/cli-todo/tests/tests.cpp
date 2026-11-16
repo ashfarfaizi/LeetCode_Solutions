@@ -124,6 +124,19 @@ static void testLoadsV1Files() {
     CHECK(loadThrows("# cli-todo v2\n1\t0\tno level\n"));
 }
 
+static void testClearDone() {
+    todo::TodoList l;
+    l.add("a");
+    l.add("b");
+    l.add("c");
+    CHECK(l.clearDone() == 0);
+    l.complete(1);
+    l.complete(3);
+    CHECK(l.clearDone() == 2);
+    CHECK(l.tasks().size() == 1 && l.tasks()[0].id == 2);
+    CHECK(l.add("d") == 4);
+}
+
 static void testFormat() {
     todo::Task t{3, "write tests", false};
     CHECK(todo::format(t) == "[ ] 3  write tests");
@@ -142,6 +155,7 @@ int main() {
     testRemoveAndEdit();
     testPriorities();
     testLoadsV1Files();
+    testClearDone();
     testFormat();
     std::cout << checks - failures << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
