@@ -13,6 +13,7 @@ todo [-f FILE] rm ID         # delete a task
 todo [-f FILE] edit ID TEXT  # replace a task's text
 todo [-f FILE] pri ID LEVEL  # change a task's priority
 todo [-f FILE] find TEXT     # list tasks containing TEXT (any case)
+todo [-f FILE] stats         # counts of done/pending tasks by priority
 todo [-f FILE] clear         # delete all completed tasks
 ```
 

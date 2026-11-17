@@ -17,6 +17,7 @@ int usage() {
                  "       todo [-f FILE] edit ID TEXT...\n"
                  "       todo [-f FILE] pri ID LEVEL\n"
                  "       todo [-f FILE] find TEXT...\n"
+                 "       todo [-f FILE] stats\n"
                  "       todo [-f FILE] clear\n"
                  "LEVEL is high, normal or low (or h, n, l)\n";
     return 2;
@@ -96,6 +97,17 @@ int main(int argc, char** argv) {
             auto hits = list.search(needle);
             for (const auto& t : hits) std::cout << todo::format(t) << '\n';
             if (hits.empty()) return 1;
+        } else if (cmd == "stats") {
+            if (i != args.size()) return usage();
+            const todo::Stats s = list.stats();
+            const int pct = s.total ? s.done * 100 / s.total : 0;
+            std::cout << s.total << " tasks, " << s.done << " done (" << pct << "%), "
+                      << s.pending << " pending\n";
+            if (s.pending > 0) {
+                std::cout << "pending: " << s.pendingByPriority[2] << " high, "
+                          << s.pendingByPriority[1] << " normal, "
+                          << s.pendingByPriority[0] << " low\n";
+            }
         } else if (cmd == "clear") {
             if (i != args.size()) return usage();
             int n = list.clearDone();

@@ -52,6 +52,10 @@ expect "undo reopens task" "[ ] 3  (low) water plants" "$("$BIN" -f "$F" list --
 expect "find is case-insensitive" "[ ] 4  (high) pay rent" "$("$BIN" -f "$F" find RENT)"
 "$BIN" -f "$F" find nothing-here >/dev/null; expect "find with no match exits 1" 1 $?
 "$BIN" -f "$F" find 2>/dev/null; expect "find without text is usage error" 2 $?
+"$BIN" -f "$F" done 3
+expect "stats" "2 tasks, 1 done (50%), 1 pending
+pending: 1 high, 0 normal, 0 low" "$("$BIN" -f "$F" stats)"
+expect "stats on empty list" "0 tasks, 0 done (0%), 0 pending" "$("$BIN" -f "$DIR/none.txt" stats)"
 "$BIN" -f "$F" list --all 2>/dev/null; expect "unknown list flag is usage error" 2 $?
 
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"

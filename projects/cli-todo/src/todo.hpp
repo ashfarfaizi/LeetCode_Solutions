@@ -21,6 +21,13 @@ struct Task {
     Priority priority = Priority::Normal;
 };
 
+struct Stats {
+    int total = 0;
+    int done = 0;
+    int pending = 0;
+    int pendingByPriority[3] = {0, 0, 0};  // indexed by Priority
+};
+
 class TodoList {
 public:
     // Appends a task and returns its id. Ids are never reused.
@@ -51,6 +58,8 @@ public:
     // Tasks whose text contains `needle`, ignoring ASCII case, in display
     // order. An empty needle matches every task.
     std::vector<Task> search(const std::string& needle) const;
+
+    Stats stats() const;
 
     std::optional<Task> find(int id) const;
     const std::vector<Task>& tasks() const { return tasks_; }

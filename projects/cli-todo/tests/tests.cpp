@@ -176,6 +176,21 @@ static void testSaveFileIsAtomic() {
     std::remove(path.c_str());
 }
 
+static void testStats() {
+    todo::TodoList l;
+    CHECK(l.stats().total == 0);
+    l.add("a", todo::Priority::High);
+    l.add("b");
+    l.add("c", todo::Priority::Low);
+    l.add("d", todo::Priority::High);
+    l.complete(4);
+    todo::Stats s = l.stats();
+    CHECK(s.total == 4 && s.done == 1 && s.pending == 3);
+    CHECK(s.pendingByPriority[2] == 1);
+    CHECK(s.pendingByPriority[1] == 1);
+    CHECK(s.pendingByPriority[0] == 1);
+}
+
 static void testFormat() {
     todo::Task t{3, "write tests", false};
     CHECK(todo::format(t) == "[ ] 3  write tests");
@@ -198,6 +213,7 @@ int main() {
     testReopen();
     testSearch();
     testSaveFileIsAtomic();
+    testStats();
     testFormat();
     std::cout << checks - failures << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;

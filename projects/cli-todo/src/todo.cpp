@@ -133,6 +133,20 @@ std::vector<Task> TodoList::search(const std::string& needle) const {
     return out;
 }
 
+Stats TodoList::stats() const {
+    Stats s;
+    for (const auto& t : tasks_) {
+        ++s.total;
+        if (t.done) {
+            ++s.done;
+        } else {
+            ++s.pending;
+            ++s.pendingByPriority[static_cast<int>(t.priority)];
+        }
+    }
+    return s;
+}
+
 void TodoList::save(std::ostream& out) const {
     out << kHeaderV2 << '\n';
     for (const auto& t : tasks_)
