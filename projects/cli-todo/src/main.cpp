@@ -12,6 +12,7 @@ int usage() {
     std::cerr << "usage: todo [-f FILE] add [-p LEVEL] TEXT...\n"
                  "       todo [-f FILE] list [--pending | --done]\n"
                  "       todo [-f FILE] done ID\n"
+                 "       todo [-f FILE] undo ID\n"
                  "       todo [-f FILE] rm ID\n"
                  "       todo [-f FILE] edit ID TEXT...\n"
                  "       todo [-f FILE] pri ID LEVEL\n"
@@ -93,10 +94,12 @@ int main(int argc, char** argv) {
             int n = list.clearDone();
             if (n > 0) list.saveFile(path);
             std::cout << "cleared " << n << (n == 1 ? " task\n" : " tasks\n");
-        } else if (cmd == "done" || cmd == "rm") {
+        } else if (cmd == "done" || cmd == "undo" || cmd == "rm") {
             int id = 0;
             if (i + 1 != args.size() || !parseId(args[i], id)) return usage();
-            bool ok = cmd == "done" ? list.complete(id) : list.remove(id);
+            bool ok = cmd == "done"   ? list.complete(id)
+                      : cmd == "undo" ? list.reopen(id)
+                                      : list.remove(id);
             if (!ok) return noTask(id);
             list.saveFile(path);
         } else if (cmd == "edit") {

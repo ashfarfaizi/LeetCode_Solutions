@@ -45,6 +45,10 @@ expect "clear" "cleared 1 task" "$("$BIN" -f "$F" clear)"
 expect "clear again" "cleared 0 tasks" "$("$BIN" -f "$F" clear)"
 expect "list after clear" "[ ] 4  (high) pay rent
 [ ] 3  (low) water plants" "$("$BIN" -f "$F" list)"
+"$BIN" -f "$F" done 3
+"$BIN" -f "$F" undo 3
+expect "undo reopens task" "[ ] 3  (low) water plants" "$("$BIN" -f "$F" list --pending | tail -n 1)"
+"$BIN" -f "$F" undo 99 2>/dev/null; expect "undo missing id exits 1" 1 $?
 "$BIN" -f "$F" list --all 2>/dev/null; expect "unknown list flag is usage error" 2 $?
 
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"

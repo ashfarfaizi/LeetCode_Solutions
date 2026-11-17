@@ -29,6 +29,10 @@ public:
     // Marks a task done; returns false if no task has that id.
     bool complete(int id);
 
+    // Marks a completed task as pending again; returns false if no task has
+    // that id.
+    bool reopen(int id);
+
     // Deletes a task; returns false if no task has that id.
     bool remove(int id);
 

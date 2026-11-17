@@ -8,6 +8,7 @@ that is easy to read, diff and keep in version control.
 todo [-f FILE] add [-p LEVEL] TEXT...  # add a task, prints its id
 todo [-f FILE] list [--pending | --done]  # show tasks, highest priority first
 todo [-f FILE] done ID       # mark a task as done
+todo [-f FILE] undo ID       # mark a done task as pending again
 todo [-f FILE] rm ID         # delete a task
 todo [-f FILE] edit ID TEXT  # replace a task's text
 todo [-f FILE] pri ID LEVEL  # change a task's priority

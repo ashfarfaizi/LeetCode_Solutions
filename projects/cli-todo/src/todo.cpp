@@ -73,6 +73,13 @@ bool TodoList::complete(int id) {
     return true;
 }
 
+bool TodoList::reopen(int id) {
+    Task* t = findMut(id);
+    if (!t) return false;
+    t->done = false;
+    return true;
+}
+
 bool TodoList::remove(int id) {
     auto it = std::find_if(tasks_.begin(), tasks_.end(),
                            [id](const Task& t) { return t.id == id; });

@@ -137,6 +137,17 @@ static void testClearDone() {
     CHECK(l.add("d") == 4);
 }
 
+static void testReopen() {
+    todo::TodoList l;
+    l.add("a");
+    l.complete(1);
+    CHECK(l.reopen(1));
+    CHECK(!l.find(1)->done);
+    CHECK(l.reopen(1));  // already pending: still succeeds, stays pending
+    CHECK(!l.find(1)->done);
+    CHECK(!l.reopen(2));
+}
+
 static void testFormat() {
     todo::Task t{3, "write tests", false};
     CHECK(todo::format(t) == "[ ] 3  write tests");
@@ -156,6 +167,7 @@ int main() {
     testPriorities();
     testLoadsV1Files();
     testClearDone();
+    testReopen();
     testFormat();
     std::cout << checks - failures << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
