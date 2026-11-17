@@ -49,6 +49,9 @@ expect "list after clear" "[ ] 4  (high) pay rent
 "$BIN" -f "$F" undo 3
 expect "undo reopens task" "[ ] 3  (low) water plants" "$("$BIN" -f "$F" list --pending | tail -n 1)"
 "$BIN" -f "$F" undo 99 2>/dev/null; expect "undo missing id exits 1" 1 $?
+expect "find is case-insensitive" "[ ] 4  (high) pay rent" "$("$BIN" -f "$F" find RENT)"
+"$BIN" -f "$F" find nothing-here >/dev/null; expect "find with no match exits 1" 1 $?
+"$BIN" -f "$F" find 2>/dev/null; expect "find without text is usage error" 2 $?
 "$BIN" -f "$F" list --all 2>/dev/null; expect "unknown list flag is usage error" 2 $?
 
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"

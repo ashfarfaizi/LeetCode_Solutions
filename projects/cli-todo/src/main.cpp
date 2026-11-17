@@ -16,6 +16,7 @@ int usage() {
                  "       todo [-f FILE] rm ID\n"
                  "       todo [-f FILE] edit ID TEXT...\n"
                  "       todo [-f FILE] pri ID LEVEL\n"
+                 "       todo [-f FILE] find TEXT...\n"
                  "       todo [-f FILE] clear\n"
                  "LEVEL is high, normal or low (or h, n, l)\n";
     return 2;
@@ -89,6 +90,12 @@ int main(int argc, char** argv) {
                 if ((show == Pending && t.done) || (show == Done && !t.done)) continue;
                 std::cout << todo::format(t) << '\n';
             }
+        } else if (cmd == "find") {
+            std::string needle = joinArgs(args, i);
+            if (needle.empty()) return usage();
+            auto hits = list.search(needle);
+            for (const auto& t : hits) std::cout << todo::format(t) << '\n';
+            if (hits.empty()) return 1;
         } else if (cmd == "clear") {
             if (i != args.size()) return usage();
             int n = list.clearDone();

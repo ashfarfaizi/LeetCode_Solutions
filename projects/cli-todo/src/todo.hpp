@@ -48,6 +48,10 @@ public:
     // Tasks ordered for display: higher priority first, then by id.
     std::vector<Task> sorted() const;
 
+    // Tasks whose text contains `needle`, ignoring ASCII case, in display
+    // order. An empty needle matches every task.
+    std::vector<Task> search(const std::string& needle) const;
+
     std::optional<Task> find(int id) const;
     const std::vector<Task>& tasks() const { return tasks_; }
     int nextId() const { return nextId_; }

@@ -12,8 +12,12 @@ todo [-f FILE] undo ID       # mark a done task as pending again
 todo [-f FILE] rm ID         # delete a task
 todo [-f FILE] edit ID TEXT  # replace a task's text
 todo [-f FILE] pri ID LEVEL  # change a task's priority
+todo [-f FILE] find TEXT     # list tasks containing TEXT (any case)
 todo [-f FILE] clear         # delete all completed tasks
 ```
+
+`find` prints matching tasks in the same order as `list` and exits with
+status `1` when nothing matches, so it can be used in scripts.
 
 `list --pending` shows only unfinished tasks and `list --done` only
 finished ones. `clear` prints how many tasks it removed; ids of cleared

@@ -1,6 +1,7 @@
 #include "todo.hpp"
 
 #include <algorithm>
+#include <cctype>
 #include <fstream>
 #include <istream>
 #include <ostream>
@@ -116,6 +117,18 @@ std::vector<Task> TodoList::sorted() const {
         if (a.priority != b.priority) return a.priority > b.priority;
         return a.id < b.id;
     });
+    return out;
+}
+
+std::vector<Task> TodoList::search(const std::string& needle) const {
+    auto lower = [](std::string s) {
+        for (char& c : s) c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+        return s;
+    };
+    const std::string n = lower(needle);
+    std::vector<Task> out;
+    for (const auto& t : sorted())
+        if (lower(t.text).find(n) != std::string::npos) out.push_back(t);
     return out;
 }
 

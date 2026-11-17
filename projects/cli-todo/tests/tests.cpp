@@ -148,6 +148,19 @@ static void testReopen() {
     CHECK(!l.reopen(2));
 }
 
+static void testSearch() {
+    todo::TodoList l;
+    l.add("Buy milk");
+    l.add("call mum");
+    l.add("buy bread", todo::Priority::High);
+    auto hits = l.search("BUY");
+    CHECK(hits.size() == 2);
+    CHECK(hits[0].id == 3 && hits[1].id == 1);  // display order
+    CHECK(l.search("mum").size() == 1);
+    CHECK(l.search("xyz").empty());
+    CHECK(l.search("").size() == 3);
+}
+
 static void testFormat() {
     todo::Task t{3, "write tests", false};
     CHECK(todo::format(t) == "[ ] 3  write tests");
@@ -168,6 +181,7 @@ int main() {
     testLoadsV1Files();
     testClearDone();
     testReopen();
+    testSearch();
     testFormat();
     std::cout << checks - failures << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
