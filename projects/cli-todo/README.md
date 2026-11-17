@@ -29,6 +29,8 @@ level tasks keep the order they were added.
 
 The list is read from `-f FILE`, else `$TODO_FILE`, else `./todo.txt`. A
 missing file is treated as an empty list and created on the first change.
+Saves go through a temporary `FILE.tmp` that is renamed into place, so an
+interrupted write never leaves a half-written list.
 
 ```
 $ todo add buy milk

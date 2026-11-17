@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cctype>
+#include <cstdio>
 #include <fstream>
 #include <istream>
 #include <ostream>
@@ -193,9 +194,23 @@ TodoList TodoList::loadFile(const std::string& path) {
 }
 
 void TodoList::saveFile(const std::string& path) const {
-    std::ofstream out(path, std::ios::trunc);
-    if (!out) throw std::runtime_error("cannot write " + path);
-    save(out);
+    // Write to a sibling temp file and rename it over the target, so an
+    // interrupted save never leaves a truncated or half-written list behind.
+    const std::string tmp = path + ".tmp";
+    {
+        std::ofstream out(tmp, std::ios::trunc);
+        if (!out) throw std::runtime_error("cannot write " + tmp);
+        save(out);
+        out.flush();
+        if (!out) {
+            std::remove(tmp.c_str());
+            throw std::runtime_error("error writing " + tmp);
+        }
+    }
+    if (std::rename(tmp.c_str(), path.c_str()) != 0) {
+        std::remove(tmp.c_str());
+        throw std::runtime_error("cannot replace " + path);
+    }
 }
 
 std::string format(const Task& t) {

@@ -1,6 +1,8 @@
 // Minimal self-contained test runner for cli-todo.
 #include "todo.hpp"
 
+#include <cstdio>
+#include <fstream>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
@@ -161,6 +163,19 @@ static void testSearch() {
     CHECK(l.search("").size() == 3);
 }
 
+static void testSaveFileIsAtomic() {
+    const std::string path = "build/atomic_test.txt";
+    todo::TodoList l;
+    l.add("one");
+    l.saveFile(path);
+    l.add("two");
+    l.saveFile(path);
+    todo::TodoList r = todo::TodoList::loadFile(path);
+    CHECK(r.tasks().size() == 2);
+    CHECK(!std::ifstream(path + ".tmp").good());  // temp file cleaned up
+    std::remove(path.c_str());
+}
+
 static void testFormat() {
     todo::Task t{3, "write tests", false};
     CHECK(todo::format(t) == "[ ] 3  write tests");
@@ -182,6 +197,7 @@ int main() {
     testClearDone();
     testReopen();
     testSearch();
+    testSaveFileIsAtomic();
     testFormat();
     std::cout << checks - failures << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
