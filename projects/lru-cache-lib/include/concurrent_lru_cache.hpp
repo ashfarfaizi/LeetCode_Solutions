@@ -36,6 +36,21 @@ public:
         return v;
     }
 
+    std::optional<Value> peek(const Key& key) const {
+        std::lock_guard<std::mutex> lock(mu_);
+        return cache_.peek(key);
+    }
+
+    bool contains(const Key& key) const {
+        std::lock_guard<std::mutex> lock(mu_);
+        return cache_.contains(key);
+    }
+
+    void resize(std::size_t newCapacity) {
+        std::lock_guard<std::mutex> lock(mu_);
+        cache_.resize(newCapacity);
+    }
+
     bool erase(const Key& key) {
         std::lock_guard<std::mutex> lock(mu_);
         return cache_.erase(key);
@@ -51,9 +66,25 @@ public:
         return cache_.size();
     }
 
+    std::size_t capacity() const {
+        std::lock_guard<std::mutex> lock(mu_);
+        return cache_.capacity();
+    }
+
+    // Snapshot of the keys from most to least recently used.
+    std::vector<Key> keys() const {
+        std::lock_guard<std::mutex> lock(mu_);
+        return cache_.keys();
+    }
+
     Stats stats() const {
         std::lock_guard<std::mutex> lock(mu_);
         return cache_.stats();
+    }
+
+    void resetStats() {
+        std::lock_guard<std::mutex> lock(mu_);
+        cache_.resetStats();
     }
 
 private:

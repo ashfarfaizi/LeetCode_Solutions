@@ -49,7 +49,9 @@ The callback runs after the entry has been removed and is not called for
 `erase()`, `popLeastRecent()` or `clear()`.
 
 For use from several threads, `lru::ConcurrentLRUCache` (in
-`concurrent_lru_cache.hpp`) guards a cache with a single mutex and adds
+`concurrent_lru_cache.hpp`) guards a cache with a single mutex. It offers
+the same `get`, `put`, `peek`, `contains`, `erase`, `clear`, `resize`,
+`keys` (a snapshot), `stats` and `resetStats`, and adds
 `getOrCompute(key, factory)`:
 
 ```cpp

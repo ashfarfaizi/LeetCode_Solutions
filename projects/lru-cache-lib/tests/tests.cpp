@@ -250,6 +250,23 @@ static void testGetOrPut() {
     CHECK(c.stats().evictions == 1);
 }
 
+static void testConcurrentForwarding() {
+    lru::ConcurrentLRUCache<int, int> c(3);
+    c.put(1, 10);
+    c.put(2, 20);
+    c.put(3, 30);
+    CHECK(c.peek(1) == 10);  // no recency change: 1 stays LRU
+    CHECK(c.contains(2));
+    CHECK(c.keys() == (std::vector<int>{3, 2, 1}));
+    c.resize(2);             // evicts 1
+    CHECK(c.capacity() == 2);
+    CHECK(!c.contains(1));
+    CHECK(c.stats().evictions == 1);
+    c.resetStats();
+    CHECK(c.stats().evictions == 0);
+    CHECK(c.stats().hits == 0);
+}
+
 int main() {
     testBasicGetPut();
     testEvictsLeastRecentlyUsed();
@@ -264,6 +281,7 @@ int main() {
     testPopLeastRecent();
     testGetOrPut();
     testConcurrentCache();
+    testConcurrentForwarding();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
