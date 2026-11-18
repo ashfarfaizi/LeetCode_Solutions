@@ -230,6 +230,26 @@ static void testPopLeastRecent() {
     CHECK(c.get(1) == std::string("one"));
 }
 
+static void testGetOrPut() {
+    lru::LRUCache<int, int> c(2);
+    int calls = 0;
+    auto square = [&](int k) { return [&calls, k] { ++calls; return k * k; }; };
+    CHECK(c.getOrPut(3, square(3)) == 9);
+    CHECK(c.getOrPut(3, square(3)) == 9);
+    CHECK(calls == 1);
+    c.getOrPut(4, square(4));
+    c.getOrPut(3, square(3));  // refreshes 3, so 4 is LRU
+    c.getOrPut(5, square(5));  // evicts 4
+    CHECK(!c.contains(4));
+    CHECK(c.contains(3) && c.contains(5));
+    CHECK(calls == 3);
+    c.getOrPut(5, square(5)) += 1;  // reference allows in-place update
+    CHECK(c.peek(5) == 26);
+    CHECK(c.stats().hits == 3);
+    CHECK(c.stats().misses == 3);
+    CHECK(c.stats().evictions == 1);
+}
+
 int main() {
     testBasicGetPut();
     testEvictsLeastRecentlyUsed();
@@ -242,6 +262,7 @@ int main() {
     testResize();
     testKeysAndForEach();
     testPopLeastRecent();
+    testGetOrPut();
     testConcurrentCache();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;

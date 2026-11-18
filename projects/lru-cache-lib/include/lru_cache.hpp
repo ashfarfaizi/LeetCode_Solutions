@@ -70,6 +70,25 @@ public:
         index_[key] = items_.begin();
     }
 
+    // Returns a reference to the cached value for key, inserting make() first
+    // if it is missing. Counts as a hit or a miss like get(). The reference is
+    // valid until the entry is removed or evicted.
+    template <typename Factory>
+    Value& getOrPut(const Key& key, Factory make) {
+        auto it = index_.find(key);
+        if (it != index_.end()) {
+            ++stats_.hits;
+            items_.splice(items_.begin(), items_, it->second);
+            return it->second->second;
+        }
+        ++stats_.misses;
+        Value value = make();
+        if (items_.size() == capacity_) evictLeastRecent();
+        items_.emplace_front(key, std::move(value));
+        index_[key] = items_.begin();
+        return items_.front().second;
+    }
+
     // True if key is cached; does not change recency.
     bool contains(const Key& key) const { return index_.count(key) != 0; }
 
@@ -129,7 +148,7 @@ public:
         return out;
     }
 
-    // Hit/miss counts come from get() only; peek() and contains() are not counted.
+    // Hit/miss counts come from get() and getOrPut() only; peek() and contains() are not counted.
     const Stats& stats() const { return stats_; }
     void resetStats() { stats_ = Stats{}; }
 

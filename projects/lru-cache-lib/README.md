@@ -22,6 +22,7 @@ Other operations:
 
 | call            | effect                                              |
 |-----------------|-----------------------------------------------------|
+| `getOrPut(k, f)` | value for `k`, inserting `f()` first if missing  |
 | `peek(k)`       | like `get` but does not change recency              |
 | `contains(k)`   | membership test, does not change recency            |
 | `erase(k)`      | removes `k`, returns whether it was present         |
@@ -33,7 +34,7 @@ Other operations:
 | `size()`, `empty()`, `capacity()` | the obvious                       |
 
 `stats()` returns hit, miss and eviction counters plus `hitRate()`;
-only `get` counts towards hits and misses. `resetStats()` zeroes them.
+only `get` and `getOrPut` count towards hits and misses. `resetStats()` zeroes them.
 
 To react to capacity evictions (for example to write dirty entries back),
 pass a callback to the constructor or `setEvictionCallback`:
