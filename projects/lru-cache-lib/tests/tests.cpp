@@ -1,6 +1,9 @@
 // Minimal self-contained test runner for lru-cache-lib.
 #include "concurrent_lru_cache.hpp"
 #include "lru_cache.hpp"
+#include "ttl_lru_cache.hpp"
+
+#include <chrono>
 
 #include <iostream>
 #include <atomic>
@@ -267,6 +270,48 @@ static void testConcurrentForwarding() {
     CHECK(c.stats().hits == 0);
 }
 
+// Hand-driven clock so TTL tests are deterministic.
+struct FakeClock {
+    using duration = std::chrono::milliseconds;
+    using rep = duration::rep;
+    using period = duration::period;
+    using time_point = std::chrono::time_point<FakeClock>;
+    static constexpr bool is_steady = true;
+    static inline time_point current{};
+    static time_point now() { return current; }
+    static void advance(int ms) { current += duration(ms); }
+};
+
+static void testTTLCache() {
+    using namespace std::chrono_literals;
+    lru::TTLLRUCache<std::string, int, std::hash<std::string>, FakeClock> c(2, 100ms);
+    c.put("a", 1);
+    FakeClock::advance(60);
+    c.put("b", 2);
+    CHECK(c.get("a") == 1);
+    FakeClock::advance(50);  // a is 110ms old, b is 50ms old
+    CHECK(!c.contains("a"));
+    CHECK(!c.get("a"));
+    CHECK(c.size() == 1);    // expired a removed by get
+    CHECK(c.get("b") == 2);
+    c.put("b", 20);          // overwrite restarts the clock
+    FakeClock::advance(90);
+    CHECK(c.get("b") == 20);
+    c.put("c", 3);
+    FakeClock::advance(20);  // b expired, c still fresh
+    CHECK(c.size() == 2);
+    CHECK(c.purgeExpired() == 1);
+    CHECK(c.contains("c"));
+    CHECK(c.stats().misses == 1);
+    bool threw = false;
+    try {
+        lru::TTLLRUCache<int, int, std::hash<int>, FakeClock> bad(1, 0ms);
+    } catch (const std::invalid_argument&) {
+        threw = true;
+    }
+    CHECK(threw);
+}
+
 int main() {
     testBasicGetPut();
     testEvictsLeastRecentlyUsed();
@@ -282,6 +327,7 @@ int main() {
     testGetOrPut();
     testConcurrentCache();
     testConcurrentForwarding();
+    testTTLCache();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

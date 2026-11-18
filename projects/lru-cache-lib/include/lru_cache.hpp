@@ -99,6 +99,13 @@ public:
         return it->second->second;
     }
 
+    // Pointer to the stored value, or nullptr; does not change recency or
+    // stats. Invalidated when the entry is removed or evicted.
+    const Value* peekPtr(const Key& key) const {
+        auto it = index_.find(key);
+        return it == index_.end() ? nullptr : &it->second->second;
+    }
+
     // Removes key if present; returns whether anything was removed.
     bool erase(const Key& key) {
         auto it = index_.find(key);

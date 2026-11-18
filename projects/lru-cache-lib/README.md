@@ -25,6 +25,7 @@ Other operations:
 | `getOrPut(k, f)` | value for `k`, inserting `f()` first if missing  |
 | `peek(k)`       | like `get` but does not change recency              |
 | `contains(k)`   | membership test, does not change recency            |
+| `peekPtr(k)`    | pointer to the stored value or `nullptr`, no copy   |
 | `erase(k)`      | removes `k`, returns whether it was present         |
 | `popLeastRecent()` | removes and returns the LRU `(key, value)` pair  |
 | `clear()`       | removes everything                                  |
@@ -62,6 +63,21 @@ Result r = results.getOrCompute(id, [&] { return expensiveLookup(id); });
 The factory runs outside the lock, so it may run more than once for the same
 key under contention.
 
+For data that goes stale, `lru::TTLLRUCache` (in `ttl_lru_cache.hpp`) also
+expires each entry a fixed time after it was written:
+
+```cpp
+lru::TTLLRUCache<std::string, Token> tokens(256, std::chrono::minutes(5));
+tokens.put(user, token);
+if (auto t = tokens.get(user)) use(*t);  // nullopt once 5 minutes have passed
+tokens.purgeExpired();                    // optional sweep, returns count removed
+```
+
+Expired entries are removed lazily on lookup (counting as a miss) or by
+`purgeExpired()`, so `size()` may include entries that have expired but not
+been touched yet. The clock is the last template parameter (default
+`std::chrono::steady_clock`), which lets tests substitute a fake one.
+
 No dependencies beyond the standard library.
 
 ## Build & test
@@ -95,6 +111,7 @@ g++ -std=c++17 -Wall -Wextra -Iinclude tests/tests.cpp -o tests_bin -pthread && 
 ```
 include/lru_cache.hpp              the cache (header-only)
 include/concurrent_lru_cache.hpp   mutex-guarded wrapper
+include/ttl_lru_cache.hpp          LRU cache with per-entry expiry
 examples/cache_sim.cpp             trace-driven hit-rate simulator
 tests/tests.cpp                    minimal self-contained test runner
 ```
