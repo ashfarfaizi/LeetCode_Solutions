@@ -25,6 +25,7 @@ Other operations:
 | `peek(k)`       | like `get` but does not change recency              |
 | `contains(k)`   | membership test, does not change recency            |
 | `erase(k)`      | removes `k`, returns whether it was present         |
+| `popLeastRecent()` | removes and returns the LRU `(key, value)` pair  |
 | `clear()`       | removes everything                                  |
 | `resize(n)`     | changes capacity; shrinking evicts LRU entries      |
 | `keys()`        | keys from most to least recently used               |
@@ -44,7 +45,7 @@ lru::LRUCache<std::string, Page> pages(64, [](const std::string& key, const Page
 ```
 
 The callback runs after the entry has been removed and is not called for
-`erase()` or `clear()`.
+`erase()`, `popLeastRecent()` or `clear()`.
 
 For use from several threads, `lru::ConcurrentLRUCache` (in
 `concurrent_lru_cache.hpp`) guards a cache with a single mutex and adds

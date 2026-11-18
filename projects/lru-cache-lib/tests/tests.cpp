@@ -208,6 +208,28 @@ static void testConcurrentCache() {
     CHECK(c.get(5) == 25);
 }
 
+static void testPopLeastRecent() {
+    int evicted = 0;
+    lru::LRUCache<int, std::string> c(3, [&](const int&, const std::string&) { ++evicted; });
+    CHECK(!c.popLeastRecent());
+    c.put(1, "one");
+    c.put(2, "two");
+    c.put(3, "three");
+    c.get(1);  // order is now 1, 3, 2
+    auto p = c.popLeastRecent();
+    CHECK(p && p->first == 2 && p->second == "two");
+    CHECK(!c.contains(2));
+    CHECK(c.size() == 2);
+    p = c.popLeastRecent();
+    CHECK(p && p->first == 3);
+    CHECK(c.keys() == std::vector<int>{1});
+    CHECK(evicted == 0);
+    CHECK(c.stats().evictions == 0);
+    c.put(4, "four");  // index stays consistent after pops
+    CHECK(c.get(4) == std::string("four"));
+    CHECK(c.get(1) == std::string("one"));
+}
+
 int main() {
     testBasicGetPut();
     testEvictsLeastRecentlyUsed();
@@ -219,6 +241,7 @@ int main() {
     testEvictionCallback();
     testResize();
     testKeysAndForEach();
+    testPopLeastRecent();
     testConcurrentCache();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;

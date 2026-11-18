@@ -97,6 +97,17 @@ public:
         while (items_.size() > capacity_) evictLeastRecent();
     }
 
+    // Removes and returns the least recently used entry, or nullopt if empty.
+    // This is a deliberate removal: it is not counted as an eviction and does
+    // not invoke the eviction callback.
+    std::optional<std::pair<Key, Value>> popLeastRecent() {
+        if (items_.empty()) return std::nullopt;
+        Entry victim = std::move(items_.back());
+        index_.erase(victim.first);
+        items_.pop_back();
+        return victim;
+    }
+
     void clear() {
         items_.clear();
         index_.clear();
