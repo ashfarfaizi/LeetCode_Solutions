@@ -302,6 +302,28 @@ static void testMultiplePatterns() {
     CHECK(!mgrep::Matcher(s).matches("dog cat"));
 }
 
+static void testByteOffset() {
+    mgrep::Options o;
+    o.pattern = "x";
+    o.byteOffset = true;
+    // Offsets count every byte before the line, newlines included.
+    CHECK(runScan(o, "ab\nx1\ncd\nzx\n") == "3:x1\n9:zx\n");
+    // The offset comes after the label and the line number.
+    o.lineNumbers = true;
+    CHECK(runScan(o, "a\nx\n", "f") == "f:2:2:x\n");
+    // Context lines use '-' for the offset too.
+    o.lineNumbers = false;
+    o.beforeContext = 1;
+    CHECK(runScan(o, "abc\nx\n") == "0-abc\n4:x\n");
+    // With -o the offset is that of each match.
+    o.beforeContext = 0;
+    o.onlyMatching = true;
+    CHECK(runScan(o, "ab\naxbx\n") == "4:x\n6:x\n");
+    // A last line without a trailing newline still gets the right offset.
+    o.onlyMatching = false;
+    CHECK(runScan(o, "a\nx") == "2:x\n");
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -320,6 +342,7 @@ int main() {
     testBeforeContext();
     testBothContexts();
     testMultiplePatterns();
+    testByteOffset();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

@@ -1,6 +1,6 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-icnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
+//   mgrep [-bicnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
 //         {PATTERN | -e PATTERN...} [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
@@ -24,7 +24,7 @@ namespace {
 enum class ListMode { None, WithMatch, WithoutMatch };
 
 void usage() {
-    std::cerr << "usage: mgrep [-icnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
+    std::cerr << "usage: mgrep [-bicnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
                  "             {PATTERN | -e PATTERN...} [FILE...]\n";
 }
 
@@ -56,6 +56,7 @@ int main(int argc, char** argv) {
             switch (arg[j]) {
                 case 'i': opts.ignoreCase = true; break;
                 case 'n': opts.lineNumbers = true; break;
+                case 'b': opts.byteOffset = true; break;
                 case 'c': opts.countOnly = true; break;
                 case 'v': opts.invert = true; break;
                 case 'w': opts.wholeWord = true; break;

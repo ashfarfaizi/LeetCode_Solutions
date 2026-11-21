@@ -18,6 +18,7 @@ struct Options {
     bool wholeWord = false;    // match only where bounded by non-word chars
     bool wholeLine = false;    // the entire line must equal the pattern
     bool lineNumbers = false;  // prefix matches with their 1-based line number
+    bool byteOffset = false;   // prefix output with its 0-based byte offset (-b)
     bool countOnly = false;    // print only the number of matching lines
     bool onlyMatching = false; // print each matched part, not the whole line
     std::size_t maxCount = 0;  // stop after this many matching lines (0 = no limit)
@@ -62,7 +63,10 @@ private:
 // trailing context. With afterContext / beforeContext each match is followed /
 // preceded by up to that many further lines (never repeating a line), prefixed with "label-" and "N-" instead of ':'; groups
 // that are not adjacent are separated by a "--" line. Context is ignored with
-// countOnly and onlyMatching. Returns the number of matching lines.
+// countOnly and onlyMatching. With byteOffset each output line is also
+// prefixed (after the line number) with the 0-based byte offset in the input
+// of the line, or of the match itself with onlyMatching. Returns the number of
+// matching lines.
 std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
                  const std::string& label = "");
 

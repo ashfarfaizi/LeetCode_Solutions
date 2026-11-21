@@ -4,7 +4,7 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-icnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
+mgrep [-bicnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
       {PATTERN | -e PATTERN...} [FILE...]
 ```
 
@@ -18,6 +18,7 @@ leaves it off even for several; whichever comes last wins.
 | `-e P` | extra pattern (repeatable) |
 | `-i`   | ignore case (ASCII)        |
 | `-n`   | prefix lines with `N:`     |
+| `-b`   | prefix with byte offset    |
 | `-c`   | print only a match count   |
 | `-o`   | print only matched text    |
 | `-v`   | select non-matching lines  |
@@ -85,6 +86,11 @@ value may be attached (`-m3`) or separate (`-m 3`).
 `name:` and `N:` prefixes), which is handy for pulling tokens out of logs:
 `mgrep -oiw error app.log | wc -l` counts occurrences rather than lines.
 With `-v` it prints nothing, and `-c` still counts lines.
+
+`-b` prefixes each output line with the 0-based byte offset of that line in
+its input (after the `N:` prefix when `-n` is also given); with `-o` it is the
+offset of the match itself, so `mgrep -bo MAGIC blob.txt` tells you exactly
+where each occurrence starts.
 
 `-e PATTERN` can be given several times and a line is selected when it
 contains any of them: `mgrep -e WARN -e ERROR app.log`. Once `-e` is used

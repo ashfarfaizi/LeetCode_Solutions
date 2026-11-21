@@ -95,30 +95,39 @@ std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
     const bool context = !o.countOnly && !o.onlyMatching &&
                          (o.afterContext > 0 || o.beforeContext > 0);
     std::size_t matched = 0, lineNo = 0;
+    std::size_t offset = 0;       // byte offset of the start of the current line
+    std::size_t nextOffset = 0;   // byte offset of the line after it
     std::size_t afterLeft = 0;    // trailing context lines still to print
     std::size_t lastPrinted = 0;  // line number of the last printed line, 0 = none
     bool limitReached = false;
     std::string line;
     // Recent unprinted lines that may become leading context for the next match.
-    std::deque<std::pair<std::size_t, std::string>> before;
+    struct Pending {
+        std::size_t lineNo, offset;
+        std::string text;
+    };
+    std::deque<Pending> before;
 
     // Writes one output line; sep is ':' for selected lines, '-' for context.
-    auto emit = [&](std::size_t n, const std::string& text, char sep) {
+    auto emit = [&](std::size_t n, std::size_t at, const std::string& text, char sep) {
         if (context && lastPrinted != 0 && n > lastPrinted + 1) out << "--\n";
         if (!label.empty()) out << label << sep;
         if (o.lineNumbers) out << n << sep;
+        if (o.byteOffset) out << at << sep;
         out << text << '\n';
         lastPrinted = n;
     };
 
     while (std::getline(in, line)) {
         ++lineNo;
+        offset = nextOffset;
+        nextOffset = offset + line.size() + (in.eof() ? 0 : 1);
         if (limitReached || !m.matches(line)) {
             if (afterLeft > 0) {
-                emit(lineNo, line, '-');
+                emit(lineNo, offset, line, '-');
                 --afterLeft;
             } else if (context && o.beforeContext > 0) {
-                before.emplace_back(lineNo, line);
+                before.push_back({lineNo, offset, line});
                 if (before.size() > o.beforeContext) before.pop_front();
             }
             if (limitReached && afterLeft == 0) break;
@@ -132,13 +141,14 @@ std::size_t scan(std::istream& in, std::ostream& out, const Matcher& m,
                 for (const auto& [start, len] : m.spans(line)) {
                     if (!label.empty()) out << label << ':';
                     if (o.lineNumbers) out << lineNo << ':';
+                    if (o.byteOffset) out << offset + start << ':';
                     out << line.substr(start, len) << '\n';
                 }
             }
         } else {
-            for (const auto& [n, text] : before) emit(n, text, '-');
+            for (const Pending& p : before) emit(p.lineNo, p.offset, p.text, '-');
             before.clear();
-            emit(lineNo, line, ':');
+            emit(lineNo, offset, line, ':');
             afterLeft = context ? o.afterContext : 0;
         }
         if (o.maxCount != 0 && matched >= o.maxCount) {
