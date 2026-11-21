@@ -4,7 +4,7 @@
 dependencies beyond the standard library.
 
 ```
-mgrep [-bicnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
+mgrep [-bicnovwxlLqrsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
       {PATTERN | -e PATTERN... | -f FILE...} [FILE...]
 ```
 
@@ -33,6 +33,7 @@ leaves it off even for several; whichever comes last wins.
 | `-L`   | list files that don't      |
 | `-q`   | quiet: exit status only    |
 | `-s`   | no "cannot open" messages  |
+| `-r`   | search directories too     |
 
 Exit status is `0` if any line matched, `1` if none did and `2` on a usage
 error or a file that cannot be opened. With `-q` nothing is printed, reading
@@ -43,6 +44,12 @@ file could not be opened, so it slots straight into shell conditions:
 `-s` suppresses the message for a file that cannot be opened; the other
 files are still searched and the exit status is still `2`, so
 `mgrep -s TODO *.cpp missing.cpp` prints only matches.
+
+`-r` searches every regular file below each directory argument, in sorted
+path order, and searches the current directory when no `FILE` is given; file
+names are shown by default, so `mgrep -rn TODO src` reads like a list of
+locations. Without `-r` a directory argument is reported (`is a directory`)
+and gives exit status `2`.
 
 Short options can be combined and `--` ends option parsing.
 

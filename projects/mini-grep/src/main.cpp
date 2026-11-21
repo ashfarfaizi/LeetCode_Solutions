@@ -1,6 +1,6 @@
 // mgrep: print lines that contain a pattern.
 //
-//   mgrep [-bicnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
+//   mgrep [-bicnovwxlLqrsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
 //         {PATTERN | -e PATTERN... | -f FILE...} [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
@@ -9,12 +9,16 @@
 // only the names of files that do / do not contain a selected line, and -q
 // prints nothing at all, exiting 0 at the first selected line.
 // -s hides "cannot open" messages (the exit status still reports them).
+// -r searches directories recursively (the current directory when no FILE is
+// given); without it a directory argument is reported as an error.
 // -f FILE reads one pattern per line from FILE ("-" for standard input).
 // Exit status: 0 if any line matched, 1 if none did, 2 on usage or I/O error.
 
 #include "grep.hpp"
 
+#include <algorithm>
 #include <cstdlib>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -25,7 +29,7 @@ namespace {
 enum class ListMode { None, WithMatch, WithoutMatch };
 
 void usage() {
-    std::cerr << "usage: mgrep [-bicnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
+    std::cerr << "usage: mgrep [-bicnovwxlLqrsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
                  "             {PATTERN | -e PATTERN... | -f FILE...} [FILE...]\n";
 }
 
@@ -54,6 +58,25 @@ bool readPatternFile(const std::string& name, std::vector<std::string>& patterns
     return true;
 }
 
+// Appends name to out, or with recursive and a directory, every regular file
+// below it in sorted order (so output is deterministic). Unreadable
+// subdirectories are skipped.
+void expand(const std::string& name, bool recursive, std::vector<std::string>& out) {
+    namespace fs = std::filesystem;
+    std::error_code ec;
+    if (!recursive || name == "-" || !fs::is_directory(name, ec)) {
+        out.push_back(name);
+        return;
+    }
+    std::vector<std::string> found;
+    for (fs::recursive_directory_iterator it(name, fs::directory_options::skip_permission_denied, ec), end;
+         !ec && it != end; it.increment(ec)) {
+        if (it->is_regular_file(ec)) found.push_back(it->path().string());
+    }
+    std::sort(found.begin(), found.end());
+    out.insert(out.end(), found.begin(), found.end());
+}
+
 }  // namespace
 
 int main(int argc, char** argv) {
@@ -61,6 +84,7 @@ int main(int argc, char** argv) {
     ListMode list = ListMode::None;
     bool quiet = false;
     bool noMessages = false;  // -s
+    bool recursive = false;   // -r
     enum class Names { Auto, Always, Never } names = Names::Auto;
     std::vector<std::string> patterns;  // from -e and -f
     bool patternOption = false;         // -e or -f given: no positional pattern
@@ -86,6 +110,7 @@ int main(int argc, char** argv) {
                 case 'L': list = ListMode::WithoutMatch; break;
                 case 'q': quiet = true; break;
                 case 's': noMessages = true; break;
+                case 'r': recursive = true; break;
                 case 'H': names = Names::Always; break;
                 case 'h': names = Names::Never; break;
                 case 'e':
@@ -159,16 +184,26 @@ int main(int argc, char** argv) {
         opts.pattern = patterns.front();
         opts.morePatterns.assign(patterns.begin() + 1, patterns.end());
     }
-    std::vector<std::string> files(argv + i, argv + argc);
-    if (files.empty()) files.push_back("-");
+    std::vector<std::string> args(argv + i, argv + argc);
+    if (args.empty()) args.push_back(recursive ? "." : "-");
+    std::vector<std::string> files;
+    for (const std::string& a : args) expand(a, recursive, files);
 
     mgrep::Matcher matcher(opts);
-    bool showNames = names == Names::Auto ? files.size() > 1 : names == Names::Always;
+    // With -r names are shown by default even if only one file turned up.
+    bool showNames = names == Names::Auto ? files.size() > 1 || recursive
+                                          : names == Names::Always;
     bool anyMatch = false, hadError = false;
     for (const std::string& name : files) {
         std::string label = showNames ? (name == "-" ? "(standard input)" : name) : "";
         std::ifstream file;
         if (name != "-") {
+            std::error_code ec;
+            if (std::filesystem::is_directory(name, ec)) {
+                if (!noMessages) std::cerr << "mgrep: " << name << ": is a directory\n";
+                hadError = true;
+                continue;
+            }
             file.open(name);
             if (!file) {
                 if (!noMessages) std::cerr << "mgrep: " << name << ": cannot open file\n";

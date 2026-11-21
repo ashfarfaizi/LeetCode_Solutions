@@ -43,5 +43,17 @@ out=$("$MGREP" -f "$tmp/pats" -e alpha "$tmp/a.txt" | tr '\n' ' '); check "-f wi
 out=$("$MGREP" -v -f "$tmp/empty" "$tmp/a.txt" | wc -l | tr -d ' '); check "-vf empty selects all" "2" "$out"
 "$MGREP" -f "$tmp/nope" "$tmp/a.txt" 2> /dev/null; check "-f missing file" "2" "$?"
 
+mkdir -p "$tmp/d/sub" "$tmp/d/empty"
+printf 'alpha one\n' > "$tmp/d/b.txt"
+printf 'nothing\nalpha two\n' > "$tmp/d/sub/a.txt"
+err=$("$MGREP" alpha "$tmp/d" 2>&1 > /dev/null); check "dir without -r exit" "2" "$?"
+check "dir without -r message" "mgrep: $tmp/d: is a directory" "$err"
+out=$("$MGREP" -rn alpha "$tmp/d" | tr '\n' '|'); check "-r exit" "0" "$?"
+check "-r sorted with names" "$tmp/d/b.txt:1:alpha one|$tmp/d/sub/a.txt:2:alpha two|" "$out"
+abs="$(cd "$(dirname "$MGREP")" && pwd)/$(basename "$MGREP")"
+out=$(cd "$tmp/d/sub" && "$abs" -r alpha); check "-r defaults to ." "./a.txt:alpha two" "$out"
+out=$("$MGREP" -rl two "$tmp/d"); check "-rl" "$tmp/d/sub/a.txt" "$out"
+"$MGREP" -r alpha "$tmp/d/empty"; check "-r empty dir" "1" "$?"
+
 echo "$pass/$((pass + fail)) cli checks passed"
 [ "$fail" -eq 0 ]
