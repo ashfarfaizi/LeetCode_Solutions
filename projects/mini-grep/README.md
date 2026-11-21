@@ -51,7 +51,10 @@ names are shown by default, so `mgrep -rn TODO src` reads like a list of
 locations. Without `-r` a directory argument is reported (`is a directory`)
 and gives exit status `2`.
 
-Short options can be combined and `--` ends option parsing.
+Short options can be combined and `--` ends option parsing, so
+`mgrep -- --help notes.md` searches for the text `--help`. `mgrep --help`
+prints a summary of every option to standard output and exits `0`; any other
+`--long` option is rejected with status `2`.
 
 ## Build & test
 

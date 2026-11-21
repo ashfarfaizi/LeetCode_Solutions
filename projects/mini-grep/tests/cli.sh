@@ -55,5 +55,11 @@ out=$(cd "$tmp/d/sub" && "$abs" -r alpha); check "-r defaults to ." "./a.txt:alp
 out=$("$MGREP" -rl two "$tmp/d"); check "-rl" "$tmp/d/sub/a.txt" "$out"
 "$MGREP" -r alpha "$tmp/d/empty"; check "-r empty dir" "1" "$?"
 
+out=$("$MGREP" --help 2> /dev/null | head -n 1); check "--help exit" "0" "$?"
+check "--help on stdout" "usage: mgrep [-bicnovwxlLqrsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]" "$out"
+err=$("$MGREP" --colour x "$tmp/a.txt" 2>&1 > /dev/null); check "unknown long option exit" "2" "$?"
+check "unknown long option message" "mgrep: unknown option --colour" "$(echo "$err" | head -n 1)"
+out=$("$MGREP" -- --help "$tmp/a.txt"); check "-- then --help is a pattern" "1" "$?"
+
 echo "$pass/$((pass + fail)) cli checks passed"
 [ "$fail" -eq 0 ]

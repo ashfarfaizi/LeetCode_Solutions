@@ -28,9 +28,27 @@ namespace {
 
 enum class ListMode { None, WithMatch, WithoutMatch };
 
-void usage() {
-    std::cerr << "usage: mgrep [-bicnovwxlLqrsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
-                 "             {PATTERN | -e PATTERN... | -f FILE...} [FILE...]\n";
+constexpr const char* kUsage =
+    "usage: mgrep [-bicnovwxlLqrsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
+    "             {PATTERN | -e PATTERN... | -f FILE...} [FILE...]\n";
+
+void usage() { std::cerr << kUsage; }
+
+// Full option summary for --help, written to standard output.
+void help() {
+    std::cout << kUsage
+              << "\nPrint lines of each FILE (standard input for - or none) that contain PATTERN.\n\n"
+                 "  -e PAT  add a pattern (repeatable)     -f FILE read patterns from FILE\n"
+                 "  -i      ignore case                    -v      select non-matching lines\n"
+                 "  -w      match whole words              -x      match whole lines\n"
+                 "  -n      prefix line numbers            -b      prefix byte offsets\n"
+                 "  -c      print match counts             -o      print only the matched text\n"
+                 "  -m NUM  stop after NUM matches         -A/-B/-C NUM  context after/before/both\n"
+                 "  -l / -L list files with / without a match\n"
+                 "  -H / -h always / never prefix file names\n"
+                 "  -r      search directories recursively -q      quiet, exit status only\n"
+                 "  -s      hide file error messages       --help  show this help\n"
+                 "\nExit status: 0 if a line was selected, 1 if none, 2 on error.\n";
 }
 
 // Parses a non-negative decimal count; returns false on anything else.
@@ -94,6 +112,15 @@ int main(int argc, char** argv) {
         if (arg == "--") {
             ++i;
             break;
+        }
+        if (arg == "--help") {
+            help();
+            return 0;
+        }
+        if (arg.size() > 2 && arg[0] == '-' && arg[1] == '-') {
+            std::cerr << "mgrep: unknown option " << arg << '\n';
+            usage();
+            return 2;
         }
         if (arg.size() < 2 || arg[0] != '-') break;
         for (std::size_t j = 1; j < arg.size(); ++j) {
