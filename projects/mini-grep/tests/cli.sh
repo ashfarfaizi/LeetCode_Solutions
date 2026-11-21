@@ -34,5 +34,14 @@ check "-s still scans other files" "$tmp/a.txt:alpha" "$out"
 "$MGREP" -q -s alpha "$tmp/missing" "$tmp/a.txt"; check "-qs match wins" "0" "$?"
 "$MGREP" -z alpha "$tmp/a.txt" 2> /dev/null; check "bad option" "2" "$?"
 
+printf 'beta\r\ngamma\n' > "$tmp/pats"
+out=$("$MGREP" -f "$tmp/pats" "$tmp/a.txt"); check "-f exit" "0" "$?"
+check "-f reads patterns (CRLF ok)" "beta" "$out"
+out=$("$MGREP" -f "$tmp/pats" -e alpha "$tmp/a.txt" | tr '\n' ' '); check "-f with -e" "alpha beta " "$out"
+: > "$tmp/empty"
+"$MGREP" -f "$tmp/empty" "$tmp/a.txt" > /dev/null; check "-f empty matches nothing" "1" "$?"
+out=$("$MGREP" -v -f "$tmp/empty" "$tmp/a.txt" | wc -l | tr -d ' '); check "-vf empty selects all" "2" "$out"
+"$MGREP" -f "$tmp/nope" "$tmp/a.txt" 2> /dev/null; check "-f missing file" "2" "$?"
+
 echo "$pass/$((pass + fail)) cli checks passed"
 [ "$fail" -eq 0 ]

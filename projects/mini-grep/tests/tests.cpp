@@ -324,6 +324,17 @@ static void testByteOffset() {
     CHECK(runScan(o, "a\nx") == "2:x\n");
 }
 
+static void testNoPatterns() {
+    mgrep::Options o;
+    o.noPatterns = true;
+    o.pattern = "ignored";
+    CHECK(!mgrep::Matcher(o).matches("ignored"));
+    CHECK(!mgrep::Matcher(o).matches(""));
+    CHECK(mgrep::Matcher(o).spans("ignored").empty());
+    o.invert = true;  // with -v every line is selected
+    CHECK(runScan(o, "a\nb\n") == "a\nb\n");
+}
+
 int main() {
     testLiteralMatch();
     testIgnoreCase();
@@ -343,6 +354,7 @@ int main() {
     testBothContexts();
     testMultiplePatterns();
     testByteOffset();
+    testNoPatterns();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

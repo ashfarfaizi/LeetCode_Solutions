@@ -22,8 +22,10 @@ bool isWordChar(char c) {
 }  // namespace
 
 Matcher::Matcher(Options opts) : opts_(std::move(opts)) {
-    needles_.push_back(opts_.pattern);
-    needles_.insert(needles_.end(), opts_.morePatterns.begin(), opts_.morePatterns.end());
+    if (!opts_.noPatterns) {
+        needles_.push_back(opts_.pattern);
+        needles_.insert(needles_.end(), opts_.morePatterns.begin(), opts_.morePatterns.end());
+    }
     if (opts_.ignoreCase) {
         for (std::string& n : needles_) n = toLower(n);
     }

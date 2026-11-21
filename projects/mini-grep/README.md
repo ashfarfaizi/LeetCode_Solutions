@@ -5,7 +5,7 @@ dependencies beyond the standard library.
 
 ```
 mgrep [-bicnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
-      {PATTERN | -e PATTERN...} [FILE...]
+      {PATTERN | -e PATTERN... | -f FILE...} [FILE...]
 ```
 
 It prints every line that contains `PATTERN` as a plain substring. With no
@@ -16,6 +16,7 @@ leaves it off even for several; whichever comes last wins.
 | option | effect                     |
 |--------|----------------------------|
 | `-e P` | extra pattern (repeatable) |
+| `-f F` | patterns from file `F`     |
 | `-i`   | ignore case (ASCII)        |
 | `-n`   | prefix lines with `N:`     |
 | `-b`   | prefix with byte offset    |
@@ -98,6 +99,14 @@ there is no positional pattern, so every remaining argument is a file. It is
 also the way to search for text that starts with `-` (`mgrep -e -v`). With
 `-o`, where patterns overlap the leftmost match is printed, and the longest
 one when several start at the same place.
+
+`-f FILE` reads patterns from `FILE`, one per line (`-` reads them from
+standard input), and can be repeated or mixed with `-e`; like `-e` it means
+there is no positional pattern. A trailing carriage return is dropped from
+each line, so files saved with Windows line endings work. A blank line in the
+file is an empty pattern and matches every line, while an empty file has no
+patterns at all and matches nothing, which keeps
+`mgrep -vf known_errors.txt app.log` working even when the list is empty.
 
 `-A N` prints up to `N` lines after each match and `-B N` up to `N` lines
 before it; `-C N` sets both. A line is never printed twice when contexts

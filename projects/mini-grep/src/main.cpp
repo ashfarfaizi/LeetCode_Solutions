@@ -1,7 +1,7 @@
 // mgrep: print lines that contain a pattern.
 //
 //   mgrep [-bicnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]
-//         {PATTERN | -e PATTERN...} [FILE...]
+//         {PATTERN | -e PATTERN... | -f FILE...} [FILE...]
 //
 // With no FILE (or FILE "-") standard input is read. When more than one file
 // is given each output line is prefixed with its file name (-H forces the
@@ -9,6 +9,7 @@
 // only the names of files that do / do not contain a selected line, and -q
 // prints nothing at all, exiting 0 at the first selected line.
 // -s hides "cannot open" messages (the exit status still reports them).
+// -f FILE reads one pattern per line from FILE ("-" for standard input).
 // Exit status: 0 if any line matched, 1 if none did, 2 on usage or I/O error.
 
 #include "grep.hpp"
@@ -25,13 +26,31 @@ enum class ListMode { None, WithMatch, WithoutMatch };
 
 void usage() {
     std::cerr << "usage: mgrep [-bicnovwxlLqsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]\n"
-                 "             {PATTERN | -e PATTERN...} [FILE...]\n";
+                 "             {PATTERN | -e PATTERN... | -f FILE...} [FILE...]\n";
 }
 
 // Parses a non-negative decimal count; returns false on anything else.
 bool parseCount(const std::string& s, std::size_t& out) {
     if (s.empty() || s.find_first_not_of("0123456789") != std::string::npos) return false;
     out = std::strtoull(s.c_str(), nullptr, 10);
+    return true;
+}
+
+// Appends every line of the named file ("-" = standard input) to patterns,
+// dropping a trailing '\r' so files with CRLF endings work. Returns false if
+// the file cannot be opened.
+bool readPatternFile(const std::string& name, std::vector<std::string>& patterns) {
+    std::ifstream file;
+    if (name != "-") {
+        file.open(name);
+        if (!file) return false;
+    }
+    std::istream& in = name == "-" ? std::cin : file;
+    std::string line;
+    while (std::getline(in, line)) {
+        if (!line.empty() && line.back() == '\r') line.pop_back();
+        patterns.push_back(line);
+    }
     return true;
 }
 
@@ -43,7 +62,8 @@ int main(int argc, char** argv) {
     bool quiet = false;
     bool noMessages = false;  // -s
     enum class Names { Auto, Always, Never } names = Names::Auto;
-    std::vector<std::string> patterns;  // from -e
+    std::vector<std::string> patterns;  // from -e and -f
+    bool patternOption = false;         // -e or -f given: no positional pattern
     int i = 1;
     for (; i < argc; ++i) {
         std::string arg = argv[i];
@@ -68,17 +88,28 @@ int main(int argc, char** argv) {
                 case 's': noMessages = true; break;
                 case 'H': names = Names::Always; break;
                 case 'h': names = Names::Never; break;
-                case 'e': {
-                    // Like -m, the pattern is the rest of the argument or the next one.
+                case 'e':
+                case 'f': {
+                    // Like -m, the value is the rest of the argument or the next one.
+                    const char opt = arg[j];
+                    std::string value;
                     if (j + 1 < arg.size()) {
-                        patterns.push_back(arg.substr(j + 1));
+                        value = arg.substr(j + 1);
                     } else if (i + 1 < argc) {
-                        patterns.push_back(argv[++i]);
+                        value = argv[++i];
                     } else {
-                        std::cerr << "mgrep: -e needs a pattern\n";
+                        std::cerr << "mgrep: -" << opt << " needs "
+                                  << (opt == 'e' ? "a pattern" : "a file") << '\n';
                         usage();
                         return 2;
                     }
+                    if (opt == 'e') {
+                        patterns.push_back(value);
+                    } else if (!readPatternFile(value, patterns)) {
+                        std::cerr << "mgrep: " << value << ": cannot open pattern file\n";
+                        return 2;
+                    }
+                    patternOption = true;
                     j = arg.size();
                     break;
                 }
@@ -115,15 +146,19 @@ int main(int argc, char** argv) {
             }
         }
     }
-    if (patterns.empty()) {
+    if (!patternOption) {
         if (i >= argc) {
             usage();
             return 2;
         }
         patterns.push_back(argv[i++]);
     }
-    opts.pattern = patterns.front();
-    opts.morePatterns.assign(patterns.begin() + 1, patterns.end());
+    if (patterns.empty()) {
+        opts.noPatterns = true;  // -f of an empty file matches nothing
+    } else {
+        opts.pattern = patterns.front();
+        opts.morePatterns.assign(patterns.begin() + 1, patterns.end());
+    }
     std::vector<std::string> files(argv + i, argv + argc);
     if (files.empty()) files.push_back("-");
 

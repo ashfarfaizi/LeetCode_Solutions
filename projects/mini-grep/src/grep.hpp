@@ -13,6 +13,7 @@ namespace mgrep {
 struct Options {
     std::string pattern;
     std::vector<std::string> morePatterns;  // extra patterns (-e); any may match
+    bool noPatterns = false;   // ignore pattern/morePatterns: nothing matches (-f of an empty file)
     bool ignoreCase = false;
     bool invert = false;       // select lines that do NOT match
     bool wholeWord = false;    // match only where bounded by non-word chars
