@@ -29,6 +29,10 @@ double apply(char op, double a, double b) {
         case 'g': return a >= b ? 1.0 : 0.0;
         case 'E': return a == b ? 1.0 : 0.0;
         case 'N': return a != b ? 1.0 : 0.0;
+        // Logical operators treat any non-zero value as true. Both operands
+        // are always evaluated (no short-circuiting).
+        case 'A': return (a != 0.0 && b != 0.0) ? 1.0 : 0.0;
+        case 'O': return (a != 0.0 || b != 0.0) ? 1.0 : 0.0;
     }
     throw EvalError("unknown operator '" + operatorText(op) + "'");
 }

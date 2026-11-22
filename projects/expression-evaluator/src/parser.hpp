@@ -8,7 +8,7 @@
 namespace expr {
 
 // Convert infix tokens to Reverse Polish Notation using Dijkstra's
-// shunting-yard algorithm. Precedence (low to high): comparisons
+// shunting-yard algorithm. Precedence (low to high): ||, &&, comparisons
 // (< <= > >= == !=), + -, * / %, unary -, ^.
 // ^ is right-associative; the binary rest are left-associative. Postfix
 // factorial '!' binds tighter than everything, so 2^3! == 2^6 and -3! == -6.

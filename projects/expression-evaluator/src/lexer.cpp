@@ -9,8 +9,11 @@ namespace {
 bool isOperatorChar(char c) {
     return c == '+' || c == '-' || c == '*' || c == '/' || c == '%' || c == '^';
 }
-// Map "<=", ">=", "==", "!=" to their single-char codes; 0 if not one.
+// Map "<=", ">=", "==", "!=", "&&", "||" to their single-char codes; 0 if
+// not one.
 char twoCharOperator(char a, char b) {
+    if (a == '&' && b == '&') return 'A';
+    if (a == '|' && b == '|') return 'O';
     if (b != '=') return '\0';
     switch (a) {
         case '<': return 'l';
@@ -44,6 +47,8 @@ std::string operatorText(char op) {
         case 'g': return ">=";
         case 'E': return "==";
         case 'N': return "!=";
+        case 'A': return "&&";
+        case 'O': return "||";
         case 'u': return "neg";
         default: return std::string(1, op);
     }

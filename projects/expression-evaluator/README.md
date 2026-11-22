@@ -14,6 +14,10 @@ A small arithmetic expression evaluator written in C++17, built in stages:
    Postfix `!` is the factorial and binds tightest, so `2^3! = 64` and
    `-3! = -6`; it accepts non-negative integers up to `170`. Note that
    `3!=6` lexes as `3 != 6`; write `(3!) == 6` to compare a factorial.
+   Below the comparisons sit the logical `&&` and then `||` (lowest of
+   all); any non-zero operand counts as true and the result is `1` or `0`,
+   so `x > 0 && x < 10` tests a range. Both sides are always evaluated, so
+   `0 && 1 / 0` is still a division-by-zero error.
 3. **Evaluator** – computes the RPN result with a value stack and reports
    errors such as division or modulo by zero. `%` is the
    floating-point remainder (`fmod`), so `-7 % 3 = -1` and `5.5 % 2 = 1.5`.

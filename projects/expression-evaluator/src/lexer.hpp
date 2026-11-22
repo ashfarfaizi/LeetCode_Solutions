@@ -14,7 +14,8 @@ struct Token {
     TokenType type;
     double value = 0.0;  // Number: the value; Function: argument count
     // Operator: the symbol; two-character comparisons are encoded as
-    // 'l' (<=), 'g' (>=), 'E' (==) and 'N' (!=). See operatorText().
+    // 'l' (<=), 'g' (>=), 'E' (==) and 'N' (!=), and the logical operators
+    // as 'A' (&&) and 'O' (||). See operatorText().
     char op = '\0';
     std::string name{};  // valid when type == Identifier or Function
 

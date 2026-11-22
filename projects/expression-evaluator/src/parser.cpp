@@ -7,11 +7,13 @@ namespace expr {
 namespace {
 int precedence(char op) {
     switch (op) {
-        case '<': case '>': case 'l': case 'g': case 'E': case 'N': return 1;
-        case '+': case '-': return 2;
-        case '*': case '/': case '%': return 3;
-        case 'u': return 4;  // unary minus: binds tighter than * / but looser than ^
-        case '^': return 5;
+        case 'O': return 1;  // ||
+        case 'A': return 2;  // &&
+        case '<': case '>': case 'l': case 'g': case 'E': case 'N': return 3;
+        case '+': case '-': return 4;
+        case '*': case '/': case '%': return 5;
+        case 'u': return 6;  // unary minus: binds tighter than * / but looser than ^
+        case '^': return 7;
         default: return 0;
     }
 }

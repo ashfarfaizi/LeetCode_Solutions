@@ -129,6 +129,9 @@ static void testParser() {
     CHECK(rpnString("min(a, max(b, c), d)") == "a b c max d min");
     CHECK(toRPN(tokenize("max(1, 2, 3)")).back().value == 3);
     auto show = [](const std::string& src) { return rpnToString(toRPN(tokenize(src))); };
+    CHECK(show("a || b && c < 1") == "a b c 1 < && ||");
+    CHECK(throwsParseError([] { tokenize("1 & 2"); }));
+    CHECK(throwsParseError([] { tokenize("1 | 2"); }));
     CHECK(show("-max(1, 2.5) * x") == "1 2.5 max/2 neg x *");
     CHECK(show("sqrt(0.125) % 3") == "0.125 sqrt 3 %");
     CHECK(show("") == "");
@@ -216,6 +219,14 @@ static void testEvaluator() {
     CHECK(near(evaluate("2 ^ 3 != 8"), 0));
     CHECK(near(evaluate("(3 > 2) * 10"), 10));
     CHECK(near(evaluate("-1 < 0"), 1));
+    CHECK(near(evaluate("1 && 2"), 1));
+    CHECK(near(evaluate("1 && 0"), 0));
+    CHECK(near(evaluate("0 || -3"), 1));
+    CHECK(near(evaluate("0 || 0"), 0));
+    CHECK(near(evaluate("3 > 2 && 2 > 1"), 1));
+    CHECK(near(evaluate("1 || 0 && 0"), 1));    // && binds tighter than ||
+    CHECK(near(evaluate("(1 || 0) && 0"), 0));
+    CHECK(throwsEvalError([] { evaluate("0 && 1 / 0"); }));  // no short-circuit
     CHECK(near(evaluate("5!"), 120));
     CHECK(near(evaluate("0!"), 1));
     CHECK(near(evaluate("2 ^ 3!"), 64));
