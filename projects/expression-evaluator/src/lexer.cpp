@@ -121,6 +121,9 @@ std::vector<Token> tokenize(const std::string& input) {
         } else if (c == '=') {
             tokens.push_back({TokenType::Assign, 0.0, '\0'});
             ++i;
+        } else if (c == ';') {
+            tokens.push_back({TokenType::Semicolon, 0.0, '\0'});
+            ++i;
         } else if (c == ',') {
             tokens.push_back({TokenType::Comma, 0.0, '\0'});
             ++i;

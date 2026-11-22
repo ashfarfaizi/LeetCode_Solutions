@@ -45,6 +45,9 @@ std::vector<Token> toRPN(const std::vector<Token>& tokens) {
                 // Assignment is only valid as "name = expr" and is split off
                 // by evaluate() before parsing.
                 throw ParseError("unexpected '='", i);
+            case TokenType::Semicolon:
+                // Statements are split on ';' by evaluate() before parsing.
+                throw ParseError("unexpected ';'", i);
             case TokenType::Number:
                 output.push_back(t);
                 expectOperand = false;

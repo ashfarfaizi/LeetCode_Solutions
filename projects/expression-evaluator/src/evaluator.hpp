@@ -33,7 +33,9 @@ double evaluate(const std::string& expression);
 
 // Like evaluate(), but resolves identifiers from env and also accepts an
 // assignment "name = expr", which stores the result in env and returns it.
-// The constants pi and e cannot be reassigned.
+// The constants pi and e cannot be reassigned. Several statements may be
+// separated by ';' ("x = 2; y = x * 3; x + y"); they run in order and the
+// last one's value is returned. Empty statements are skipped.
 double evaluate(const std::string& expression, Environment& env);
 
 }  // namespace expr

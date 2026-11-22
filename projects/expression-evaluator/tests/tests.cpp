@@ -287,6 +287,20 @@ static void testVariables() {
     CHECK(throwsParseError([&] { evaluate("2 = 1", env); }));
     CHECK(near(evaluate("big = x >= 4", env), 1));
     CHECK(near(evaluate("x == 4", env), 1));
+
+    // ';' separates statements; the last value is returned.
+    Environment multi;
+    CHECK(near(evaluate("a = 2; b = a * 3; a + b", multi), 8));
+    CHECK(near(multi.at("b"), 6));
+    CHECK(near(evaluate("1; 2;", multi), 2));
+    CHECK(near(evaluate(";; 5 ;", multi), 5));
+    CHECK(near(evaluate("7; ;8", multi), 8));
+    CHECK(near(evaluate("a = 1; 2 + 3"), 5));  // overload without env
+    // Earlier assignments stick even when a later statement fails.
+    CHECK(throwsEvalError([&] { evaluate("c = 9; 1 / 0", multi); }));
+    CHECK(near(multi.at("c"), 9));
+    CHECK(throwsEvalError([&] { evaluate(";", multi); }));
+    CHECK(throwsParseError([] { toRPN(tokenize("1; 2")); }));
 }
 
 int main() {

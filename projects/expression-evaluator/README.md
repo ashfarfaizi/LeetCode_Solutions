@@ -51,6 +51,10 @@ double area = expr::evaluate("pi * r ^ 2", env);  // 12.566...
 A failed assignment (e.g. `x = 1 / 0`) leaves the previous value in place,
 and `pi` / `e` cannot be reassigned.
 
+Statements can be chained with `;`. They run left to right and the value
+of the last one is returned, so `w = 3; h = 4; w * h` gives `12` and
+leaves `w` and `h` bound. A trailing `;` is allowed.
+
 No external dependencies; only the standard library.
 
 ## Build & test

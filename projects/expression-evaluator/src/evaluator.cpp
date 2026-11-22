@@ -160,13 +160,8 @@ double evaluateRPN(const std::vector<Token>& rpn, const Environment& env) {
     return stack.back();
 }
 
-double evaluate(const std::string& expression) {
-    Environment scratch;
-    return evaluate(expression, scratch);
-}
-
-double evaluate(const std::string& expression, Environment& env) {
-    std::vector<Token> tokens = tokenize(expression);
+// One statement: either "name = expr" or a plain expression.
+static double evaluateStatement(std::vector<Token> tokens, Environment& env) {
     if (tokens.size() >= 2 && tokens[0].type == TokenType::Identifier &&
         tokens[1].type == TokenType::Assign) {
         const std::string name = tokens[0].name;
@@ -177,6 +172,30 @@ double evaluate(const std::string& expression, Environment& env) {
         return value;
     }
     return evaluateRPN(toRPN(tokens), env);
+}
+
+double evaluate(const std::string& expression) {
+    Environment scratch;
+    return evaluate(expression, scratch);
+}
+
+double evaluate(const std::string& expression, Environment& env) {
+    std::vector<Token> tokens = tokenize(expression);
+    // Split on ';' and run each non-empty statement in order; the value of
+    // the last one is the result. Assignments made by earlier statements
+    // are kept even if a later statement fails.
+    std::vector<std::vector<Token>> statements(1);
+    for (const Token& t : tokens) {
+        if (t.type == TokenType::Semicolon) {
+            if (!statements.back().empty()) statements.emplace_back();
+        } else {
+            statements.back().push_back(t);
+        }
+    }
+    if (statements.size() > 1 && statements.back().empty()) statements.pop_back();
+    double result = 0.0;
+    for (const auto& statement : statements) result = evaluateStatement(statement, env);
+    return result;
 }
 
 }  // namespace expr
