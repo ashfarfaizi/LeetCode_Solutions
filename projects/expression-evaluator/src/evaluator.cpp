@@ -64,6 +64,12 @@ double call(const std::string& name, const std::vector<double>& args) {
         if (name == "hypot") return std::hypot(args[0], args[1]);
         return std::atan2(args[0], args[1]);
     }
+    if (name == "if") {
+        // if(cond, a, b): a when cond is non-zero, else b. All three
+        // arguments are evaluated before the call.
+        expectArgs(name, args.size(), 3);
+        return args[0] != 0.0 ? args[1] : args[2];
+    }
     if (name == "gcd" || name == "lcm") {
         expectArgs(name, args.size(), 2);
         for (double v : args)
@@ -79,7 +85,7 @@ double call(const std::string& name, const std::vector<double>& args) {
 
     static const char* const unary[] = {"sqrt",  "cbrt", "ln",    "log10", "abs",
                                         "exp",   "sin",  "cos",   "tan",   "floor",
-                                        "ceil",  "round", "trunc", "sign"};
+                                        "ceil",  "round", "trunc", "sign", "not"};
     if (std::find(std::begin(unary), std::end(unary), name) == std::end(unary))
         throw EvalError("unknown function '" + name + "'");
     expectArgs(name, args.size(), 1);
@@ -94,6 +100,7 @@ double call(const std::string& name, const std::vector<double>& args) {
     }
     if (name == "cbrt") return std::cbrt(x);
     if (name == "abs") return std::fabs(x);
+    if (name == "not") return x == 0.0 ? 1.0 : 0.0;
     if (name == "sign") return x > 0 ? 1.0 : (x < 0 ? -1.0 : 0.0);
     if (name == "trunc") return std::trunc(x);
     if (name == "exp") return std::exp(x);

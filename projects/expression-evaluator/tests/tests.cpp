@@ -227,6 +227,13 @@ static void testEvaluator() {
     CHECK(near(evaluate("1 || 0 && 0"), 1));    // && binds tighter than ||
     CHECK(near(evaluate("(1 || 0) && 0"), 0));
     CHECK(throwsEvalError([] { evaluate("0 && 1 / 0"); }));  // no short-circuit
+    CHECK(near(evaluate("if(1, 10, 20)"), 10));
+    CHECK(near(evaluate("if(0, 10, 20)"), 20));
+    CHECK(near(evaluate("if(2 > 3, 1, if(2 == 2, 7, 8))"), 7));
+    CHECK(near(evaluate("not(0) + not(5)"), 1));
+    CHECK(near(evaluate("not(1 && 0)"), 1));
+    CHECK(throwsEvalError([] { evaluate("if(1, 2)"); }));
+    CHECK(throwsEvalError([] { evaluate("not(1, 2)"); }));
     CHECK(near(evaluate("5!"), 120));
     CHECK(near(evaluate("0!"), 1));
     CHECK(near(evaluate("2 ^ 3!"), 64));

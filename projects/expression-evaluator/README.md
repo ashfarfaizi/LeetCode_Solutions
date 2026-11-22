@@ -31,7 +31,11 @@ The constants `pi` and `e` are built in, along with the one-argument
 functions `sqrt cbrt abs sign exp ln log10 sin cos tan floor ceil round
 trunc` (angles in radians), the two-argument `pow hypot atan2` and
 `gcd lcm` (integers only, sign ignored), and the variadic
-`min` / `max`, e.g. `max(1, hypot(3, 4), 2)` is `5`. Passing the wrong
+`min` / `max`, e.g. `max(1, hypot(3, 4), 2)` is `5`. For conditionals
+there is `not(x)` (`1` when `x` is zero, else `0`) and
+`if(cond, a, b)`, which yields `a` when `cond` is non-zero and `b`
+otherwise, e.g. `if(x < 0, -x, x)`; like `&&`, every argument is
+evaluated. Passing the wrong
 number of arguments is an eval error. Domain errors such as `sqrt(-1)` or `ln(0)` are
 reported as eval errors rather than returning NaN.
 
