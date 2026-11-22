@@ -2,10 +2,12 @@
 //   calc "1 + 2 * 3"     evaluate the arguments as one expression and exit
 //   calc --rpn "1 + 2"   print the expression in RPN instead of evaluating it
 //   calc                 read expressions line by line from stdin (REPL)
+//   calc --help          print a summary of the syntax and exit
 //
 // In the REPL, variables persist between lines ("x = 4", then "x * 2"),
 // "ans" holds the last successful result, "vars" lists the bindings,
-// "del NAME..." removes bindings and "clear" removes them all.
+// "del NAME..." removes bindings, "clear" removes them all and "help"
+// prints the syntax summary.
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -38,6 +40,19 @@ bool printRPN(const std::string& line) {
     return false;
 }
 
+void printHelp(std::ostream& out) {
+    out << "usage: calc [--rpn] [EXPRESSION...] | calc --help\n"
+           "\n"
+           "operators (loosest first):  ||  &&  < <= > >= == !=  + -  * / %  unary -  ^  postfix !\n"
+           "numbers:    42  3.5  .5  1e3  2.5E-4  0xFF  0b1010\n"
+           "constants:  pi  e\n"
+           "functions:  sqrt cbrt abs sign exp ln log10 sin cos tan floor ceil round trunc not\n"
+           "            pow hypot atan2 gcd lcm (2 args), if(cond, a, b), min max (1+ args)\n"
+           "statements: name = expr   assigns; separate several with ';'\n"
+           "\n"
+           "REPL commands: vars, del NAME..., clear, help, exit/quit; 'ans' is the last result\n";
+}
+
 std::string trim(const std::string& s) {
     auto b = s.find_first_not_of(" \t\r");
     if (b == std::string::npos) return "";
@@ -50,6 +65,10 @@ int main(int argc, char** argv) {
     expr::Environment env;
     if (argc > 1) {
         int first = 1;
+        if (std::string(argv[1]) == "--help" || std::string(argv[1]) == "-h") {
+            printHelp(std::cout);
+            return 0;
+        }
         bool rpnOnly = std::string(argv[1]) == "--rpn";
         if (rpnOnly) ++first;
         std::string expression;
@@ -69,6 +88,10 @@ int main(int argc, char** argv) {
         if (line == "vars") {
             if (env.empty()) std::cout << "(no variables)\n";
             for (const auto& [name, value] : env) std::cout << name << " = " << value << '\n';
+            continue;
+        }
+        if (line == "help") {
+            printHelp(std::cout);
             continue;
         }
         if (line == "clear") {

@@ -98,7 +98,8 @@ $ ./build/calc --rpn "-max(1, 2.5) * x"
 ```
 
 In the REPL, variables persist between lines, `ans` holds the last
-successful result, and `vars` lists all bindings. `del x y` removes the
+successful result, `vars` lists all bindings and `help` prints a
+one-screen summary of the syntax (also available as `calc --help`). `del x y` removes the
 named variables (reporting any that do not exist) and `clear` removes
 them all.
 
