@@ -20,6 +20,22 @@ char twoCharOperator(char a, char b) {
         default: return '\0';
     }
 }
+// Value of a hex digit (0-9, a-f, A-F), or -1.
+int digitValue(char c) {
+    if (c >= '0' && c <= '9') return c - '0';
+    if (c >= 'a' && c <= 'f') return c - 'a' + 10;
+    if (c >= 'A' && c <= 'F') return c - 'A' + 10;
+    return -1;
+}
+// 16 or 2 if input[i..] starts a "0x"/"0b" literal with at least one valid
+// digit after the prefix, else 0 (so "0b" alone is 0 followed by b).
+int radixPrefix(const std::string& input, std::size_t i) {
+    if (i + 2 >= input.size() || input[i] != '0') return 0;
+    char p = input[i + 1];
+    int base = (p == 'x' || p == 'X') ? 16 : (p == 'b' || p == 'B') ? 2 : 0;
+    int d = base ? digitValue(input[i + 2]) : -1;
+    return d >= 0 && d < base ? base : 0;
+}
 }  // namespace
 
 std::string operatorText(char op) {
@@ -40,6 +56,21 @@ std::vector<Token> tokenize(const std::string& input) {
         char c = input[i];
         if (std::isspace(static_cast<unsigned char>(c))) {
             ++i;
+        } else if (int base = radixPrefix(input, i)) {
+            // 0x1F / 0b101: integer literals in base 16 or 2.
+            std::size_t start = i;
+            i += 2;
+            double value = 0.0;
+            while (i < input.size()) {
+                int d = digitValue(input[i]);
+                if (d < 0 || d >= base) break;
+                value = value * base + d;
+                ++i;
+            }
+            if (i < input.size() &&
+                (std::isalnum(static_cast<unsigned char>(input[i])) || input[i] == '_' || input[i] == '.'))
+                throw ParseError("malformed number", start);
+            tokens.push_back({TokenType::Number, value, '\0'});
         } else if (std::isdigit(static_cast<unsigned char>(c)) || c == '.') {
             std::size_t start = i;
             bool seenDot = false;

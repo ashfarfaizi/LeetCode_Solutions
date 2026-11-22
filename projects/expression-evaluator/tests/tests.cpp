@@ -56,6 +56,17 @@ static void testLexer() {
     CHECK(tokenize("2.5E-2")[0].value == 0.025);
     CHECK(tokenize(".5e+1")[0].value == 5.0);
     CHECK(tokenize("1e3").size() == 1);
+    // Hex and binary integer literals.
+    CHECK(tokenize("0xff")[0].value == 255.0);
+    CHECK(tokenize("0X1A")[0].value == 26.0);
+    CHECK(tokenize("0b1011")[0].value == 11.0);
+    CHECK(tokenize("0xFF+0b1").size() == 3);
+    CHECK(throwsParseError([] { tokenize("0b102"); }));
+    CHECK(throwsParseError([] { tokenize("0x1g"); }));
+    CHECK(throwsParseError([] { tokenize("0x1.5"); }));
+    // A bare prefix with no digits is just 0 followed by an identifier.
+    auto bare = tokenize("0b");
+    CHECK(bare.size() == 2 && bare[0].value == 0.0 && bare[1].name == "b");
     // A dangling exponent is not part of the number: "2e" is 2 then e.
     auto noExp = tokenize("2e");
     CHECK(noExp.size() == 2);
