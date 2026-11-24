@@ -1,0 +1,9 @@
+1:1 LBrace {
+1:2 String "a"
+1:5 Colon :
+1:7 LBracket [
+1:8 Number 1
+1:9 Comma ,
+1:11 String "x\ny"
+1:17 RBracket ]
+1:18 RBrace }

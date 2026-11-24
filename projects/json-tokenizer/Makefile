@@ -1,16 +1,28 @@
 CXX      ?= g++
 CXXFLAGS ?= -std=c++17 -Wall -Wextra -O2
 
-.PHONY: all test clean
+.PHONY: all test cli-test clean
 
-all: test
+all: build/jtok test
 
 build/tests: tests/tests.cpp $(wildcard include/*.hpp)
 	@mkdir -p build
 	$(CXX) $(CXXFLAGS) -Iinclude tests/tests.cpp -o $@
 
-test: build/tests
+build/jtok: src/jtok.cpp $(wildcard include/*.hpp)
+	@mkdir -p build
+	$(CXX) $(CXXFLAGS) -Iinclude src/jtok.cpp -o $@
+
+test: build/tests cli-test
 	./build/tests
+
+# Smoke tests for the command-line tool.
+cli-test: build/jtok
+	@printf '{"a": [1, "x\\ny"]}' | ./build/jtok | diff - tests/cli_expected.txt
+	@printf '[1, 2]' | ./build/jtok --check
+	@! printf '[1,]' | ./build/jtok --check 2>/dev/null
+	@printf '[1,]' | ./build/jtok --check 2>&1 | grep -q '^<stdin>:1:4: error:'
+	@echo "cli tests passed"
 
 clean:
 	rm -rf build
