@@ -9,6 +9,8 @@ stage of a parser, a pretty-printer or a syntax highlighter.
 - Punctuation tokens `{ } [ ] : ,` and the literals `true`, `false`, `null`
 - Strings decoded with the standard escapes (`\" \\ \/ \b \f \n \r \t`);
   raw control characters are rejected
+- `\uXXXX` escapes decoded to UTF-8, including surrogate pairs for
+  characters outside the Basic Multilingual Plane
 - Numbers validated against the JSON grammar (no leading zeros, no bare
   `.`, exponent must have digits) and returned exactly as written
 - Every token records its byte offset; errors throw `jt::TokenizeError`

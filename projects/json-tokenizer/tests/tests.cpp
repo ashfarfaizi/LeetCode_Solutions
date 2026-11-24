@@ -61,6 +61,20 @@ static void test_strings() {
     CHECK(fails("\"ends with backslash\\"));
 }
 
+static void test_unicode_escapes() {
+    auto toks = jt::tokenize(R"("\u0041" "\u00e9" "\u20AC" "\ud83d\ude00" "a\u0000b")");
+    CHECK(toks[0].value == "A");
+    CHECK(toks[1].value == "\xC3\xA9");          // é
+    CHECK(toks[2].value == "\xE2\x82\xAC");      // €
+    CHECK(toks[3].value == "\xF0\x9F\x98\x80");  // U+1F600
+    CHECK(toks[4].value == std::string("a\0b", 3));
+    CHECK(fails(R"("\u12")"));
+    CHECK(fails(R"("\u12G4")"));
+    CHECK(fails(R"("\ud83d")"));         // high surrogate alone
+    CHECK(fails(R"("\ud83d\u0041")"));   // high + non-low
+    CHECK(fails(R"("\ude00")"));         // low surrogate alone
+}
+
 static void test_numbers() {
     for (const char* ok : {"0", "-0", "12", "-12", "3.25", "1e10", "1E+2", "-2.5e-3", "0.0"}) {
         auto toks = jt::tokenize(ok);
@@ -88,6 +102,7 @@ static void test_error_offsets() {
 int main() {
     test_punctuation_and_literals();
     test_strings();
+    test_unicode_escapes();
     test_numbers();
     test_error_offsets();
     std::printf("%d passed, %d failed\n", passed, failures);

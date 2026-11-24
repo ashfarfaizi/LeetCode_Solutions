@@ -132,8 +132,59 @@ private:
                 case 'n': out += '\n'; break;
                 case 'r': out += '\r'; break;
                 case 't': out += '\t'; break;
+                case 'u': read_unicode_escape(out, pos_ - 2); break;
                 default: throw TokenizeError(std::string("invalid escape '\\") + e + "'", pos_ - 2);
             }
+        }
+    }
+
+    unsigned read_hex4() {
+        if (src_.size() - pos_ < 4) throw TokenizeError("truncated \\u escape", pos_);
+        unsigned v = 0;
+        for (int i = 0; i < 4; ++i) {
+            char h = src_[pos_++];
+            v <<= 4;
+            if (h >= '0' && h <= '9') v |= static_cast<unsigned>(h - '0');
+            else if (h >= 'a' && h <= 'f') v |= static_cast<unsigned>(h - 'a' + 10);
+            else if (h >= 'A' && h <= 'F') v |= static_cast<unsigned>(h - 'A' + 10);
+            else throw TokenizeError("invalid hex digit in \\u escape", pos_ - 1);
+        }
+        return v;
+    }
+
+    // Decodes \uXXXX (pos_ is just past the 'u'), combining UTF-16
+    // surrogate pairs, and appends the code point as UTF-8.
+    void read_unicode_escape(std::string& out, std::size_t escape_start) {
+        unsigned cp = read_hex4();
+        if (cp >= 0xDC00 && cp <= 0xDFFF)
+            throw TokenizeError("unpaired low surrogate", escape_start);
+        if (cp >= 0xD800 && cp <= 0xDBFF) {
+            if (src_.substr(pos_, 2) != "\\u")
+                throw TokenizeError("unpaired high surrogate", escape_start);
+            pos_ += 2;
+            unsigned lo = read_hex4();
+            if (lo < 0xDC00 || lo > 0xDFFF)
+                throw TokenizeError("invalid low surrogate", pos_ - 6);
+            cp = 0x10000 + ((cp - 0xD800) << 10) + (lo - 0xDC00);
+        }
+        append_utf8(out, cp);
+    }
+
+    static void append_utf8(std::string& out, unsigned cp) {
+        if (cp < 0x80) {
+            out += static_cast<char>(cp);
+        } else if (cp < 0x800) {
+            out += static_cast<char>(0xC0 | (cp >> 6));
+            out += static_cast<char>(0x80 | (cp & 0x3F));
+        } else if (cp < 0x10000) {
+            out += static_cast<char>(0xE0 | (cp >> 12));
+            out += static_cast<char>(0x80 | ((cp >> 6) & 0x3F));
+            out += static_cast<char>(0x80 | (cp & 0x3F));
+        } else {
+            out += static_cast<char>(0xF0 | (cp >> 18));
+            out += static_cast<char>(0x80 | ((cp >> 12) & 0x3F));
+            out += static_cast<char>(0x80 | ((cp >> 6) & 0x3F));
+            out += static_cast<char>(0x80 | (cp & 0x3F));
         }
     }
 
