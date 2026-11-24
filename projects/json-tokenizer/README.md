@@ -16,6 +16,9 @@ stage of a parser, a pretty-printer or a syntax highlighter.
 - Every token records its byte offset and 1-based line and column; errors
   throw `jt::TokenizeError` with the same position, e.g.
   `invalid literal, expected 'null' at line 3, column 3`
+- `jt::validate` / `jt::is_valid` (`json_validate.hpp`) check that the
+  token stream forms exactly one JSON value, with an explicit stack (no
+  recursion) and an optional maximum nesting depth
 
 ## Build and test
 

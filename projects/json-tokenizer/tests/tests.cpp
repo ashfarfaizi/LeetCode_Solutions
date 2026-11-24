@@ -1,4 +1,5 @@
 #include "json_tokenizer.hpp"
+#include "json_validate.hpp"
 
 #include <cstdio>
 #include <functional>
@@ -117,6 +118,43 @@ static void test_line_and_column() {
     }
 }
 
+static void test_validate() {
+    for (const char* ok : {"1", "\"s\"", "null", " [ ] ", "{}", "[1, [2, [3]], {\"a\": {}}]",
+                           "{\"k\": [true, false, null], \"n\": -1.5e3}"}) {
+        std::string err;
+        bool valid = jt::is_valid(ok, &err);
+        CHECK(valid);
+        if (!valid) std::printf("  %s -> %s\n", ok, err.c_str());
+    }
+    for (const char* bad : {"", "[", "]", "[1,]", "[,1]", "{\"a\"}", "{\"a\":}", "{1: 2}",
+                            "{\"a\": 1,}", "[1 2]", "1 2", "[}", "{]", ":", "{\"a\" 1}"}) {
+        CHECK(!jt::is_valid(bad));
+    }
+    try {
+        jt::validate("{\n  \"a\": [1, 2,]\n}");
+        CHECK(false);
+    } catch (const jt::SyntaxError& e) {
+        CHECK(e.line() == 2 && e.column() == 14);
+        CHECK(std::string(e.what()).find("expected a value but found ']'") == 0);
+    }
+    // lexical errors still surface through validate
+    std::string err;
+    CHECK(!jt::is_valid("[01]", &err));
+    CHECK(err.find("leading zeros") != std::string::npos);
+
+    // deep nesting does not recurse, and max_depth is enforced
+    std::string deep = std::string(100000, '[') + std::string(100000, ']');
+    CHECK(jt::is_valid(deep));
+    bool threw = false;
+    try {
+        jt::validate("[[[1]]]", 2);
+    } catch (const jt::SyntaxError&) {
+        threw = true;
+    }
+    CHECK(threw);
+    jt::validate("[[1]]", 2);  // exactly at the limit is fine
+}
+
 int main() {
     test_punctuation_and_literals();
     test_strings();
@@ -124,6 +162,7 @@ int main() {
     test_numbers();
     test_error_offsets();
     test_line_and_column();
+    test_validate();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }
