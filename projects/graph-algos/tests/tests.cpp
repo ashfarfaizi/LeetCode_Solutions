@@ -4,6 +4,7 @@
 #include "topo.hpp"
 #include "scc.hpp"
 #include "bridges.hpp"
+#include "flow.hpp"
 
 #include <cstdio>
 #include <functional>
@@ -371,6 +372,47 @@ static void test_zero_one_bfs() {
     CHECK(throws([&] { ga::zero_one_bfs(bad, 0); }));
 }
 
+static void test_max_flow() {
+    // CLRS example network, max flow 23
+    ga::MaxFlow f(6);
+    f.add_edge(0, 1, 16);
+    f.add_edge(0, 2, 13);
+    f.add_edge(1, 2, 10);
+    f.add_edge(2, 1, 4);
+    f.add_edge(1, 3, 12);
+    int e32 = f.add_edge(3, 2, 9);
+    f.add_edge(2, 4, 14);
+    f.add_edge(4, 3, 7);
+    int e35 = f.add_edge(3, 5, 20);
+    int e45 = f.add_edge(4, 5, 4);
+    CHECK(f.run(0, 5) == 23);
+    CHECK(f.flow_on(e35) + f.flow_on(e45) == 23);
+    CHECK(f.flow_on(e32) >= 0 && f.flow_on(e32) <= 9);
+    CHECK(f.run(0, 5) == 0);  // already saturated
+
+    auto side = f.min_cut_side(0);
+    CHECK(side[0] && !side[5]);
+
+    // bipartite matching: 3 workers, 3 jobs, perfect matching exists
+    ga::MaxFlow m(8);  // 0 = source, 1..3 workers, 4..6 jobs, 7 = sink
+    for (int w = 1; w <= 3; ++w) m.add_edge(0, w, 1);
+    for (int j = 4; j <= 6; ++j) m.add_edge(j, 7, 1);
+    m.add_edge(1, 4, 1);
+    m.add_edge(1, 5, 1);
+    m.add_edge(2, 4, 1);
+    m.add_edge(3, 6, 1);
+    CHECK(m.run(0, 7) == 3);
+
+    ga::Graph g(3, true);
+    g.add_edge(0, 1, 5);
+    g.add_edge(1, 2, 3);
+    g.add_edge(1, 1, 7);  // self-loop carries no s-t flow
+    CHECK(ga::MaxFlow::from_graph(g).run(0, 2) == 3);
+    CHECK(throws([] { ga::MaxFlow::from_graph(ga::Graph(2)); }));
+    CHECK(throws([&] { f.run(1, 1); }));
+    CHECK(throws([&] { f.add_edge(0, 1, -1); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
@@ -386,6 +428,7 @@ int main() {
     test_condensation();
     test_cut_structure();
     test_bipartite();
+    test_max_flow();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }
