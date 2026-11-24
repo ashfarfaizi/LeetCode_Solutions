@@ -13,8 +13,9 @@ stage of a parser, a pretty-printer or a syntax highlighter.
   characters outside the Basic Multilingual Plane
 - Numbers validated against the JSON grammar (no leading zeros, no bare
   `.`, exponent must have digits) and returned exactly as written
-- Every token records its byte offset; errors throw `jt::TokenizeError`
-  with the offending offset
+- Every token records its byte offset and 1-based line and column; errors
+  throw `jt::TokenizeError` with the same position, e.g.
+  `invalid literal, expected 'null' at line 3, column 3`
 
 ## Build and test
 

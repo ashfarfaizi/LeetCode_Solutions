@@ -96,6 +96,24 @@ static void test_error_offsets() {
         CHECK(false);
     } catch (const jt::TokenizeError& e) {
         CHECK(e.offset() == 4);
+        CHECK(e.line() == 1 && e.column() == 5);
+    }
+}
+
+static void test_line_and_column() {
+    auto toks = jt::tokenize("{\n  \"a\": [1,\r\n    2]\n}");
+    CHECK(toks[0].line == 1 && toks[0].column == 1);  // {
+    CHECK(toks[1].line == 2 && toks[1].column == 3);  // "a"
+    CHECK(toks[3].line == 2 && toks[3].column == 8);  // [
+    CHECK(toks[6].line == 3 && toks[6].column == 5);  // 2
+    CHECK(toks[8].line == 4 && toks[8].column == 1);  // }
+    CHECK(toks[9].type == jt::TokenType::End && toks[9].line == 4 && toks[9].column == 2);
+    try {
+        jt::tokenize("[\n  true,\n  nul ]");
+        CHECK(false);
+    } catch (const jt::TokenizeError& e) {
+        CHECK(e.line() == 3 && e.column() == 3);
+        CHECK(std::string(e.what()).find("line 3, column 3") != std::string::npos);
     }
 }
 
@@ -105,6 +123,7 @@ int main() {
     test_unicode_escapes();
     test_numbers();
     test_error_offsets();
+    test_line_and_column();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }
