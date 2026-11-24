@@ -1,6 +1,7 @@
 #pragma once
 
 #include <algorithm>
+#include <deque>
 #include <functional>
 #include <limits>
 #include <queue>
@@ -49,6 +50,33 @@ inline ShortestPaths dijkstra(const Graph& g, int src) {
                 sp.dist[e.to] = nd;
                 sp.parent[e.to] = u;
                 pq.push({nd, e.to});
+            }
+        }
+    }
+    return sp;
+}
+
+// 0-1 BFS: shortest paths when every edge weight is 0 or 1, in O(V + E)
+// using a deque instead of a heap (0-edges go to the front, 1-edges to the
+// back). Throws if any reachable edge has another weight.
+inline ShortestPaths zero_one_bfs(const Graph& g, int src) {
+    ShortestPaths sp{std::vector<long long>(g.size(), INF), std::vector<int>(g.size(), -1)};
+    g.neighbors(src);  // validates src
+    std::deque<int> dq;
+    sp.dist[src] = 0;
+    dq.push_back(src);
+    while (!dq.empty()) {
+        int u = dq.front();
+        dq.pop_front();
+        for (const auto& e : g.neighbors(u)) {
+            if (e.weight != 0 && e.weight != 1)
+                throw std::invalid_argument("zero_one_bfs: edge weight must be 0 or 1");
+            long long nd = sp.dist[u] + e.weight;
+            if (nd < sp.dist[e.to]) {
+                sp.dist[e.to] = nd;
+                sp.parent[e.to] = u;
+                if (e.weight == 0) dq.push_front(e.to);
+                else dq.push_back(e.to);
             }
         }
     }

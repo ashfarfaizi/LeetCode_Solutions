@@ -10,6 +10,8 @@ easy to read and easy to drop into a contest or side project.
 - `connected_components` labelling
 - `dijkstra` single-source shortest paths with `path_to` reconstruction
   (`shortest_paths.hpp`)
+- `zero_one_bfs` for graphs with 0/1 edge weights in O(V + E)
+  (`shortest_paths.hpp`)
 - `bellman_ford` for negative weights, with negative-cycle detection
 - `topological_sort` (Kahn, smallest-id-first) and `has_cycle` for DAGs
   (`topo.hpp`)

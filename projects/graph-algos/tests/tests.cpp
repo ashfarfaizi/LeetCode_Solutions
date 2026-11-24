@@ -341,10 +341,41 @@ static void test_bipartite() {
     CHECK(throws([&] { ga::is_bipartite(directed, side); }));
 }
 
+static void test_zero_one_bfs() {
+    ga::Graph g(5, true);
+    g.add_edge(0, 1, 1);
+    g.add_edge(0, 2, 0);
+    g.add_edge(2, 1, 0);
+    g.add_edge(1, 3, 1);
+    g.add_edge(2, 3, 1);
+    auto sp = ga::zero_one_bfs(g, 0);
+    CHECK(sp.dist[1] == 0);
+    CHECK(sp.dist[3] == 1);
+    CHECK(!sp.reachable(4));
+    CHECK((sp.path_to(1) == std::vector<int>{0, 2, 1}));
+
+    // agrees with dijkstra on a random 0/1-weighted graph
+    ga::Graph r(30, true);
+    unsigned seed = 12345;
+    for (int i = 0; i < 120; ++i) {
+        seed = seed * 1103515245u + 12345u;
+        int u = (seed >> 8) % 30;
+        seed = seed * 1103515245u + 12345u;
+        int v = (seed >> 8) % 30;
+        r.add_edge(u, v, (seed >> 20) & 1);
+    }
+    CHECK(ga::zero_one_bfs(r, 0).dist == ga::dijkstra(r, 0).dist);
+
+    ga::Graph bad(2, true);
+    bad.add_edge(0, 1, 2);
+    CHECK(throws([&] { ga::zero_one_bfs(bad, 0); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
     test_dijkstra();
+    test_zero_one_bfs();
     test_bellman_ford();
     test_topological_sort();
     test_disjoint_set();
