@@ -29,6 +29,8 @@ easy to read and easy to drop into a contest or side project.
 - `is_bipartite` two-colouring with the colour of each vertex (`graph.hpp`)
 - `MaxFlow` (Dinic) with per-edge flows and minimum-cut side, usable for
   bipartite matching (`flow.hpp`)
+- `LCA` lowest common ancestor on a forest via binary lifting, with
+  k-th ancestor and tree distance queries (`lca.hpp`)
 
 ## Build and test
 

@@ -5,6 +5,7 @@
 #include "scc.hpp"
 #include "bridges.hpp"
 #include "flow.hpp"
+#include "lca.hpp"
 
 #include <cstdio>
 #include <functional>
@@ -413,6 +414,58 @@ static void test_max_flow() {
     CHECK(throws([&] { f.add_edge(0, 1, -1); }));
 }
 
+static void test_lca() {
+    // Tree: 0-1, 0-2, 1-3, 1-4, 2-5, 4-6 (rooted at 0); 7 is isolated.
+    ga::Graph g(8);
+    g.add_edge(0, 1);
+    g.add_edge(0, 2);
+    g.add_edge(1, 3);
+    g.add_edge(1, 4);
+    g.add_edge(2, 5);
+    g.add_edge(4, 6);
+    ga::LCA lca(g);  // vertex 7 is its own tree
+    CHECK(lca.query(3, 6) == 1);
+    CHECK(lca.query(6, 5) == 0);
+    CHECK(lca.query(4, 6) == 4);
+    CHECK(lca.query(2, 2) == 2);
+    CHECK(lca.query(3, 7) == -1);
+    CHECK(lca.depth(6) == 3);
+    CHECK(lca.parent(0) == -1);
+    CHECK(lca.ancestor(6, 2) == 1);
+    CHECK(lca.ancestor(6, 4) == -1);
+    CHECK(lca.distance(3, 5) == 4);
+    CHECK(lca.distance(7, 0) == -1);
+
+    ga::LCA rerooted(g, 4);
+    CHECK(rerooted.query(3, 6) == 4);
+    CHECK(rerooted.query(5, 3) == 1);
+
+    // long path: deep iterative build and many lifting levels
+    const int n = 100000;
+    ga::Graph path(n);
+    for (int i = 0; i + 1 < n; ++i) path.add_edge(i, i + 1);
+    ga::LCA pl(path);
+    CHECK(pl.query(n - 1, 12345) == 12345);
+    CHECK(pl.ancestor(n - 1, n - 1) == 0);
+
+    ga::Graph cyc(3);
+    cyc.add_edge(0, 1);
+    cyc.add_edge(1, 2);
+    cyc.add_edge(2, 0);
+    CHECK(throws([&] { ga::LCA bad(cyc); }));
+    ga::Graph two_cycles(5);  // 4 edges on 5 vertices but not a forest
+    two_cycles.add_edge(0, 1);
+    two_cycles.add_edge(1, 2);
+    two_cycles.add_edge(2, 0);
+    two_cycles.add_edge(3, 3);
+    CHECK(throws([&] { ga::LCA bad(two_cycles); }));
+    ga::Graph parallel(3);  // duplicate edge is a 2-cycle
+    parallel.add_edge(0, 1);
+    parallel.add_edge(0, 1);
+    CHECK(throws([&] { ga::LCA bad(parallel); }));
+    CHECK(throws([] { ga::LCA bad(ga::Graph(2, true)); }));
+}
+
 int main() {
     test_construction();
     test_traversals();
@@ -429,6 +482,7 @@ int main() {
     test_cut_structure();
     test_bipartite();
     test_max_flow();
+    test_lca();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }
