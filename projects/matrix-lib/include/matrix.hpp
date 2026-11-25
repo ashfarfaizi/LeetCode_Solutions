@@ -13,6 +13,7 @@
 namespace mat {
 
 struct LU;
+struct QR;
 
 class Matrix {
 public:
@@ -253,6 +254,11 @@ public:
     // lower-triangular and U upper-triangular. Defined after the class.
     LU lu(double eps = 1e-12) const;
 
+    // Householder QR factorisation A = Q R for rows() >= cols(). Q is an
+    // orthogonal rows() x rows() matrix, R is upper-triangular with the
+    // shape of A. Works for rank-deficient A too. Defined after the class.
+    QR qr() const;
+
     // True if the matrix is square and |a(i,j) - a(j,i)| <= eps everywhere.
     bool isSymmetric(double eps = 1e-12) const {
         if (!isSquare()) return false;
@@ -465,6 +471,46 @@ inline LU Matrix::lu(double eps) const {
         }
     }
     for (std::size_t i = 0; i < n; ++i) out.L(i, i) = 1.0;
+    return out;
+}
+
+// Result of Matrix::qr(): A == Q * R, Q^T Q == I.
+struct QR {
+    Matrix Q, R;
+};
+
+inline QR Matrix::qr() const {
+    const std::size_t m = rows_, n = cols_;
+    if (m < n) throw std::invalid_argument("qr requires rows() >= cols()");
+    QR out{identity(m), *this};
+    std::vector<double> v(m);
+    for (std::size_t k = 0; k < n && k + 1 < m; ++k) {
+        // Householder vector that zeroes R(k+1.., k).
+        double norm = 0.0;
+        for (std::size_t i = k; i < m; ++i) norm += out.R(i, k) * out.R(i, k);
+        norm = std::sqrt(norm);
+        if (norm == 0.0) continue;
+        double alpha = out.R(k, k) > 0 ? -norm : norm;  // sign avoids cancellation
+        for (std::size_t i = k; i < m; ++i) v[i] = out.R(i, k);
+        v[k] -= alpha;
+        double vv = 0.0;
+        for (std::size_t i = k; i < m; ++i) vv += v[i] * v[i];
+        if (vv == 0.0) continue;
+        // R <- H R and Q <- Q H, with H = I - 2 v v^T / (v^T v).
+        for (std::size_t c = k; c < n; ++c) {
+            double dot = 0.0;
+            for (std::size_t i = k; i < m; ++i) dot += v[i] * out.R(i, c);
+            double f = 2.0 * dot / vv;
+            for (std::size_t i = k; i < m; ++i) out.R(i, c) -= f * v[i];
+        }
+        for (std::size_t r = 0; r < m; ++r) {
+            double dot = 0.0;
+            for (std::size_t i = k; i < m; ++i) dot += out.Q(r, i) * v[i];
+            double f = 2.0 * dot / vv;
+            for (std::size_t i = k; i < m; ++i) out.Q(r, i) -= f * v[i];
+        }
+        for (std::size_t i = k + 1; i < m; ++i) out.R(i, k) = 0.0;
+    }
     return out;
 }
 

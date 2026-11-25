@@ -71,6 +71,12 @@ mat::Matrix L = S.cholesky();    // lower-triangular, S == L * L.transpose()
                                  // throws std::domain_error if not positive definite
 ```
 
+Householder QR for any matrix with at least as many rows as columns:
+
+```cpp
+mat::QR q = A.qr();              // A == q.Q * q.R; q.Q is orthogonal, q.R upper-triangular
+```
+
 Shape mismatches throw `std::invalid_argument`.
 
 ## Build and test

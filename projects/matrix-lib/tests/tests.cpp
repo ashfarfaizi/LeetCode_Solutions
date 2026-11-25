@@ -253,6 +253,29 @@ static void testCholesky() {
     CHECK_THROWS((Matrix{{1, 2}, {2, 1}}).cholesky(), std::domain_error);
 }
 
+static void testQR() {
+    Matrix a{{12, -51, 4}, {6, 167, -68}, {-4, 24, -41}};
+    mat::QR f = a.qr();
+    CHECK((f.Q * f.R).approxEqual(a));
+    CHECK((f.Q.transpose() * f.Q).approxEqual(Matrix::identity(3)));
+    for (std::size_t i = 0; i < 3; ++i)
+        for (std::size_t j = 0; j < i; ++j) CHECK(f.R(i, j) == 0.0);
+    // |R diagonal| matches the textbook result 14, 175, 35.
+    CHECK(std::fabs(std::fabs(f.R(0, 0)) - 14) < 1e-9);
+    CHECK(std::fabs(std::fabs(f.R(1, 1)) - 175) < 1e-9);
+    CHECK(std::fabs(std::fabs(f.R(2, 2)) - 35) < 1e-9);
+
+    // Tall and rank-deficient inputs.
+    Matrix tall{{1, 2}, {3, 4}, {5, 6}, {7, 8}};
+    mat::QR g = tall.qr();
+    CHECK(g.Q.rows() == 4 && g.Q.cols() == 4 && g.R.rows() == 4 && g.R.cols() == 2);
+    CHECK((g.Q * g.R).approxEqual(tall));
+    CHECK((g.Q * g.Q.transpose()).approxEqual(Matrix::identity(4)));
+    Matrix flat{{1, 1}, {1, 1}, {1, 1}};
+    CHECK((flat.qr().Q * flat.qr().R).approxEqual(flat));
+    CHECK_THROWS(Matrix(2, 3).qr(), std::invalid_argument);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -268,6 +291,7 @@ int main() {
     testNorms();
     testLU();
     testCholesky();
+    testQR();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
