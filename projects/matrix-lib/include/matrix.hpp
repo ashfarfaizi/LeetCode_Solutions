@@ -15,6 +15,7 @@ namespace mat {
 
 struct LU;
 struct QR;
+struct Eigenpair;
 
 class Matrix {
 public:
@@ -265,6 +266,12 @@ public:
     // Requires rows() >= cols() and full column rank, else throws
     // std::invalid_argument / std::domain_error. Defined after the class.
     Matrix leastSquares(const Matrix& b, double eps = 1e-10) const;
+
+    // Dominant eigenvalue (largest in magnitude) and a unit eigenvector by
+    // power iteration. Converges when that eigenvalue is strictly dominant;
+    // throws std::runtime_error if it has not settled after maxIter steps.
+    // Defined after the class.
+    Eigenpair dominantEigen(std::size_t maxIter = 1000, double tol = 1e-10) const;
 
     // True if the matrix is square and |a(i,j) - a(j,i)| <= eps everywhere.
     bool isSymmetric(double eps = 1e-12) const {
@@ -543,6 +550,45 @@ inline Matrix Matrix::leastSquares(const Matrix& b, double eps) const {
         }
     }
     return x;
+}
+
+// Result of Matrix::dominantEigen(): A v ~= value v, ||v|| == 1.
+struct Eigenpair {
+    double value = 0.0;
+    Matrix vector;
+    std::size_t iterations = 0;
+};
+
+inline Eigenpair Matrix::dominantEigen(std::size_t maxIter, double tol) const {
+    if (!isSquare() || rows_ == 0) throw std::invalid_argument("dominantEigen requires a non-empty square matrix");
+    const std::size_t n = rows_;
+    // A non-uniform start vector is unlikely to be orthogonal to the answer.
+    Matrix v(n, 1);
+    for (std::size_t i = 0; i < n; ++i) v(i, 0) = 1.0 + static_cast<double>(i) / static_cast<double>(n);
+    v *= 1.0 / v.frobeniusNorm();
+    Eigenpair out;
+    for (std::size_t it = 1; it <= maxIter; ++it) {
+        Matrix w = *this * v;
+        double norm = w.frobeniusNorm();
+        if (norm == 0.0) {  // v is in the null space: eigenvalue 0
+            out = {0.0, v, it};
+            return out;
+        }
+        w *= 1.0 / norm;
+        // Fix the sign so a negative eigenvalue does not make w flip forever.
+        double dot = (w.transpose() * v)(0, 0);
+        if (dot < 0) w *= -1.0;
+        double change = (w - v).frobeniusNorm();
+        v = std::move(w);
+        if (change < tol) {
+            // Rayleigh quotient gives the signed eigenvalue.
+            out.value = (v.transpose() * (*this * v))(0, 0);
+            out.vector = v;
+            out.iterations = it;
+            return out;
+        }
+    }
+    throw std::runtime_error("power iteration did not converge");
 }
 
 }  // namespace mat

@@ -82,6 +82,15 @@ mat::Matrix y{{1}, {2}, {2}, {4}};
 X.leastSquares(y);               // [0.9; 0.9]; throws std::domain_error if X is rank-deficient
 ```
 
+Dominant eigenvalue by power iteration:
+
+```cpp
+mat::Eigenpair e = mat::Matrix{{2, 1}, {1, 2}}.dominantEigen();
+e.value;                         // 3
+e.vector;                        // unit vector ~ [0.707; 0.707]
+// throws std::runtime_error if it does not converge (e.g. complex eigenvalues)
+```
+
 Shape mismatches throw `std::invalid_argument`.
 
 ## Build and test

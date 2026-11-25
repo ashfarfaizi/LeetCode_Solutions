@@ -298,6 +298,30 @@ static void testLeastSquares() {
     CHECK_THROWS(Matrix(2, 3).leastSquares(Matrix(2, 1)), std::invalid_argument);
 }
 
+static void testDominantEigen() {
+    Matrix a{{2, 1}, {1, 2}};  // eigenvalues 3 and 1
+    mat::Eigenpair e = a.dominantEigen();
+    CHECK(std::fabs(e.value - 3.0) < 1e-8);
+    CHECK(std::fabs(e.vector.frobeniusNorm() - 1.0) < 1e-12);
+    CHECK((a * e.vector).approxEqual(e.vector * e.value, 1e-8));
+    CHECK(e.iterations > 0);
+
+    // Dominant eigenvalue negative: diag(-5, 2).
+    Matrix d{{-5, 0}, {0, 2}};
+    mat::Eigenpair f = d.dominantEigen();
+    CHECK(std::fabs(f.value + 5.0) < 1e-8);
+    CHECK(std::fabs(std::fabs(f.vector(0, 0)) - 1.0) < 1e-8);
+
+    // Non-symmetric 3x3 with eigenvalues 1, 2, 4 (upper-triangular).
+    Matrix u{{4, 1, 2}, {0, 2, 3}, {0, 0, 1}};
+    CHECK(std::fabs(u.dominantEigen().value - 4.0) < 1e-8);
+
+    CHECK(Matrix(3, 3).dominantEigen().value == 0.0);
+    CHECK_THROWS(Matrix(2, 3).dominantEigen(), std::invalid_argument);
+    // Rotation by 90 degrees has eigenvalues +-i: no real dominant one.
+    CHECK_THROWS((Matrix{{0, -1}, {1, 0}}).dominantEigen(50), std::runtime_error);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -315,6 +339,7 @@ int main() {
     testCholesky();
     testQR();
     testLeastSquares();
+    testDominantEigen();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
