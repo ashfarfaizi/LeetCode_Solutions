@@ -238,6 +238,21 @@ static void testLU() {
     CHECK_THROWS(f.solve(Matrix(2, 1)), std::invalid_argument);
 }
 
+static void testCholesky() {
+    Matrix a{{4, 12, -16}, {12, 37, -43}, {-16, -43, 98}};
+    CHECK(a.isSymmetric());
+    Matrix l = a.cholesky();
+    CHECK(l.approxEqual(Matrix{{2, 0, 0}, {6, 1, 0}, {-8, 5, 3}}));
+    CHECK((l * l.transpose()).approxEqual(a));
+    CHECK(Matrix::identity(4).cholesky() == Matrix::identity(4));
+
+    CHECK(!(Matrix{{1, 2}, {3, 4}}).isSymmetric());
+    CHECK(!Matrix(2, 3).isSymmetric());
+    CHECK_THROWS((Matrix{{1, 2}, {3, 4}}).cholesky(), std::invalid_argument);
+    // Symmetric but indefinite (eigenvalues 3 and -1).
+    CHECK_THROWS((Matrix{{1, 2}, {2, 1}}).cholesky(), std::domain_error);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -252,6 +267,7 @@ int main() {
     testRank();
     testNorms();
     testLU();
+    testCholesky();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }

@@ -62,6 +62,15 @@ f.determinant();                 // product of U's diagonal times the permutatio
 f.permutation() * A;             // equals f.L * f.U
 ```
 
+Cholesky factorisation for symmetric positive-definite matrices:
+
+```cpp
+mat::Matrix S{{4, 12, -16}, {12, 37, -43}, {-16, -43, 98}};
+S.isSymmetric();                 // true (tolerance-based)
+mat::Matrix L = S.cholesky();    // lower-triangular, S == L * L.transpose()
+                                 // throws std::domain_error if not positive definite
+```
+
 Shape mismatches throw `std::invalid_argument`.
 
 ## Build and test

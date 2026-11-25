@@ -253,6 +253,39 @@ public:
     // lower-triangular and U upper-triangular. Defined after the class.
     LU lu(double eps = 1e-12) const;
 
+    // True if the matrix is square and |a(i,j) - a(j,i)| <= eps everywhere.
+    bool isSymmetric(double eps = 1e-12) const {
+        if (!isSquare()) return false;
+        for (std::size_t i = 0; i < rows_; ++i) {
+            for (std::size_t j = i + 1; j < cols_; ++j) {
+                if (std::fabs((*this)(i, j) - (*this)(j, i)) > eps) return false;
+            }
+        }
+        return true;
+    }
+
+    // Cholesky factorisation A = L L^T for a symmetric positive-definite A.
+    // Returns the lower-triangular L. About half the work of LU and needs no
+    // pivoting. Throws std::invalid_argument if A is not symmetric and
+    // std::domain_error if it is not positive definite.
+    Matrix cholesky(double eps = 1e-12) const {
+        if (!isSymmetric(eps)) throw std::invalid_argument("cholesky requires a symmetric matrix");
+        const std::size_t n = rows_;
+        Matrix l(n, n);
+        for (std::size_t j = 0; j < n; ++j) {
+            double d = (*this)(j, j);
+            for (std::size_t k = 0; k < j; ++k) d -= l(j, k) * l(j, k);
+            if (d <= eps) throw std::domain_error("matrix is not positive definite");
+            l(j, j) = std::sqrt(d);
+            for (std::size_t i = j + 1; i < n; ++i) {
+                double s = (*this)(i, j);
+                for (std::size_t k = 0; k < j; ++k) s -= l(i, k) * l(j, k);
+                l(i, j) = s / l(j, j);
+            }
+        }
+        return l;
+    }
+
     // Solves A X = B for X, where B may hold several right-hand-side columns.
     // Gaussian elimination with partial pivoting and back substitution,
     // O(n^3 + n^2 k); cheaper and more accurate than inverse() * B.
