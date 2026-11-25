@@ -75,6 +75,11 @@ Householder QR for any matrix with at least as many rows as columns:
 
 ```cpp
 mat::QR q = A.qr();              // A == q.Q * q.R; q.Q is orthogonal, q.R upper-triangular
+
+// Least squares: fit y = c0 + c1 x to (0,1), (1,2), (2,2), (3,4)
+mat::Matrix X{{1, 0}, {1, 1}, {1, 2}, {1, 3}};
+mat::Matrix y{{1}, {2}, {2}, {4}};
+X.leastSquares(y);               // [0.9; 0.9]; throws std::domain_error if X is rank-deficient
 ```
 
 Shape mismatches throw `std::invalid_argument`.

@@ -1,6 +1,7 @@
 // matrix-lib: a small header-only dense matrix of doubles.
 #pragma once
 
+#include <algorithm>
 #include <cmath>
 #include <cstddef>
 #include <initializer_list>
@@ -259,6 +260,12 @@ public:
     // shape of A. Works for rank-deficient A too. Defined after the class.
     QR qr() const;
 
+    // Least-squares solution of an overdetermined system: the X minimising
+    // ||A X - B|| (column by column), via QR so A^T A is never formed.
+    // Requires rows() >= cols() and full column rank, else throws
+    // std::invalid_argument / std::domain_error. Defined after the class.
+    Matrix leastSquares(const Matrix& b, double eps = 1e-10) const;
+
     // True if the matrix is square and |a(i,j) - a(j,i)| <= eps everywhere.
     bool isSymmetric(double eps = 1e-12) const {
         if (!isSquare()) return false;
@@ -512,6 +519,30 @@ inline QR Matrix::qr() const {
         for (std::size_t i = k + 1; i < m; ++i) out.R(i, k) = 0.0;
     }
     return out;
+}
+
+inline Matrix Matrix::leastSquares(const Matrix& b, double eps) const {
+    if (b.rows() != rows_) throw std::invalid_argument("shape mismatch in leastSquares");
+    const QR f = qr();  // throws if rows() < cols()
+    const std::size_t n = cols_, k = b.cols();
+    // Rank check relative to the largest diagonal entry of R.
+    double scale = 0.0;
+    for (std::size_t i = 0; i < n; ++i) scale = std::max(scale, std::fabs(f.R(i, i)));
+    for (std::size_t i = 0; i < n; ++i) {
+        if (std::fabs(f.R(i, i)) <= eps * std::max(scale, 1.0)) {
+            throw std::domain_error("matrix does not have full column rank");
+        }
+    }
+    const Matrix qtb = f.Q.transpose() * b;
+    Matrix x(n, k);
+    for (std::size_t c = 0; c < k; ++c) {
+        for (std::size_t i = n; i-- > 0;) {
+            double s = qtb(i, c);
+            for (std::size_t j = i + 1; j < n; ++j) s -= f.R(i, j) * x(j, c);
+            x(i, c) = s / f.R(i, i);
+        }
+    }
+    return x;
 }
 
 }  // namespace mat

@@ -276,6 +276,28 @@ static void testQR() {
     CHECK_THROWS(Matrix(2, 3).qr(), std::invalid_argument);
 }
 
+static void testLeastSquares() {
+    // Fit y = c0 + c1 x through (0,1), (1,3), (2,5), (3,7): exact line 1 + 2x.
+    Matrix A{{1, 0}, {1, 1}, {1, 2}, {1, 3}};
+    Matrix y{{1}, {3}, {5}, {7}};
+    CHECK(A.leastSquares(y).approxEqual(Matrix{{1}, {2}}));
+
+    // Noisy points (0,1), (1,2), (2,2), (3,4): normal equations give 0.9 + 0.9x.
+    Matrix noisy{{1}, {2}, {2}, {4}};
+    Matrix x = A.leastSquares(noisy);
+    CHECK(x.approxEqual(Matrix{{0.9}, {0.9}}));
+    // Residual is orthogonal to the column space.
+    CHECK((A.transpose() * (A * x - noisy)).approxEqual(Matrix(2, 1)));
+
+    // Square, non-singular: same as solve(). Several right-hand sides at once.
+    Matrix s{{2, 1, -1}, {-3, -1, 2}, {-2, 1, 2}};
+    CHECK(s.leastSquares(Matrix::identity(3)).approxEqual(s.inverse()));
+
+    CHECK_THROWS((Matrix{{1, 2}, {2, 4}, {3, 6}}).leastSquares(Matrix(3, 1)), std::domain_error);
+    CHECK_THROWS(A.leastSquares(Matrix(3, 1)), std::invalid_argument);
+    CHECK_THROWS(Matrix(2, 3).leastSquares(Matrix(2, 1)), std::invalid_argument);
+}
+
 int main() {
     testConstruction();
     testArithmetic();
@@ -292,6 +314,7 @@ int main() {
     testLU();
     testCholesky();
     testQR();
+    testLeastSquares();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
