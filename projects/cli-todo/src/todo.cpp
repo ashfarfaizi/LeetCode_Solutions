@@ -7,6 +7,7 @@
 #include <istream>
 #include <ostream>
 #include <stdexcept>
+#include <string>
 
 namespace todo {
 
@@ -14,6 +15,7 @@ namespace {
 
 const char* const kHeaderV1 = "# cli-todo v1";
 const char* const kHeaderV2 = "# cli-todo v2";
+const std::string kNextIdPrefix = "# next-id ";
 
 char priorityCode(Priority p) {
     switch (p) {
@@ -161,6 +163,9 @@ Stats TodoList::stats() const {
 
 void TodoList::save(std::ostream& out) const {
     out << kHeaderV2 << '\n';
+    // Remember the id counter so ids of removed or cleared tasks are not
+    // handed out again after a reload. Older readers skip it as a comment.
+    out << kNextIdPrefix << nextId_ << '\n';
     for (const auto& t : tasks_)
         out << t.id << '\t' << (t.done ? 1 : 0) << '\t' << priorityCode(t.priority) << '\t'
             << t.text << '\n';
@@ -175,6 +180,15 @@ TodoList TodoList::load(std::istream& in) {
         ++lineNo;
         if (line == kHeaderV2) version = 2;
         if (line == kHeaderV1) version = 1;
+        if (line.compare(0, kNextIdPrefix.size(), kNextIdPrefix) == 0) {
+            // Ignore an unparsable counter: ids are still derived from tasks.
+            try {
+                int n = std::stoi(line.substr(kNextIdPrefix.size()));
+                if (n > 0) list.nextId_ = std::max(list.nextId_, n);
+            } catch (const std::logic_error&) {
+            }
+            continue;
+        }
         if (line.empty() || line[0] == '#') continue;
         auto bad = [&] {
             return std::runtime_error("malformed task on line " + std::to_string(lineNo));

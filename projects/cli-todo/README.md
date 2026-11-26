@@ -70,6 +70,7 @@ or malformed file, and `2` for a usage error.
 
 ```
 # cli-todo v2
+# next-id 3
 1	1	N	buy milk
 2	0	H	pay rent
 ```
@@ -77,8 +78,9 @@ or malformed file, and `2` for a usage error.
 A header line, then one `id<TAB>done<TAB>priority<TAB>text` line per task,
 with priority `L`, `N` or `H`. Older `# cli-todo v1` files (no priority
 column) still load, with every task at normal priority, and are rewritten
-as v2 on the next change. Ids are
-never reused, even after loading a file. Lines starting with `#` and blank
+as v2 on the next change. The `# next-id` line records the id counter, so
+ids are never reused, even for tasks that were removed or cleared before
+the file was reloaded. Lines starting with `#` and blank
 lines are ignored.
 
 ## Build and test

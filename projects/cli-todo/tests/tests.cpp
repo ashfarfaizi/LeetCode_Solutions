@@ -68,6 +68,25 @@ static void testIdsNotReusedAfterLoad() {
     CHECK(l.add("next") == 6);
 }
 
+static void testIdsNotReusedAfterRemoveAndReload() {
+    todo::TodoList l;
+    l.add("a");
+    l.add("b");
+    l.add("c");
+    l.remove(3);
+    l.complete(2);
+    l.clearDone();
+    std::stringstream buf;
+    l.save(buf);
+    todo::TodoList back = todo::TodoList::load(buf);
+    CHECK(back.tasks().size() == 1);
+    CHECK(back.nextId() == 4);
+    CHECK(back.add("d") == 4);
+
+    std::istringstream junk("# cli-todo v2\n# next-id oops\n2\t0\tN\tx\n");
+    CHECK(todo::TodoList::load(junk).nextId() == 3);
+}
+
 static void testRejectsMalformed() {
     CHECK(loadThrows("1 0 no tabs\n"));
     CHECK(loadThrows("x\t0\tbad id\n"));
@@ -223,6 +242,7 @@ int main() {
     testSanitizesNewlines();
     testRoundTrip();
     testIdsNotReusedAfterLoad();
+    testIdsNotReusedAfterRemoveAndReload();
     testRejectsMalformed();
     testRemoveAndEdit();
     testPriorities();
