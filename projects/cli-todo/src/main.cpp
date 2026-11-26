@@ -8,18 +8,22 @@
 
 namespace {
 
+const char* const kUsage =
+    "usage: todo [-f FILE] add [-p LEVEL] TEXT...\n"
+    "       todo [-f FILE] list [--pending | --done]\n"
+    "       todo [-f FILE] done ID\n"
+    "       todo [-f FILE] undo ID\n"
+    "       todo [-f FILE] rm ID\n"
+    "       todo [-f FILE] edit ID TEXT...\n"
+    "       todo [-f FILE] pri ID LEVEL\n"
+    "       todo [-f FILE] find TEXT...\n"
+    "       todo [-f FILE] stats\n"
+    "       todo [-f FILE] clear\n"
+    "       todo help\n"
+    "LEVEL is high, normal or low (or h, n, l)\n";
+
 int usage() {
-    std::cerr << "usage: todo [-f FILE] add [-p LEVEL] TEXT...\n"
-                 "       todo [-f FILE] list [--pending | --done]\n"
-                 "       todo [-f FILE] done ID\n"
-                 "       todo [-f FILE] undo ID\n"
-                 "       todo [-f FILE] rm ID\n"
-                 "       todo [-f FILE] edit ID TEXT...\n"
-                 "       todo [-f FILE] pri ID LEVEL\n"
-                 "       todo [-f FILE] find TEXT...\n"
-                 "       todo [-f FILE] stats\n"
-                 "       todo [-f FILE] clear\n"
-                 "LEVEL is high, normal or low (or h, n, l)\n";
+    std::cerr << kUsage;
     return 2;
 }
 
@@ -51,6 +55,10 @@ std::string joinArgs(const std::vector<std::string>& args, size_t from) {
 
 int main(int argc, char** argv) {
     std::vector<std::string> args(argv + 1, argv + argc);
+    if (!args.empty() && (args[0] == "help" || args[0] == "--help" || args[0] == "-h")) {
+        std::cout << kUsage;
+        return 0;
+    }
     std::string path = "todo.txt";
     if (const char* env = std::getenv("TODO_FILE")) path = env;
     size_t i = 0;

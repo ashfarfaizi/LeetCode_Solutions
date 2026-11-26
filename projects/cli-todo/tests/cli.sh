@@ -58,5 +58,9 @@ pending: 1 high, 0 normal, 0 low" "$("$BIN" -f "$F" stats)"
 expect "stats on empty list" "0 tasks, 0 done (0%), 0 pending" "$("$BIN" -f "$DIR/none.txt" stats)"
 "$BIN" -f "$F" list --all 2>/dev/null; expect "unknown list flag is usage error" 2 $?
 
+"$BIN" help | head -n 1 | grep -q '^usage: todo'; expect "help prints usage" 0 $?
+"$BIN" --help >/dev/null; expect "--help exits 0" 0 $?
+"$BIN" -h 2>/dev/null | grep -q 'todo help'; expect "-h lists help command" 0 $?
+
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"
 exit $fail

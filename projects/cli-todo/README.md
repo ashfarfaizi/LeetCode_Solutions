@@ -15,6 +15,7 @@ todo [-f FILE] pri ID LEVEL  # change a task's priority
 todo [-f FILE] find TEXT     # list tasks containing TEXT (any case)
 todo [-f FILE] stats         # counts of done/pending tasks by priority
 todo [-f FILE] clear         # delete all completed tasks
+todo help                    # print usage (also --help, -h)
 ```
 
 `find` prints matching tasks in the same order as `list` and exits with
@@ -50,6 +51,9 @@ $ todo list
 [ ] 3  (high) pay rent
 [ ] 2  call mum back
 ```
+
+`help` prints the usage summary to standard output and exits `0`; a usage
+error prints the same summary to standard error.
 
 Exit status is `0` on success, `1` for an unknown task id or an unreadable
 or malformed file, and `2` for a usage error.
