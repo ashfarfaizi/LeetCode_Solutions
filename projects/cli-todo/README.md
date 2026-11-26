@@ -16,6 +16,7 @@ todo [-f FILE] find TEXT     # list tasks containing TEXT (any case)
 todo [-f FILE] next          # show the task to work on next
 todo [-f FILE] stats         # counts of done/pending tasks by priority
 todo [-f FILE] clear         # delete all completed tasks
+todo [-f FILE] export --md   # print the list as a Markdown checklist
 todo help                    # print usage (also --help, -h)
 ```
 
@@ -59,6 +60,11 @@ nothing is pending it prints `nothing to do` and exits `1`.
 
 `done`, `undo` and `rm` accept several ids. Every id is checked first: if
 any is unknown nothing is changed and the command exits `1`.
+
+`export --md` writes the list, in `list` order, as a Markdown task list
+(`- [ ]` / `- [x]`) that renders as a checklist on GitHub. High-priority
+tasks are bold, low-priority ones italic, and Markdown punctuation in task
+text is escaped.
 
 `help` prints the usage summary to standard output and exits `0`; a usage
 error prints the same summary to standard error.

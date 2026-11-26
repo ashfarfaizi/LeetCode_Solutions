@@ -87,6 +87,12 @@ private:
     int nextId_ = 1;
 };
 
+// The list as a Markdown task list in display order, one
+// "- [ ] text" / "- [x] **text**" line per task (high priority in bold,
+// low priority in italics). Markdown-special characters in the text are
+// backslash-escaped.
+std::string toMarkdown(const TodoList& list);
+
 // "[ ] 3  buy milk" / "[x] 4  call mum" / "[ ] 5  (high) pay rent"
 std::string format(const Task& t);
 

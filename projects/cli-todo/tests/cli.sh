@@ -88,5 +88,9 @@ expect "list --done -p normal" "[x] 1  a
 "$BIN" -f "$G" list -p 2>/dev/null; expect "list -p without level is usage error" 2 $?
 "$BIN" -f "$G" list --pending --done 2>/dev/null; expect "list with both filters is usage error" 2 $?
 
+expect "export --md" "- [ ] **pay rent**
+- [x] _water plants_" "$("$BIN" -f "$F" export --md)"
+"$BIN" -f "$F" export 2>/dev/null; expect "export without format is usage error" 2 $?
+
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"
 exit $fail

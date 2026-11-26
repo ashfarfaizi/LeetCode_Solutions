@@ -259,4 +259,21 @@ std::string format(const Task& t) {
     return out + t.text;
 }
 
+std::string toMarkdown(const TodoList& list) {
+    std::string out;
+    for (const auto& t : list.sorted()) {
+        std::string text;
+        for (char c : t.text) {
+            if (std::string("\\`*_[]<>#|").find(c) != std::string::npos) text += '\\';
+            text += c;
+        }
+        if (t.priority == Priority::High) text = "**" + text + "**";
+        else if (t.priority == Priority::Low) text = "_" + text + "_";
+        out += t.done ? "- [x] " : "- [ ] ";
+        out += text;
+        out += '\n';
+    }
+    return out;
+}
+
 }  // namespace todo

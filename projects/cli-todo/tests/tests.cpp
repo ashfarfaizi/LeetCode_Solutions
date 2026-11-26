@@ -228,6 +228,19 @@ static void testNextPending() {
     CHECK(!l.nextPending());
 }
 
+static void testToMarkdown() {
+    todo::TodoList l;
+    CHECK(todo::toMarkdown(l).empty());
+    l.add("buy milk");
+    l.add("pay rent", todo::Priority::High);
+    l.add("fix *bold* [link]", todo::Priority::Low);
+    l.complete(1);
+    CHECK(todo::toMarkdown(l) ==
+          "- [ ] **pay rent**\n"
+          "- [x] buy milk\n"
+          "- [ ] _fix \\*bold\\* \\[link\\]_\n");
+}
+
 static void testFormat() {
     todo::Task t{3, "write tests", false};
     CHECK(todo::format(t) == "[ ] 3  write tests");
@@ -253,6 +266,7 @@ int main() {
     testSaveFileIsAtomic();
     testStats();
     testNextPending();
+    testToMarkdown();
     testFormat();
     std::cout << checks - failures << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;

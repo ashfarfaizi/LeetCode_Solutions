@@ -21,6 +21,7 @@ const char* const kUsage =
     "       todo [-f FILE] next\n"
     "       todo [-f FILE] stats\n"
     "       todo [-f FILE] clear\n"
+    "       todo [-f FILE] export --md\n"
     "       todo help\n"
     "LEVEL is high, normal or low (or h, n, l)\n";
 
@@ -114,6 +115,9 @@ int main(int argc, char** argv) {
             auto hits = list.search(needle);
             for (const auto& t : hits) std::cout << todo::format(t) << '\n';
             if (hits.empty()) return 1;
+        } else if (cmd == "export") {
+            if (i + 1 != args.size() || args[i] != "--md") return usage();
+            std::cout << todo::toMarkdown(list);
         } else if (cmd == "next") {
             if (i != args.size()) return usage();
             auto t = list.nextPending();
