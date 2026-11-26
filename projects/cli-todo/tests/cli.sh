@@ -61,6 +61,17 @@ expect "stats on empty list" "0 tasks, 0 done (0%), 0 pending" "$("$BIN" -f "$DI
 "$BIN" help | head -n 1 | grep -q '^usage: todo'; expect "help prints usage" 0 $?
 "$BIN" --help >/dev/null; expect "--help exits 0" 0 $?
 "$BIN" -h 2>/dev/null | grep -q 'todo help'; expect "-h lists help command" 0 $?
+G="$DIR/multi.txt"
+for t in a b c d; do "$BIN" -f "$G" add "$t" >/dev/null; done
+"$BIN" -f "$G" done 1 3
+expect "done with several ids" "[ ] 2  b
+[ ] 4  d" "$("$BIN" -f "$G" list --pending)"
+"$BIN" -f "$G" rm 2 9 2>/dev/null; expect "rm with unknown id exits 1" 1 $?
+expect "rm with unknown id changes nothing" 4 "$("$BIN" -f "$G" list | wc -l | tr -d ' ')"
+"$BIN" -f "$G" rm 2 4
+expect "rm with several ids" "[x] 1  a
+[x] 3  c" "$("$BIN" -f "$G" list)"
+"$BIN" -f "$G" undo 1 x 2>/dev/null; expect "bad id among several is usage error" 2 $?
 
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"
 exit $fail

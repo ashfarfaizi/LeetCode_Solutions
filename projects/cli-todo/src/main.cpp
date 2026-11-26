@@ -11,9 +11,9 @@ namespace {
 const char* const kUsage =
     "usage: todo [-f FILE] add [-p LEVEL] TEXT...\n"
     "       todo [-f FILE] list [--pending | --done]\n"
-    "       todo [-f FILE] done ID\n"
-    "       todo [-f FILE] undo ID\n"
-    "       todo [-f FILE] rm ID\n"
+    "       todo [-f FILE] done ID...\n"
+    "       todo [-f FILE] undo ID...\n"
+    "       todo [-f FILE] rm ID...\n"
     "       todo [-f FILE] edit ID TEXT...\n"
     "       todo [-f FILE] pri ID LEVEL\n"
     "       todo [-f FILE] find TEXT...\n"
@@ -122,12 +122,21 @@ int main(int argc, char** argv) {
             if (n > 0) list.saveFile(path);
             std::cout << "cleared " << n << (n == 1 ? " task\n" : " tasks\n");
         } else if (cmd == "done" || cmd == "undo" || cmd == "rm") {
-            int id = 0;
-            if (i + 1 != args.size() || !parseId(args[i], id)) return usage();
-            bool ok = cmd == "done"   ? list.complete(id)
-                      : cmd == "undo" ? list.reopen(id)
-                                      : list.remove(id);
-            if (!ok) return noTask(id);
+            // Several ids may be given; all are validated before any change.
+            if (i >= args.size()) return usage();
+            std::vector<int> ids;
+            for (; i < args.size(); ++i) {
+                int id = 0;
+                if (!parseId(args[i], id)) return usage();
+                ids.push_back(id);
+            }
+            for (int id : ids)
+                if (!list.find(id)) return noTask(id);
+            for (int id : ids) {
+                if (cmd == "done") list.complete(id);
+                else if (cmd == "undo") list.reopen(id);
+                else list.remove(id);
+            }
             list.saveFile(path);
         } else if (cmd == "edit") {
             int id = 0;

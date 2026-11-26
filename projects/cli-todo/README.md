@@ -7,9 +7,9 @@ that is easy to read, diff and keep in version control.
 ```
 todo [-f FILE] add [-p LEVEL] TEXT...  # add a task, prints its id
 todo [-f FILE] list [--pending | --done]  # show tasks, highest priority first
-todo [-f FILE] done ID       # mark a task as done
-todo [-f FILE] undo ID       # mark a done task as pending again
-todo [-f FILE] rm ID         # delete a task
+todo [-f FILE] done ID...    # mark tasks as done
+todo [-f FILE] undo ID...    # mark done tasks as pending again
+todo [-f FILE] rm ID...      # delete tasks
 todo [-f FILE] edit ID TEXT  # replace a task's text
 todo [-f FILE] pri ID LEVEL  # change a task's priority
 todo [-f FILE] find TEXT     # list tasks containing TEXT (any case)
@@ -51,6 +51,9 @@ $ todo list
 [ ] 3  (high) pay rent
 [ ] 2  call mum back
 ```
+
+`done`, `undo` and `rm` accept several ids. Every id is checked first: if
+any is unknown nothing is changed and the command exits `1`.
 
 `help` prints the usage summary to standard output and exits `0`; a usage
 error prints the same summary to standard error.
