@@ -77,5 +77,16 @@ expect "next picks highest priority" "[ ] 4  (high) pay rent" "$("$BIN" -f "$F" 
 "$BIN" -f "$G" next >/dev/null; expect "next with nothing pending exits 1" 1 $?
 expect "next with nothing pending" "nothing to do" "$("$BIN" -f "$G" next)"
 
+"$BIN" -f "$G" add -p high e >/dev/null
+"$BIN" -f "$G" add -p high f >/dev/null
+"$BIN" -f "$G" done 4
+expect "list -p filters by priority" "[x] 4  (high) e
+[ ] 5  (high) f" "$("$BIN" -f "$G" list -p high)"
+expect "list -p combines with --pending" "[ ] 5  (high) f" "$("$BIN" -f "$G" list -p h --pending)"
+expect "list --done -p normal" "[x] 1  a
+[x] 3  c" "$("$BIN" -f "$G" list --done -p normal)"
+"$BIN" -f "$G" list -p 2>/dev/null; expect "list -p without level is usage error" 2 $?
+"$BIN" -f "$G" list --pending --done 2>/dev/null; expect "list with both filters is usage error" 2 $?
+
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"
 exit $fail

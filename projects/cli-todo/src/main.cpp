@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -10,7 +11,7 @@ namespace {
 
 const char* const kUsage =
     "usage: todo [-f FILE] add [-p LEVEL] TEXT...\n"
-    "       todo [-f FILE] list [--pending | --done]\n"
+    "       todo [-f FILE] list [--pending | --done] [-p LEVEL]\n"
     "       todo [-f FILE] done ID...\n"
     "       todo [-f FILE] undo ID...\n"
     "       todo [-f FILE] rm ID...\n"
@@ -89,15 +90,22 @@ int main(int argc, char** argv) {
             std::cout << "added " << id << '\n';
         } else if (cmd == "list") {
             enum { All, Pending, Done } show = All;
-            if (i < args.size()) {
-                if (args[i] == "--pending") show = Pending;
-                else if (args[i] == "--done") show = Done;
-                else return usage();
-                ++i;
+            std::optional<todo::Priority> only;
+            for (; i < args.size(); ++i) {
+                if (args[i] == "--pending" && show == All) {
+                    show = Pending;
+                } else if (args[i] == "--done" && show == All) {
+                    show = Done;
+                } else if (args[i] == "-p" && !only && i + 1 < args.size()) {
+                    only = todo::parsePriority(args[++i]);
+                    if (!only) return usage();
+                } else {
+                    return usage();
+                }
             }
-            if (i != args.size()) return usage();
             for (const auto& t : list.sorted()) {
                 if ((show == Pending && t.done) || (show == Done && !t.done)) continue;
+                if (only && t.priority != *only) continue;
                 std::cout << todo::format(t) << '\n';
             }
         } else if (cmd == "find") {

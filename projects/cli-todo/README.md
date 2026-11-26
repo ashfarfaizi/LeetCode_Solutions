@@ -6,7 +6,7 @@ that is easy to read, diff and keep in version control.
 
 ```
 todo [-f FILE] add [-p LEVEL] TEXT...  # add a task, prints its id
-todo [-f FILE] list [--pending | --done]  # show tasks, highest priority first
+todo [-f FILE] list [--pending | --done] [-p LEVEL]  # show tasks, highest priority first
 todo [-f FILE] done ID...    # mark tasks as done
 todo [-f FILE] undo ID...    # mark done tasks as pending again
 todo [-f FILE] rm ID...      # delete tasks
@@ -23,7 +23,8 @@ todo help                    # print usage (also --help, -h)
 status `1` when nothing matches, so it can be used in scripts.
 
 `list --pending` shows only unfinished tasks and `list --done` only
-finished ones. `clear` prints how many tasks it removed; ids of cleared
+finished ones. `-p LEVEL` keeps only tasks of that priority and can be
+combined with either flag, in any order. `clear` prints how many tasks it removed; ids of cleared
 tasks are not reused.
 
 `LEVEL` is `high`, `normal` (the default) or `low`, or just `h`, `n`, `l`.
