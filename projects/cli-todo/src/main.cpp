@@ -17,6 +17,7 @@ const char* const kUsage =
     "       todo [-f FILE] edit ID TEXT...\n"
     "       todo [-f FILE] pri ID LEVEL\n"
     "       todo [-f FILE] find TEXT...\n"
+    "       todo [-f FILE] next\n"
     "       todo [-f FILE] stats\n"
     "       todo [-f FILE] clear\n"
     "       todo help\n"
@@ -105,6 +106,14 @@ int main(int argc, char** argv) {
             auto hits = list.search(needle);
             for (const auto& t : hits) std::cout << todo::format(t) << '\n';
             if (hits.empty()) return 1;
+        } else if (cmd == "next") {
+            if (i != args.size()) return usage();
+            auto t = list.nextPending();
+            if (!t) {
+                std::cout << "nothing to do\n";
+                return 1;
+            }
+            std::cout << todo::format(*t) << '\n';
         } else if (cmd == "stats") {
             if (i != args.size()) return usage();
             const todo::Stats s = list.stats();

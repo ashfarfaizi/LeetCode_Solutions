@@ -73,5 +73,9 @@ expect "rm with several ids" "[x] 1  a
 [x] 3  c" "$("$BIN" -f "$G" list)"
 "$BIN" -f "$G" undo 1 x 2>/dev/null; expect "bad id among several is usage error" 2 $?
 
+expect "next picks highest priority" "[ ] 4  (high) pay rent" "$("$BIN" -f "$F" next)"
+"$BIN" -f "$G" next >/dev/null; expect "next with nothing pending exits 1" 1 $?
+expect "next with nothing pending" "nothing to do" "$("$BIN" -f "$G" next)"
+
 [ $fail -eq 0 ] && echo "cli: all smoke tests passed"
 exit $fail

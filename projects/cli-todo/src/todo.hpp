@@ -61,6 +61,10 @@ public:
 
     Stats stats() const;
 
+    // The pending task that would be listed first (highest priority, then
+    // lowest id), or nothing when every task is done.
+    std::optional<Task> nextPending() const;
+
     std::optional<Task> find(int id) const;
     const std::vector<Task>& tasks() const { return tasks_; }
     int nextId() const { return nextId_; }

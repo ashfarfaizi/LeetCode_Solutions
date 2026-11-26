@@ -133,6 +133,18 @@ std::vector<Task> TodoList::search(const std::string& needle) const {
     return out;
 }
 
+std::optional<Task> TodoList::nextPending() const {
+    const Task* best = nullptr;
+    for (const auto& t : tasks_) {
+        if (t.done) continue;
+        if (!best || t.priority > best->priority ||
+            (t.priority == best->priority && t.id < best->id))
+            best = &t;
+    }
+    if (!best) return std::nullopt;
+    return *best;
+}
+
 Stats TodoList::stats() const {
     Stats s;
     for (const auto& t : tasks_) {

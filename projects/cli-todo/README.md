@@ -13,6 +13,7 @@ todo [-f FILE] rm ID...      # delete tasks
 todo [-f FILE] edit ID TEXT  # replace a task's text
 todo [-f FILE] pri ID LEVEL  # change a task's priority
 todo [-f FILE] find TEXT     # list tasks containing TEXT (any case)
+todo [-f FILE] next          # show the task to work on next
 todo [-f FILE] stats         # counts of done/pending tasks by priority
 todo [-f FILE] clear         # delete all completed tasks
 todo help                    # print usage (also --help, -h)
@@ -51,6 +52,9 @@ $ todo list
 [ ] 3  (high) pay rent
 [ ] 2  call mum back
 ```
+
+`next` prints the single pending task that `list` would show first. When
+nothing is pending it prints `nothing to do` and exits `1`.
 
 `done`, `undo` and `rm` accept several ids. Every id is checked first: if
 any is unknown nothing is changed and the command exits `1`.

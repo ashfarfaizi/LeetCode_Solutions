@@ -191,6 +191,24 @@ static void testStats() {
     CHECK(s.pendingByPriority[0] == 1);
 }
 
+static void testNextPending() {
+    todo::TodoList l;
+    CHECK(!l.nextPending());
+    l.add("a");
+    l.add("b", todo::Priority::Low);
+    CHECK(l.nextPending()->id == 1);
+    l.add("c", todo::Priority::High);
+    l.add("d", todo::Priority::High);
+    CHECK(l.nextPending()->id == 3);
+    l.complete(3);
+    CHECK(l.nextPending()->id == 4);
+    l.complete(4);
+    l.complete(1);
+    CHECK(l.nextPending()->id == 2);
+    l.complete(2);
+    CHECK(!l.nextPending());
+}
+
 static void testFormat() {
     todo::Task t{3, "write tests", false};
     CHECK(todo::format(t) == "[ ] 3  write tests");
@@ -214,6 +232,7 @@ int main() {
     testSearch();
     testSaveFileIsAtomic();
     testStats();
+    testNextPending();
     testFormat();
     std::cout << checks - failures << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
