@@ -22,6 +22,8 @@ stage of a parser, a pretty-printer or a syntax highlighter.
 - `jt::minify` (`json_format.hpp`) strips insignificant whitespace from a
   valid document; `jt::escape_string` re-encodes a decoded string value as
   a JSON string literal
+- `jt::pretty(src, indent)` re-indents a valid document with one element
+  or member per line (default indent 2); empty `{}` / `[]` stay compact
 
 ## Build and test
 

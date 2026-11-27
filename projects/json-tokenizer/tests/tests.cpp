@@ -185,6 +185,31 @@ static void test_escape_and_minify() {
     CHECK(throws_on(jt::minify, "{\"a\": tru}"));
 }
 
+static std::string pretty4(std::string_view src) { return jt::pretty(src, 4); }
+
+static void test_pretty() {
+    CHECK(jt::pretty("1") == "1");
+    CHECK(jt::pretty(" [ ] ") == "[]");
+    CHECK(jt::pretty("{ }") == "{}");
+    CHECK(jt::pretty("[1,2]") == "[\n  1,\n  2\n]");
+    CHECK(jt::pretty(R"({"a":[1,{}],"b":{"c":"x\ty"}})") ==
+          "{\n"
+          "  \"a\": [\n"
+          "    1,\n"
+          "    {}\n"
+          "  ],\n"
+          "  \"b\": {\n"
+          "    \"c\": \"x\\ty\"\n"
+          "  }\n"
+          "}");
+    CHECK(pretty4("[[true]]") == "[\n    [\n        true\n    ]\n]");
+    CHECK(jt::pretty("[null,[]]", 0) == "[\nnull,\n[]\n]");
+    // pretty output round-trips through minify
+    std::string doc = R"({"k":[1.50,"\u00e9",[[]],{"z":false}],"e":{}})";
+    CHECK(jt::minify(jt::pretty(doc)) == jt::minify(doc));
+    CHECK(throws_on(pretty4, "[1 2]"));
+}
+
 int main() {
     test_punctuation_and_literals();
     test_strings();
@@ -194,6 +219,7 @@ int main() {
     test_line_and_column();
     test_validate();
     test_escape_and_minify();
+    test_pretty();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

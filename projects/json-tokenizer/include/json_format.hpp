@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <string>
 #include <string_view>
+#include <vector>
 
 #include "json_tokenizer.hpp"
 #include "json_validate.hpp"
@@ -54,6 +55,55 @@ inline std::string minify(std::string_view src) {
     Tokenizer lexer(src);
     for (Token tok = lexer.next(); tok.type != TokenType::End; tok = lexer.next())
         out += token_text(tok);
+    return out;
+}
+
+// Re-formats a valid document with one element or member per line, each
+// nesting level indented by `indent` spaces and a space after every ':'.
+// Empty containers stay on one line as {} or []. No trailing newline is
+// added. Invalid JSON throws TokenizeError / SyntaxError.
+inline std::string pretty(std::string_view src, unsigned indent = 2) {
+    validate(src);
+    std::vector<Token> toks = tokenize(src);
+    std::string out;
+    out.reserve(src.size() * 2);
+    std::size_t depth = 0;
+    auto newline = [&] {
+        out += '\n';
+        out.append(depth * indent, ' ');
+    };
+    for (std::size_t i = 0; i + 1 < toks.size(); ++i) {  // skip the End token
+        const Token& t = toks[i];
+        switch (t.type) {
+            case TokenType::LBrace:
+            case TokenType::LBracket: {
+                TokenType close = t.type == TokenType::LBrace ? TokenType::RBrace : TokenType::RBracket;
+                out += t.value;
+                if (toks[i + 1].type == close) {  // empty container
+                    out += toks[++i].value;
+                } else {
+                    ++depth;
+                    newline();
+                }
+                break;
+            }
+            case TokenType::RBrace:
+            case TokenType::RBracket:
+                --depth;
+                newline();
+                out += t.value;
+                break;
+            case TokenType::Comma:
+                out += ',';
+                newline();
+                break;
+            case TokenType::Colon:
+                out += ": ";
+                break;
+            default:
+                out += token_text(t);
+        }
+    }
     return out;
 }
 
