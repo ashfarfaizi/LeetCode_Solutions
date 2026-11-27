@@ -23,7 +23,7 @@ namespace {
 
 void usage(std::FILE* out) {
     std::fprintf(out,
-                 "usage: jtok [--check | --minify | --pretty[=N] | --stats] [FILE]\n"
+                 "usage: jtok [--comments] [--check | --minify | --pretty[=N] | --stats] [FILE]\n"
                  "  Prints one token per line as LINE:COL TYPE VALUE.\n"
                  "  --check       only validate; print nothing on success\n"
                  "  --minify      print the document without insignificant whitespace\n"
