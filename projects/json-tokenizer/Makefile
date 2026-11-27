@@ -22,6 +22,11 @@ cli-test: build/jtok
 	@printf '[1, 2]' | ./build/jtok --check
 	@! printf '[1,]' | ./build/jtok --check 2>/dev/null
 	@printf '[1,]' | ./build/jtok --check 2>&1 | grep -q '^<stdin>:1:4: error:'
+	@test "$$(printf '{ "a" : [ 1 , "x\\ty" ] }' | ./build/jtok --minify)" = '{"a":[1,"x\ty"]}'
+	@printf '{"a":[1,{}]}' | ./build/jtok --pretty=4 | diff - tests/cli_pretty_expected.txt
+	@! printf '[1 2]' | ./build/jtok --minify 2>/dev/null
+	@printf '1' | ./build/jtok --check --minify 2>/dev/null; test $$? -eq 2
+	@printf '1' | ./build/jtok --pretty=x 2>/dev/null; test $$? -eq 2
 	@echo "cli tests passed"
 
 clean:

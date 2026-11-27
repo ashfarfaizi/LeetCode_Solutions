@@ -43,7 +43,8 @@ g++ -std=c++17 -Wall -Wextra -Iinclude src/jtok.cpp -o build/jtok
 
 `jtok` prints one token per line, or with `--check` only validates. It reads
 a file argument or standard input and exits with 0 (valid), 1 (invalid JSON)
-or 2 (usage / I/O error).
+or 2 (usage / I/O error). `--minify` prints the document on one line and
+`--pretty[=N]` re-indents it (default 2 spaces); only one mode may be given.
 
 ```console
 $ echo '{"a": [1, true]}' | ./build/jtok
@@ -58,6 +59,13 @@ $ echo '{"a": [1, true]}' | ./build/jtok
 1:16 RBrace }
 $ echo '[1,]' | ./build/jtok --check
 <stdin>:1:4: error: expected a value but found ']' at line 1, column 4
+$ echo '{"a": [1, {}]}' | ./build/jtok --pretty
+{
+  "a": [
+    1,
+    {}
+  ]
+}
 ```
 
 ## Usage

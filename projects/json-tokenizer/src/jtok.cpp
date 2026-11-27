@@ -1,9 +1,12 @@
 // jtok: print the tokens of a JSON document, or just check that it is valid.
 //
-//   jtok [--check] [FILE]     reads FILE, or standard input when omitted or "-"
+//   jtok [--check | --minify | --pretty[=N]] [FILE]
+//
+// Reads FILE, or standard input when it is omitted or "-".
 //
 // Exit status: 0 = ok, 1 = invalid JSON, 2 = usage or I/O error.
 
+#include "json_format.hpp"
 #include "json_tokenizer.hpp"
 #include "json_validate.hpp"
 
@@ -18,45 +21,43 @@ namespace {
 
 void usage(std::FILE* out) {
     std::fprintf(out,
-                 "usage: jtok [--check] [FILE]\n"
+                 "usage: jtok [--check | --minify | --pretty[=N]] [FILE]\n"
                  "  Prints one token per line as LINE:COL TYPE VALUE.\n"
-                 "  --check   only validate; print nothing on success\n"
+                 "  --check       only validate; print nothing on success\n"
+                 "  --minify      print the document without insignificant whitespace\n"
+                 "  --pretty[=N]  print the document indented by N spaces (default 2)\n"
                  "  -h, --help\n");
-}
-
-// Escapes a decoded string value so each token stays on one line.
-std::string quoted(const std::string& s) {
-    std::string out = "\"";
-    for (unsigned char c : s) {
-        switch (c) {
-            case '"': out += "\\\""; break;
-            case '\\': out += "\\\\"; break;
-            case '\n': out += "\\n"; break;
-            case '\r': out += "\\r"; break;
-            case '\t': out += "\\t"; break;
-            default:
-                if (c < 0x20) {
-                    char buf[8];
-                    std::snprintf(buf, sizeof buf, "\\u%04x", c);
-                    out += buf;
-                } else {
-                    out += static_cast<char>(c);
-                }
-        }
-    }
-    return out + "\"";
 }
 
 }  // namespace
 
 int main(int argc, char** argv) {
-    bool check_only = false;
+    enum class Mode { Tokens, Check, Minify, Pretty };
+    Mode mode = Mode::Tokens;
+    unsigned indent = 2;
+    auto set_mode = [&](Mode m, const std::string& arg) {
+        if (mode != Mode::Tokens && mode != m) {
+            std::fprintf(stderr, "jtok: '%s' conflicts with an earlier mode option\n", arg.c_str());
+            return false;
+        }
+        mode = m;
+        return true;
+    };
     std::string path = "-";
     bool have_path = false;
     for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];
-        if (arg == "--check") {
-            check_only = true;
+        if (arg == "--check" || arg == "--minify" || arg == "--pretty") {
+            Mode m = arg == "--check" ? Mode::Check : arg == "--minify" ? Mode::Minify : Mode::Pretty;
+            if (!set_mode(m, arg)) return 2;
+        } else if (arg.rfind("--pretty=", 0) == 0) {
+            std::string n = arg.substr(9);
+            if (n.empty() || n.size() > 2 || n.find_first_not_of("0123456789") != std::string::npos) {
+                std::fprintf(stderr, "jtok: invalid indent '%s' (expected 0-99)\n", n.c_str());
+                return 2;
+            }
+            indent = static_cast<unsigned>(std::stoul(n));
+            if (!set_mode(Mode::Pretty, arg)) return 2;
         } else if (arg == "-h" || arg == "--help") {
             usage(stdout);
             return 0;
@@ -89,11 +90,19 @@ int main(int argc, char** argv) {
     const char* name = path == "-" ? "<stdin>" : path.c_str();
 
     try {
+        if (mode == Mode::Minify) {
+            std::printf("%s\n", jt::minify(text).c_str());
+            return 0;
+        }
+        if (mode == Mode::Pretty) {
+            std::printf("%s\n", jt::pretty(text, indent).c_str());
+            return 0;
+        }
         jt::validate(text);
-        if (check_only) return 0;
+        if (mode == Mode::Check) return 0;
         jt::Tokenizer lexer(text);
         for (auto tok = lexer.next(); tok.type != jt::TokenType::End; tok = lexer.next()) {
-            std::string value = tok.type == jt::TokenType::String ? quoted(tok.value) : tok.value;
+            std::string value = jt::token_text(tok);
             std::printf("%zu:%zu %s %s\n", tok.line, tok.column, jt::type_name(tok.type), value.c_str());
         }
     } catch (const jt::TokenizeError& e) {
