@@ -1,11 +1,12 @@
 // jtok: print the tokens of a JSON document, or just check that it is valid.
 //
-//   jtok [--check | --minify | --pretty[=N] | --stats] [FILE]
+//   jtok [--comments] [--check | --minify | --pretty[=N] | --stats] [FILE]
 //
 // Reads FILE, or standard input when it is omitted or "-".
 //
 // Exit status: 0 = ok, 1 = invalid JSON, 2 = usage or I/O error.
 
+#include "json_comments.hpp"
 #include "json_format.hpp"
 #include "json_stats.hpp"
 #include "json_tokenizer.hpp"
@@ -28,6 +29,7 @@ void usage(std::FILE* out) {
                  "  --minify      print the document without insignificant whitespace\n"
                  "  --pretty[=N]  print the document indented by N spaces (default 2)\n"
                  "  --stats       print counts of each kind of value and the maximum depth\n"
+                 "  --comments    allow // and /* */ comments (JSONC); they are dropped\n"
                  "  -h, --help\n");
 }
 
@@ -37,6 +39,7 @@ int main(int argc, char** argv) {
     enum class Mode { Tokens, Check, Minify, Pretty, Stats };
     Mode mode = Mode::Tokens;
     unsigned indent = 2;
+    bool allow_comments = false;
     auto set_mode = [&](Mode m, const std::string& arg) {
         if (mode != Mode::Tokens && mode != m) {
             std::fprintf(stderr, "jtok: '%s' conflicts with an earlier mode option\n", arg.c_str());
@@ -55,6 +58,8 @@ int main(int argc, char** argv) {
                      : arg == "--stats"  ? Mode::Stats
                                          : Mode::Pretty;
             if (!set_mode(m, arg)) return 2;
+        } else if (arg == "--comments") {
+            allow_comments = true;
         } else if (arg.rfind("--pretty=", 0) == 0) {
             std::string n = arg.substr(9);
             if (n.empty() || n.size() > 2 || n.find_first_not_of("0123456789") != std::string::npos) {
@@ -95,6 +100,7 @@ int main(int argc, char** argv) {
     const char* name = path == "-" ? "<stdin>" : path.c_str();
 
     try {
+        if (allow_comments) text = jt::strip_comments(text);
         if (mode == Mode::Minify) {
             std::printf("%s\n", jt::minify(text).c_str());
             return 0;

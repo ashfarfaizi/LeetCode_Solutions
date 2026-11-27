@@ -1,3 +1,4 @@
+#include "json_comments.hpp"
 #include "json_format.hpp"
 #include "json_stats.hpp"
 #include "json_tokenizer.hpp"
@@ -235,6 +236,28 @@ static void test_stats() {
     CHECK(threw);
 }
 
+static void test_strip_comments() {
+    std::string src = "{\n  // name\n  \"a\": 1, /* inline */ \"b\": [2 /* x\n y */, 3]\n}";
+    std::string out = jt::strip_comments(src);
+    CHECK(out.size() == src.size());
+    CHECK(jt::minify(out) == "{\"a\":1,\"b\":[2,3]}");
+    auto toks = jt::tokenize(out);
+    CHECK(toks[1].line == 3 && toks[1].column == 3);  // "a" keeps its position
+    CHECK(toks[10].type == jt::TokenType::Number && toks[10].line == 4);  // 3 after the multi-line comment
+
+    // markers inside strings are not comments, including after an escaped quote
+    CHECK(jt::strip_comments(R"(["http://x", "/*no*/", "q\"//"])") == R"(["http://x", "/*no*/", "q\"//"])");
+    CHECK(jt::strip_comments("1 // trailing") == "1            ");
+    CHECK(jt::strip_comments("[1, 2 / 3]") == "[1, 2 / 3]");  // lone slash stays and fails later
+    CHECK(!jt::is_valid(jt::strip_comments("[1, 2 / 3]")));
+    try {
+        jt::strip_comments("[1,\n  /* open");
+        CHECK(false);
+    } catch (const jt::TokenizeError& e) {
+        CHECK(e.offset() == 6 && e.line() == 2 && e.column() == 3);
+    }
+}
+
 int main() {
     test_punctuation_and_literals();
     test_strings();
@@ -246,6 +269,7 @@ int main() {
     test_escape_and_minify();
     test_pretty();
     test_stats();
+    test_strip_comments();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

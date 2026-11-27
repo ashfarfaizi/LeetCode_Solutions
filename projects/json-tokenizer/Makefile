@@ -28,6 +28,9 @@ cli-test: build/jtok
 	@printf '1' | ./build/jtok --check --minify 2>/dev/null; test $$? -eq 2
 	@printf '1' | ./build/jtok --pretty=x 2>/dev/null; test $$? -eq 2
 	@printf '{"a":[1,"s",true],"b":{}}' | ./build/jtok --stats | diff - tests/cli_stats_expected.txt
+	@test "$$(printf '[1, // one\n 2 /* two */]' | ./build/jtok --comments --minify)" = '[1,2]'
+	@! printf '[1 /* x */]' | ./build/jtok --check 2>/dev/null
+	@printf '[1,\n /* open' | ./build/jtok --comments --check 2>&1 | grep -q '^<stdin>:2:2: error: unterminated block comment'
 	@echo "cli tests passed"
 
 clean:

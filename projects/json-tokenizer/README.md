@@ -26,6 +26,9 @@ stage of a parser, a pretty-printer or a syntax highlighter.
   or member per line (default indent 2); empty `{}` / `[]` stay compact
 - `jt::stats` (`json_stats.hpp`) counts objects, arrays, keys, strings,
   numbers, booleans and nulls and reports the maximum nesting depth
+- `jt::strip_comments` (`json_comments.hpp`) blanks out `//` and `/* */`
+  comments (JSONC) while keeping every byte's line and column, so the
+  result can be fed to any of the functions above
 
 ## Build and test
 
@@ -48,7 +51,8 @@ a file argument or standard input and exits with 0 (valid), 1 (invalid JSON)
 or 2 (usage / I/O error). `--minify` prints the document on one line and
 `--pretty[=N]` re-indents it (default 2 spaces); `--stats` prints a count
 of each kind of value and the deepest nesting level. Only one mode may be
-given.
+given. `--comments` accepts JSONC input such as editor config files; error
+positions still refer to the original text.
 
 ```console
 $ echo '{"a": [1, true]}' | ./build/jtok
