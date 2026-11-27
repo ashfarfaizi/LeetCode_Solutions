@@ -1,3 +1,4 @@
+#include "json_format.hpp"
 #include "json_tokenizer.hpp"
 #include "json_validate.hpp"
 
@@ -155,6 +156,35 @@ static void test_validate() {
     jt::validate("[[1]]", 2);  // exactly at the limit is fine
 }
 
+static bool throws_on(std::string (*fn)(std::string_view), const std::string& src) {
+    try {
+        fn(src);
+    } catch (const jt::TokenizeError&) {
+        return true;
+    }
+    return false;
+}
+
+static void test_escape_and_minify() {
+    CHECK(jt::escape_string("plain") == "\"plain\"");
+    CHECK(jt::escape_string("a\"b\\c") == "\"a\\\"b\\\\c\"");
+    CHECK(jt::escape_string("\n\t\r\b\f") == "\"\\n\\t\\r\\b\\f\"");
+    CHECK(jt::escape_string(std::string("x\0\x1f", 3)) == "\"x\\u0000\\u001f\"");
+    CHECK(jt::escape_string("\xC3\xA9") == "\"\xC3\xA9\"");  // UTF-8 kept as is
+    CHECK(jt::escape_string("a/b") == "\"a/b\"");
+
+    CHECK(jt::minify(" { \"a\" : [ 1 , 2.50 ,\n true ] ,\t\"b\" : null } ") ==
+          "{\"a\":[1,2.50,true],\"b\":null}");
+    CHECK(jt::minify("\"\\u0041\\/\"") == "\"A/\"");  // escapes normalised
+    CHECK(jt::minify("[ ]") == "[]");
+    CHECK(jt::minify("-1e+5") == "-1e+5");
+    std::string doc = R"({"k": ["x\ny", {"z": false}], "e": {}})";
+    CHECK(jt::minify(jt::minify(doc)) == jt::minify(doc));  // idempotent
+    CHECK(jt::is_valid(jt::minify(doc)));
+    CHECK(throws_on(jt::minify, "[1,]"));
+    CHECK(throws_on(jt::minify, "{\"a\": tru}"));
+}
+
 int main() {
     test_punctuation_and_literals();
     test_strings();
@@ -163,6 +193,7 @@ int main() {
     test_error_offsets();
     test_line_and_column();
     test_validate();
+    test_escape_and_minify();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

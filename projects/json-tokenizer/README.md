@@ -19,6 +19,9 @@ stage of a parser, a pretty-printer or a syntax highlighter.
 - `jt::validate` / `jt::is_valid` (`json_validate.hpp`) check that the
   token stream forms exactly one JSON value, with an explicit stack (no
   recursion) and an optional maximum nesting depth
+- `jt::minify` (`json_format.hpp`) strips insignificant whitespace from a
+  valid document; `jt::escape_string` re-encodes a decoded string value as
+  a JSON string literal
 
 ## Build and test
 
