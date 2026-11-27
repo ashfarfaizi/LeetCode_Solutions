@@ -1,4 +1,5 @@
 #include "json_format.hpp"
+#include "json_stats.hpp"
 #include "json_tokenizer.hpp"
 #include "json_validate.hpp"
 
@@ -210,6 +211,30 @@ static void test_pretty() {
     CHECK(throws_on(pretty4, "[1 2]"));
 }
 
+static void test_stats() {
+    jt::Stats s = jt::stats(R"({"a": [1, 2.5, "x"], "b": {"c": null, "d": [true, false, []]}, "e": "y"})");
+    CHECK(s.objects == 2);
+    CHECK(s.arrays == 3);
+    CHECK(s.keys == 5);
+    CHECK(s.strings == 2);
+    CHECK(s.numbers == 2);
+    CHECK(s.booleans == 2);
+    CHECK(s.nulls == 1);
+    CHECK(s.max_depth == 4);
+
+    jt::Stats scalar = jt::stats("\"just a string\"");
+    CHECK(scalar.strings == 1 && scalar.keys == 0 && scalar.max_depth == 0);
+    CHECK(jt::stats("[[[]]]").max_depth == 3);
+    CHECK(jt::stats("[\"k\", \"v\"]").keys == 0);  // strings in arrays are values
+    bool threw = false;
+    try {
+        jt::stats("{\"a\" 1}");
+    } catch (const jt::SyntaxError&) {
+        threw = true;
+    }
+    CHECK(threw);
+}
+
 int main() {
     test_punctuation_and_literals();
     test_strings();
@@ -220,6 +245,7 @@ int main() {
     test_validate();
     test_escape_and_minify();
     test_pretty();
+    test_stats();
     std::printf("%d passed, %d failed\n", passed, failures);
     return failures == 0 ? 0 : 1;
 }

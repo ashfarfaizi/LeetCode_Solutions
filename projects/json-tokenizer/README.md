@@ -24,6 +24,8 @@ stage of a parser, a pretty-printer or a syntax highlighter.
   a JSON string literal
 - `jt::pretty(src, indent)` re-indents a valid document with one element
   or member per line (default indent 2); empty `{}` / `[]` stay compact
+- `jt::stats` (`json_stats.hpp`) counts objects, arrays, keys, strings,
+  numbers, booleans and nulls and reports the maximum nesting depth
 
 ## Build and test
 
@@ -44,7 +46,9 @@ g++ -std=c++17 -Wall -Wextra -Iinclude src/jtok.cpp -o build/jtok
 `jtok` prints one token per line, or with `--check` only validates. It reads
 a file argument or standard input and exits with 0 (valid), 1 (invalid JSON)
 or 2 (usage / I/O error). `--minify` prints the document on one line and
-`--pretty[=N]` re-indents it (default 2 spaces); only one mode may be given.
+`--pretty[=N]` re-indents it (default 2 spaces); `--stats` prints a count
+of each kind of value and the deepest nesting level. Only one mode may be
+given.
 
 ```console
 $ echo '{"a": [1, true]}' | ./build/jtok

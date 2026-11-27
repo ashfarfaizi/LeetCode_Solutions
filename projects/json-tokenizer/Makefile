@@ -27,6 +27,7 @@ cli-test: build/jtok
 	@! printf '[1 2]' | ./build/jtok --minify 2>/dev/null
 	@printf '1' | ./build/jtok --check --minify 2>/dev/null; test $$? -eq 2
 	@printf '1' | ./build/jtok --pretty=x 2>/dev/null; test $$? -eq 2
+	@printf '{"a":[1,"s",true],"b":{}}' | ./build/jtok --stats | diff - tests/cli_stats_expected.txt
 	@echo "cli tests passed"
 
 clean:

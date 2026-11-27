@@ -1,0 +1,8 @@
+objects   2
+arrays    1
+keys      2
+strings   1
+numbers   1
+booleans  1
+nulls     0
+max_depth 2

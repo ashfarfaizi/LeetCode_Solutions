@@ -1,12 +1,13 @@
 // jtok: print the tokens of a JSON document, or just check that it is valid.
 //
-//   jtok [--check | --minify | --pretty[=N]] [FILE]
+//   jtok [--check | --minify | --pretty[=N] | --stats] [FILE]
 //
 // Reads FILE, or standard input when it is omitted or "-".
 //
 // Exit status: 0 = ok, 1 = invalid JSON, 2 = usage or I/O error.
 
 #include "json_format.hpp"
+#include "json_stats.hpp"
 #include "json_tokenizer.hpp"
 #include "json_validate.hpp"
 
@@ -21,18 +22,19 @@ namespace {
 
 void usage(std::FILE* out) {
     std::fprintf(out,
-                 "usage: jtok [--check | --minify | --pretty[=N]] [FILE]\n"
+                 "usage: jtok [--check | --minify | --pretty[=N] | --stats] [FILE]\n"
                  "  Prints one token per line as LINE:COL TYPE VALUE.\n"
                  "  --check       only validate; print nothing on success\n"
                  "  --minify      print the document without insignificant whitespace\n"
                  "  --pretty[=N]  print the document indented by N spaces (default 2)\n"
+                 "  --stats       print counts of each kind of value and the maximum depth\n"
                  "  -h, --help\n");
 }
 
 }  // namespace
 
 int main(int argc, char** argv) {
-    enum class Mode { Tokens, Check, Minify, Pretty };
+    enum class Mode { Tokens, Check, Minify, Pretty, Stats };
     Mode mode = Mode::Tokens;
     unsigned indent = 2;
     auto set_mode = [&](Mode m, const std::string& arg) {
@@ -47,8 +49,11 @@ int main(int argc, char** argv) {
     bool have_path = false;
     for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];
-        if (arg == "--check" || arg == "--minify" || arg == "--pretty") {
-            Mode m = arg == "--check" ? Mode::Check : arg == "--minify" ? Mode::Minify : Mode::Pretty;
+        if (arg == "--check" || arg == "--minify" || arg == "--pretty" || arg == "--stats") {
+            Mode m = arg == "--check"    ? Mode::Check
+                     : arg == "--minify" ? Mode::Minify
+                     : arg == "--stats"  ? Mode::Stats
+                                         : Mode::Pretty;
             if (!set_mode(m, arg)) return 2;
         } else if (arg.rfind("--pretty=", 0) == 0) {
             std::string n = arg.substr(9);
@@ -96,6 +101,14 @@ int main(int argc, char** argv) {
         }
         if (mode == Mode::Pretty) {
             std::printf("%s\n", jt::pretty(text, indent).c_str());
+            return 0;
+        }
+        if (mode == Mode::Stats) {
+            jt::Stats st = jt::stats(text);
+            std::printf("objects   %zu\narrays    %zu\nkeys      %zu\nstrings   %zu\n"
+                        "numbers   %zu\nbooleans  %zu\nnulls     %zu\nmax_depth %zu\n",
+                        st.objects, st.arrays, st.keys, st.strings, st.numbers, st.booleans,
+                        st.nulls, st.max_depth);
             return 0;
         }
         jt::validate(text);
