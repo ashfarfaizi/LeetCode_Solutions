@@ -62,6 +62,13 @@ out=$("$MGREP" -rl --include='*.txt' --include='*.md' --exclude='a.*' alpha "$tm
 out=$("$MGREP" -r --include='?.txt' -c alpha "$tmp/d" | tr '\n' '|'); check "--include ?" "$tmp/d/b.txt:1|$tmp/d/sub/a.txt:1|" "$out"
 out=$("$MGREP" --exclude='*.txt' alpha "$tmp/a.txt"); check "named files not filtered" "alpha" "$out"
 "$MGREP" -r --include= alpha "$tmp/d" 2> /dev/null; check "--include= empty" "2" "$?"
+mkdir -p "$tmp/d/.git" "$tmp/d/sub/build"
+printf 'alpha git\n' > "$tmp/d/.git/config"
+printf 'alpha obj\n' > "$tmp/d/sub/build/out.txt"
+out=$("$MGREP" -rl alpha "$tmp/d" | wc -l | tr -d ' '); check "-r sees nested dirs" "5" "$out"
+out=$("$MGREP" -rl --exclude-dir=.git --exclude-dir='b*d' alpha "$tmp/d" | tr '\n' '|'); check "--exclude-dir" "$tmp/d/b.txt|$tmp/d/notes.md|$tmp/d/sub/a.txt|" "$out"
+err=$("$MGREP" -r --exclude-dir= alpha "$tmp/d" 2>&1 > /dev/null); check "--exclude-dir= empty" "2" "$?"
+check "--exclude-dir= message" "mgrep: --exclude-dir needs a pattern" "$(echo "$err" | head -n 1)"
 
 out=$("$MGREP" --help 2> /dev/null | head -n 1); check "--help exit" "0" "$?"
 check "--help on stdout" "usage: mgrep [-bicnovwxlLqrsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]" "$out"

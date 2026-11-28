@@ -12,7 +12,8 @@
 // -r searches directories recursively (the current directory when no FILE is
 // given); without it a directory argument is reported as an error.
 // -f FILE reads one pattern per line from FILE ("-" for standard input).
-// --include=GLOB / --exclude=GLOB filter the files -r finds by base name.
+// --include=GLOB / --exclude=GLOB filter the files -r finds by base name, and
+// --exclude-dir=GLOB stops -r descending into matching directories.
 // Exit status: 0 if any line matched, 1 if none did, 2 on usage or I/O error.
 
 #include "grep.hpp"
@@ -51,6 +52,7 @@ void help() {
                  "  -s      hide file error messages       --help  show this help\n"
                  "  --include=GLOB  with -r, only search files whose name matches GLOB\n"
                  "  --exclude=GLOB  with -r, skip files whose name matches GLOB\n"
+                 "  --exclude-dir=GLOB  with -r, skip directories whose name matches GLOB\n"
                  "\nExit status: 0 if a line was selected, 1 if none, 2 on error.\n";
 }
 
@@ -101,9 +103,16 @@ bool globMatch(const std::string& glob, const std::string& text) {
     return g == glob.size();
 }
 
-// --include / --exclude globs applied to base names of files found by -r.
+// --include / --exclude globs applied to base names of files found by -r,
+// and --exclude-dir globs applied to the directories it walks into.
 struct FileFilter {
-    std::vector<std::string> include, exclude;
+    std::vector<std::string> include, exclude, excludeDir;
+
+    bool skipsDir(const std::string& baseName) const {
+        for (const auto& g : excludeDir)
+            if (globMatch(g, baseName)) return true;
+        return false;
+    }
 
     bool accepts(const std::string& baseName) const {
         for (const auto& g : exclude)
@@ -129,6 +138,10 @@ void expand(const std::string& name, bool recursive, const FileFilter& filter,
     std::vector<std::string> found;
     for (fs::recursive_directory_iterator it(name, fs::directory_options::skip_permission_denied, ec), end;
          !ec && it != end; it.increment(ec)) {
+        if (it->is_directory(ec) && filter.skipsDir(it->path().filename().string())) {
+            it.disable_recursion_pending();
+            continue;
+        }
         if (it->is_regular_file(ec) && filter.accepts(it->path().filename().string()))
             found.push_back(it->path().string());
     }
@@ -159,15 +172,20 @@ int main(int argc, char** argv) {
             help();
             return 0;
         }
-        if (arg.rfind("--include=", 0) == 0 || arg.rfind("--exclude=", 0) == 0) {
-            const bool inc = arg[2] == 'i';
-            std::string glob = arg.substr(10);
+        if (arg.rfind("--include=", 0) == 0 || arg.rfind("--exclude=", 0) == 0 ||
+            arg.rfind("--exclude-dir=", 0) == 0) {
+            const std::size_t eq = arg.find('=');
+            const std::string key = arg.substr(2, eq - 2);
+            std::string glob = arg.substr(eq + 1);
             if (glob.empty()) {
-                std::cerr << "mgrep: " << arg << " needs a pattern\n";
+                std::cerr << "mgrep: --" << key << " needs a pattern\n";
                 usage();
                 return 2;
             }
-            (inc ? filter.include : filter.exclude).push_back(glob);
+            auto& list = key == "include" ? filter.include
+                       : key == "exclude" ? filter.exclude
+                                          : filter.excludeDir;
+            list.push_back(glob);
             continue;
         }
         if (arg.size() > 2 && arg[0] == '-' && arg[1] == '-') {

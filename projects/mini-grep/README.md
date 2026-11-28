@@ -58,6 +58,10 @@ exclude beats an include: `mgrep -rn --include='*.cpp' --include='*.hpp'
 --exclude='*_test.cpp' TODO src`. Files named on the command line are always
 searched.
 
+`--exclude-dir=GLOB` (also repeatable) stops `-r` from descending into any
+directory whose base name matches, which keeps `.git` or build trees out of
+the results: `mgrep -rn --exclude-dir=.git --exclude-dir=build TODO .`.
+
 Short options can be combined and `--` ends option parsing, so
 `mgrep -- --help notes.md` searches for the text `--help`. `mgrep --help`
 prints a summary of every option to standard output and exits `0`; any other
