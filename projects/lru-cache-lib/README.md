@@ -78,6 +78,19 @@ Expired entries are removed lazily on lookup (counting as a miss) or by
 been touched yet. The clock is the last template parameter (default
 `std::chrono::steady_clock`), which lets tests substitute a fake one.
 
+When access frequency matters more than recency, `lru::LFUCache` (in
+`lfu_cache.hpp`) evicts the least frequently used entry instead, breaking
+ties by recency. `get`, `put`, `contains`, `erase` and `clear` mirror
+`LRUCache`, `frequency(k)` reports an entry's use count, and `stats()` /
+`resetStats()` work the same way. Overwriting a key counts as a use.
+
+```cpp
+lru::LFUCache<int, int> c(2);
+c.put(1, 1); c.put(2, 2);
+c.get(1);      // 1 used twice, 2 once
+c.put(3, 3);   // evicts 2
+```
+
 No dependencies beyond the standard library.
 
 ## Build & test
@@ -112,6 +125,7 @@ g++ -std=c++17 -Wall -Wextra -Iinclude tests/tests.cpp -o tests_bin -pthread && 
 include/lru_cache.hpp              the cache (header-only)
 include/concurrent_lru_cache.hpp   mutex-guarded wrapper
 include/ttl_lru_cache.hpp          LRU cache with per-entry expiry
+include/lfu_cache.hpp              least-frequently-used cache
 examples/cache_sim.cpp             trace-driven hit-rate simulator
 tests/tests.cpp                    minimal self-contained test runner
 ```

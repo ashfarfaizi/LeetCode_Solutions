@@ -1,5 +1,6 @@
 // Minimal self-contained test runner for lru-cache-lib.
 #include "concurrent_lru_cache.hpp"
+#include "lfu_cache.hpp"
 #include "lru_cache.hpp"
 #include "ttl_lru_cache.hpp"
 
@@ -312,6 +313,44 @@ static void testTTLCache() {
     CHECK(threw);
 }
 
+static void testLFUCache() {
+    lru::LFUCache<int, int> c(2);
+    c.put(1, 10);
+    c.put(2, 20);
+    CHECK(c.get(1) == 10);       // freq(1)=2, freq(2)=1
+    c.put(3, 30);                // evicts 2 (lowest frequency)
+    CHECK(!c.get(2));
+    CHECK(c.get(3) == 30);       // freq(3)=2, ties with 1
+    c.put(4, 40);                // tie at freq 2: evicts 1 (least recent)
+    CHECK(!c.contains(1));
+    CHECK(c.contains(3) && c.contains(4));
+    CHECK(c.frequency(3) == 2 && c.frequency(4) == 1 && c.frequency(99) == 0);
+    c.put(4, 41);                // overwrite counts as a use
+    CHECK(c.frequency(4) == 2);
+    CHECK(c.get(4) == 41);
+    CHECK(c.stats().hits == 3 && c.stats().misses == 1 && c.stats().evictions == 2);
+
+    CHECK(c.erase(3));
+    CHECK(!c.erase(3));
+    CHECK(c.size() == 1);
+    c.put(5, 50);                // room after erase: no eviction
+    c.put(6, 60);                // evicts 5 (freq 1) rather than 4 (freq 3)
+    CHECK(c.contains(4) && c.contains(6) && !c.contains(5));
+    CHECK(c.stats().evictions == 3);
+    c.clear();
+    CHECK(c.empty());
+    c.put(7, 70);
+    CHECK(c.get(7) == 70);
+
+    bool threw = false;
+    try {
+        lru::LFUCache<int, int> bad(0);
+    } catch (const std::invalid_argument&) {
+        threw = true;
+    }
+    CHECK(threw);
+}
+
 int main() {
     testBasicGetPut();
     testEvictsLeastRecentlyUsed();
@@ -328,6 +367,7 @@ int main() {
     testConcurrentCache();
     testConcurrentForwarding();
     testTTLCache();
+    testLFUCache();
     std::cout << (checks - failures) << "/" << checks << " checks passed\n";
     return failures == 0 ? 0 : 1;
 }
