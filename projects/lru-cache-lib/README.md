@@ -113,6 +113,16 @@ capacity 2: 1 hits, 9 misses, 7 evictions, hit rate 10.0%
 capacity 3: 4 hits, 6 misses, 3 evictions, hit rate 40.0%
 ```
 
+`--policy=lfu` replays the trace through `LFUCache` instead, and
+`--policy=both` prints LRU and LFU results side by side:
+
+```sh
+$ echo "a b c a d a b e a b" | ./build/cache_sim --policy=both 2
+requests: 10
+lru capacity 2: 1 hits, 9 misses, 7 evictions, hit rate 10.0%
+lfu capacity 2: 2 hits, 8 misses, 6 evictions, hit rate 20.0%
+```
+
 Or without make:
 
 ```sh
@@ -126,6 +136,6 @@ include/lru_cache.hpp              the cache (header-only)
 include/concurrent_lru_cache.hpp   mutex-guarded wrapper
 include/ttl_lru_cache.hpp          LRU cache with per-entry expiry
 include/lfu_cache.hpp              least-frequently-used cache
-examples/cache_sim.cpp             trace-driven hit-rate simulator
+examples/cache_sim.cpp             trace-driven LRU/LFU hit-rate simulator
 tests/tests.cpp                    minimal self-contained test runner
 ```
