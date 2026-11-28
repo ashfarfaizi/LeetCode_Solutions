@@ -1,0 +1,2 @@
+<h2><a href="https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/">1011. Capacity To Ship Packages Within D Days</a></h2><h3>Medium</h3><hr>
+<p>Packages with given weights must be shipped in their listed order over a fixed number of days; each day the ship takes a contiguous run of packages whose total weight does not exceed its capacity. Find the smallest capacity that lets all packages ship within the allowed number of days.</p>
