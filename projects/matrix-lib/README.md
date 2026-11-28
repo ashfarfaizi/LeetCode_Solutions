@@ -53,6 +53,13 @@ mat::Matrix::hstack(a, b);       // [a | b], needs equal row counts
 mat::Matrix::vstack(a, b);       // a on top of b, needs equal column counts
 ```
 
+Other products:
+
+```cpp
+a.hadamard(b);                   // element-wise product; shapes must match
+mat::Matrix::kronecker(a, b);    // block matrix [a(i,j) * b]; (ra*rb) x (ca*cb)
+```
+
 LU factorisation, for solving many systems with the same coefficient matrix:
 
 ```cpp

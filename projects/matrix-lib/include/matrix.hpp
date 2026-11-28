@@ -65,6 +65,26 @@ public:
         return out;
     }
 
+    // Kronecker product: every entry a(i, j) is replaced by the block
+    // a(i, j) * b, giving an (a.rows*b.rows) x (a.cols*b.cols) matrix.
+    static Matrix kronecker(const Matrix& a, const Matrix& b) {
+        Matrix out(a.rows_ * b.rows_, a.cols_ * b.cols_);
+        for (std::size_t i = 0; i < a.rows_; ++i)
+            for (std::size_t j = 0; j < a.cols_; ++j)
+                for (std::size_t p = 0; p < b.rows_; ++p)
+                    for (std::size_t q = 0; q < b.cols_; ++q)
+                        out(i * b.rows_ + p, j * b.cols_ + q) = a(i, j) * b(p, q);
+        return out;
+    }
+
+    // Element-wise (Hadamard) product. Shapes must match.
+    Matrix hadamard(const Matrix& o) const {
+        requireSameShape(o, "hadamard");
+        Matrix out = *this;
+        for (std::size_t k = 0; k < data_.size(); ++k) out.data_[k] *= o.data_[k];
+        return out;
+    }
+
     std::size_t rows() const { return rows_; }
     std::size_t cols() const { return cols_; }
     bool isSquare() const { return rows_ == cols_; }

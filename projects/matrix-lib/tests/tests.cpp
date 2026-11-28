@@ -189,6 +189,30 @@ static void testStacking() {
     CHECK_THROWS(Matrix::vstack(a, b), std::invalid_argument);
 }
 
+static void testElementwiseAndKronecker() {
+    Matrix a{{1, 2}, {3, 4}};
+    Matrix b{{0, 5}, {6, 7}};
+    CHECK(a.hadamard(b) == (Matrix{{0, 10}, {18, 28}}));
+    CHECK(a.hadamard(Matrix(2, 2, 1.0)) == a);
+    CHECK_THROWS(a.hadamard(Matrix(2, 3)), std::invalid_argument);
+
+    CHECK(Matrix::kronecker(a, b) == (Matrix{{0, 5, 0, 10},
+                                             {6, 7, 12, 14},
+                                             {0, 15, 0, 20},
+                                             {18, 21, 24, 28}}));
+    // I (x) B is block-diagonal; shapes multiply for non-square inputs.
+    Matrix k = Matrix::kronecker(Matrix::identity(2), Matrix{{1, 2, 3}});
+    CHECK(k.rows() == 2 && k.cols() == 6);
+    CHECK(k == (Matrix{{1, 2, 3, 0, 0, 0}, {0, 0, 0, 1, 2, 3}}));
+    // Mixed-product property: (A (x) B)(C (x) D) = AC (x) BD.
+    Matrix c{{2, 0}, {1, 1}}, d{{1, -1}, {0, 2}};
+    CHECK(Matrix::kronecker(a, b) * Matrix::kronecker(c, d) ==
+          Matrix::kronecker(a * c, b * d));
+    // det(A (x) B) = det(A)^m det(B)^n for n x n A and m x m B.
+    CHECK(std::fabs(Matrix::kronecker(a, b).determinant() -
+                    std::pow(a.determinant(), 2) * std::pow(b.determinant(), 2)) < 1e-6);
+}
+
 static void testRank() {
     CHECK(Matrix::identity(4).rank() == 4);
     CHECK(Matrix(3, 5).rank() == 0);
@@ -333,6 +357,7 @@ int main() {
     testSolveAndPrint();
     testSlicing();
     testStacking();
+    testElementwiseAndKronecker();
     testRank();
     testNorms();
     testLU();
