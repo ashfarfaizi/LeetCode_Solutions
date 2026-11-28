@@ -55,6 +55,14 @@ out=$(cd "$tmp/d/sub" && "$abs" -r alpha); check "-r defaults to ." "./a.txt:alp
 out=$("$MGREP" -rl two "$tmp/d"); check "-rl" "$tmp/d/sub/a.txt" "$out"
 "$MGREP" -r alpha "$tmp/d/empty"; check "-r empty dir" "1" "$?"
 
+printf 'alpha md\n' > "$tmp/d/notes.md"
+out=$("$MGREP" -r --include='*.txt' alpha "$tmp/d" | tr '\n' '|'); check "--include" "$tmp/d/b.txt:alpha one|$tmp/d/sub/a.txt:alpha two|" "$out"
+out=$("$MGREP" -r --exclude='*.txt' alpha "$tmp/d"); check "--exclude" "$tmp/d/notes.md:alpha md" "$out"
+out=$("$MGREP" -rl --include='*.txt' --include='*.md' --exclude='a.*' alpha "$tmp/d" | tr '\n' '|'); check "--include/--exclude combine" "$tmp/d/b.txt|$tmp/d/notes.md|" "$out"
+out=$("$MGREP" -r --include='?.txt' -c alpha "$tmp/d" | tr '\n' '|'); check "--include ?" "$tmp/d/b.txt:1|$tmp/d/sub/a.txt:1|" "$out"
+out=$("$MGREP" --exclude='*.txt' alpha "$tmp/a.txt"); check "named files not filtered" "alpha" "$out"
+"$MGREP" -r --include= alpha "$tmp/d" 2> /dev/null; check "--include= empty" "2" "$?"
+
 out=$("$MGREP" --help 2> /dev/null | head -n 1); check "--help exit" "0" "$?"
 check "--help on stdout" "usage: mgrep [-bicnovwxlLqrsHh] [-m NUM] [-A NUM] [-B NUM] [-C NUM]" "$out"
 err=$("$MGREP" --colour x "$tmp/a.txt" 2>&1 > /dev/null); check "unknown long option exit" "2" "$?"

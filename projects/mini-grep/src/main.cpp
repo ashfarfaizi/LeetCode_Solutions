@@ -12,6 +12,7 @@
 // -r searches directories recursively (the current directory when no FILE is
 // given); without it a directory argument is reported as an error.
 // -f FILE reads one pattern per line from FILE ("-" for standard input).
+// --include=GLOB / --exclude=GLOB filter the files -r finds by base name.
 // Exit status: 0 if any line matched, 1 if none did, 2 on usage or I/O error.
 
 #include "grep.hpp"
@@ -48,6 +49,8 @@ void help() {
                  "  -H / -h always / never prefix file names\n"
                  "  -r      search directories recursively -q      quiet, exit status only\n"
                  "  -s      hide file error messages       --help  show this help\n"
+                 "  --include=GLOB  with -r, only search files whose name matches GLOB\n"
+                 "  --exclude=GLOB  with -r, skip files whose name matches GLOB\n"
                  "\nExit status: 0 if a line was selected, 1 if none, 2 on error.\n";
 }
 
@@ -76,10 +79,47 @@ bool readPatternFile(const std::string& name, std::vector<std::string>& patterns
     return true;
 }
 
+// Shell-style wildcard match of the whole text: '*' matches any run of
+// characters, '?' any single character, everything else itself.
+bool globMatch(const std::string& glob, const std::string& text) {
+    std::size_t g = 0, t = 0, starG = std::string::npos, starT = 0;
+    while (t < text.size()) {
+        if (g < glob.size() && (glob[g] == '?' || glob[g] == text[t])) {
+            ++g;
+            ++t;
+        } else if (g < glob.size() && glob[g] == '*') {
+            starG = g++;
+            starT = t;
+        } else if (starG != std::string::npos) {
+            g = starG + 1;  // let the last '*' swallow one more character
+            t = ++starT;
+        } else {
+            return false;
+        }
+    }
+    while (g < glob.size() && glob[g] == '*') ++g;
+    return g == glob.size();
+}
+
+// --include / --exclude globs applied to base names of files found by -r.
+struct FileFilter {
+    std::vector<std::string> include, exclude;
+
+    bool accepts(const std::string& baseName) const {
+        for (const auto& g : exclude)
+            if (globMatch(g, baseName)) return false;
+        if (include.empty()) return true;
+        for (const auto& g : include)
+            if (globMatch(g, baseName)) return true;
+        return false;
+    }
+};
+
 // Appends name to out, or with recursive and a directory, every regular file
-// below it in sorted order (so output is deterministic). Unreadable
-// subdirectories are skipped.
-void expand(const std::string& name, bool recursive, std::vector<std::string>& out) {
+// below it that filter accepts, in sorted order (so output is deterministic).
+// Unreadable subdirectories are skipped. Files named directly are never filtered.
+void expand(const std::string& name, bool recursive, const FileFilter& filter,
+            std::vector<std::string>& out) {
     namespace fs = std::filesystem;
     std::error_code ec;
     if (!recursive || name == "-" || !fs::is_directory(name, ec)) {
@@ -89,7 +129,8 @@ void expand(const std::string& name, bool recursive, std::vector<std::string>& o
     std::vector<std::string> found;
     for (fs::recursive_directory_iterator it(name, fs::directory_options::skip_permission_denied, ec), end;
          !ec && it != end; it.increment(ec)) {
-        if (it->is_regular_file(ec)) found.push_back(it->path().string());
+        if (it->is_regular_file(ec) && filter.accepts(it->path().filename().string()))
+            found.push_back(it->path().string());
     }
     std::sort(found.begin(), found.end());
     out.insert(out.end(), found.begin(), found.end());
@@ -103,6 +144,7 @@ int main(int argc, char** argv) {
     bool quiet = false;
     bool noMessages = false;  // -s
     bool recursive = false;   // -r
+    FileFilter filter;        // --include / --exclude
     enum class Names { Auto, Always, Never } names = Names::Auto;
     std::vector<std::string> patterns;  // from -e and -f
     bool patternOption = false;         // -e or -f given: no positional pattern
@@ -116,6 +158,17 @@ int main(int argc, char** argv) {
         if (arg == "--help") {
             help();
             return 0;
+        }
+        if (arg.rfind("--include=", 0) == 0 || arg.rfind("--exclude=", 0) == 0) {
+            const bool inc = arg[2] == 'i';
+            std::string glob = arg.substr(10);
+            if (glob.empty()) {
+                std::cerr << "mgrep: " << arg << " needs a pattern\n";
+                usage();
+                return 2;
+            }
+            (inc ? filter.include : filter.exclude).push_back(glob);
+            continue;
         }
         if (arg.size() > 2 && arg[0] == '-' && arg[1] == '-') {
             std::cerr << "mgrep: unknown option " << arg << '\n';
@@ -214,7 +267,7 @@ int main(int argc, char** argv) {
     std::vector<std::string> args(argv + i, argv + argc);
     if (args.empty()) args.push_back(recursive ? "." : "-");
     std::vector<std::string> files;
-    for (const std::string& a : args) expand(a, recursive, files);
+    for (const std::string& a : args) expand(a, recursive, filter, files);
 
     mgrep::Matcher matcher(opts);
     // With -r names are shown by default even if only one file turned up.

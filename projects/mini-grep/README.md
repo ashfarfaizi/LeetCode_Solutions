@@ -51,6 +51,13 @@ names are shown by default, so `mgrep -rn TODO src` reads like a list of
 locations. Without `-r` a directory argument is reported (`is a directory`)
 and gives exit status `2`.
 
+With `-r`, `--include=GLOB` searches only files whose base name matches
+`GLOB` and `--exclude=GLOB` skips files whose base name matches it. Both are
+repeatable, `*` matches any run of characters and `?` a single one, and an
+exclude beats an include: `mgrep -rn --include='*.cpp' --include='*.hpp'
+--exclude='*_test.cpp' TODO src`. Files named on the command line are always
+searched.
+
 Short options can be combined and `--` ends option parsing, so
 `mgrep -- --help notes.md` searches for the text `--help`. `mgrep --help`
 prints a summary of every option to standard output and exits `0`; any other
